@@ -1,2 +1,4 @@
 *.wad.bak
 *.pk3.bak
+/dist/*.pk3
+
