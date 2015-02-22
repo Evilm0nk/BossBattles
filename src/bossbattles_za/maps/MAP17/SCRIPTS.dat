@@ -1,0 +1,1210 @@
+#include "zcommon.acs"
+
+
+
+Int Wave = 1;
+Int WellDone = 0;
+
+Script 50 OPEN
+{
+SetActivator(0);
+If (Wave == 1 && WellDone == 0)
+  {
+  // Wave 1
+  WellDone = 1;
+  Acs_Execute (101, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 2 && WellDone == 0)
+  {
+  // Wave 2
+  WellDone = 1;
+  Acs_Execute (102, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 3 && WellDone == 0)
+  {
+  // Wave 3
+  WellDone = 1;
+  Acs_Execute (103, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 4 && WellDone == 0)
+  {
+  // Wave 4
+  WellDone = 1;
+  Acs_Execute (104, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 5 && WellDone == 0)
+  {
+  // Wave 5
+  WellDone = 1;
+  Acs_Execute (105, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 6 && WellDone == 0)
+  {
+  // Wave 6
+  WellDone = 1;
+  Acs_Execute (106, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 7 && WellDone == 0)
+  {
+  // Wave 7
+  WellDone = 1;
+  Acs_Execute (107, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 8 && WellDone == 0)
+  {
+  // Wave 8
+  WellDone = 1;
+  Acs_Execute (108, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 9 && WellDone == 0)
+  {
+  // Wave 9
+  WellDone = 1;
+  Acs_Execute (109, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 10 && WellDone == 0)
+  {
+  // Wave 10
+  WellDone = 1;
+  Acs_Execute (110, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 11 && WellDone == 0)
+  {
+  // Wave 11
+  WellDone = 1;
+  Acs_Execute (111, 0, 0, 0, 0);
+  Delay(10);
+  }
+  If (Wave == 12 && WellDone == 0)
+  {
+  // Wave 12
+  WellDone = 1;
+  Acs_Execute (112, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 13 && WellDone == 0)
+  {
+  // Wave 13
+  WellDone = 1;
+  Acs_Execute (113, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 14 && WellDone == 0)
+  {
+  // Wave 14
+  WellDone = 1;
+  Acs_Execute (114, 0, 0, 0, 0);
+  Delay(10);
+  }
+  If (Wave == 15 && WellDone == 0)
+  {
+  // Wave 15
+  WellDone = 1;
+  Acs_Execute (115, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 16 && WellDone == 0)
+  {
+  // Wave 16
+  WellDone = 1;
+  Acs_Execute (116, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 17 && WellDone == 0)
+  {
+  // Wave 17
+  WellDone = 1;
+  Acs_Execute (117, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 18 && WellDone == 0)
+  {
+  // Wave 18
+  WellDone = 1;
+  Acs_Execute (118, 0, 0, 0, 0);
+  Delay(10);
+  }
+    If (Wave == 19 && WellDone == 0)
+  {
+  // Wave 19
+  WellDone = 1;
+  Acs_Execute (119, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 20 && WellDone == 0)
+  {
+  // Wave 20
+  WellDone = 1;
+  Acs_Execute (120, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 21 && WellDone == 0)
+  {
+  // Wave 21
+  WellDone = 1;
+  Acs_Execute (121, 0, 0, 0, 0);
+  Delay(10);
+  }
+Delay(35);
+Restart;
+}
+
+Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  Ambientsound("dswelld",255);
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for good monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+
+
+                  script 301 (void) // bosses health
+{
+    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+	script 149 open
+	{	
+        setmusic ("D_map17");
+       Scroll_ceiling(24, 0, 16, 10);
+       sector_setceilingscale(24, 0, 460, 0, 460);
+}
+
+
+//Monster Spawner
+
+Script 101 (Void) // wave 1
+{ 	
+delay (100);
+Setfont("BIGFONT");
+Printbold(s:"\cAThe domain of Magic \n\n\ckBy\n\n\ckEvilm0nk\n\n\cdMusic by\n\n\cdchaosphoenix88: The Heat from this Battle\n\n\n\n\n\n\n\n");
+delay(200);
+setfont("DOOMFONT");
+hudmessage(s:"We were warped into What looks like a part of the realm that is controlled by magic!!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"This Strong Magic must be guarding something important!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"We have to get to the end of this to find out!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 1/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Bishop2", 1, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Bishop2", 1, 999);
+delay (90); 
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Wizard2", 1, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Wizard2", 1, 999);
+delay (90); 
+SpawnSpotfacing ("spawnfire", 2, 0);
+SpawnSpotfacing ("priest", 2, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 102 (Void) // wave 2
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 2/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Bishop2", 1, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("Wizard2", 1, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 1, 0);
+SpawnSpotfacing ("vampire", 2, 999);
+delay (90); 
+SpawnSpotfacing ("spawnfire", 2, 0);
+SpawnSpotfacing ("disciple", 2, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 103 (Void) // wave 3
+{ 	
+Delay(40);
+Floor_lowertonearest(3,10);
+setfont("DOOMFONT");
+hudmessage(s:"it seems a doorway is now open!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 3/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("vampire", 9, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 10, 0);
+SpawnSpotfacing ("disciple", 10, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 13, 0);
+SpawnSpotfacing ("firewizard", 13, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 10, 0);
+SpawnSpotfacing ("priest", 10, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("Bishop2", 12, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 104 (Void) // wave 4
+{ 	
+Delay(60);
+setfont("BIGFONT");
+hudmessage(s:"Wave 4/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("vampire", 9, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 10, 0);
+SpawnSpotfacing ("disciple", 10, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 13, 0);
+SpawnSpotfacing ("wizard2", 13, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 10, 0);
+SpawnSpotfacing ("PoisonWizard", 10, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("priest", 12, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 105 (Void) // wave 5
+{ 	
+Delay(50);
+Floor_lowertonearest(31,10);
+setfont("DOOMFONT");
+hudmessage(s:"A doorway opens!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+hudmessage(s:"Heresiarch awaits your arrival, if you can survive the twisted pads!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(500);
+setfont("BIGFONT");
+hudmessage(s:"Wave 5/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 32, 0);
+SpawnSpotfacing ("EnragedHeresiarch", 32, 999);
+Delay(60);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 106 (Void) // wave 6
+{ 	
+Delay(100);
+acs_Terminate(301,0);
+acs_Terminate(8,0);
+acs_Terminate(9,0);
+Floor_lowertonearest(36,10);
+setfont("DOOMFONT");
+hudmessage(s:"another path is chosen for you at the entrance!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 6/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 56, 0);
+SpawnSpotfacing ("vampire", 56, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 57, 0);
+SpawnSpotfacing ("wizard2", 57, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 58, 0);
+SpawnSpotfacing ("firewizard", 58, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 56, 0);
+SpawnSpotfacing ("bishop2", 56, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 58, 0);
+SpawnSpotfacing ("disciple", 58, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 57, 0);
+SpawnSpotfacing ("icemage", 57, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 107 (Void) // wave 7
+{ 	
+Delay(80);
+setfont("BIGFONT");
+hudmessage(s:"Wave 7/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 56, 0);
+SpawnSpotfacing ("vampire", 56, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 57, 0);
+SpawnSpotfacing ("firewizard", 57, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 58, 0);
+SpawnSpotfacing ("wizard2", 58, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 56, 0);
+SpawnSpotfacing ("priest", 56, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 57, 0);
+SpawnSpotfacing ("icemage", 57, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 58, 0);
+SpawnSpotfacing ("PoisonWizard", 58, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 57, 0);
+SpawnSpotfacing ("bishop2", 57, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 108 (Void) // wave 8
+{ 	
+Delay(60);
+Floor_lowertonearest(59,10);
+setfont("DOOMFONT");
+hudmessage(s:"A door Moves us further!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+hudmessage(s:"Dsparil awaits you if you can survive one of the magical paths!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(400);
+setfont("BIGFONT");
+hudmessage(s:"Wave 8/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire",54, 0);
+SpawnSpotfacing ("EnragedDsparil", 54, 999);
+Delay(60);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 109 (Void) // wave 9
+{ 	
+Delay(50);
+acs_Terminate(301,0);
+acs_Terminate(12,0);
+acs_Terminate(13,0);
+acs_Terminate(14,0);
+Floor_lowertonearest(71,10);
+Floor_lowertonearest(55,10);
+setfont("DOOMFONT");
+hudmessage(s:"another path is chosen for you at the entrance!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 9/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 61, 0);
+SpawnSpotfacing ("vampire", 61, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 63, 0);
+SpawnSpotfacing ("firewizard", 63, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 62, 0);
+SpawnSpotfacing ("wizard2", 62, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 61, 0);
+SpawnSpotfacing ("icemage", 61, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 62, 0);
+SpawnSpotfacing ("disciple", 62, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 63, 0);
+SpawnSpotfacing ("Bishop2", 63, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 110 (Void) // wave 10
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 10/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 61, 0);
+SpawnSpotfacing ("bishop2", 61, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 63, 0);
+SpawnSpotfacing ("icemage", 63, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 62, 0);
+SpawnSpotfacing ("firewizard", 62, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 61, 0);
+SpawnSpotfacing ("vampire", 61, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 62, 0);
+SpawnSpotfacing ("disciple", 62, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 63, 0);
+SpawnSpotfacing ("PoisonWizard", 63, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 111 (Void) // wave 11
+{ 	
+Delay(100);
+Floor_lowertonearest(69,10);
+setfont("DOOMFONT");
+hudmessage(s:"another path is opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+hudmessage(s:"avatar awaits you! if you can survive the path of faith!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 11/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire",74, 0);
+SpawnSpotfacing ("EnragedAVATAR", 74, 999);
+Delay(60);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 112 (Void) // wave 12
+{ 	
+Delay(50);
+acs_Terminate(301,0);
+acs_Terminate(16,0);
+Floor_lowertonearest(75,10);
+setfont("DOOMFONT");
+hudmessage(s:"another path is chosen for you at the entrance!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 12/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 79, 0);
+SpawnSpotfacing ("vampire", 79, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 80, 0);
+SpawnSpotfacing ("firewizard", 80, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 79, 0);
+SpawnSpotfacing ("PoisonWizard", 79, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 80, 0);
+SpawnSpotfacing ("icemage", 80, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 113 (Void) // wave 13
+{ 	
+Delay(60);
+Floor_lowertonearest(81,10);
+setfont("DOOMFONT");
+hudmessage(s:"Silver Door opens for you!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+hudmessage(s:"menelkir awaits your arrival, if your favorite color is red!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 13/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire",82, 0);
+SpawnSpotfacing ("Enragedmenelkir", 82, 999);
+Delay(60);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 114 (Void) // wave 14
+{ 	
+Delay(50);
+acs_Terminate(22,0);
+acs_Terminate(301,0);
+Floor_lowertonearest(83,10);
+setfont("DOOMFONT");
+hudmessage(s:"More spellcasters approach the entrance!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(200);
+setfont("BIGFONT");
+hudmessage(s:"Wave 14/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 79, 0);
+SpawnSpotfacing ("vampire", 79, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 80, 0);
+SpawnSpotfacing ("firewizard", 80, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 79, 0);
+SpawnSpotfacing ("wizard2", 79, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 80, 0);
+SpawnSpotfacing ("icemage", 80, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 115 (Void) // wave 15
+{ 	
+Delay(60);
+Floor_lowertonearest(87,10);
+setfont("DOOMFONT");
+hudmessage(s:"Another door opens!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(300);
+setfont("BIGFONT");
+hudmessage(s:"Wave 15/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 88, 0);
+SpawnSpotfacing ("PoisonWizard", 88, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 89, 0);
+SpawnSpotfacing ("firewizard", 89, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 90, 0);
+SpawnSpotfacing ("wizard2", 90, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 91, 0);
+SpawnSpotfacing ("icemage", 91, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 92, 0);
+SpawnSpotfacing ("Priest", 92, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 116 (Void) // wave 16
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 16/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 88, 0);
+SpawnSpotfacing ("bishop2", 88, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 89, 0);
+SpawnSpotfacing ("firewizard", 89, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 90, 0);
+SpawnSpotfacing ("disciple", 90, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 91, 0);
+SpawnSpotfacing ("icemage", 91, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 92, 0);
+SpawnSpotfacing ("Priest", 92, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 88, 0);
+SpawnSpotfacing ("bishop2", 88, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 89, 0);
+SpawnSpotfacing ("firewizard", 89, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 90, 0);
+SpawnSpotfacing ("disciple", 90, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 91, 0);
+SpawnSpotfacing ("icemage", 91, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 92, 0);
+SpawnSpotfacing ("Priest", 92, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 117 (Void) // wave 17
+{ 	
+Delay(60);
+setfont("BIGFONT");
+hudmessage(s:"Wave 17/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 88, 0);
+SpawnSpotfacing ("icemage", 88, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 89, 0);
+SpawnSpotfacing ("Vampire", 89, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 90, 0);
+SpawnSpotfacing ("Avatar", 90, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 91, 0);
+SpawnSpotfacing ("icemage", 91, 999);
+Delay(10);
+SpawnSpotfacing ("spawnfire", 92, 0);
+SpawnSpotfacing ("Vampire", 92, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 118 (Void) // wave 18
+{ 	
+Delay(50);
+Floor_lowertonearest(86,10);
+setfont("DOOMFONT");
+hudmessage(s:"Silver Door opens for you!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(140);
+setfont("BIGFONT");
+hudmessage(s:"Wave 18/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire",93, 0);
+SpawnSpotfacing ("hellpatriarch", 93, 999);
+Delay(60);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 119 (Void) // wave 19
+{ 	
+Delay(100);
+acs_Terminate(301,0);
+Floor_lowertonearest(94,10);
+setfont("DOOMFONT");
+hudmessage(s:"Another door opens!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+hudmessage(s:"Back at the entrance!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 19/20!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(150);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 110, 0);
+SpawnSpotfacing ("Wizard2", 110, 0);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 111, 0);
+SpawnSpotfacing ("Bishop2", 111, 0);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 112, 0);
+SpawnSpotfacing ("Wizard2", 112, 0);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 113, 0);
+SpawnSpotfacing ("Bishop2", 113, 0);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("Thor", 114, 999);
+Delay(20);
+Acs_Execute(301,0);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 120 (Void) // wave 10
+{ 	
+Delay(70);
+acs_Terminate(301,0);
+acs_Terminate(19,0);
+acs_Terminate(20,0);
+acs_Terminate(21,0);
+Floor_lowertonearest(96,10);
+setmusic ("D_boss2");
+setfont("DOOMFONT");
+hudmessage(s:"The final door is open to us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+hudmessage(s:"We must now fight cronus, Then this magic barrier of a place will be clear!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 97, 0);
+SpawnSpotfacing ("cronus", 97, 999);
+Delay(20);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+
+Script 121 (Void) // wave end
+{ 	
+Delay(100);
+acs_Terminate(301,0);
+setfont("DOOMFONT");
+hudmessage(s:"Finally we defeated this magical place!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+hudmessage(s:"The Magic is warping us further into Hell Itself!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+exit_Normal(0);
+}
+
+Script 3 open // turrent
+{ 	
+Delay(100);
+SpawnProjectile (4,"Redtrapball",-85,250,0,0,0);
+Delay(130);
+SpawnProjectile (4,"Redtrapball",-85,250,0,0,0);
+Restart;
+}
+
+
+Script 4 open // turrent
+{ 	
+Delay(140);
+SpawnProjectile (5,"bluetrapball",105,250,0,0,0);
+Delay(130);
+SpawnProjectile (5,"bluetrapBall",105,250,0,0,0);
+Restart;
+}
+
+Script 5 open // turrent
+{ 	
+Delay(160);
+SpawnProjectile (6,"BluetrapBall",30,250,0,0,0);
+Delay(150);
+SpawnProjectile (6,"BluetrapBall",30,250,0,0,0);
+Restart;
+}
+
+Script 6 open // turrent
+{ 	
+Delay(170);
+SpawnProjectile (7,"Redtrapball",480,260,0,0,0);
+Delay(145);
+SpawnProjectile (7,"Redtrapball",480,260,0,0,0);
+Restart;
+}
+
+Script 7 open // turrent
+{ 	
+Delay(100);
+SpawnProjectile (8,"bluetrapBall",-85,250,0,0,0);
+Delay(130);
+SpawnProjectile (8,"bluetrapBall",-85,250,0,0,0);
+Restart;
+}
+
+script 8 open //Turret
+{
+	SpawnProjectile (15, "RedTrapball", 0, 2, 30,0,0);
+	delay(25);
+ SpawnProjectile (16, "RedTrapball", 0, 2, 30,0,0);
+	delay(45);
+ SpawnProjectile (15, "RedTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (17, "RedTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (16, "RedTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (18, "RedTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (19, "RedTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (20, "RedTrapball", 0, 2, 30,0,0);
+	Restart;
+}
+
+script 9 open //turret
+{
+	SpawnProjectile (21, "blueTrapball", 0, 2, 30,0,0);
+	delay(25);
+ SpawnProjectile (22, "blueTrapball", 0, 2, 30,0,0);
+	delay(45);
+ SpawnProjectile (23, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (25, "blueTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (26, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (21, "blueTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (22, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (25, "blueTrapball", 0, 2, 30,0,0);
+	Restart;
+}
+
+script 10 open //turret
+{
+	SpawnProjectile (28, "blueTrapball",130,250,0,0,0);
+	delay(15);
+ SpawnProjectile (27, "blueTrapball",0,250,0,0,0);
+	delay(45);
+	Restart;
+}
+
+script 11 (void) //checkpoint
+{
+	delay(15);
+Floor_lowertolowest(30,10);
+}
+
+script 12 (void) //turrent for second area
+{
+	SpawnProjectile (38, "Poisontrap",0,0,5,10,0);
+	delay(5);
+ SpawnProjectile (37, "Poisontrap",0,0,5,10,0);
+ delay(10);
+ 	SpawnProjectile (41, "Poisontrap",0,0,5,10,0);
+	delay(5);
+ SpawnProjectile (39, "Poisontrap",0,0,5,10,0);
+ 	delay(10);
+ SpawnProjectile (40, "Poisontrap",0,0,5,10,0);
+ delay(5);
+ SpawnProjectile (37, "Poisontrap",0,0,5,10,0);
+ 	delay(5);
+ SpawnProjectile (41, "Poisontrap",0,0,5,10,0);
+ delay(10);
+ SpawnProjectile (38, "Poisontrap",0,0,5,10,0);
+	Restart;
+}
+
+script 13 (void) //turrent for second area
+{
+	SpawnProjectile (42, "icetrap",0,0,5,80,0);
+	delay(5);
+ SpawnProjectile (43, "icetrap",0,0,5,80,0);
+ delay(10);
+ 	SpawnProjectile (44, "icetrap",0,0,5,80,0);
+	delay(5);
+ SpawnProjectile (45, "icetrap",0,0,5,80,0);
+ 	delay(10);
+ SpawnProjectile (46, "icetrap",0,0,5,80,0);
+ delay(5);
+	Restart;
+}
+
+script 14 (void) //turrent for second area
+{
+	SpawnProjectile (47, "firetrap",0,0,5,80,0);
+	delay(5);
+ SpawnProjectile (47, "firetrap",0,0,5,80,0);
+	delay(5);
+ SpawnProjectile (47, "firetrap",0,0,5,80,0);
+	delay(5); 
+ SpawnProjectile (47, "firetrap",0,0,5,80,0);
+	delay(5);
+ 	SpawnProjectile (47, "firetrap",0,0,5,80,0);
+	delay(5);
+ 	SpawnProjectile (47, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+	delay(5);
+  SpawnProjectile (47, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+	delay(5);
+  SpawnProjectile (47, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+	delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+	delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+ delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+ SpawnProjectile (50, "firetrap",0,0,5,80,0);
+  delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+ SpawnProjectile (50, "firetrap",0,0,5,80,0);
+  delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+ SpawnProjectile (50, "firetrap",0,0,5,80,0);
+  delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+  SpawnProjectile (48, "firetrap",0,0,5,80,0);
+ SpawnProjectile (50, "firetrap",0,0,5,80,0);
+ delay(5);
+  SpawnProjectile (49, "firetrap",0,0,5,80,0);
+ SpawnProjectile (50, "firetrap",0,0,5,80,0);
+	Restart;
+}
+
+script 15 (void) //checkpoint
+{
+	delay(15);
+Floor_lowertolowest(52,10);
+}
+
+script 16 open //Turret
+{
+	SpawnProjectile (64, "RedTrapball", 0, 2, 30,0,0);
+	delay(25);
+ SpawnProjectile (65, "RedTrapball", 0, 2, 30,0,0);
+	delay(45);
+ SpawnProjectile (66, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (64, "RedTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (67, "RedTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (65, "blueTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (68, "RedTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (66, "blueTrapball", 0, 2, 30,0,0);
+	Restart;
+}
+
+script 17 (void) //checkpoint
+{
+	delay(15);
+Floor_lowertolowest(72,10);
+}
+
+script 18 (void) //checkpoint
+{
+	delay(15);
+Floor_lowertolowest(78,10);
+}
+
+script 19 (void) //Turret
+{
+	SpawnProjectile (98, "RedTrapball",185,250,0,0,0);
+	delay(45);
+	SpawnProjectile (100, "RedTrapball",60,250,0,0,0);
+  delay(25);
+	Restart;
+}
+
+script 20 (void) //Turret
+{
+	SpawnProjectile (99, "RedTrapball",185,250,0,0,0);
+	delay(25);
+	SpawnProjectile (101, "RedTrapball",60,250,0,0,0);
+  delay(25);
+	Restart;
+}
+
+script 21 (void) //turret
+{
+	SpawnProjectile (102, "blueTrapball", 0, 2, 30,0,0);
+	delay(25);
+ SpawnProjectile (103, "blueTrapball", 0, 2, 30,0,0);
+	delay(45);
+ SpawnProjectile (104, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (105, "blueTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (103, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (104, "blueTrapball", 0, 2, 30,0,0);
+ 	delay(45);
+ SpawnProjectile (105, "blueTrapball", 0, 2, 30,0,0);
+ SpawnProjectile (103, "blueTrapball", 0, 2, 30,0,0);
+	Restart;
+}
+
+script 22 (void) //Turret
+{
+	SpawnProjectile (106, "RedTrapball",185,250,0,0,0);
+	delay(45);
+	SpawnProjectile (107, "RedTrapball",185,250,0,0,0);
+	SpawnProjectile (109, "RedTrapball",60,250,0,0,0);
+  	delay(45);
+	SpawnProjectile (108, "RedTrapball",60,250,0,0,0);
+	Restart;
+}  

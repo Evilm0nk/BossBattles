@@ -1,0 +1,4139 @@
+#include "zcommon.acs"
+
+Int Wave = 1;
+Int WellDone = 0;
+
+//int n;
+
+
+
+//Traps
+
+	Script 163 (void)        
+{
+	SpawnSpotfacing ("Eyesore", 128, 0);
+}
+
+
+	Script 999 (void)        
+{
+setfont("BIGFONT");
+hudmessagebold(s:"The Server Doesn't Approve!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+SpawnSpotfacing ("Eyesore", 129, 0);
+SpawnSpotfacing ("megaEyesore", 130, 0);
+SpawnSpotfacing ("superbabycacodemon", 131, 0);
+setmusic ("D_Boss");
+}
+
+	script 327 (void)
+{	
+Ambientsound("Dsyousuk",255);
+}
+
+	script 179 (void)
+	{	
+Ambientsound("Dsyousuk",255);
+delay(5);
+SpawnProjectile (125,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (125,"rocket",60,250,0,0,0);
+}
+  
+	script 300 (void)
+	{	
+Ambientsound("Dsyousuk",255);
+delay(5);
+SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+delay(5);
+SpawnProjectile (151,"rocket",60,250,0,0,0);
+}
+  
+script 100 OPEN
+{	
+	delay(200);
+Setfont("BIGFONT");
+Printbold(s:"\cAThe museum of bossbattles \n\n\ckBy\n\n\ckGosimer, Evilm0nk\n\n\cdMusic from\n\n\cdDragons View: Keire Temple\n\n\n\n\n\n\n\n");
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"Spawn Monsters to battle you or other Monsters!"; HUDMSG_TYPEON, 2, CR_blue, 0.5, 0.6, 3.0, 0.02, 1.0);
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"Limit to 2 monsters total, 1 bad and 1 good monster!"; HUDMSG_TYPEON, 2, CR_blue, 0.5, 0.6, 3.0, 0.02, 1.0);
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"Secrets are hidden everywhere, they unlock extra rooms!"; HUDMSG_TYPEON, 2, CR_blue, 0.5, 0.6, 3.0, 0.02, 1.0);
+delay (150);}
+
+	Script 2 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Afrit2", 151, 999);
+}
+}
+
+	Script 3 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Diabloist2", 151, 999);
+}
+}
+
+	Script 4 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("bruiserdemon2", 151, 999);
+}
+}
+
+	Script 5 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("deathknight2", 151, 999);
+}
+}
+
+	Script 6 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsfury2", 151, 999);
+}
+}
+
+	Script 7 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsmith2", 151, 999);
+}
+}
+
+	Script 8 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellstormarchon2", 151, 999);
+}
+}
+
+	Script 9 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("reddemon2", 151, 999);
+}
+}
+
+	Script 10 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("LavaDemon2", 151, 999);
+}
+}
+
+	Script 11 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Lordofheresy2", 151, 999);
+}
+}
+
+	Script 12 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Pyrodemon2", 151, 999);
+}
+}
+
+	Script 13 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("hellsapprentice2", 151, 999);
+}
+}
+
+	Script 14 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("annihilator1", 151, 999);
+}
+}
+
+	Script 15 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdemon2", 151, 999);
+}
+}
+
+	Script 16 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cardinal1", 151, 999);
+}
+}
+
+	Script 17 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("D3cyberdemon2", 151, 999);
+}
+}
+
+	Script 18 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("superdemon1", 151, 999);
+}
+}
+
+	Script 19 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("thamuz2", 151, 999);
+}
+}
+
+	Script 20 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdemon642", 151, 999);
+}
+}
+
+	Script 21 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("demolisher2", 151, 999);
+}
+}
+
+	Script 22 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("spidermastermind2", 151, 999);
+}
+}
+
+	Script 23 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cybermastermind1", 151, 999);
+}
+}
+
+	Script 24 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("insanityarachnophyte2", 151, 999);
+}
+}
+
+	Script 25 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("insanityspider2", 151, 999);
+}
+}
+
+	Script 26 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("supremefiend1", 151, 999);
+}
+}
+
+	Script 27 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("arachnophyte1", 151, 999);
+}
+}
+
+	Script 29 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("traductus2", 151, 999);
+}
+}
+
+	Script 30 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zedek2", 151, 999);
+}
+}
+
+	Script 31 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Menelkir2", 151, 999);
+}
+}
+
+	Script 32 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Wyvern3", 151, 999);
+}
+}
+
+	Script 33 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Korax3", 151, 999);
+}
+}
+
+	Script 34 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("infernodemon2", 151, 999);
+}
+}
+
+	Script 35 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("heresiarch3", 151, 999);
+}
+}
+
+	Script 36 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Avatar1", 151, 999);
+}
+}
+
+
+	Script 39 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("chaosWyvern2", 151, 999);
+}
+}
+
+	Script 41 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Minotaur3", 151, 999);
+}
+}
+
+	Script 42 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("dsparil3", 151, 999);
+}
+}
+
+	Script 43 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("icelich1", 151, 999);
+}
+}
+
+	Script 44 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ironlich3", 151, 999);
+}
+}
+
+	Script 45 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Metalhead2", 151, 999);
+}
+}
+
+	Script 46 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("furylich2", 151, 999);
+}
+}
+	Script 48 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Darkinquisitor1", 151, 999);
+}
+}
+
+	Script 49 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("entityboss2", 151, 999);
+}
+}
+
+	Script 50 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("inquisitor2", 151, 999);
+}
+}
+
+	Script 51 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Loremaster2", 151, 999);
+}
+}
+
+	Script 52 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Paladin2", 151, 999);
+}
+}
+
+	Script 53 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Strifebishop3", 151, 999);
+}
+}
+
+	Script 54 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Motherdemon2", 151, 999);
+}
+}
+
+	Script 55 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Fallen2", 151, 999);
+}
+}
+
+	Script 57 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cacoking2", 151, 999);
+}
+}
+
+	Script 58 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DEoverlord2", 151, 999);
+}
+}
+
+	Script 59 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Gaguuro2", 151, 999);
+}
+}
+
+	Script 60 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Helemental2", 151, 999);
+}
+}
+
+	Script 61 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Invertedcaco2", 151, 999);
+}
+}
+
+	Script 62 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Jadebaby2", 151, 999);
+}
+}
+
+	Script 63 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Sewercacodemon2", 151, 999);
+}
+}
+
+	Script 64 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Steelcacodemon2", 151, 999);
+}
+}
+
+
+	Script 65 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snowcacodemonboss2", 151, 999);
+}
+}
+
+	Script 66 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BigInfernalSpider2", 151, 999);
+}
+}
+
+	Script 67 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cheogh2", 151, 999);
+}
+
+
+}	Script 68 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilDoomguy2", 151, 999);
+}
+}
+
+	Script 69 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Evolutionarybaron2", 151, 999);
+}
+}
+
+
+	Script 70 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Gatekeeper2", 151, 999);
+}
+}
+
+	Script 71 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Moloch2", 151, 999);
+}
+}
+
+	Script 72 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SourceGuardian2", 151, 999);
+}
+}
+
+
+	Script 75 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hammerhound2", 151, 999);
+}
+}
+
+	Script 76 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hansgrosse02", 151, 999);
+}
+}
+
+	Script 77 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsbattery2", 151, 999);
+}
+}
+
+	Script 78 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Mechademon2", 151, 999);
+}
+}
+
+	Script 79 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("queen2", 151, 999);
+}
+}
+
+	Script 80 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Scourge2", 151, 999);
+}
+}
+
+	Script 81 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zardaz2", 151, 999);
+}
+}
+
+	Script 82 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("evilknight2", 151, 999);
+}
+}
+
+
+	Script 83 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Heavenguard2", 151, 999);
+}
+}
+
+	Script 84 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Heavenguardboss2", 151, 999);
+}
+}
+
+	Script 85 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("thor2", 151, 999);
+}
+}
+
+	Script 86 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Vampire2", 151, 999);
+}
+}
+
+	Script 87 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Paingasm2", 151, 999);
+}
+}
+
+	Script 196 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("tchernobog2", 151, 999);
+}
+}
+
+	Script 198 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbot3", 151, 999);
+}
+}
+
+	Script 199 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbot4", 151, 999);
+}
+}
+
+	Script 208 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("MotherdemonO2", 151, 999);
+}
+}
+
+	Script 230 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hitler02", 151, 999);
+}
+}
+
+	Script 231 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SilverAnnihilator1", 151, 999);
+}
+}
+
+	Script 234 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("CacoDad2", 151, 999);
+}
+}
+
+	Script 237 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellPatriarch2", 151, 999);
+}
+}
+
+	Script 238 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Storm2", 151, 999);
+}
+}
+
+	Script 240 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("gretelgrosse2", 151, 999);
+}
+}
+
+
+	Script 242 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Schabbs2", 151, 999);
+}
+}
+
+	Script 243 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Priest1", 151, 999);
+}
+}
+
+	Script 244 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DESentinel2", 151, 999);
+}
+}
+
+	Script 245 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Disciple1", 151, 999);
+}
+}
+
+	Script 246 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Azazel1", 151, 999);
+}
+}
+
+	Script 247 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("incubus2", 151, 999);
+}
+}
+
+	Script 248 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Greaterincubus2", 151, 999);
+}
+}
+
+	Script 47 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Ultimaspider2", 151, 999);
+}
+}
+
+	Script 136 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Dominator2", 151, 999);
+}
+}
+
+	Script 146 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Conqueror2", 151, 999);
+}
+}
+
+	Script 164 (void)         ////Good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Maephisto2", 151, 999);
+}
+}
+
+	Script 154 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Uzombiecacodemon2", 151, 999);
+}
+}
+
+	Script 155 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberarach2", 151, 999);
+}
+}
+
+	Script 156 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdestroyer2", 151, 999);
+}
+}
+
+	Script 158 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("incarnate2", 151, 999);
+}
+}
+
+
+	Script 159 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("RotWraith2", 151, 999);
+}
+}
+
+	Script 214 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("zombiecacodemon2", 151, 999);
+}
+}
+
+	Script 274 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Aracnorbqueen2", 151, 999);
+}
+}
+
+	Script 275 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DeepOne2", 151, 999);
+}
+}
+
+	Script 276 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Scanner3", 151, 999);
+}
+}
+
+	Script 277 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DestructionImp2", 151, 999);
+}
+}
+
+	Script 278 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilCorvus2", 151, 999);
+}
+}
+
+	Script 279 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Tranarch2", 151, 999);
+}
+}
+
+
+	Script 280 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Ractus2", 151, 999);
+}
+}
+
+	Script 281 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zerox2", 151, 999);
+}
+}
+
+	Script 282 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cronus2", 151, 999);
+}
+}
+
+	Script 283 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Phobos2", 151, 999);
+}
+}
+
+	Script 284 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cerberus2", 151, 999);
+}
+}
+
+	Script 285 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("PoisonWizard2", 151, 999);
+}
+}
+
+
+	Script 286 (void)        ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FireWizard2", 151, 999);
+}
+}
+
+	Script 287 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("IceMage2", 151, 999);
+}
+}
+
+
+	Script 291 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FlemBomination2", 151, 999);
+}
+}
+
+	Script 292 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Maximus2", 151, 999);
+}
+}
+
+	Script 293 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snotfolus2", 151, 999);
+}
+}
+
+	Script 294 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilStrifeguy2", 151, 999);
+}
+}
+
+	Script 326 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ArachnotronMK3", 151, 999);
+}
+}
+
+	Script 316 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbaron2", 151, 999);
+}
+}
+
+	Script 317 (void)         /////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberimp2", 151, 999);
+}
+}
+
+	Script 318 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberborgm2", 151, 999);
+}
+}
+
+	Script 319 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbruiser2", 151, 999);
+}
+}
+
+
+	Script 320 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Doomedimp2", 151, 999);
+}
+}
+
+	Script 321 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EntitySlave2", 151, 999);
+}
+}
+
+	Script 322 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("StrifeTemplar2", 151, 999);
+}
+}
+
+	Script 323 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Terminator2", 151, 999);
+}
+}
+
+	Script 324 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SuperDeepone2", 151, 999);
+}
+}
+
+	Script 329 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Spidermastermind642", 151, 999);
+}
+}
+
+	Script 330 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("StarSpawn2", 151, 999);
+}
+}
+
+	Script 331 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("CaptainolRed2", 151, 999);
+}
+}
+
+
+	Script 332 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DarkFaith2", 151, 999);
+}
+}
+
+	Script 333 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberdemolisher2", 151, 999);
+}
+}
+
+	Script 334 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Triton2", 151, 999);
+}
+}
+
+	Script 359 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FlameCacodemon2", 151, 999);
+}
+}
+
+	Script 357 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Arachnotronmk3", 151, 999);
+}
+}
+
+	Script 361 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Deceptionist2", 151, 999);
+}
+}
+
+	Script 90 (void)         ////Good
+{
+	delay(10);
+	SpawnSpotfacing ("Cacodemon2", 103, 992);
+	SpawnSpotfacing ("Bishop3", 104, 992);
+	SpawnSpotfacing ("Arachnotron2", 105, 992);
+	SpawnSpotfacing ("Demon5", 106, 992);
+  SpawnSpotfacing ("Demon6", 107, 992);
+  SpawnSpotfacing ("Babycacodemon2", 108, 992);
+  SpawnSpotfacing ("Wizard3", 109, 992);
+  SpawnSpotfacing ("Baronofhell2", 110, 992);
+  SpawnSpotfacing ("Mummy2", 111, 992);
+  SpawnSpotfacing ("Darklostsoul2", 112, 992);
+  SpawnSpotfacing ("Hellknight2", 113, 992);
+  SpawnSpotfacing ("Fatso2", 114, 992);
+  SpawnSpotfacing ("Molochwraith2", 115, 992); 
+  SpawnSpotfacing ("Minispider2", 116, 992);
+  SpawnSpotfacing ("veryminispider2", 117, 992);
+  SpawnSpotfacing ("Smallinfernal2", 118, 992);
+  SpawnSpotfacing ("guardian2", 119, 992);
+  SpawnSpotfacing ("Spider2", 120, 992);
+  SpawnSpotfacing ("Greenspider2", 121, 992);
+  SpawnSpotfacing ("Redspider2", 122, 992);
+  SpawnSpotfacing ("Iceguy3", 123, 992);
+  delay(1000);
+}
+
+	Script 364 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyborgm2", 151, 999);
+}
+}
+
+	Script 388 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cacaroo2", 151, 999);
+}
+}
+
+	Script 390 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellWarrior2", 151, 999);
+}
+}
+
+	Script 392 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellWarriorOmega2", 151, 999);
+}
+}
+
+	Script 394 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ScorpionMastermind2", 151, 999);
+}
+}
+
+	Script 396 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BlueAnnihilator2", 151, 999);
+}
+}
+
+	Script 398 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BlizzardDemon2", 151, 999);
+}
+}
+
+	Script 402 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Icedemon2", 151, 999);
+}
+}
+
+	Script 403 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("IceGolem2", 151, 999);
+}
+}
+
+	Script 405 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FrozenCacodemon2", 151, 999);
+}
+}
+
+	Script 406 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snowcacodemon2", 151, 999);
+}
+}
+
+///////////////////////BAD monster scripts/////////////////
+
+
+	Script 91 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Afrit", 3, 998);
+}
+}
+
+	Script 92 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Diabloist", 3, 998);
+}
+}
+
+	Script 93 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("bruiserdemon", 3, 998);
+}
+}
+
+	Script 94 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("deathknight", 3, 998);
+}
+}
+
+	Script 95 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsfury", 3, 998);
+}
+}
+
+	Script 96 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsmith1", 3, 998);
+}
+}
+
+	Script 97 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellstormarchon", 3, 998);
+}
+}
+
+	Script 98 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("reddemon", 3, 998);
+}
+}
+
+	Script 99 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("LavaDemon", 3, 998);
+}
+}
+
+	Script 192 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Lordofheresy", 3, 998);
+}
+}
+
+	Script 193 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Pyrodemon", 3, 998);
+}
+}
+
+	Script 102 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("hellsapprentice", 3, 998);
+}
+}
+
+	Script 103 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("annihilator", 3, 998);
+}
+}
+
+	Script 104 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdemon", 3, 998);
+}
+}
+
+	Script 105 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cardinal", 3, 998);
+}
+}
+
+	Script 106 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("D3cyberdemon", 3, 998);
+}
+}
+
+	Script 107 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("superdemon", 3, 998);
+}
+}
+
+	Script 108 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("thamuz", 3, 998);
+}
+}
+
+	Script 109 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdemon64", 3, 998);
+}
+}
+
+	Script 110 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("demolisher", 3, 998);
+}
+}
+
+	Script 111 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("spidermastermind", 3, 998);
+}
+}
+
+	Script 112 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cybermastermind", 3, 998);
+}
+}
+
+	Script 113 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("insanityarachnophyte", 3, 998);
+}
+}
+
+	Script 114 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("insanityspider", 3, 998);
+}
+}
+
+	Script 115 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("supremefiend", 3, 998);
+}
+}
+
+	Script 116 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("arachnophyte", 3, 998);
+}
+}
+
+	Script 118 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("traductus", 3, 998);
+}
+}
+
+	Script 119 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zedek", 3, 998);
+}
+}
+
+	Script 120 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Menelkir", 3, 998);
+}
+}
+
+	Script 121 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Wyvern2", 3, 998);
+}
+}
+
+	Script 122 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Korax2", 3, 998);
+}
+}
+
+	Script 123 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("infernodemon", 3, 998);
+}
+}
+
+	Script 124 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("heresiarch2", 3, 998);
+}
+}
+
+	Script 125 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Avatar", 3, 998);
+}
+}
+
+
+	Script 128 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("chaosWyvern", 3, 998);
+}
+}
+
+	Script 130 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Minotaur2", 3, 998);
+}
+}
+
+	Script 131 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("dsparil2", 3, 998);
+}
+}
+
+	Script 132 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("icelich", 3, 998);
+}
+}
+
+	Script 133 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ironlich2", 3, 998);
+}
+}
+
+	Script 134 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Metalhead", 3, 998);
+}
+}
+
+	Script 135 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("furylich", 3, 998);
+}
+}
+
+	Script 137 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Darkinquisitor", 3, 998);
+}
+}
+
+	Script 138 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("entityboss1", 3, 998);
+}
+}
+
+	Script 139 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("inquisitor1", 3, 998);
+}
+}
+
+	Script 140 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Loremaster1", 3, 998);
+}
+}
+
+	Script 141 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Paladin", 3, 998);
+}
+}
+
+	Script 142 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Strifebishop2", 3, 998);
+}
+}
+
+	Script 143 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Motherdemon", 3, 998);
+}
+}
+
+	Script 144 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Fallen", 3, 998);
+}
+}
+
+	Script 147 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cacoking", 3, 998);
+}
+}
+
+	Script 148 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DEoverlord", 3, 998);
+}
+}
+
+	Script 149 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Gaguuro", 3, 998);
+}
+}
+
+	Script 180 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Helemental", 3, 998);
+}
+}
+
+	Script 181 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Invertedcaco", 3, 998);
+}
+}
+
+	Script 182 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Jadebaby", 3, 998);
+}
+}
+
+	Script 183 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Sewercacodemon", 3, 998);
+}
+}
+
+	Script 184 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Steelcacodemon", 3, 998);
+}
+}
+
+
+	Script 185 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snowcacodemonboss", 3, 998);
+}
+}
+
+	Script 186 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BigInfernalSpider", 3, 998);
+}
+}
+
+	Script 187 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cheogh", 3, 998);
+}
+
+
+}	Script 188 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilDoomguy3", 3, 998);
+}
+}
+
+	Script 189 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Evolutionarybaron", 3, 998);
+}
+}
+
+
+	Script 190 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Gatekeeper", 3, 998);
+}
+}
+
+	Script 191 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Moloch", 3, 998);
+}
+}
+
+	Script 162 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SourceGuardian", 3, 998);
+}
+}
+
+	Script 165 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hammerhound", 3, 998);
+}
+}
+
+	Script 166 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hansgrosse01", 3, 998);
+}
+}
+
+	Script 167 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hellsbattery", 3, 998);
+}
+}
+
+	Script 168 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Mechademon", 3, 998);
+}
+}
+
+	Script 169 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("queen", 3, 998);
+}
+}
+
+	Script 170 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Scourge", 3, 998);
+}
+}
+
+	Script 171 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zardaz", 3, 998);
+}
+}
+
+	Script 172 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("evilknight", 3, 998);
+}
+}
+
+
+	Script 173 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Heavenguard", 3, 998);
+}
+}
+
+	Script 174 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Heavenguardboss", 3, 998);
+}
+}
+
+	Script 175 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("thor", 3, 998);
+}
+}
+
+	Script 176 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Vampire", 3, 998);
+}
+}
+
+	Script 177 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Paingasm", 3, 998);
+}
+}
+	Script 197 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("tchernobog", 3, 998);
+}
+}
+
+	Script 200 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbot1", 3, 998);
+}
+}
+
+	Script 201 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbot2", 3, 998);
+}
+}
+
+	Script 207 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Devilform1", 3, 998);
+}
+}
+
+	Script 209 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("MotherdemonO", 3, 998);
+}
+}
+
+	Script 232 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Hitler01", 3, 998);
+}
+}
+
+	Script 233 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SilverAnnihilator", 3, 998);
+}
+}
+
+	Script 235 (void)         ////Bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("CacoDad", 3, 998);
+}
+}
+
+	Script 236 (void)         ////Bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellPatriarch", 3, 998);
+}
+}
+
+	Script 239 (void)         ////Bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Storm", 3, 998);
+}
+}
+
+	Script 241 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("gretelgrosse", 3, 998);
+}
+}
+
+	Script 249 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Schabbs", 3, 998);
+}
+}
+
+	Script 250 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Priest", 3, 998);
+}
+}
+
+	Script 251 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DESentinel", 3, 998);
+}
+}
+
+	Script 252 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Disciple", 3, 998);
+}
+}
+
+	Script 253 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Azazel", 3, 998);
+}
+}
+
+	Script 254 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("incubus", 3, 998);
+}
+}
+
+	Script 255 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Greaterincubus", 3, 998);
+}
+}
+
+	Script 126 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Ultimaspider", 3, 998);
+}
+}
+
+
+	Script 145 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Dominator", 3, 998);
+}
+}
+
+	Script 178 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Conqueror", 3, 998);
+}
+}
+
+
+	Script 40 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Maephisto", 3, 998);
+}
+}
+
+	Script 151 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Uzombiecacodemon", 3, 998);
+}
+}
+
+	Script 152 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberarach", 3, 998);
+}
+}
+
+	Script 153 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("cyberdestroyer", 3, 998);
+}
+}
+
+	Script 160 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("incarnate", 3, 998);
+}
+}
+
+
+	Script 161 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("RotWraith", 3, 998);
+}
+}
+
+	Script 213 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("zombiecacodemon", 3, 998);
+}
+}
+
+	Script 256 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Aracnorbqueen", 3, 998);
+}
+}
+
+	Script 257 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DeepOne", 3, 998);
+}
+}
+
+	Script 259 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Scanner2", 3, 998);
+}
+}
+
+	Script 261 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DestructionImp", 3, 998);
+}
+}
+
+	Script 264 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilCorvus", 3, 998);
+}
+}
+
+	Script 265 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Tranarch", 3, 998);
+}
+}
+
+
+	Script 266 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Ractus", 3, 998);
+}
+}
+
+	Script 267 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Zerox", 3, 998);
+}
+}
+
+	Script 268 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cronus", 3, 998);
+}
+}
+
+	Script 269 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Phobos", 3, 998);
+}
+}
+
+	Script 270 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cerberus", 3, 998);
+}
+}
+
+	Script 271 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("PoisonWizard", 3, 998);
+}
+}
+
+
+	Script 272 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FireWizard", 3, 998);
+}
+}
+
+	Script 273 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("IceMage", 3, 998);
+}
+}
+
+	Script 288 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FlemBomination1", 3, 998);
+}
+}
+
+	Script 289 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Maximus1", 3, 998);
+}
+}
+
+	Script 290 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snotfolus1", 3, 998);
+}
+}
+
+	Script 296 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EvilStrifeguy", 3, 998);
+}
+}
+
+	Script 306 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ArachnotronMK2", 3, 998);
+}
+}
+
+	Script 307 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbaron", 3, 998);
+}
+}
+
+	Script 308 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberimp", 3, 998);
+}
+}
+
+	Script 309 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberborgm", 3, 998);
+}
+}
+
+	Script 310 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberbruiser", 3, 998);
+}
+}
+
+
+	Script 311 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Doomedimp", 3, 998);
+}
+}
+
+	Script 312 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("EntitySlave", 3, 998);
+}
+}
+
+	Script 313 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("StrifeTemplar", 3, 998);
+}
+}
+
+	Script 314 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Terminator", 3, 998);
+}
+}
+
+	Script 315 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SuperDeepone", 3, 998);
+}
+}
+
+	Script 328 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Spidermastermind64", 3, 998);
+}
+}
+
+	Script 297 (void)         ////bad
+{
+	SpawnSpotfacing ("Eyesore", 4, 989);
+	delay(500);
+}
+
+	Script 298 (void)         ////bad
+{
+	SpawnSpotfacing ("SuperBabyCacodemon", 5, 989);
+	delay(500);
+}
+
+	Script 299 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("MegaEyesore", 6, 998);
+}
+}
+
+	Script 301 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DevilForm1", 3, 998);
+}
+}
+
+	Script 302 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DevilForm2", 3, 998);
+}
+}
+
+	Script 303 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DevilForm3", 3, 998);
+}
+}
+
+	Script 304 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DevilForm4", 3, 998);
+}
+}
+
+	Script 305 (void)         ////bad
+{
+	SpawnSpotfacing ("Eyesore", 155, 989);
+	delay(1000);
+}
+
+	Script 335 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("StarSpawn", 3, 998);
+}
+}
+
+	Script 336 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("CaptainolRed", 3, 998);
+}
+}
+
+
+	Script 337 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("DarkFaith", 3, 998);
+}
+}
+
+	Script 338 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyberdemolisher", 3, 998);
+}
+}
+
+	Script 339 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Triton", 3, 998);
+}
+}
+
+	Script 358 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FlameCacodemon", 3, 998);
+}
+}
+
+	Script 360 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Arachnotronmk2", 3, 998);
+}
+}
+
+	Script 362 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Deceptionist", 3, 998);
+}
+}
+
+	Script 363 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cyborgm", 3, 998);
+}
+}
+
+	Script 389 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Cacaroo", 3, 998);
+}
+}
+
+	Script 391 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellWarrior", 3, 998);
+}
+}
+
+	Script 393 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("HellWarriorOmega", 3, 998);
+}
+}
+
+	Script 395 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("ScorpionMastermind", 3, 998);
+}
+}
+
+	Script 397 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BlueAnnihilator", 3, 998);
+}
+}
+
+	Script 399 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("BliZzarddemon", 3, 998);
+}
+}
+
+	Script 400 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Icedemon", 3, 998);
+}
+}
+
+	Script 401 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("IceGolem", 3, 998);
+}
+}
+
+
+	Script 404 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("FrozenCacodemon", 3, 998);
+}
+}
+
+	Script 407 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SnowCacodemon", 3, 998);
+}
+}
+
+	Script 157 (void)         ////bad
+{
+setfont("BIGFONT");
+hudmessageBold(s:"Map14 bosses Mission!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+ACS_terminate(210, 0);
+ACS_terminate(263, 0);
+Thing_Remove(982);
+	delay(150);
+hudmessageBold(s:"icon of sin!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(30);
+	SpawnSpotfacing ("iconofsin", 132, 982);
+ ACS_Execute(258, 0, 0, 0, 0);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+delay(100);
+hudmessageBold(s:"Demon Heart!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+ACS_terminate(263, 0); 
+	delay(100);
+	SpawnSpotfacing ("DemonHeart", 136, 982);
+ ACS_terminate(258, 0);
+ 	delay(20);
+ ACS_Execute(260, 0, 0, 0, 0);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+	
+{
+ 	delay(20);
+}
+delay(30);
+setfont("BIGFONT");
+hudmessageBold(s:"Map 14 bosses killed! Mission Complete!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	ACS_terminate(263, 0);
+ delay(30);
+ACS_terminate(260, 0);
+}
+
+	Script 258 (void)  // monster spawner for icon of sin
+{ 	
+Delay(400);
+SpawnSpotfacing ("spawnfire", 133, 983);
+SpawnSpotfacing ("incubus", 133, 983);
+SpawnSpotfacing ("guardian", 135, 983);
+Delay(400);
+SpawnSpotfacing ("spawnfire", 134, 983);
+SpawnSpotfacing ("Greaterincubus", 134, 983);
+SpawnSpotfacing ("guardian", 135, 983);
+Delay(400);
+SpawnSpotfacing ("spawnfire", 134, 983);
+SpawnSpotfacing ("vampire", 134, 983);
+SpawnSpotfacing ("guardian", 135, 983);
+Delay(400);
+SpawnSpotfacing ("spawnfire", 133, 983);
+SpawnSpotfacing ("disciple", 133, 983);
+SpawnSpotfacing ("guardian", 135, 983);
+Delay(150);
+Restart;
+}
+
+	Script 260 (void)  // monster spawner for icon of sin
+{ 	
+Delay(300);
+SpawnSpotfacing ("spawnfire", 133, 983);
+SpawnSpotfacing ("incubus", 133, 983);
+Delay(300);
+SpawnSpotfacing ("spawnfire", 134, 983);
+SpawnSpotfacing ("Greaterincubus", 134, 983);
+Delay(300);
+SpawnSpotfacing ("spawnfire", 134, 983);
+SpawnSpotfacing ("cyberdemon", 134, 983);
+Delay(300);
+SpawnSpotfacing ("spawnfire", 133, 983);
+SpawnSpotfacing ("annihilator", 133, 983);
+Delay(150);
+Restart;
+}
+
+	Script 210 (void)         ////bad
+{
+setfont("BIGFONT");
+hudmessageBold(s:"Final Bosses!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+ACS_terminate(157, 0);
+ACS_terminate(258, 0);
+ACS_terminate(263, 0); 
+Thing_Remove(983);
+Thing_Remove(982);
+	delay(150);
+hudmessageBold(s:"Devils Double 1!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(30);
+	SpawnSpotfacing ("Devilform1", 137, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+	delay(100);
+ACS_terminate(263, 0); 
+setfont("BIGFONT");
+hudmessageBold(s:"Devils Double 2!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(70);
+	SpawnSpotfacing ("Devilform2", 137, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+delay(100);
+ACS_terminate(263, 0); 
+setfont("BIGFONT");
+hudmessageBold(s:"Devils Double 3!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(70);
+	SpawnSpotfacing ("Devilform3", 137, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+	delay(100);
+ACS_terminate(263, 0); 
+setfont("BIGFONT");
+hudmessageBold(s:"Devils Double 4!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(70);
+	SpawnSpotfacing ("Devilform4", 137, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+	delay(100);
+ACS_terminate(263, 0); 
+setfont("BIGFONT");
+hudmessageBold(s:"The Devil!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(70);
+	SpawnSpotfacing ("Devilform5", 137, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+delay(30);
+setfont("BIGFONT");
+hudmessageBold(s:"Devils have been killed! Mission Complete!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	ACS_terminate(263, 0);
+ delay(30);
+}
+
+	Script 325 (void)         ////bad
+{
+setfont("BIGFONT");
+hudmessageBold(s:"Demortrix Mission!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+ACS_terminate(210, 0);
+ACS_terminate(263, 0);
+ACS_terminate(157, 0);
+ACS_terminate(258, 0);
+Thing_Remove(983);
+Thing_Remove(982);
+	delay(150);
+hudmessageBold(s:"Final Boss Demortrix!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	delay(30);
+	SpawnSpotfacing ("Demortrix", 157, 982);
+ 	delay(20);
+ACS_Execute(263, 0, 0, 0, 0); 
+ 	delay(20);
+ACS_Execute(262, 0, 0, 0, 0); 
+	while (thingcount(0, 982)) 
+{
+ 	delay(20);
+}
+
+delay(30);
+setfont("BIGFONT");
+hudmessageBold(s:"Demortrix destroyed mission complete!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+	ACS_terminate(263, 0);
+ delay(30);
+}
+
+	Script 117 (void)         ////Bad
+{
+	delay(10);
+	SpawnSpotfacing ("Cacodemon", 103, 992);
+	SpawnSpotfacing ("Bishop", 104, 992);
+	SpawnSpotfacing ("Arachnotron", 105, 992);
+	SpawnSpotfacing ("Demon3", 106, 992);
+  SpawnSpotfacing ("Demon4", 107, 992);
+  SpawnSpotfacing ("Babycacodemon", 108, 992);
+  SpawnSpotfacing ("Wizard2", 109, 992);
+  SpawnSpotfacing ("Baronofhell", 110, 992);
+  SpawnSpotfacing ("Mummy1", 111, 992);
+  SpawnSpotfacing ("Darklostsoul", 112, 992);
+  SpawnSpotfacing ("Hellknight", 113, 992);
+  SpawnSpotfacing ("Fatso", 114, 992);
+  SpawnSpotfacing ("Molochwraith", 115, 992); 
+  SpawnSpotfacing ("Minispider", 116, 992);
+  SpawnSpotfacing ("veryminispider", 117, 992);
+  SpawnSpotfacing ("Smallinfernal", 118, 992);
+  SpawnSpotfacing ("guardian", 119, 992);
+  SpawnSpotfacing ("Spider", 120, 992);
+  SpawnSpotfacing ("Greenspider", 121, 992);
+  SpawnSpotfacing ("Redspider", 122, 992);
+  SpawnSpotfacing ("Iceguy2", 123, 992);
+  delay(1000);
+}
+
+////////remove all switch//////////
+
+			Script 194 (void)
+{
+setfont("BIGFONT");
+hudmessageBold(s:"Arena reset switch engaged!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+delay(10);
+Thing_Remove(989);
+Thing_Remove(999);
+Thing_Remove(998);
+Thing_Remove(997);
+Thing_Remove(992);
+Thing_Remove(983);
+Thing_Remove(982);
+ACS_Terminate(202, 0);
+ACS_Terminate(257, 0);
+ACS_Terminate(203, 0);
+ACS_terminate(258, 0);
+ACS_terminate(260, 0);
+ACS_terminate(157, 0);
+ACS_terminate(299, 0);
+ACS_terminate(263, 0);
+ACS_Terminate(210, 0);
+setmusic ("D_map22");
+delay(200);
+ACS_Execute(202, 0, 0, 0, 0); 
+ACS_Execute(203, 0, 0, 0, 0);
+delay(200);
+}
+
+
+	Script 355 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("demortrix", 151, 999);
+}
+}
+
+	Script 356 (void)         ////good
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("devilform5", 4, 998);
+}
+}
+
+
+////////Boss health multiplier switch//////////
+
+			Script 206 (void)
+{
+setfont("BIGFONT");
+hudmessageBOLD(s:"Boss health multiplier engaged!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+ACS_Execute(204, 0, 0, 0, 0); 
+ACS_Execute(205, 0, 0, 0, 0);
+delay(100);
+}
+
+
+                  script 202 (void) // good boss health
+{
+    setfont("BIGFONT");
+    hudmessageBold(s: "good boss: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Blue, -0.0, -0.75, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+                  script 203 (void) // bad boss health
+{
+    setfont("BIGFONT");
+    hudmessageBold(s: "Bad boss: ", d:GetActorProperty(998, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.65, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+                  script 263 (void) // bad boss health
+{
+    setfont("BIGFONT");
+    hudmessageBold(s: "Monster Health: ", d:GetActorProperty(982, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_black, -0.0, -0.85, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+	Script 204 (void)  // Boss health multiplier for good monsters
+{
+int BossHealthMultiplier = PlayerCount();
+SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * BossHealthMultiplier);
+}
+
+	Script 205 (void)  // Boss health multiplier for Bad monsters
+{
+int BossHealthMultiplier = PlayerCount();
+SetActorProperty(998, APROP_Health, (GetActorProperty (998, APROP_SpawnHealth)) * BossHealthMultiplier);
+}
+
+	Script 262 (void)  // Boss health multiplier for good monsters
+{
+int BossHealthMultiplier = PlayerCount();
+SetActorProperty(982, APROP_Health, (GetActorProperty (982, APROP_SpawnHealth)) * BossHealthMultiplier);
+}
+
+    		script 365 (void)
+	{	
+setmusic ("D_tpt1");
+Delay (3955);
+setmusic ("D_tpt2");
+Delay (1365);
+setmusic ("D_tpt3");
+Delay (1750);
+	}
+    
+        		script 366 (void)
+	{	
+setmusic ("D_BOSS");
+	}
+    
+           script 367 (void)
+	{	
+setmusic ("D_BOSS2");
+	}
+    
+            script 368 (void)
+	{	
+setmusic ("D_MAP01");
+	}
+
+            script 369 (void)
+	{	
+setmusic ("D_MAP02");
+	}
+    
+            script 370 (void)
+	{	
+setmusic ("D_MAP03");
+	}
+    
+            script 371 (void)
+	{	
+setmusic ("D_MAP04");
+	}
+    
+            script 372 (void)
+	{	
+setmusic ("D_MAP05");
+	}
+    
+            script 373 (void)
+	{	
+setmusic ("D_MAP06");
+	}
+    
+            script 374 (void)
+	{	
+setmusic ("D_MAP07");
+	}
+    
+            script 375 (void)
+	{	
+setmusic ("D_MAP08");
+	}
+    
+            script 376 (void)
+	{	
+setmusic ("D_MAP09");
+	}
+    
+            script 377 (void)
+	{	
+setmusic ("D_MAP10");
+	}
+    
+            script 378 (void)
+	{	
+setmusic ("D_MAP11");
+	}
+    
+            script 379 (void)
+	{	
+setmusic ("D_MAP12");
+	}
+    
+            script 380 (void)
+	{	
+setmusic ("D_MAP13");
+	}
+
+            script 381 (void)
+	{	
+setmusic ("D_MAP14");
+	}
+    
+            script 382 (void)
+	{	
+setmusic ("D_MAP15");
+	}
+    
+            script 383 (void)
+	{	
+setmusic ("D_MAP16");
+	}
+    
+            script 384 (void)
+	{	
+setmusic ("D_MAP17");
+	}
+    
+            script 385 (void)
+	{	
+setmusic ("D_MAP18");
+	}
+    
+            script 386 (void)
+	{	
+setmusic ("D_MAP21");
+	}
+    
+                script 387 (void)
+	{	
+SpawnSpotfacing ("CMANA", 8, 0);
+SpawnSpotfacing ("DMANA", 9, 0);
+SpawnSpotfacing ("CombatPack", 10, 0);
+SpawnSpotfacing ("CMANA", 8, 0);
+SpawnSpotfacing ("DMANA", 9, 0);
+SpawnSpotfacing ("CombatPack", 10, 0);
+SpawnSpotfacing ("CMANA", 8, 0);
+SpawnSpotfacing ("DMANA", 9, 0);
+SpawnSpotfacing ("CombatPack", 10, 0);
+SpawnSpotfacing ("CMANA", 8, 0);
+SpawnSpotfacing ("DMANA", 9, 0);
+SpawnSpotfacing ("CombatPack", 10, 0);
+	}
+  
