@@ -3,14 +3,15 @@
 Int Wave = 1;
 Int WellDone = 0;
 
-     Script 1 Enter
+Script 1 Enter
 {
-if (GameType () == GAME_SINGLE_PLAYER)
-{
-            ACS_Execute(2, 0, 0, 0, 0); // Invasion Script Single Player
-}
-Else
+    if (GameType () == GAME_SINGLE_PLAYER)
+    {
+        ACS_Execute(2, 0, 0, 0, 0); // Invasion Script Single Player
+    }
+    Else {
         ACS_Execute(3, 0, 0, 0, 0); // Invasion Script Multiplayer
+    }
 }
 
 Script 3 (void) //Multiplayer Invasion waves
