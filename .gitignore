@@ -1,4 +1,7 @@
 *.wad.bak
 *.pk3.bak
+*.wad.backup*
+*.pk3.backup*
+*.dbs
 /dist/*.pk3
 
