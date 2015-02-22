@@ -1,0 +1,712 @@
+#include "zcommon.acs"
+
+
+
+Int Wave = 1;
+Int WellDone = 0;
+
+
+Script 50 OPEN
+{
+SetActivator(0);
+If (Wave == 1 && WellDone == 0)
+  {
+  // Wave 1
+  WellDone = 1;
+  Acs_Execute (101, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 2 && WellDone == 0)
+  {
+  // Wave 2
+  WellDone = 1;
+  Acs_Execute (102, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 3 && WellDone == 0)
+  {
+  // Wave 3
+  WellDone = 1;
+  Acs_Execute (103, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 4 && WellDone == 0)
+  {
+  // Wave 4
+  WellDone = 1;
+  Acs_Execute (104, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 5 && WellDone == 0)
+  {
+  // Wave 5
+  WellDone = 1;
+  Acs_Execute (105, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 6 && WellDone == 0)
+  {
+  // Wave 6
+  WellDone = 1;
+  Acs_Execute (106, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 7 && WellDone == 0)
+  {
+  // Wave 7
+  WellDone = 1;
+  Acs_Execute (107, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 8 && WellDone == 0)
+  {
+  // Wave 8
+  WellDone = 1;
+  Acs_Execute (108, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 9 && WellDone == 0)
+  {
+  // Wave 9
+  WellDone = 1;
+  Acs_Execute (109, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 10 && WellDone == 0)
+  {
+  // Wave 10
+  WellDone = 1;
+  Acs_Execute (110, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 11 && WellDone == 0)
+  {
+  // Wave 11
+  WellDone = 1;
+  Acs_Execute (111, 0, 0, 0, 0);
+  Delay(10);
+  }
+  If (Wave == 12 && WellDone == 0)
+  {
+  // Wave 12
+  WellDone = 1;
+  Acs_Execute (112, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 13 && WellDone == 0)
+  {
+  // Wave end
+  WellDone = 1;
+  Acs_Execute (113, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 14 && WellDone == 0)
+  {
+  // Wave 14
+  WellDone = 1;
+  Acs_Execute (114, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 15 && WellDone == 0)
+  {
+  // Wave end
+  WellDone = 1;
+  Acs_Execute (115, 0, 0, 0, 0);
+  Delay(10);
+  }
+Delay(35);
+Restart;
+}
+
+Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  Ambientsound("dswelld",255);
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for good monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+
+
+                  script 301 (void) // bosses health
+{
+    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+	script 149 open
+	{	
+        setmusic ("D_map15");
+Scroll_ceiling(24, 0, 16, 10);
+sector_setceilingscale(24, 0, 460, 0, 460);
+	}
+
+//Monster Spawner
+
+Script 101 (Void) // wave 1
+{ 	
+delay (100);
+Setfont("BIGFONT");
+Printbold(s:"\cAThe Graveyard of Chaos \n\n\ckBy\n\n\ckEvilm0nk\n\n\cdMusic by\n\n\cdRise: TheHeartgrinder\n\n\n\n\n\n\n\n");
+delay(200);
+setfont("DOOMFONT");
+hudmessage(s:"The monsters belly was ruptured!!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"This isn't the greatest spot to be either!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 1/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 4, 0);
+SpawnSpotfacing ("Incarnate", 4, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 5, 0);
+SpawnSpotfacing ("zombiecacodemon", 5, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("molochwraith", 6, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 4, 0);
+SpawnSpotfacing ("RotWraith", 4, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("MolochWraith", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 102 (Void) // wave 2
+{ 	
+
+Delay(90);
+SpawnSpotfacing ("TeleportFog", 20, 0);
+SpawnSpotfacing ("Cmana", 20, 0);
+SpawnSpotfacing ("TeleportFog", 21, 0);
+SpawnSpotfacing ("Dmana", 21, 0);
+SpawnSpotfacing ("TeleportFog", 22, 0);
+SpawnSpotfacing ("combatpack", 22, 0);
+setfont("BIGFONT");
+hudmessage(s:"Wave 2/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 4, 0);
+SpawnSpotfacing ("spawnfire", 5, 0);
+SpawnSpotfacing ("rotwraith", 4, 999);
+SpawnSpotfacing ("zombiecacodemon", 5, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("spawnfire", 5, 0);
+SpawnSpotfacing ("molochwraith", 6, 999);
+SpawnSpotfacing ("DarkLostsoul", 5, 999);
+delay (140); 
+SpawnSpotfacing ("spawnfire", 4, 0);
+SpawnSpotfacing ("incarnate", 4, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 103 (Void) // wave 3
+{ 	
+Delay(70);
+setfont("BIGFONT");
+hudmessage(s:"Wave 3/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 5, 0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("MolochWraith", 6, 999);
+SpawnSpotfacing ("darklostsoul", 5, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 4, 0);
+SpawnSpotfacing ("spawnfire", 5, 0);
+SpawnSpotfacing ("incarnate", 4, 999);
+SpawnSpotfacing ("rotwraith", 5, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 104 (Void) // wave 4
+{ 	
+Delay(60);
+SpawnSpotfacing ("TeleportFog", 20, 0);
+SpawnSpotfacing ("TeleportFog", 21, 0);
+SpawnSpotfacing ("TeleportFog", 22, 0);
+SpawnSpotfacing ("Cmana", 20, 0);
+SpawnSpotfacing ("TeleportFog", 21, 0);
+SpawnSpotfacing ("Dmana", 21, 0);
+SpawnSpotfacing ("TeleportFog", 22, 0);
+SpawnSpotfacing ("combatpack", 22, 0);
+setfont("BIGFONT");
+hudmessage(s:"Wave 4/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 7, 0);
+SpawnSpotfacing ("tchernobog", 7, 999);
+Delay(20);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 105 (Void) // wave 5
+{ 	
+Delay(40);
+acs_Terminate(301,0);
+Floor_lowertonearest(8,10);
+setfont("DOOMFONT");
+hudmessage(s:"A gate has opened to another part!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(300);
+setfont("BIGFONT");
+hudmessage(s:"Wave 5/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(90);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("Vampire", 9, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("vampire", 9, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("incarnate", 12, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("Zombiecacodemon", 12, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 106 (Void) // wave 5
+{ 	
+Delay(40);
+setfont("BIGFONT");
+hudmessage(s:"Wave 6/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("Priest", 9, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("vampire", 9, 999);
+Delay(50);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("rotwraith", 12, 999);
+Delay(80);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("Zombiecacodemon", 12, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("cyberdemon", 9, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 107 (Void) // wave 6
+{ 	
+Delay(60);
+SpawnSpotfacing ("TeleportFog", 23, 0);
+SpawnSpotfacing ("TeleportFog", 25, 0);
+SpawnSpotfacing ("TeleportFog", 26, 0);
+SpawnSpotfacing ("Cmana", 23, 0);
+SpawnSpotfacing ("TeleportFog", 25, 0);
+SpawnSpotfacing ("combatpack", 25, 0);
+SpawnSpotfacing ("TeleportFog", 26, 0);
+SpawnSpotfacing ("Medikit4", 26, 0);
+setfont("BIGFONT");
+hudmessage(s:"Wave 7/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("deathknight", 9, 999);
+SpawnSpotfacing ("incarnate", 12, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("superdemon", 9, 999);
+SpawnSpotfacing ("rotwraith", 12, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("darklostsoul", 12, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("Zombiecacodemon", 12, 999);
+Delay(60);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("Zombiecacodemon", 12, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("cyberdemon", 9, 999);
+SpawnSpotfacing ("rotwraith", 12, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 108 (Void) // wave 9
+{ 	
+Delay(80);
+setfont("BIGFONT");
+hudmessage(s:"Wave 8/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 11, 0);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("Cerberus", 11, 999);
+SpawnSpotfacing ("darklostsoul", 12, 0);
+SpawnSpotfacing ("molochwraith", 9, 0);
+Delay(20);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 109 (Void) // wave 10
+{ 	
+Delay(70);
+acs_Terminate(301,0);
+Floor_lowertolowest(13,10);
+setfont("DOOMFONT");
+hudmessage(s:"another door is open!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+SpawnSpotfacing ("TeleportFog", 29, 0);
+SpawnSpotfacing ("Cmana", 29, 0);
+SpawnSpotfacing ("TeleportFog", 28, 0);
+SpawnSpotfacing ("Dmana", 28, 0);
+SpawnSpotfacing ("TeleportFog", 27, 0);
+SpawnSpotfacing ("combatpack", 27, 0);
+SpawnSpotfacing ("TeleportFog", 30, 0);
+SpawnSpotfacing ("Medikit", 30, 0);
+Delay(140);
+setfont("BIGFONT");
+hudmessage(s:"Wave 9/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("zombiecacodemon", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("rotwraith", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("darklostsoul", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("rotwraith", 14, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 110 (Void) // wave 10
+{ 	
+Delay(70);
+SpawnSpotfacing ("TeleportFog", 29, 0);
+SpawnSpotfacing ("Cmana", 29, 0);
+SpawnSpotfacing ("TeleportFog", 28, 0);
+SpawnSpotfacing ("Dmana", 28, 0);
+SpawnSpotfacing ("TeleportFog", 27, 0);
+SpawnSpotfacing ("combatpack", 27, 0);
+SpawnSpotfacing ("TeleportFog", 30, 0);
+SpawnSpotfacing ("Medikit", 30, 0);
+setfont("BIGFONT");
+hudmessage(s:"Wave 10/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("zombiecacodemon", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("rotwraith", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("darklostsoul", 14, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("rotwraith", 14, 999);
+SpawnSpotfacing ("spawnfire", 12, 0);
+SpawnSpotfacing ("zombiecacodemon", 12, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 11, 0);
+SpawnSpotfacing ("rotwraith", 11, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("darklostsoul", 9, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 111 (Void) // wave 9
+{ 	
+Delay(80);
+setfont("BIGFONT");
+hudmessage(s:"Wave 11/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("spawnfire", 15, 0);
+SpawnSpotfacing ("uzombiecacodemon", 15, 999);
+SpawnSpotfacing ("zombiecacodemon", 14, 0);
+Delay(20);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 112 (Void) // wave 12
+{ 	
+Delay(60);
+acs_Terminate(301,0);
+acs_Terminate(6,0);
+Floor_lowertolowest(16,10);
+setfont("DOOMFONT");
+hudmessage(s:"The final door is open, The end of this Dead Land is almost upon us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 12/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("zombiecacodemon", 17, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("rotwraith", 17, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("darklostsoul", 17, 999);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("incarnate", 14, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 113 (Void) // wave 13
+{ 	
+Delay(60);
+acs_Terminate(301,0);
+acs_Terminate(6,0);
+Floor_lowertolowest(16,10);
+setfont("DOOMFONT");
+hudmessage(s:"The final door is open, The end of this Dead Land is almost upon us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 12/14!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("zombiecacodemon", 17, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("rotwraith", 17, 999);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 17, 0);
+SpawnSpotfacing ("Vampire", 17, 999);
+SpawnSpotfacing ("spawnfire", 14, 0);
+SpawnSpotfacing ("darklostsoul", 14, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 114 (Void) // wave 14
+{ 	
+Delay(60);
+setmusic ("D_boss2");
+setfont("DOOMFONT");
+hudmessage(s:"DArk Faith!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 18, 0);
+SpawnSpotfacing ("DarkFaith", 18, 999);
+Delay(20);
+Acs_Execute(301,0);
+Delay(20);
+Acs_Execute(300,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 115 (Void) // wave 9
+{ 	
+Floor_lowertolowest(19,10);
+Delay(100);
+acs_Terminate(301,0);
+acs_Terminate(6,0);
+setfont("DOOMFONT");
+hudmessage(s:"another part of this realm is now accessible through the portal!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+}
+
+Script 2 open // bloodspawner
+{ 	
+Delay(13);
+Spawnspotfacing ("blood",10,0);
+Delay(10);
+Spawnspotfacing ("blood",10,0);
+Delay(19);
+Spawnspotfacing ("blood",10,0);
+Delay(20);
+Spawnspotfacing ("blood",10,0);
+Delay(10);
+Spawnspotfacing ("blood",10,0);
+Delay(40);
+Spawnspotfacing ("blood",10,0);
+delay(30);
+Spawnspotfacing ("blood",10,0);
+Delay(10);
+Spawnspotfacing ("blood",10,0);
+Delay(17);
+Spawnspotfacing ("blood",10,0);
+Delay(30);
+Spawnspotfacing ("blood",10,0);
+Delay(20);
+Spawnspotfacing ("blood",10,0);
+Delay(30);
+Spawnspotfacing ("blood",10,0);
+Delay(10);
+Spawnspotfacing ("blood",10,0);
+Restart;
+}
+  

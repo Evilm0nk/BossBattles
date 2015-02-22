@@ -1,0 +1,1561 @@
+#include "zcommon.acs"
+
+Int Wave = 1;
+Int WellDone = 0;
+
+Script 50 OPEN
+{
+SetActivator(0);
+If (Wave == 1 && WellDone == 0)
+  {
+  // Wave 1
+  WellDone = 1;
+  Acs_Execute (101, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 2 && WellDone == 0)
+  {
+  // Wave 2
+  WellDone = 1;
+  Acs_Execute (102, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 3 && WellDone == 0)
+  {
+  // Wave 3
+  WellDone = 1;
+  Acs_Execute (103, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 4 && WellDone == 0)
+  {
+  // Wave 4
+  WellDone = 1;
+  Acs_Execute (104, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 5 && WellDone == 0)
+  {
+  // Wave 5
+  WellDone = 1;
+  Acs_Execute (105, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 6 && WellDone == 0)
+  {
+  // Wave 6
+  WellDone = 1;
+  Acs_Execute (106, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 7 && WellDone == 0)
+  {
+  // Wave 7
+  WellDone = 1;
+  Acs_Execute (107, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 8 && WellDone == 0)
+  {
+  // Wave 8
+  WellDone = 1;
+  Acs_Execute (108, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 9 && WellDone == 0)
+  {
+  // Wave 9
+  WellDone = 1;
+  Acs_Execute (109, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 10 && WellDone == 0)
+  {
+  // Wave 10
+  WellDone = 1;
+  Acs_Execute (110, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 11 && WellDone == 0)
+  {
+  // Wave 11
+  WellDone = 1;
+  Acs_Execute (111, 0, 0, 0, 0);
+  Delay(10);
+  }
+  If (Wave == 12 && WellDone == 0)
+  {
+  // Wave 12
+  WellDone = 1;
+  Acs_Execute (112, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 13 && WellDone == 0)
+  {
+  // Wave 13
+  WellDone = 1;
+  Acs_Execute (113, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 14 && WellDone == 0)
+  {
+  // Wave 14
+  WellDone = 1;
+  Acs_Execute (114, 0, 0, 0, 0);
+  Delay(10);
+  }
+  If (Wave == 15 && WellDone == 0)
+  {
+  // Wave 15
+  WellDone = 1;
+  Acs_Execute (115, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 16 && WellDone == 0)
+  {
+  // Wave 16
+  WellDone = 1;
+  Acs_Execute (116, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 17 && WellDone == 0)
+  {
+  // Wave 17
+  WellDone = 1;
+  Acs_Execute (117, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 18 && WellDone == 0)
+  {
+  // Wave 18
+  WellDone = 1;
+  Acs_Execute (118, 0, 0, 0, 0);
+  Delay(10);
+  }
+    If (Wave == 19 && WellDone == 0)
+  {
+  // Wave 19
+  WellDone = 1;
+  Acs_Execute (119, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 20 && WellDone == 0)
+  {
+  // Wave 20
+  WellDone = 1;
+  Acs_Execute (120, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 21 && WellDone == 0)
+  {
+  // Wave 21
+  WellDone = 1;
+  Acs_Execute (121, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 22 && WellDone == 0)
+  {
+  // Wave 22
+  WellDone = 1;
+  Acs_Execute (122, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 23 && WellDone == 0)
+  {
+  // Wave 23
+  WellDone = 1;
+  Acs_Execute (123, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 24 && WellDone == 0)
+  {
+  // Wave 24
+  WellDone = 1;
+  Acs_Execute (124, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 25 && WellDone == 0)
+  {
+  // Wave 25
+  WellDone = 1;
+  Acs_Execute (125, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 26 && WellDone == 0)
+  {
+  // Wave 26
+  WellDone = 1;
+  Acs_Execute (126, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 27 && WellDone == 0)
+  {
+  // Wave 27
+  WellDone = 1;
+  Acs_Execute (127, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 28 && WellDone == 0)
+  {
+  // Wave 28
+  WellDone = 1;
+  Acs_Execute (128, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 29 && WellDone == 0)
+  {
+  // Wave 29
+  WellDone = 1;
+  Acs_Execute (129, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 30 && WellDone == 0)
+  {
+  // Wave 30
+  WellDone = 1;
+  Acs_Execute (130, 0, 0, 0, 0);
+  Delay(10);
+  }
+Delay(35);
+Restart;
+}
+
+Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  Ambientsound("dswelld",255);
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for good monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+
+
+                  script 301 (void) // bosses health
+{
+    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+	script 149 open
+	{	
+        setmusic ("D_map18");
+  }
+
+
+//////////////////Green area 1st area//////////////////
+
+script 1 OPEN // Crusher for green area
+	{
+	generic_crusher(1,60,70,1,30);
+	delay(15);
+	generic_crusher(2,50,40,1,30);
+	delay(55);
+	generic_crusher(3,60,60,1,30);
+	delay(30);
+  generic_crusher(4,40,40,1,30);
+	}
+
+script 2 (void) // crusher for green power node
+	{
+	delay(15);
+	generic_crusher(5,50,40,1,30);
+	}
+
+script 4 (void) // Crusher for green area
+	{
+	Ceiling_CrushStop(1);
+	delay(15);
+	Ceiling_CrushStop(2);
+	delay(55);
+	Ceiling_CrushStop(3);
+	delay(30);
+    Ceiling_CrushStop(4);
+	}
+
+script 5 (void) // crusher for green power node
+	{
+	delay(15);
+	Ceiling_CrushStop(5);
+	}
+
+	Script 3 (void)
+{
+delay(75);
+Light_fade(1, 150, 70);
+Light_fade(2, 150, 70);
+Light_fade(3, 150, 70);
+Light_fade(4, 150, 70);
+Light_fade(5, 150, 70);
+Light_fade(7, 150, 70);
+Light_fade(12, 150, 70);
+delay(105);
+Light_fade(1, 50, 70);
+Light_fade(2, 50, 70);
+Light_fade(3, 50, 70);
+Light_fade(4, 50, 70);
+Light_fade(5, 50, 70);
+Light_fade(7, 50, 70);
+Light_fade(12, 50, 70);
+delay(105);
+Light_fade(1, 150, 70);
+Light_fade(2, 150, 70);
+Light_fade(3, 150, 70);
+Light_fade(4, 150, 70);
+Light_fade(5, 150, 70);
+Light_fade(7, 150, 70);
+Light_fade(12, 150, 70);
+delay(105);
+Light_fade(1, 50, 70);
+Light_fade(2, 50, 70);
+Light_fade(3, 50, 70);
+Light_fade(4, 50, 70);
+Light_fade(5, 50, 70);
+Light_fade(7, 50, 70);
+Light_fade(12, 50, 70);
+delay(105);
+Light_fade(1, 150, 70);
+Light_fade(2, 150, 70);
+Light_fade(3, 150, 70);
+Light_fade(4, 150, 70);
+Light_fade(5, 150, 70);
+Light_fade(7, 150, 70);
+Light_fade(12, 150, 70);
+delay(105);
+Light_fade(1, 50, 70);
+Light_fade(2, 50, 70);
+Light_fade(3, 50, 70);
+Light_fade(4, 50, 70);
+Light_fade(5, 50, 70);
+Light_fade(7, 50, 70);
+Light_fade(12, 50, 70);
+delay(105);
+Light_fade(1, 150, 70);
+Light_fade(2, 150, 70);
+Light_fade(3, 150, 70);
+Light_fade(4, 150, 70);
+Light_fade(5, 150, 70);
+Light_fade(7, 150, 70);
+Light_fade(12, 150, 70);
+delay(105);
+Light_fade(1, 80, 60);
+Light_fade(2, 80, 60);
+Light_fade(3, 80, 60);
+Light_fade(4, 80, 60);
+Light_fade(5, 80, 60);
+Light_fade(7, 80, 60);
+Light_fade(12, 80, 60);
+
+}
+
+Script 6 (Void) // monsters defending the green power node
+{ 	
+delay (80);
+SpawnSpotfacing ("Scanner2", 14, 0);
+delay (140);
+SpawnSpotfacing ("Scanner2", 15, 0);
+Restart;
+}
+
+//////////////////Blue area 2nd area//////////////////
+
+script 7 OPEN // Crusher for blue area
+	{
+	generic_crusher(17,60,70,1,30);
+	delay(15);
+	generic_crusher(18,50,40,1,30);
+	delay(55);
+	generic_crusher(19,60,60,1,30);
+	delay(30);
+  generic_crusher(20,40,40,1,30);
+	}
+
+script 8 (void) // crusher for blue power node
+	{
+	delay(15);
+	generic_crusher(26,50,40,1,30);
+	}
+
+Script 9 (Void) // monsters defending the Blue power node
+{ 	
+delay (80);
+SpawnSpotfacing ("Scanner2", 27, 0);
+delay (250);
+SpawnSpotfacing ("Scanner2", 27, 0);
+Restart;
+}
+
+script 10 (void) // Crusher for blue area
+	{
+	Ceiling_CrushStop(17);
+	delay(15);
+	Ceiling_CrushStop(18);
+	delay(55);
+	Ceiling_CrushStop(19);
+	delay(30);
+    Ceiling_CrushStop(20);
+	}
+
+script 11 (void) // crusher for blue power node
+	{
+	delay(15);
+	Ceiling_CrushStop(26);
+	}
+
+
+	Script 12 (void)
+{
+delay(75);
+Light_fade(16, 150, 70);
+Light_fade(17, 150, 70);
+Light_fade(18, 150, 70);
+Light_fade(19, 150, 70);
+Light_fade(20, 150, 70);
+Light_fade(26, 150, 70);
+Light_fade(21, 150, 70);
+delay(105);
+Light_fade(16, 50, 70);
+Light_fade(17, 50, 70);
+Light_fade(18, 50, 70);
+Light_fade(19, 50, 70);
+Light_fade(20, 50, 70);
+Light_fade(21, 50, 70);
+Light_fade(26, 50, 70);
+delay(105);
+Light_fade(16, 150, 70);
+Light_fade(17, 150, 70);
+Light_fade(18, 150, 70);
+Light_fade(19, 150, 70);
+Light_fade(20, 150, 70);
+Light_fade(26, 150, 70);
+Light_fade(21, 150, 70);
+delay(105);
+Light_fade(16, 50, 70);
+Light_fade(17, 50, 70);
+Light_fade(18, 50, 70);
+Light_fade(19, 50, 70);
+Light_fade(20, 50, 70);
+Light_fade(21, 50, 70);
+Light_fade(26, 50, 70);
+delay(105);
+Light_fade(16, 150, 70);
+Light_fade(17, 150, 70);
+Light_fade(18, 150, 70);
+Light_fade(19, 150, 70);
+Light_fade(20, 150, 70);
+Light_fade(26, 150, 70);
+Light_fade(21, 150, 70);
+delay(105);
+Light_fade(16, 80, 60);
+Light_fade(17, 80, 60);
+Light_fade(18, 80, 60);
+Light_fade(19, 80, 60);
+Light_fade(20, 80, 60);
+Light_fade(21, 80, 60);
+Light_fade(26, 80, 60);
+
+}
+
+//////////////////Red area 3rd area//////////////////
+
+script 13 OPEN // Crusher for Red area
+	{
+	generic_crusher(31,60,70,1,30);
+	delay(15);
+	generic_crusher(32,50,40,1,30);
+	delay(55);
+	generic_crusher(33,60,60,1,30);
+	delay(30);
+  generic_crusher(30,40,40,1,30);
+	}
+
+script 14 (void) // crusher for Red power node
+	{
+	delay(15);
+	generic_crusher(34,50,40,1,30);
+	}
+
+Script 15 (Void) // monsters defending the Red power node
+{ 	
+delay (80);
+SpawnSpotfacing ("Scanner2", 41, 0);
+delay (250);
+SpawnSpotfacing ("Scanner2", 42, 0);
+Restart;
+}
+
+script 16 (void) // Crusher for Red area
+	{
+	Ceiling_CrushStop(31);
+	delay(15);
+	Ceiling_CrushStop(32);
+	delay(55);
+	Ceiling_CrushStop(33);
+	delay(30);
+    Ceiling_CrushStop(30);
+	}
+
+script 17 (void) // crusher for Red power node
+	{
+	delay(15);
+	Ceiling_CrushStop(34);
+	}
+
+
+	Script 18 (void)
+{
+delay(75);
+Light_fade(29, 150, 70);
+Light_fade(30, 150, 70);
+Light_fade(31, 150, 70);
+Light_fade(32, 150, 70);
+Light_fade(33, 150, 70);
+Light_fade(34, 150, 70);
+Light_fade(35, 150, 70);
+delay(105);
+Light_fade(29, 50, 70);
+Light_fade(30, 50, 70);
+Light_fade(31, 50, 70);
+Light_fade(32, 50, 70);
+Light_fade(33, 50, 70);
+Light_fade(34, 50, 70);
+Light_fade(35, 50, 70);
+delay(75);
+Light_fade(29, 150, 70);
+Light_fade(30, 150, 70);
+Light_fade(31, 150, 70);
+Light_fade(32, 150, 70);
+Light_fade(33, 150, 70);
+Light_fade(34, 150, 70);
+Light_fade(35, 150, 70);
+delay(105);
+Light_fade(29, 50, 70);
+Light_fade(30, 50, 70);
+Light_fade(31, 50, 70);
+Light_fade(32, 50, 70);
+Light_fade(33, 50, 70);
+Light_fade(34, 50, 70);
+Light_fade(35, 50, 70);
+delay(105);
+Light_fade(29, 150, 70);
+Light_fade(30, 150, 70);
+Light_fade(31, 150, 70);
+Light_fade(32, 150, 70);
+Light_fade(33, 150, 70);
+Light_fade(34, 150, 70);
+Light_fade(35, 150, 70);
+delay(105);
+Light_fade(29, 80, 60);
+Light_fade(30, 80, 60);
+Light_fade(31, 80, 60);
+Light_fade(32, 80, 60);
+Light_fade(33, 80, 60);
+Light_fade(34, 80, 60);
+Light_fade(35, 80, 60);
+
+}
+
+//////////////////Yellow area 4th area//////////////////
+
+script 19 OPEN // Crusher for yellow area
+	{
+	generic_crusher(45,60,70,1,30);
+	delay(15);
+	generic_crusher(46,50,40,1,30);
+	delay(55);
+	generic_crusher(47,60,60,1,30);
+	delay(30);
+  generic_crusher(48,40,40,1,30);
+	delay(30);
+  generic_crusher(49,20,20,1,30);
+	}
+
+script 20 (void) // crusher for Yellow power node
+	{
+	delay(15);
+	generic_crusher(50,50,40,1,30);
+	}
+
+Script 21 (Void) // monsters defending the yellow power node
+{ 	
+SpawnSpotfacing ("Scanner2", 58, 0);
+delay (300);
+Restart;
+}
+
+script 22 (void) // Crusher for yellow area
+	{
+	Ceiling_CrushStop(45);
+	delay(15);
+	Ceiling_CrushStop(46);
+	delay(55);
+	Ceiling_CrushStop(47);
+	delay(30);
+    Ceiling_CrushStop(48);
+	delay(30);
+    Ceiling_CrushStop(49);
+	}
+
+script 23 (void) // crusher for yellow power node
+	{
+	delay(15);
+	Ceiling_CrushStop(50);
+	}
+
+	Script 24 (void)
+{
+delay(75);
+Light_fade(44, 150, 70);
+Light_fade(45, 150, 70);
+Light_fade(46, 150, 70);
+Light_fade(47, 150, 70);
+Light_fade(48, 150, 70);
+Light_fade(49, 150, 70);
+Light_fade(50, 150, 70);
+delay(105);
+Light_fade(44, 50, 70);
+Light_fade(45, 50, 70);
+Light_fade(46, 50, 70);
+Light_fade(47, 50, 70);
+Light_fade(48, 50, 70);
+Light_fade(49, 50, 70);
+Light_fade(50, 50, 70);
+delay(75);
+Light_fade(44, 150, 70);
+Light_fade(45, 150, 70);
+Light_fade(46, 150, 70);
+Light_fade(47, 150, 70);
+Light_fade(48, 150, 70);
+Light_fade(49, 150, 70);
+Light_fade(50, 150, 70);
+delay(105);
+Light_fade(44, 50, 70);
+Light_fade(45, 50, 70);
+Light_fade(46, 50, 70);
+Light_fade(47, 50, 70);
+Light_fade(48, 50, 70);
+Light_fade(49, 50, 70);
+Light_fade(50, 50, 70);
+delay(105);
+Light_fade(44, 150, 70);
+Light_fade(45, 150, 70);
+Light_fade(46, 150, 70);
+Light_fade(47, 150, 70);
+Light_fade(48, 150, 70);
+Light_fade(49, 150, 70);
+Light_fade(50, 150, 70);
+delay(105);
+Light_fade(44, 80, 60);
+Light_fade(45, 80, 60);
+Light_fade(46, 80, 60);
+Light_fade(47, 80, 60);
+Light_fade(48, 80, 60);
+Light_fade(49, 80, 60);
+Light_fade(50, 80, 60);
+
+}
+
+	Script 25 (void)
+{
+delay(105);
+Light_fade(72, 30, 70);
+delay(175);
+Light_fade(72, 176, 70);
+
+}
+
+
+//Monster Spawner
+
+Script 101 (Void) // wave 1
+{ 	
+delay (100);
+Setfont("BIGFONT");
+Printbold(s:"\cAInto the chaos engine \n\n\ckBy\n\n\ckEvilm0nk\n\n\cdMusic by\n\n\cdNevrosia666: (E)Inc. - Machines Spoken\n\n\n\n\n\n\n\n");
+delay(200);
+setfont("DOOMFONT");
+hudmessage(s:"Looks like we have entered into the heart of the chaos Engine!!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"This is what the Magic Barrier Was Guarding!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"The Power Here keeps Hell Portals powered and opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"We must Put an end to the power source and stop Hell from Making New Portals!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 1/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cyborgm", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("CyborgM", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 102 (Void) // wave 2
+{ 	
+delay (60);
+setfont("BIGFONT");
+hudmessage(s:"Wave 2/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cyborgm", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cybruiser", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 103 (Void) // wave 3
+{ 	
+delay (80);
+Floor_lowertonearest(7,10);
+setfont("DOOMFONT");
+hudmessage(s:"A door Has lowered for us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 3/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 8, 0);
+SpawnSpotfacing ("Cyborgm", 8, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("Cybruiser", 9, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 104 (Void) // wave 4
+{ 	
+delay (50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 4/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 8, 0);
+SpawnSpotfacing ("Cyberbaron", 8, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 9, 0);
+SpawnSpotfacing ("Cybruiser", 9, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 8, 0);
+SpawnSpotfacing ("Cyberbaron", 8, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 105 (Void) // wave 5
+{ 	
+delay (50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 5/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 10, 0);
+SpawnSpotfacing ("Inquisitor1", 10, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 106 (Void) // wave 6
+{ 	
+delay (50);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"Now we must destroy the power node to get to the next room!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 6/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("Greenpowernode", 11, 999);
+delay (40); 
+Floor_lowertonearest(5,150);
+delay (40);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(2, 0, 0, 0, 0);
+ACS_Execute(6, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 107 (Void) // wave 7
+{ 	
+delay (55);
+Thing_Remove(13);
+ACS_Execute(3, 0, 0, 0, 0);
+ACS_Execute(4, 0, 0, 0, 0);
+ACS_Execute(5, 0, 0, 0, 0);
+ACS_terminate(6, 0);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(250);
+hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+hudmessage(s:"Lets head back to the main hall!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 7/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("StrifeTemplar", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cybruiser", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 108 (Void) // wave 8
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 8/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("StrifeTemplar", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cyborgm", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+
+Script 109 (Void) // wave 9
+{ 	
+delay (55);
+Floor_lowertonearest(21,10);
+setfont("DOOMFONT");
+hudmessage(s:"Another room has opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 9/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 22, 0);
+SpawnSpotfacing ("StrifeTemplar", 22, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 23, 0);
+SpawnSpotfacing ("Cyborgm", 23, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 110 (Void) // wave 10
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 10/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 22, 0);
+SpawnSpotfacing ("StrifeTemplar", 22, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 23, 0);
+SpawnSpotfacing ("Cybruiser", 23, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 111 (Void) // wave 11
+{ 	
+delay (50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 11/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 24, 0);
+SpawnSpotfacing ("DarkInquisitor", 24, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 112 (Void) // wave 12
+{ 	
+delay (50);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"Anothwe Power Node to Destroy!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 12/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("Bluepowernode", 25, 999);
+delay (40); 
+Floor_lowertonearest(26,150);
+delay (40);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(8, 0, 0, 0, 0);
+ACS_Execute(9, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 113 (Void) // wave 13
+{ 	
+delay (55);
+Thing_Remove(28);
+ACS_Execute(10, 0, 0, 0, 0);
+ACS_Execute(11, 0, 0, 0, 0);
+ACS_Execute(12, 0, 0, 0, 0);
+ACS_terminate(9, 0);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(250);
+hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+hudmessage(s:"Lets head back to the main hall!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 13/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("StrifeTemplar", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cybruiser", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 114 (Void) // wave 14
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 14/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("StrifeTemplar", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cybruiser", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 115 (Void) // wave 15
+{ 	
+delay (55);
+Floor_lowertonearest(35,10);
+setfont("DOOMFONT");
+hudmessage(s:"Another room has opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 15/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 36, 0);
+SpawnSpotfacing ("CyberImp", 36, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 37, 0);
+SpawnSpotfacing ("StrifeTemplar", 37, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 38, 0);
+SpawnSpotfacing ("CyberBaron", 38, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 116 (Void) // wave 16
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 16/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 36, 0);
+SpawnSpotfacing ("CyberImp", 36, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 37, 0);
+SpawnSpotfacing ("StrifeTemplar", 37, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 38, 0);
+SpawnSpotfacing ("Cyborgm", 38, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 117 (Void) // wave 17
+{ 	
+delay (50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 17/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 39, 0);
+SpawnSpotfacing ("Scourge",39, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 118 (Void) // wave 18
+{ 	
+delay (60);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"Another power Node, You know What to DO!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 18/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("Redpowernode", 40, 999);
+delay (40); 
+Floor_lowertonearest(34,150);
+delay (40);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(14, 0, 0, 0, 0);
+ACS_Execute(15, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 119 (Void) // wave 19
+{ 	
+delay (55);
+Thing_Remove(43);
+ACS_Execute(16, 0, 0, 0, 0);
+ACS_Execute(17, 0, 0, 0, 0);
+ACS_Execute(18, 0, 0, 0, 0);
+ACS_terminate(15, 0);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(250);
+hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+hudmessage(s:"Lets head back to the main hall!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 19/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cyberimp", 6, 999);
+delay (100); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("arachnotronmk2", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 120 (Void) // wave 20
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 20/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("StrifeTemplar", 6, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cybruiser", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 121 (Void) // wave 21
+{ 	
+delay (55);
+Floor_lowertonearest(52,10);
+setfont("DOOMFONT");
+hudmessage(s:"Another room has opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 21/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 54, 0);
+SpawnSpotfacing ("arachnotronmk2", 54, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 53, 0);
+SpawnSpotfacing ("StrifeTemplar", 53, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 122 (Void) // wave 22
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 22/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Floor_lowertonearest(5,10);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 54, 0);
+SpawnSpotfacing ("arachnotronmk2", 54, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 53, 0);
+SpawnSpotfacing ("Arachnotron", 53, 999);
+delay (80); 
+SpawnSpotfacing ("spawnfire", 55, 0);
+SpawnSpotfacing ("cybruiser", 55, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 123 (Void) // wave 23
+{ 	
+delay (100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 23/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 56, 0);
+SpawnSpotfacing ("Demolisher",56, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 124 (Void) // wave 24
+{ 	
+delay (70);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"Final PowerNode Before the Next and Final Room!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 24/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("Yellowpowernode", 57, 999);
+delay (40); 
+Floor_lowertonearest(50,150);
+delay (40);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(20, 0, 0, 0, 0);
+ACS_Execute(21, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 125 (Void) // wave 25
+{ 	
+delay (55);
+Thing_Remove(51);
+ACS_Execute(22, 0, 0, 0, 0);
+ACS_Execute(23, 0, 0, 0, 0);
+ACS_Execute(24, 0, 0, 0, 0);
+ACS_terminate(21, 0);
+ACS_terminate(301, 0);
+Floor_lowertonearest(59,10);
+setfont("DOOMFONT");
+hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(250);
+hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+hudmessage(s:"The final door is open to us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(140);
+setfont("BIGFONT");
+hudmessage(s:"Wave 25/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("cYBORGM", 6, 999);
+delay (100); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("arachnotron", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 126 (Void) // wave 26
+{ 	
+delay (55);
+setfont("BIGFONT");
+hudmessage(s:"Wave 26/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 60, 0);
+SpawnSpotfacing ("Terminator", 60, 999);
+delay (100); 
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("arachnotronmk2", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 127 (Void) // wave 27
+{ 	
+delay (50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 27/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 61, 0);
+SpawnSpotfacing ("Cyberdemolisher",61, 999);
+SpawnSpotfacing ("spawnfire", 6, 0);
+SpawnSpotfacing ("Cyberimp", 6, 0);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 128 (Void) // wave 28
+{ 	
+delay (55);
+ACS_terminate(301, 0);
+Floor_lowertoLowest(62,10);
+setfont("DOOMFONT");
+hudmessage(s:"The final area is finally open to us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+setfont("BIGFONT");
+hudmessage(s:"Wave 28/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 63, 0);
+SpawnSpotfacing ("cYBORGM", 63, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 64, 0);
+SpawnSpotfacing ("arachnotronmk2", 64, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 65, 0);
+SpawnSpotfacing ("Cyberimp", 65, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 66, 0);
+SpawnSpotfacing ("Cyberbaron", 66, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 67, 0);
+SpawnSpotfacing ("Cyberbruiser", 67, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 68, 0);
+SpawnSpotfacing ("strifetemplar", 68, 999);
+delay (60); 
+SpawnSpotfacing ("spawnfire", 69, 0);
+SpawnSpotfacing ("Arachnotron", 69, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 129 (Void) // wave 29
+{ 	
+delay (55);
+setfont("DOOMFONT");
+hudmessage(s:"Seems like this beast is The FInal Power To This place!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+Thing_Remove(71);
+ACS_Execute(25, 0, 0, 0, 0);
+Delay(95);
+hudmessage(s:"ehh the lights are getting dim!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(70);
+SpawnSpotfacing ("spawnfire", 74, 0);
+Thing_Remove(73);
+setfont("BIGFONT");
+hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(40);
+setmusic ("D_Boss2");
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("spawnfire", 70, 0);
+SpawnSpotfacing ("Aracnorbqueen",70, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0);
+ACS_Execute(301, 0, 0, 0, 0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+Script 130 (Void) // wave 30
+{ 	
+delay (55);
+ACS_terminate(301, 0);
+setfont("DOOMFONT");
+hudmessage(s:"Finally All the power to Hells Portals Are shut off for good!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(160);
+hudmessage(s:"Now no Hell Portal Can ever invade Heaven!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+exit_normal(0);
+}  

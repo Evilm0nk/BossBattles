@@ -1,0 +1,452 @@
+#include "zcommon.acs"
+
+Int Wave = 1;
+Int WellDone = 0;
+
+Script 50 (VOID)
+{
+SetActivator(0);
+If (Wave == 1 && WellDone == 0)
+  {
+  // Wave 1
+  WellDone = 1;
+  Acs_Execute (101, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 2 && WellDone == 0)
+  {
+  // Wave 2
+  WellDone = 1;
+  Acs_Execute (102, 0, 0, 0, 0);
+  Delay(10);
+  }
+
+Delay(35);
+Restart;
+}
+
+ Script 51 (void) //wave 1 red skull key
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessageBold(s:"Battle For red skull key begins now, Infernodemon!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("Infernodemon", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+
+	delay (100); 
+  Ambientsound("dswelld",255);
+ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"Red skull key now obtainable!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(34,10);
+}
+
+ Script 52 (void) //wave 2 redkeycard
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessagebold(s:"Battle For red keycard begins now, Hellpatarairch!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("hellpatriarch", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+	delay (100);
+Ambientsound("dswelld",255);
+ ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"Red keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(37,10);
+}
+
+ Script 53 (void) //wave 3 blue key card
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessagebold(s:"Battle For blue keycard begins now, evolutionarybaron!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("evolutionarybaron", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+
+	delay (100);
+  Ambientsound("dswelld",255);
+ ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"Blue keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(43,10);
+}
+
+ Script 54 (void) //wave 4 yellowskull key
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessagebold(s:"Battle For yellow skull key begins now, scourge!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("scourge", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+	delay (100);
+  Ambientsound("dswelld",255);
+ ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"yellow skull key now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(48,10);
+}
+
+ Script 55 (void) //wave 5 blueskull key
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessagebold(s:"Battle For blue skull key begins now, korax!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("korax2", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+	while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+	delay (100);
+Ambientsound("dswelld",255);
+ ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"blue skull key now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(51,10);
+}
+
+ Script 56 (void) //wave 6 yellow keycard
+{
+	delay (100);
+setfont("DOOMFONT");
+hudmessagebold(s:"Battle For yellow keycard begins now, Moloch!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+Ambientsound("Dsfight1",255);
+HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpotfacing ("moloch", 33, 999);
+Delay(40);
+acs_execute (300,0,0,0,0);
+acs_execute (21,0,0,0,0);
+Delay(40);
+while (thingcount(0, 999)) 
+	{ 
+		delay (35); 
+	}
+delay (100);
+  Ambientsound("dswelld",255);
+ ACS_Terminate(21, 0);
+setfont("DOOMFONT");
+hudmessagebold(s:"yellow keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+floor_lowertolowest(26,10);
+}
+
+Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  Ambientsound("dswelld",255);
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	script 149 open
+	{	
+		setmusic ("D_map09");
+		
+	}
+
+	script 151 open
+	{	
+  Delay(60);
+	SpawnProjectile (40,"Hellshot2",185,250,0,0,0);
+  SpawnProjectile (45,"Hellshot2",0,250,0,0,0);
+  Delay(70);
+  SpawnProjectile (41,"Hellshot2",0,250,0,0,0);
+  SpawnProjectile (46,"Hellshot2",130,250,0,0,0); 
+  Restart;
+	}
+
+script 1 OPEN
+	{
+	light_glow(5,176,96,35);
+	generic_crusher(6,45,10,0,1);
+	sector_setfloorpanning(18,30,30,47,47);
+	sector_setfloorpanning(19,31,31,31,31);
+	sector_setfloorpanning(20,30,30,0,0);
+	sector_setfloorpanning(21,47,47,15,15);
+	sector_setfloorpanning(26,47,47,17,17);
+	sector_setdamage(23,255,0);
+	sector_setfade(24,255,0,0);
+	sector_setfloorpanning(25,40,40,40,40);
+	}
+
+
+script 2 (void)
+	{
+	floor_lowerbyvaluetimes8(7,40,32);
+	changefloor(7,"LAVA1");
+	}
+
+script 3 OPEN
+	{
+	generic_crusher(12,64,64,0,500);
+	delay(105);
+	generic_crusher(13,64,64,0,500);
+	delay(75);
+	generic_crusher(14,64,64,0,500);
+	}
+
+script 4 OPEN
+	{
+	generic_crusher(9,30,30,0,500);
+	delay(125);
+	generic_crusher(10,30,30,0,500);
+	delay(125);
+	generic_crusher(11,30,30,0,500);
+	}
+
+script 5 (void)
+	{
+	thing_spawn(13,T_cyberdemon,0,99);
+	thing_spawn(10,T_cyberdemon,0,99);
+	thing_spawn(14,T_cyberdemon,0,99);
+	}
+	
+Script 101 (void) // wave 1
+{ 	
+Delay (10);
+Ambientsound("Dstalk8",255);
+PRINTBOLD (s:"Finally ANother Guardian Shows Itself!");
+Delay (100);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+setmusic ("D_boss");
+SpawnSpot ("Conqueror", 24, 999);
+Delay(20);
+ACS_Execute(300, 0, 0, 0, 0); //Multiplier
+ ACS_Execute(21, 0, 0, 0, 0); //health meter
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+
+script 102 (void)
+	{
+	Delay(100);
+	PrintBold(s:"Our Battle is soon over!");
+	delay (100);
+ ACS_Terminate(21, 0);
+delay(150);
+exit_normal(0);
+}
+	
+	Script 300 (void)  // popsoap Boss health multiplier for good monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());}
+
+
+ script 21 (void) // conquerors health
+{
+    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.55, 1.0, 0.09, 0);
+    delay(const:35);
+    restart;
+    
+}
+    
+	Script 111 (void)
+{
+	delay (10);
+	Thing_Remove(300);
+	delay (5);
+SpawnSpotfacing ("superdemon", 301, 0);
+}
+
+
+script 397 open
+{
+delay (100);
+Ambientsound("Dsmonst2",255);
+Setfont("BIGFONT");
+Printbold(s:"\cAHell Grounds \n\n\ckBy\n\n\ckFlame46mon\n\n\cdMusic by\n\n\cdMagnumKlutch: Nope ft DeadStringer\n\n\n\n\n\n\n\n");
+delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"Looks as though We have found A Dark Castle in this Dreaded Place!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+Ambientsound("Dstalk0",255);
+setfont("DOOMFONT");
+hudmessage(s:"Lets See Where this leads!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+}
+
+script 129 (void)
+	{
+	PrintBold(s:"Main front Gate open");
+	delay (1);
+	Floor_LowerToLowest(28,10);
+	}
+	
+		Script 400 open
+{
+ Sector_SetDamage(7, 100, 20);
+  Sector_SetDamage(29, 999, 20);
+}
+
+Script 145 OPEN
+{
+
+delay(500);
+AmbientSound("dsThund", 127);
+delay(10);
+Light_ChangeToValue(2, 255);
+Light_ChangeToValue(23, 255);
+Light_ChangeToValue(27, 255);
+Light_ChangeToValue(31, 255);
+Light_ChangeToValue(50, 255);
+Light_ChangeToValue(30, 255);
+Light_ChangeToValue(32, 255);
+Light_ChangeToValue(28, 255);
+Light_ChangeToValue(1, 255);
+delay(10);
+Light_fade(2, 200, 200);
+Light_fade(23, 200, 200);
+Light_fade(27, 200, 200);
+Light_fade(32, 200, 200);
+Light_fade(31, 200, 200);
+Light_fade(50, 200, 200);
+Light_fade(30, 200, 200);
+Light_fade(28, 200, 200);
+Light_fade(1, 200, 200);
+delay(1000);
+
+
+Restart;
+
+
+}
+
+Script 164 OPEN
+{
+SectorDamage (32, 20, "fire", "", DAMAGE_PLAYERS);
+delay(5);
+Restart;
+}
+
+script 165 (void)
+	{
+	thing_spawn(15,T_yellowskullkey,0,99);
+  delay(2000);
+ Restart;
+	}
+	
+	script 166 (void)
+	{
+	thing_spawn(16,T_blueskullkey,0,99);
+ delay(2000);
+ Restart;
+
+	}
+	
+	script 167 (void)
+	{
+	thing_spawn(17,T_redskullkey,0,99);
+ delay(2000);
+ Restart;
+
+	}  

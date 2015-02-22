@@ -1,0 +1,648 @@
+#include "zcommon.acs"
+
+Int Wave = 1;
+Int WellDone = 0;
+
+Script 50 OPEN
+{
+SetActivator(0);
+If (Wave == 1 && WellDone == 0)
+  {
+  // Wave 1
+  WellDone = 1;
+  Acs_Execute (101, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 2 && WellDone == 0)
+  {
+  // Wave 2
+  WellDone = 1;
+  Acs_Execute (102, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 3 && WellDone == 0)
+  {
+  // Wave 3
+  WellDone = 1;
+  Acs_Execute (103, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 4 && WellDone == 0)
+  {
+  // Wave 4
+  WellDone = 1;
+  Acs_Execute (104, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 5 && WellDone == 0)
+  {
+  // Wave 5
+  WellDone = 1;
+  Acs_Execute (105, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 6 && WellDone == 0)
+  {
+  // Wave 6
+  WellDone = 1;
+  Acs_Execute (106, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 7 && WellDone == 0)
+  {
+  // Wave 7
+  WellDone = 1;
+  Acs_Execute (107, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 8 && WellDone == 0)
+  {
+  // Wave 8
+  WellDone = 1;
+  Acs_Execute (108, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 9 && WellDone == 0)
+  {
+  // Wave 9
+  WellDone = 1;
+  Acs_Execute (109, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 10 && WellDone == 0)
+  {
+  // Wave 10
+  WellDone = 1;
+  Acs_Execute (110, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 11 && WellDone == 0)
+  {
+  // Wave 11
+  WellDone = 1;
+  Acs_Execute (111, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 12 && WellDone == 0)
+  {
+  // Wave 12
+  WellDone = 1;
+  Acs_Execute (112, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 13 && WellDone == 0)
+  {
+  // Wave 13
+  WellDone = 1;
+  Acs_Execute (113, 0, 0, 0, 0);
+  Delay(10);
+  }
+If (Wave == 14 && WellDone == 0)
+  {
+  // Wave 14
+  WellDone = 1;
+  Acs_Execute (114, 0, 0, 0, 0);
+  Delay(10);
+  }
+Delay(35);
+Restart;
+}
+
+	script 149 open
+	{	
+		setmusic ("D_map08");
+		
+	}
+
+	
+	Script 100 OPEN
+{
+Scroll_ceiling(24, 0, 16, 10);
+sector_setceilingscale(24, 0, 460, 0, 460);
+
+}
+
+Script 44 OPEN
+{
+SectorDamage (3, 20, "fire", "", DAMAGE_PLAYERS);
+delay(5);
+Restart;
+}
+
+script 1 OPEN
+{
+	sector_setColor(2,255,64,64);
+}
+
+	script 6 (void)      //multi minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<3; i++)
+	{
+
+
+
+	thing_projectile (50,T_bfgshot,450,260,0);
+	delay(5);
+	thing_projectile (51,T_bfgshot,450,260,0);
+	delay(5);
+	thing_projectile (52,T_bfgshot,450,260,0);
+	delay(5);
+	thing_projectile (53,T_bfgshot,450,260,0);
+	delay(5);
+	thing_projectile (54,T_bfgshot,450,260,0);
+	delay(5);
+	thing_projectile (55,T_bfgshot,450,260,0);
+	delay(5);
+
+
+
+	}
+
+
+delay (300);
+}
+
+script 8 (void)      //Rocket minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<3; i++)
+	{
+
+
+
+	thing_projectile (56,T_bfgshot,515,260,0);
+	delay(5);
+	thing_projectile (57,T_bfgshot,515,260,0);
+	delay(5);
+	thing_projectile (58,T_bfgshot,515,260,0);
+	delay(5);
+	thing_projectile (59,T_bfgshot,515,260,0);
+	delay(5);
+	thing_projectile (60,T_bfgshot,515,260,0);
+	delay(5);
+	thing_projectile (61,T_bfgshot,515,260,0);
+	delay(5);
+
+
+
+	}
+
+
+delay (300);
+}
+
+script 12 (void)      //plasma minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<2; i++)
+	{
+
+
+
+	thing_projectile (62,T_bfgshot,130,260,0);
+	delay(5);
+	thing_projectile (63,T_bfgshot,130,260,0);
+	delay(5);
+	thing_projectile (64,T_bfgshot,130,260,0);
+	delay(5);
+	thing_projectile (65,T_bfgshot,130,260,0);
+	delay(5);
+	thing_projectile (66,T_bfgshot,130,260,0);
+	delay(5);
+	thing_projectile (67,T_plasmabolt,130,260,0);
+	delay(5);
+
+
+
+	}
+
+
+delay (200);
+}
+
+script 11 (void)      //BFG minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<2; i++)
+	{
+
+
+
+	thing_projectile (68,T_bfgshot,320,260,0);
+	delay(5);
+	thing_projectile (69,T_bfgshot,320,260,0);
+	delay(5);
+	thing_projectile (70,T_bfgshot,320,260,0);
+	delay(5);
+	thing_projectile (71,T_bfgshot,320,260,0);
+	delay(5);
+	thing_projectile (72,T_bfgshot,320,260,0);
+	delay(5);
+	thing_projectile (73,T_bfgshot,320,260,0);
+	delay(5);
+
+
+
+	}
+
+
+delay (200);
+}
+
+//Monster Spawner
+
+  Script 101 (Void) // wave 1
+{ 	
+delay (100);
+Setfont("BIGFONT");
+Printbold(s:"\cAHells Hangnail\n\n\ckBy\n\n\ckEvilm0nk,Gosimer\n\n\cdMusic by\n\n\cdlashmush: Simple metal\n\n\n\n\n\n\n\n");
+Ambientsound("dsyell8",255);
+Delay(100);
+setfont("DOOMFONT");
+hudmessage(s:"We have been warped to a Strange Place!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"It seems to be a small arena, Time to battle the Hoard!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+Ambientsound("dstalk6",255);
+setfont("BIGFONT");
+hudmessage(s:"Wave 1/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Baronofhell", 4, 999);
+Delay(40);
+SpawnSpot ("hellsfury", 4, 999);
+Delay(40);
+SpawnSpot ("hellknight", 4, 999);
+Delay(40);
+SpawnSpot ("hellstormarchon", 5, 999);
+SpawnSpot ("hellsmith1", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+  Script 102 (Void) // wave 2
+{ 	
+Delay(50);
+setfont("DOOMFONT");
+hudmessage(s:"More demons Approaching!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Wave 2/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Diabloist", 4, 999);
+Delay(70);
+SpawnSpot ("lordofheresy", 4, 999);
+Delay(70);
+SpawnSpot ("Lavademon", 4, 999);
+Delay(70);
+SpawnSpot ("Hellsapprentice", 5, 999);
+SpawnSpot ("hellsmith1", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+  Script 103 (Void) // wave 3
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 3/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Deathknight", 4, 999);
+Delay(70);
+SpawnSpot ("Hellstormarchon", 4, 999);
+Delay(70);
+SpawnSpot ("reddemon", 4, 999);
+Delay(70);
+SpawnSpot ("LavaDemon", 5, 999);
+SpawnSpot ("Hellsfury", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+  Script 104 (Void) // wave 4
+{ 	
+Delay(60);
+setfont("BIGFONT");
+hudmessage(s:"Wave 4/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Afrit", 4, 999);
+Delay(70);
+SpawnSpot ("Bruiserdemon", 4, 999);
+Delay(70);
+SpawnSpot ("Hellsfury", 4, 999);
+Delay(70);
+SpawnSpot ("PyroDemon", 5, 999);
+SpawnSpot ("Bruiserdemon", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+	
+    Script 105 (Void) // wave 5
+{ 	
+Delay(70);
+setfont("BIGFONT");
+hudmessage(s:"Wave 5/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Reddemon", 4, 999);
+Delay(70);
+SpawnSpot ("Lordofheresy", 4, 999);
+Delay(70);
+SpawnSpot ("arachnophyte", 4, 999);
+Delay(70);
+SpawnSpot ("Hellsfury", 5, 999);
+SpawnSpot ("Bruiserdemon", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}    
+   
+     Script 106 (Void) // wave 6
+{ 	
+Delay(70);
+Floor_lowertonearest(9,20);
+setfont("BIGFONT");
+hudmessage(s:"Wave 6/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Bruiserdemon", 4, 999);
+Delay(70);
+SpawnSpot ("Hellsfury", 4, 999);
+Delay(70);
+SpawnSpot ("Deathknight", 4, 999);
+Delay(70);
+SpawnSpot ("bruiserdemon", 5, 999);
+SpawnSpot ("deathknight", 6, 999);
+SpawnSpot ("Fallen", 7, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+     Script 107 (Void) // wave 7
+{ 	
+Delay(80);
+setfont("BIGFONT");
+hudmessage(s:"Wave 7/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Bruiserdemon", 4, 999);
+Delay(70);
+SpawnSpot ("arachnophyte", 4, 999);
+Delay(70);
+SpawnSpot ("Reddemon", 4, 999);
+Delay(70);
+SpawnSpot ("Lordofheresy", 5, 999);
+SpawnSpot ("hellsmith1", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+
+     Script 108 (Void) // wave 8
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 8/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Superdemon", 4, 999);
+Delay(70);
+SpawnSpot ("HellstormArchon", 4, 999);
+Delay(70);
+SpawnSpot ("deahtknight", 4, 999);
+Delay(70);
+SpawnSpot ("Hellsfury", 5, 999);
+SpawnSpot ("lavademon", 6, 999);
+SpawnSpot ("SewerCacodemon", 7, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+     Script 109 (Void) // wave 9
+{ 	
+Delay(50);
+setfont("BIGFONT");
+hudmessage(s:"Wave 9/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Cyberdemon", 4, 999);
+Delay(70);
+SpawnSpot ("Reddemon", 4, 999);
+Delay(70);
+SpawnSpot ("Afrit", 4, 999);
+Delay(70);
+SpawnSpot ("hellsfury", 5, 999);
+SpawnSpot ("pyrodemon", 6, 999);
+SpawnSpot ("Lavademon", 7, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+     Script 110 (Void) // wave 10
+{ 	
+Delay(70);
+setfont("BIGFONT");
+hudmessage(s:"Wave 10/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(90);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("deathknight", 12, 999);
+Delay(70);
+SpawnSpot ("EvilKNight", 4, 999);
+Delay(70);
+SpawnSpot ("Bruiserdemon", 13, 999);
+Delay(70);
+SpawnSpot ("hellsfury", 5, 999);
+SpawnSpot ("Superdemon", 6, 999);
+SpawnSpot ("SteelCacodemon", 7, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+     Script 111 (Void) // wave 11
+{ 	
+Delay(60);
+setfont("BIGFONT");
+hudmessage(s:"Wave 11/12!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("hellsfury", 12, 999);
+Delay(70);
+SpawnSpot ("arachnophyte", 4, 999);
+Delay(70);
+SpawnSpot ("Deathknight", 13, 999);
+Delay(70);
+SpawnSpot ("Cyberdemon", 5, 999);
+SpawnSpot ("Pyrodemon", 6, 999);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}
+
+     Script 112 (Void) // wave 12
+{ 	
+Delay(50);
+setfont("DOOMFONT");
+hudmessage(s:"Another Guardian Aproaches. Cacodad!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+Delay(150);
+setfont("BIGFONT");
+hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+Delay(80);
+SetFont("BIGFONT");
+HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+Delay (35);
+setmusic ("D_Boss");
+AmbientSound("dsfight1", 255); // Wave Starts
+HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
+SpawnSpot ("Cacodad", 8, 999);
+delay(20);
+Acs_Execute(300,0,0,0,0);
+Acs_Execute(301,0,0,0,0);
+Delay(20);
+ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+}  
+
+     Script 114 (Void) // wave end
+{ 	
+delay (35);   
+Acs_Terminate(301,0);  
+setfont("DOOMFONT");
+hudmessage(s:"Another Guardian defeated!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+setfont("DOOMFONT");
+hudmessage(s:"More site Seeing Awaits Us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay(150);
+Exit_normal(0);
+}
+
+Script 299 (void) // untrustables Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  Ambientsound("dswelld",255);
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for good monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+                  script 301 (void) // Finalbosses health
+{
+    hudmessageBold(s: "CacoDad's health: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+  

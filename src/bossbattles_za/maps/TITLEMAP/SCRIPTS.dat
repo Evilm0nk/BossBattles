@@ -1,0 +1,271 @@
+#include "zcommon.acs"
+
+script 1 OPEN
+{
+    	setmusic("d_map02",0,0);
+}
+
+script 3 open
+{
+delay (150);
+setfont("DOOMFONT");
+hudmessage(s:"A time Ago, Demons used to run the world."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (250);
+hudmessage(s:"They Terrorized And Destroyed everything and everyone that stood helplessly in there path."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (350);
+hudmessage(s:"But! There was hope!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (150);
+hudmessage(s:"Seven heros from different time periods stopped these events."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (250);
+hudmessage(s:"Corvus, A mystical elf defended his great land from d'sparil."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (270);
+setfont("DOOMFONT");
+hudmessage(s:"A trio of warriors stopped the all powerful korax from destroying cronos."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+floor_lowerTonearest(5,20);
+delay (270);
+setfont("DOOMFONT");
+hudmessage(s:"Another Was A man who lived in a dark time with order trying to take over."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (270);
+setfont("DOOMFONT");
+hudmessage(s:"2 Doomed Marines stopped Hell more then once and lived to tell the tale."; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (260);
+setfont("DOOMFONT");
+hudmessage(s:"BUT!!! They're Journey is not over!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (180);
+setfont("DOOMFONT");
+hudmessage(s:"Hell has once again Found its way Back, the Target... HEAVEN!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (260);
+setfont("DOOMFONT");
+hudmessage(s:"These Heros Unknown to Eachother Now have to team up and stop the Devil!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (260);
+setfont("DOOMFONT");
+hudmessage(s:"In Bossbattles!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.06, 1.5);
+delay (35);
+ACS_execute(6,0,0,0,0);
+ACS_execute(7,0,0,0,0);
+ACS_execute(8,0,0,0,0);
+ACS_execute(9,0,0,0,0);
+ACS_execute(10,0,0,0,0);
+ACS_execute(11,0,0,0,0);
+}
+
+script 4 open
+{
+delay (1300);
+SetHudSize(640,480,0);
+SetFont("Hereticd");
+HudMessage(s:"A";HUDMSG_FADEINOUT,3,CR_UNTRANSLATED,320.0,240.0,0.1,0.8,0.2);;
+delay (260);
+SetHudSize(640,480,0);
+SetFont("Hexened");
+HudMessage(s:"A";HUDMSG_FADEINOUT,3,CR_UNTRANSLATED,320.0,240.0,0.1,0.8,0.2);;
+delay (280);
+SetHudSize(640,480,0);
+SetFont("Strifed");
+HudMessage(s:"A";HUDMSG_FADEINOUT,3,CR_UNTRANSLATED,320.0,240.0,0.1,0.8,0.2);
+delay (280);
+SetHudSize(640,480,0);
+SetFont("Doomed");
+HudMessage(s:"A";HUDMSG_FADEINOUT,3,CR_UNTRANSLATED,320.0,240.0,0.1,0.8,0.2);
+}
+
+script 5 Enter
+{
+delay (5);
+ Thing_ACtivate(2);
+	ChangeCamera(2, 1, 0);
+	SetPlayerProperty(1, 1, PROP_TOTALLYFROZEN);
+}
+
+script 6 (void)
+{
+delay (5);
+Thing_DeACtivate(2);
+delay (5);
+ Thing_ACtivate(17);
+	ChangeCamera(17, 1, 0);
+	SetPlayerProperty(1, 1, PROP_TOTALLYFROZEN);
+}
+
+		script 7 (Void)
+	{	
+Delay (5);
+SpawnSpotfacing ("HeroDoomguy", 56, 994);
+SpawnSpotfacing ("HeroCleric", 57, 994);	
+SpawnSpotfacing ("HeroFighter", 58, 994);
+SpawnSpotfacing ("HeroCorvus", 59, 994);	
+SpawnSpotfacing ("HeroStrifeguy", 60, 994);
+SpawnSpotfacing ("HeroMage", 61, 994);	
+SpawnSpotfacing ("HeroTriton", 28, 994);	
+	}
+
+
+script 8 (void)
+{
+    Delay (10);
+    thing_hate(999, 994, 4);
+    thing_hate(999, 992, 4);
+    Delay (1090);
+    Restart;
+}
+
+		script 9 (Void)
+	{	
+Delay (5);
+SpawnSpotfacing ("Hellsfury", 55, 999);
+SpawnSpotfacing ("Cyberdemon", 47, 999);	
+SpawnSpotfacing ("Heresiarch2", 48, 999);
+SpawnSpotfacing ("Dsparil2", 49, 999);	
+SpawnSpotfacing ("MotherDemon", 50, 999);
+SpawnSpotfacing ("Spidermastermind", 51, 999);	
+SpawnSpotfacing ("Korax2", 53, 999);	
+SpawnSpotfacing ("Superdemon", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Bruisderdemon", 55, 999);
+SpawnSpotfacing ("Evolutionarybaron", 47, 999);	
+SpawnSpotfacing ("ironlich2", 48, 999);
+SpawnSpotfacing ("Minotaur2", 49, 999);	
+SpawnSpotfacing ("Arachnophyte", 50, 999);
+SpawnSpotfacing ("Inquisitor1", 51, 999);	
+SpawnSpotfacing ("Avatar", 53, 999);	
+SpawnSpotfacing ("HellsApprentice", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Lordofheresy", 55, 999);
+SpawnSpotfacing ("MetalHead", 47, 999);	
+SpawnSpotfacing ("Infernodemon", 48, 999);
+SpawnSpotfacing ("Demolisher", 49, 999);	
+SpawnSpotfacing ("InsanitySpider", 50, 999);
+SpawnSpotfacing ("Strifebishop2", 51, 999);	
+SpawnSpotfacing ("entityboss1", 53, 999);	
+SpawnSpotfacing ("Gatekeeper", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Hellstormarchon", 55, 999);
+SpawnSpotfacing ("FuryLich", 47, 999);	
+SpawnSpotfacing ("Cyberbot1", 48, 999);
+SpawnSpotfacing ("SupremeFiend", 49, 999);	
+SpawnSpotfacing ("Cybermastermind", 50, 999);
+SpawnSpotfacing ("DEOverlord", 51, 999);	
+SpawnSpotfacing ("Scourge", 53, 999);	
+SpawnSpotfacing ("HammerHound", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Bruiserdemon", 55, 999);
+SpawnSpotfacing ("HellsBattery", 47, 999);	
+SpawnSpotfacing ("Paladin", 48, 999);
+SpawnSpotfacing ("Cyberbot2", 49, 999);	
+SpawnSpotfacing ("Wyvern2", 50, 999);
+SpawnSpotfacing ("Tchernobog", 51, 999);	
+SpawnSpotfacing ("Cheogh", 53, 999);	
+SpawnSpotfacing ("Spidermastermind64", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Lordofheresy", 55, 999);
+SpawnSpotfacing ("Snotfolus1", 47, 999);	
+SpawnSpotfacing ("HansGrosse01", 48, 999);
+SpawnSpotfacing ("Thamuz", 49, 999);	
+SpawnSpotfacing ("Conqueror", 50, 999);
+SpawnSpotfacing ("Menlkir", 51, 999);	
+SpawnSpotfacing ("Zedek", 53, 999);	
+SpawnSpotfacing ("Azazel", 54, 999);
+Delay (1090);
+SpawnSpotfacing ("Afrit", 55, 999);
+SpawnSpotfacing ("Maximus1", 47, 999);	
+SpawnSpotfacing ("Cacodad", 48, 999);
+SpawnSpotfacing ("Gaguuro", 49, 999);	
+SpawnSpotfacing ("Cerberus", 50, 999);
+SpawnSpotfacing ("Traductus", 51, 999);	
+SpawnSpotfacing ("Strifbishop2", 53, 999);	
+SpawnSpotfacing ("schabs", 54, 999);
+Delay (1090);
+Restart;
+	}
+    
+    		script 10 (Void)
+	{	
+Delay (5);
+SpawnSpotfacing ("HeavenGuard", 62, 992);
+Delay (5);
+thing_hate(992, 999, 4);
+Delay (600);
+Restart;
+	}
+    
+    		script 11 (Void)
+	{	
+setmusic ("D_tpt1");
+Delay (3955);
+setmusic ("D_tpt2");
+Delay (1365);
+ACS_execute(12,0,0,0,0);
+	}
+    
+      script 12 (Void)
+	{	
+setmusic ("D_tpt3");
+SetHudSize(640,480,0);
+SetFont("Titlepp");
+HudMessage(s:"A";HUDMSG_FADEINOUT,3,CR_UNTRANSLATED,320.0,240.0,0.0,0.0,20.0);
+
+	}
+    
+    Script 13 (Void)
+{ 	
+Delay (100);
+setfont("BIGFONT");
+hudmessageBold(s:"Credits:"; HUDMSG_PLAIN, 2, CR_BLUE, 0.2, 0.525, 0.0, 0.00, 2.0);
+
+}
+
+
+Script 14 (Void)
+{ 	
+Delay (155);
+setfont("DOOMFONT");
+hudmessageBold(s:"TitleMusic, Author: Megamannt92, Song: Anarchy Reigns"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"Project Leader: Evilm0nk"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"(UAN)EvilmOnk 2"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"Flam64mon"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"Popsoap"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"Gosimer"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"Jason"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (100);
+hudmessageBold(s:"The Damager"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Aiur850"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Untrustable"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"David G (ItsNatureToDie)"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Monsoon"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Realm667"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Newgrounds"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Idsoftware"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"RavenSoftware"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Monolith Productions"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Rogue Entertainment"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Zandronum"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Skulltag"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Zdaemon"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Zdoom/Gzdoom"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Weapons Resource wad"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+hudmessageBold(s:"Monster Resource Wad"; HUDMSG_FADEINOUT, 1, CR_Red, 0.2, 0.595, 1.0, 1.0, 1.0);
+Delay (105);
+Restart;
+}  
