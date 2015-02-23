@@ -3,7 +3,7 @@
 Int Wave = 1;
 Int WellDone = 0;
 
-Script 1 (void) //Invasion Script
+Script 1 Open //Invasion Script
 {
 SetActivator(0);
 If (Wave == 1 && WellDone == 0)
