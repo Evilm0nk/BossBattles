@@ -7,7 +7,7 @@
 //==========================================================
 
 
-ACTOR Terminator 30666
+ACTOR UltimateTerminator 30666
 { 
   //$Category DemortrixMinions
 Health 29000 
@@ -391,7 +391,7 @@ actor TerminatorShoulder
     }
 }
 
-Actor Terminator2 : Terminator 22221	
+Actor UltimateTerminator2 : UltimateTerminator 22221	
 {
 //$Category Friendlies
 	+FRIENDLY
