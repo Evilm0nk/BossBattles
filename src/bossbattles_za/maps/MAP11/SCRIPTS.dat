@@ -380,40 +380,6 @@ Restart;
 		setmusic ("D_map11");
 		
 	}
-
-Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-   
-script 301 (void) //  healthbar
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_GREY, -0.0, -0.55, 1.0, 0.09, 0);
-    delay(const:35);
-    restart;
-    
-}
  
 	Script 23 open
 {
@@ -480,7 +446,7 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("hellsfury", 2, 999);
-SpawnSpotfacing  ("deathknight", 3, 999);
+SpawnSpotfacing  ("HellWarrior", 3, 999);
 delay (50);
 SpawnSpotfacing  ("hellsmith1", 3, 999);
 Delay(20);
@@ -575,7 +541,7 @@ SpawnSpotfacing  ("Motherdemon", 9, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }  
 
       Script 105 (Void) // wave 5
@@ -605,7 +571,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }  
 
 	      Script 106 (Void) // wave 6
@@ -632,7 +598,7 @@ SpawnSpotfacing  ("minotaur2", 11, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }  
     
     	      Script 107 (Void) // wave 7
@@ -659,7 +625,7 @@ SpawnSpotfacing  ("icelich", 11, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
      	      Script 108 (Void) // wave 8
@@ -686,7 +652,7 @@ SpawnSpotfacing  ("Furylich", 11, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
    
      	      Script 109 (Void) // wave 9
@@ -713,7 +679,7 @@ SpawnSpotfacing  ("Metalhead", 11, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
      	      Script 110 (Void) // wave 10
@@ -740,7 +706,7 @@ SpawnSpotfacing  ("dsparil2", 11, 999);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
      	      Script 111 (Void) // wave 11
@@ -772,7 +738,7 @@ SpawnSpotfacing  ("afrit", 13, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
          	      Script 112 (Void) // wave 12
@@ -804,7 +770,7 @@ SpawnSpotfacing  ("demon3", 14, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 	
              	      Script 113 (Void) // wave 13
@@ -836,7 +802,7 @@ delay (10);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
              	      Script 114 (Void) // wave 14
@@ -865,7 +831,7 @@ delay (10);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
              	      Script 115 (Void) // wave 15
@@ -894,7 +860,7 @@ delay (10);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 	
                 	      Script 116 (Void) // wave 16
@@ -927,7 +893,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
     
                     	      Script 117 (Void) // wave 17
@@ -957,7 +923,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                     	      Script 118 (Void) // wave 18
@@ -987,7 +953,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
    
                        	      Script 119 (Void) // wave 19
@@ -1017,7 +983,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
   
                        	      Script 120 (Void) // wave 20
@@ -1050,7 +1016,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                        	      Script 121 (Void) // wave 21
@@ -1080,7 +1046,7 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
    
@@ -1119,7 +1085,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                         	      Script 123 (Void) // wave 23
@@ -1162,7 +1128,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                         	      Script 124 (Void) // wave 24
@@ -1195,7 +1161,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
  
@@ -1229,7 +1195,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
  
@@ -1263,7 +1229,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                         	      Script 127 (Void) // wave 27
@@ -1296,7 +1262,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                          	      Script 128 (Void) // wave 28
@@ -1329,7 +1295,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                         	      Script 129 (Void) // wave 29
@@ -1362,7 +1328,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                         	      Script 130 (Void) // wave 30
@@ -1398,7 +1364,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                         	      Script 131 (Void) // wave 31
@@ -1431,7 +1397,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                          	      Script 132 (Void) // wave 32
@@ -1464,7 +1430,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                           	      Script 133 (Void) // wave 33
@@ -1497,7 +1463,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                           	      Script 134 (Void) // wave 34
@@ -1530,7 +1496,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                           	      Script 135 (Void) // wave 35
@@ -1563,7 +1529,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                            	      Script 136 (Void) // wave 36
@@ -1596,7 +1562,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
  
                             	      Script 137 (Void) // wave 37
@@ -1629,7 +1595,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
 
@@ -1658,13 +1624,13 @@ AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing  ("hellsfury", 76, 0);
 delay (60);
-SpawnSpotfacing  ("bruiserdemon", 76, 0);
+SpawnSpotfacing  ("HellWarrior", 76, 0);
 SpawnSpotfacing  ("d3cyberdemon", 77, 999);
 delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 139 (Void) // wave 39
@@ -1695,7 +1661,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 140 (Void) // wave 40
@@ -1723,7 +1689,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
 
@@ -1752,7 +1718,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 142 (Void) // wave 42
@@ -1780,7 +1746,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 143 (Void) // wave 43
@@ -1808,7 +1774,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 144 (Void) // wave 44
@@ -1836,7 +1802,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                              	      Script 145 (Void) // wave 45
@@ -1867,7 +1833,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
                               	      Script 146 (Void) // wave 46
@@ -1895,7 +1861,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                               	      Script 147 (Void) // wave 47
@@ -1923,7 +1889,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
 
                               	      Script 148 (Void) // wave 48
@@ -1951,7 +1917,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
                               	      Script 149 (Void) // wave 50
@@ -1960,7 +1926,7 @@ delay (50);
 ACS_Terminate(301, 0);
 delay (100);
 setfont("BIGFONT");
-hudmessage(s:"Cacarroo (helemental!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+hudmessage(s:"Cacarroo!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
 delay (100);
 setfont("BIGFONT");
 hudmessage(s:"Wave 49/50!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
@@ -1974,12 +1940,12 @@ HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-	SpawnSpotfacing  ("Helemental", 105, 999);
+	SpawnSpotfacing  ("Cacaroo", 105, 999);
 delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
                               	      Script 150 (Void) // wave 54
@@ -2016,7 +1982,7 @@ delay (35);
 ACS_Execute(301, 0, 0, 0, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
                               	      Script 151 (Void) // wave 55
@@ -2072,7 +2038,7 @@ SpawnProjectile (20,"hellshot2",-85,150,-100,50,0);
   delay (3500);
   SpawnSpotfacing  ("hellsfury", 83, 0);
   delay (3500);
-  SpawnSpotfacing  ("bruiserdemon", 83, 0);
+  SpawnSpotfacing  ("HellWarrior", 83, 0);
     delay (3500);
   SpawnSpotfacing  ("cacodemon", 83, 0);
   delay (3500);
