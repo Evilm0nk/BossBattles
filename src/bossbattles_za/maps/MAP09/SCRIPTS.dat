@@ -27,7 +27,8 @@ Restart;
 
  Script 51 (void) //wave 1 red skull key
 {
-	delay (100);
+delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessageBold(s:"Battle For red skull key begins now, Infernodemon!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -43,7 +44,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("Infernodemon", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 while (thingcount(0, 999)) 
 	{ 
@@ -52,7 +53,7 @@ while (thingcount(0, 999))
 
 	delay (100); 
   Ambientsound("dswelld",255);
-ACS_Terminate(21, 0);
+ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Red skull key now obtainable!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(34,10);
@@ -61,6 +62,7 @@ floor_lowertolowest(34,10);
  Script 52 (void) //wave 2 redkeycard
 {
 	delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Battle For red keycard begins now, Hellpatarairch!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -76,7 +78,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("hellpatriarch", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 while (thingcount(0, 999)) 
 	{ 
@@ -84,7 +86,7 @@ while (thingcount(0, 999))
 	}
 	delay (100);
 Ambientsound("dswelld",255);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Red keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(37,10);
@@ -93,6 +95,7 @@ floor_lowertolowest(37,10);
  Script 53 (void) //wave 3 blue key card
 {
 	delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Battle For blue keycard begins now, evolutionarybaron!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -108,7 +111,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("evolutionarybaron", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 while (thingcount(0, 999)) 
 	{ 
@@ -117,7 +120,7 @@ while (thingcount(0, 999))
 
 	delay (100);
   Ambientsound("dswelld",255);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Blue keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(43,10);
@@ -126,6 +129,7 @@ floor_lowertolowest(43,10);
  Script 54 (void) //wave 4 yellowskull key
 {
 	delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Battle For yellow skull key begins now, scourge!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -141,7 +145,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("scourge", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 while (thingcount(0, 999)) 
 	{ 
@@ -149,7 +153,7 @@ while (thingcount(0, 999))
 	}
 	delay (100);
   Ambientsound("dswelld",255);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"yellow skull key now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(48,10);
@@ -158,6 +162,7 @@ floor_lowertolowest(48,10);
  Script 55 (void) //wave 5 blueskull key
 {
 	delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Battle For blue skull key begins now, korax!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -173,7 +178,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("korax2", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 	while (thingcount(0, 999)) 
 	{ 
@@ -181,7 +186,7 @@ Delay(40);
 	}
 	delay (100);
 Ambientsound("dswelld",255);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"blue skull key now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(51,10);
@@ -190,6 +195,7 @@ floor_lowertolowest(51,10);
  Script 56 (void) //wave 6 yellow keycard
 {
 	delay (100);
+SetActivator(0);
 setfont("DOOMFONT");
 hudmessagebold(s:"Battle For yellow keycard begins now, Moloch!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -205,7 +211,7 @@ HudMessage(s:"FIGHT!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("moloch", 33, 999);
 Delay(40);
 acs_execute (300,0,0,0,0);
-acs_execute (21,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(40);
 while (thingcount(0, 999)) 
 	{ 
@@ -213,30 +219,10 @@ while (thingcount(0, 999))
 	}
 delay (100);
   Ambientsound("dswelld",255);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 setfont("DOOMFONT");
 hudmessagebold(s:"yellow keycard now availble!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 floor_lowertolowest(26,10);
-}
-
-Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
 }
 
 	script 149 open
@@ -306,7 +292,7 @@ Script 101 (void) // wave 1
 { 	
 Delay (10);
 Ambientsound("Dstalk8",255);
-PRINTBOLD (s:"Finally ANother Guardian Shows Itself!");
+PRINTBOLD (s:"Finally Another Guardian Shows Itself!");
 Delay (100);
 SetFont("BIGFONT");
 HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
@@ -321,9 +307,9 @@ setmusic ("D_boss");
 SpawnSpot ("Conqueror", 24, 999);
 Delay(20);
 ACS_Execute(300, 0, 0, 0, 0); //Multiplier
- ACS_Execute(21, 0, 0, 0, 0); //health meter
+ ACS_Execute(301, 0, 0, 0, 0); //health meter
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 
@@ -332,23 +318,9 @@ script 102 (void)
 	Delay(100);
 	PrintBold(s:"Our Battle is soon over!");
 	delay (100);
- ACS_Terminate(21, 0);
+ ACS_Terminate(301, 0);
 delay(150);
 exit_normal(0);
-}
-	
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());}
-
-
- script 21 (void) // conquerors health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.55, 1.0, 0.09, 0);
-    delay(const:35);
-    restart;
-    
 }
     
 	Script 111 (void)
