@@ -1,0 +1,399 @@
+//==========================================================
+//
+//     Terminator
+//       
+//       
+//
+//==========================================================
+
+
+ACTOR Terminator 30666
+{ 
+  //$Category DemortrixMinions
+Health 29000 
+Radius 24 
+Height 64 
+Mass 150000000 
+Speed 12 
+PainChance 1
+scale 1.2
+MinMissileChance 30
+MONSTER
+Obituary "%o was liquidated by a Terminator."
++FLOORCLIP 
++MISSILEMORE
++BOSS
++NOTARGET
++DONTHURTSPECIES
++NORADIUSDMG
++QUICKTORETALIATE
+Missiletype Grenadeblast
+dropitem "MediumHealthVile" 70
+DropItem "Combatpack" 60
+DropItem "Cmana" 60
+DropItem "DmanaDrop" 60
+DropItem "SmallhealthVile" 150
+DropItem "LargeHealthvile" 50
+DropItem "SuperArmor" 3
+DropItem "Greenarmor" 7
+DropItem "Bluearmor" 5
+DropItem "ArtiHealingRadius1" 5
+DropItem "Medikit" 6
+DropItem "Stimpack" 8
+Damagefactor "HEAVENPOWER", 1.0
+Damagefactor "PEXPLOSIVE", 1.0 
+Damagefactor "EXPLOSIVE", 1.0
+Damagefactor "Fire", 0.7
+Damagefactor "PFire", 0.7
+Damagefactor "Electric", 0.5
+Damagefactor "PElectric", 0.5
+Damagefactor "Poison", 0.6
+Damagefactor "PPoison", 0.6
+Damagefactor "PBullet", 0.8
+Damagefactor "Bullet", 0.8
+Damagefactor "ice", 1.2
+Damagefactor "Redblast", 0.0
+SeeSound "monster/termsit" 
+PainSound "monster/termpin" 
+DeathSound "monster/termdth"
+ActiveSound "Terminator/termact"
+States 
+   { 
+   Spawn: 
+       TERM AB 10 A_Look 
+       Loop 
+   See:
+       TERM A 1 A_Playsound("Terminator/terstepA")
+       TERM A 3 A_Chase
+       TERM A 4 A_Chase
+       TERM B 4 A_Chase
+       TERM B 4 A_Chase
+       TERM C 1 A_Playsound("Terminator/terstepA")
+       TERM C 3 A_Chase 
+       TERM C 4 A_Chase
+       TERM D 4 A_Chase
+       TERM D 4 A_Chase
+       Loop 
+   Pain:
+       TERM L 3 	
+       TERM L 3 A_Pain
+       Goto See
+   Missile:
+       TERM E 0 A_Jump(192, 5) 
+       TERM E 8 A_FaceTarget
+       TERM F 8 Bright A_CustomMissile("TerminatorBlaster",38,15,0,0)
+       TERM E 0 A_jump(128, 1)
+       Goto See
+       TERM E 8 A_Spidrefire
+       Goto Missile+1
+       TERM G 0 A_Jump(160, 9)
+       TERM G 2 A_Facetarget
+       TERM H 1 Bright A_CustomMissile ("Terminatorpuff",15,Random(45, -45),0) 
+       TERM H 1 Bright A_Playsound("Terminator/tershotB")
+       TERM G 2 A_Facetarget
+       TERM I 1 Bright A_CustomMissile ("Terminatorpuff",15,Random(45, -45),0) 
+       TERM I 1 Bright A_Playsound("Terminator/tershotB")
+       TERM G 0 A_jump(16, 2)
+       TERM G 1 A_Spidrefire
+       Goto Missile+7
+       TERM J 0 A_Jump(128, 3)
+       TERM J 8 A_Facetarget
+       TERM K 8 Bright A_CustomMissile("Redstar", 38, -15, 0, 0)
+       Goto See
+       TERM J 0 A_Jumpifcloser(192, 3)
+       TERM J 8 A_Facetarget
+       TERM K 8 Bright A_CustomMissile("Redgrenade", 38, -15, 0, 0)
+       Goto See
+       TERM J 8 A_Facetarget
+       TERM K 8 Bright A_CustomMissile("Redstar", 38, -15, 0, 0)
+       Goto See   
+   Death:
+       TERM L 0
+	   TERM LLLLLLLL 7 A_SpawnItemEx("KoraxDeathExplosion",random(-10,10),random(-10,10),random(15,40),0,0,0,0,0,0)
+       TERM M 6 A_ScreamAndUnblock
+       TERM N 4 
+	   TNT1 AAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-40,40),random(-10,10),random(-20,20))
+       TERM OPQ 4 Bright
+       TERM R 0 Bright A_FaceTarget
+	   TNT1 AAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-40,40),random(-10,10),random(-20,20))
+       TERM R 0 Bright A_SpawnItemEx("TerminatorHead", 15, 0, 90, 10, 0, 0, -170, 128)
+       TERM R 0 Bright A_SpawnItemEx("TerminatorShoulder", 60, 0, 75, 8, 0, 0, -70, 128)
+       TERM R 4 Bright A_SpawnItemEx("TerminatorArm", 60, 0, 0, 3, 0, 0, -90, 128)
+	   TNT1 AAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-40,40),random(-10,10),random(-20,20))
+       TERM STUV 4 Bright
+       TERM W 4 
+	   TNT1 AAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-40,40),random(-10,10),random(-20,20))
+       TERM X 6 
+       TERM Y 6
+	   TNT1 AAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-40,40),random(-10,10),random(-20,20))
+       TERM Z 1 A_Playsound("Terminator/terstepA")
+       TERM Z 5 
+	   TERM [ 520 A_SetFloorClip
+       TERM [ 2 A_FadeOut
+	   Wait
+   } 
+}
+
+ACTOR TerminatorBlaster
+{
+   Radius 8
+   Height 12
+   Speed 24
+   Damage 15
+   SpawnID 251
+   PROJECTILE
+   RENDERSTYLE ADD
+   alpha 0.85
+   +SPECTRAL
+   
+   SeeSound "monster/brufir"
+   DeathSound "weapons/hellex"
+   DamageType "FIRE"
+   DONTHURTSHOOTER
+   Decal RevenantScorch
+   States
+   {
+   Spawn: 
+      BLST A 1 Bright 
+      loop
+   Death:
+      BLST B 6 Bright A_Explode(10,72,1)
+      BLST CDEFGHIJKL 3 Bright 
+      stop
+   }
+}
+
+actor Redstar
+{
+    Radius 10
+    Height 20
+    Speed 13
+    Damage 10
+    Scale 0.6
+    +SEEKERMISSILE
+	+SPECTRAL
+    PROJECTILE
+    RENDERSTYLE ADD
+	DamageType "FIRE"
+    ALPHA 0.8
+    SeeSound "Terminator/tershotA"
+    DeathSound "imp/shotx"
+    Decal CacoScorch
+    States
+    {
+    Spawn:
+        STAR A 3 Bright A_SeekerMissile (10,15)
+        STAR B 3 Bright A_SeekerMissile (10,15)
+        STAR C 3 Bright A_SeekerMissile (10,15)
+        STAR D 3 Bright A_SeekerMissile (10,15)
+        Loop
+    Death:
+        STAR EFGHIJKLMNO 3 Bright
+        Stop
+    }
+}
+
+actor Redgrenade
+{
+    Radius 6
+    Height 12
+    Speed 20
+    Damage 10
+	DamageType "FIRE"
+    PROJECTILE
+    +DoomBounce
+   +SPECTRAL
+    -NoGravity
+    RENDERSTYLE ADD
+    ALPHA 0.8
+    DeathSound "imp/shotx"
+    States
+    {
+    Spawn:
+    	TGND A 0
+    	TGND A 1 Bright Thrustthingz(0, 24, 0, 1)
+    	TGND A 1 Bright A_Playsound("Terminator/tershotA")
+    	TGND BBBBCCCCAAAA 1 Bright A_SpawnItemEx("grenadetrail",0,0,0,0,0,0,0,128)
+    	TGND A 0 A_Jumpifcloser(48, 1)
+        Goto Spawn+3
+    Death:
+    	STAR E 3 Bright A_Explode(40,72,1)
+    	STAR E 0 Bright A_custommissile("grenadeblast",0,0,0,2,0)
+    	STAR E 0 Bright A_custommissile("grenadeblast",0,0,20,2,0)
+    	STAR E 0 Bright A_custommissile("grenadeblast",0,0,40,2,0)
+    	STAR E 0 Bright A_custommissile("grenadeblast",0,0,60,2,0)
+    	STAR E 0 Bright A_custommissile("grenadeblast",0,0,80,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,100,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,120,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,140,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,160,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,180,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,200,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,220,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,240,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,260,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,280,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,300,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,320,2,0)
+        STAR E 0 Bright A_custommissile("grenadeblast",0,0,340,2,0)
+        STAR FGHIJKLMNO 3 Bright
+        Stop
+    }
+}
+
+ACTOR Grenadetrail
+{       
+   	PROJECTILE
+   	+NOCLIP
+	+CLIENTSIDEONLY
+    	Renderstyle ADD
+	Alpha 0.6
+	DamageType Redblast
+	DamageType "FIRE"
+	States
+	{   
+	Spawn:
+	    TGTR ABCDEFGHI 4 Bright 
+	    Stop
+	}
+}  
+
+
+actor Grenadeblast
+{
+    Radius 6
+    Height 12
+    Speed 5
+    Damage 7
+    PROJECTILE
+    RENDERSTYLE ADD
+	DamageType "EXPLOSIVE"
+   +SPECTRAL
+    +Ripper
+    ALPHA 0.8
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+    States
+    {
+    Spawn:
+    	TGBL ABCDEFGHIJK 2 Bright
+        stop
+    }
+}
+
+actor TerminatorPuff : FastProjectile
+{ 
+    Radius 3
+	Height 3  
+	Mass 1
+	Damage 4
+	Speed 200
+	Alpha 0.75
+	scale 0.75
+	Decal Bulletchip
+	DamageType "Bullet"
+	PROJECTILE
+	+NOTELEPORT
+	+BLOODSPLATTER
+	+Spectral
+	
+	States{
+		Spawn:
+			TNT1 A 1
+			Loop
+		Death:
+			TNT1 A 1
+			TPUF A 2 Bright A_PlaySound("Weapons/NailHit")
+			TPUF A 0 A_SpawnDebris("BulletSpark")
+			TPUF A 0 A_Jump(128,10)
+			TPUF BCDEFGH 2 Bright
+			Stop
+			TPUF IJKLMNO 2 Bright 
+			Stop
+		XDeath:
+            TPUF A 0 A_PlaySound("Weapons/NailHitBleed")
+            Stop	
+   	}
+}
+
+ACTOR TerminatorArm
+{
+	Radius 12
+	Height 15
+	Speed 3
+	Mass 1000
+	scale 1.2
+	+DOOMBOUNCE
+	+CLIENTSIDEONLY
+      States
+	{
+	Spawn:
+         TARM A 5
+         TARM B 5 A_Fall 
+         TARM CDE 5
+         TARM F 100
+	     NKXP BC 3 Bright
+         NKXP D 3 Bright A_PlaySound ("duke/flame")
+         NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+         Stop 
+	}
+}
+
+actor TerminatorHead
+{
+    Radius 6
+    Height 8
+    Speed 10
+    Mass 1000
+    +DOOMBOUNCE
+	+CLIENTSIDEONLY
+    +DROPOFF
+    +Missile
+    scale 1.2
+    
+    States
+    {
+    Spawn:
+    	THAD DEFGHABC 2
+        loop
+    Death:
+    	THAD I 100
+	    NKXP BC 3 Bright
+        NKXP D 3 Bright A_PlaySound ("duke/flame")
+        NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+        Stop 
+    }
+}
+
+actor TerminatorShoulder
+{
+    Radius 8
+    Height 8
+    Speed 8
+    Mass 1000
+    +DOOMBOUNCE
+    +DROPOFF
+	+CLIENTSIDEONLY
+    +Missile
+    scale 1.2
+    
+    States
+    {
+    Spawn:
+    	TSHO ABCDEFGH 2
+        loop
+    Death:
+    	TSHO I 100
+	    NKXP BC 3 Bright
+        NKXP D 3 Bright A_PlaySound ("duke/flame")
+        NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+        Stop 
+    }
+}
+
+Actor Terminator2 : Terminator 22221	
+{
+//$Category Friendlies
+	+FRIENDLY
+	+Spectral
+}
