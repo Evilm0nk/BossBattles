@@ -3,21 +3,21 @@
 Int Wave = 1;
 Int WellDone = 0;
 
-Script 50 OPEN
+Script 1 (void) //Invasion Script
 {
 SetActivator(0);
 If (Wave == 1 && WellDone == 0)
   {
   // Wave 1
   WellDone = 1;
-  Acs_Execute (101, 0, 0, 0, 0);
+  Acs_Execute (4, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 2 && WellDone == 0)
   {
   // Wave 2
   WellDone = 1;
-  Acs_Execute (102, 0, 0, 0, 0);
+  Acs_Execute (5, 0, 0, 0, 0);
   Floor_LowerToLowest(40,10);
   Delay(40);
   Floor_LowerToLowest(88,10);
@@ -27,7 +27,7 @@ If (Wave == 3 && WellDone == 0)
   {
   // Wave 3
   WellDone = 1;
-  Acs_Execute (103, 0, 0, 0, 0);
+  Acs_Execute (6, 0, 0, 0, 0);
   Floor_LowerToLowest(90,10);
   Delay(10);
   }
@@ -35,35 +35,35 @@ If (Wave == 4 && WellDone == 0)
   {
   // Wave 4
   WellDone = 1;
-  Acs_Execute (104, 0, 0, 0, 0);
+  Acs_Execute (7, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 5 && WellDone == 0)
   {
   // Wave 5
   WellDone = 1;
-  Acs_Execute (105, 0, 0, 0, 0);
+  Acs_Execute (8, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 6 && WellDone == 0)
   {
   // Wave 6
   WellDone = 1;
-  Acs_Execute (106, 0, 0, 0, 0);
+  Acs_Execute (9, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 7 && WellDone == 0)
   {
   // Wave 7
   WellDone = 1;
-  Acs_Execute (107, 0, 0, 0, 0);
+  Acs_Execute (10, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 8 && WellDone == 0)
   {
   // Wave 8
   WellDone = 1;
-  Acs_Execute (108, 0, 0, 0, 0);
+  Acs_Execute (11, 0, 0, 0, 0);
   Floor_LowerToLowest(95,10);
   Delay(10);
   }
@@ -71,21 +71,21 @@ If (Wave == 9 && WellDone == 0)
   {
   // Wave 9
   WellDone = 1;
-  Acs_Execute (109, 0, 0, 0, 0);
+  Acs_Execute (12, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 10 && WellDone == 0)
   {
   // Wave 10
   WellDone = 1;
-  Acs_Execute (110, 0, 0, 0, 0);
+  Acs_Execute (13, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 11 && WellDone == 0)
   {
   // Wave 11
   WellDone = 1;
-  Acs_Execute (111, 0, 0, 0, 0);
+  Acs_Execute (14, 0, 0, 0, 0);
   Floor_LowerToLowest(100,10);
   Delay(10);
   }
@@ -93,7 +93,7 @@ If (Wave == 12 && WellDone == 0)
   {
   // Wave 12
   WellDone = 1;
-  Acs_Execute (112, 0, 0, 0, 0);
+  Acs_Execute (15, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 13 && WellDone == 0)
@@ -101,21 +101,21 @@ If (Wave == 13 && WellDone == 0)
   // Wave 13
   WellDone = 1;
   Delay(10);
-  Acs_Execute (113, 0, 0, 0, 0);
+  Acs_Execute (16, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 14 && WellDone == 0)
   {
   // Wave 14
   WellDone = 1;
-  Acs_Execute (114, 0, 0, 0, 0);
+  Acs_Execute (17, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 15 && WellDone == 0)
   {
   // Wave 15
   WellDone = 1;
-  Acs_Execute (115, 0, 0, 0, 0);
+  Acs_Execute (18, 0, 0, 0, 0);
   Floor_LowerToLowest(102,10);
   Delay(10);
   }
@@ -123,21 +123,21 @@ If (Wave == 16 && WellDone == 0)
   {
   // Wave 16
   WellDone = 1;
-  Acs_Execute (116, 0, 0, 0, 0);
+  Acs_Execute (19, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 17 && WellDone == 0)
   {
   // Wave 17
   WellDone = 1;
-  Acs_Execute (117, 0, 0, 0, 0);
+  Acs_Execute (20, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 18 && WellDone == 0)
   {
   // Wave 18
   WellDone = 1;
-  Acs_Execute (118, 0, 0, 0, 0);
+  Acs_Execute (21, 0, 0, 0, 0);
   Floor_LowerToLowest(106,10);
   Delay(10);
   }
@@ -146,21 +146,21 @@ If (Wave == 19 && WellDone == 0)
   // Wave 19
   WellDone = 1;
   Delay(10);
-  Acs_Execute (119, 0, 0, 0, 0);
+  Acs_Execute (22, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 20 && WellDone == 0)
   {
   // Wave 20
   WellDone = 1;
-  Acs_Execute (120, 0, 0, 0, 0);
+  Acs_Execute (23, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 21 && WellDone == 0)
   {
   // Wave 21
   WellDone = 1;
-  Acs_Execute (121, 0, 0, 0, 0);
+  Acs_Execute (24, 0, 0, 0, 0);
   Delay(10);
   }
 If (Wave == 22 && WellDone == 0)
@@ -168,7 +168,7 @@ If (Wave == 22 && WellDone == 0)
   // Wave 22
   WellDone = 1;
   Delay(10);
-  Acs_Execute (122, 0, 0, 0, 0);
+  Acs_Execute (25, 0, 0, 0, 0);
   Floor_LowerToLowest(112,10);
   Delay(10);
   }
@@ -177,7 +177,7 @@ If (Wave == 23 && WellDone == 0)
   // Wave 23
   WellDone = 1;
   Delay(10);
-  Acs_Execute (123, 0, 0, 0, 0);
+  Acs_Execute (26, 0, 0, 0, 0);
   Floor_LowerToLowest(113,10);
   Delay(10);
   }
@@ -185,162 +185,30 @@ If (Wave == 23 && WellDone == 0)
   {
   // Wave 24
   WellDone = 1;
-  Acs_Execute (124, 0, 0, 0, 0);
+  Acs_Execute (27, 0, 0, 0, 0);
   Delay(10);
   }
 Delay(35);
 Restart;
 }
 
-Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
+ script 2 open
+{	
+setmusic ("D_Map05");
+Sector_SetDamage(6, 50, 20);		
+}
+    
+Script 3 OPEN
 {
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
+SectorDamage (8, 20, "fire", "", DAMAGE_PLAYERS);
+delay(5);
 Restart;
 }
 
 
-	script 51 open
-	{	
-		setmusic ("D_Map05");
-		
-	}
-	
-	Script 23 open
-{
- Sector_SetDamage(6, 50, 20);
-}
+// Monster Spawner
 
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-                  script 301 (void) // Finalbosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-Script 25 open  //trap
-{
-SpawnProjectile (114,"hellshot2",80,150,-100,50,0);
-SpawnProjectile (115,"hellshot2",10,150,-100,50,0);
-SpawnProjectile (116,"hellshot2",120,150,-100,50,0);
-SpawnProjectile (117,"hellshot2",-85,150,-100,50,0);
-
-delay (100);
-Restart;
-
-}
-
-script 26 OPEN // trap
-	{
-	generic_crusher(118,30,30,0,300);
-	delay(125);
-	generic_crusher(119,30,30,0,300);
-	delay(125);
-	generic_crusher(120,30,30,0,300);
-	}
-    
-    script 27 (void)      //minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-	SpawnProjectile (121,"Fswordmissile2",130,250,0,0,0);
-
-delay (60);
-
-	}
-    
-}
-    
-    script 28 (void)      //minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-	SpawnProjectile (122,"Bfgball2",130,250,0,0,0);
-delay (300);
-
-	}
-    
-}
-
-script 29 (void)          //minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-    
-SpawnProjectile (123,"Bfgball2",185,250,0,0,0);
-delay (300);
-	}
-    
-}
-
-script 30 (void)      //archoncomet minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-	SpawnProjectile (126,"Bfgball2",0,250,0,0,0);
-delay (300);
-	}
-    
-}
-
-script 31 (void)      //archoncomet minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-	SpawnProjectile (124,"Bfgball2",0,250,0,0,0);
-delay (300);
-	}
-    
-}
-
-script 32 (void)      //archoncomet minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-	SpawnProjectile (125,"Bfgball2",0,250,0,0,0);
-delay (300);
-	}
-    
-}
-    
-//Monster Spawner
-
-Script 101 (Void) // wave 1 / wave 1
+Script 4 (Void) // wave 1 / wave 1
 { 	
 Delay (50);
 Setfont("BIGFONT");
@@ -370,14 +238,14 @@ HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
-SpawnSpotfacing ("Bruiserdemon", 6, 999);
+SpawnSpotfacing ("HellWarrior", 6, 999);
 Delay(2);
-SpawnSpotfacing ("Deathknight", 7, 999);
+SpawnSpotfacing ("Hellsfury", 7, 999);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
 
-Script 102 (Void) // wave 2 
+Script 5 (Void) // wave 2 
 { 	
 Delay (10);
 Ambientsound("Dscrea2",255); //devil talk
@@ -397,12 +265,12 @@ HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
-SpawnSpotfacing ("Hellsfury", 89, 999);
+SpawnSpotfacing ("Hellwarrior", 89, 999);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
 
-Script 103 (Void) // wave 3
+Script 6 (Void) // wave 3
 { 	
 Delay(40);
 setfont("DOOMFONT");
@@ -428,7 +296,7 @@ ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
 
 
-Script 104 (Void) // wave 4
+Script 7 (Void) // wave 4
 { 	
 Delay(40);
 ACS_Terminate(301, 0);
@@ -451,7 +319,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
 
-Script 105 (Void) // wave 5
+Script 8 (Void) // wave 5
 { 	
 Delay(60);
 ACS_Terminate(301, 0);
@@ -474,7 +342,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
     
-   Script 106 (Void) // wave 6
+   Script 9 (Void) // wave 6
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -497,7 +365,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
 
-Script 107 (Void) // wave 7
+Script 10 (Void) // wave 7
 { 	
 Delay (30);
 ACS_Terminate(301, 0);
@@ -521,7 +389,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
 
-     Script 108 (Void) // wave 8
+     Script 11 (Void) // wave 8
 { 	
 Delay(30);
 setfont("DOOMFONT");
@@ -546,7 +414,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }  
  
-     Script 109 (Void) // wave 9
+     Script 12 (Void) // wave 9
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -569,7 +437,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }   
 
-     Script 110 (Void) // wave 10
+     Script 13 (Void) // wave 10
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -592,7 +460,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }  
 
-     Script 111 (Void) // wave 11
+     Script 14 (Void) // wave 11
 { 	
 Delay(60);
 ACS_Terminate(301, 0);
@@ -610,7 +478,7 @@ HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
-SpawnSpotfacing ("cacoking", 101, 999);
+SpawnSpotfacing ("CyberMastermind", 101, 999);
 Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
@@ -618,7 +486,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }   
 
-     Script 112 (Void) // wave 12
+     Script 15 (Void) // wave 12
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -633,7 +501,7 @@ HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
-SpawnSpotfacing ("gaguuro", 101, 999);
+SpawnSpotfacing ("Cheogh", 101, 999);
 Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
@@ -641,7 +509,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }   
 
-     Script 113 (Void) // wave 13
+     Script 16 (Void) // wave 13
 { 	
 Delay(60);
 ACS_Terminate(301, 0);
@@ -664,7 +532,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }   
     
-         Script 114 (Void) // wave 14
+         Script 17 (Void) // wave 14
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -687,7 +555,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
 
-         Script 115 (Void) // wave 15
+         Script 18 (Void) // wave 15
 { 	
 Delay(70);
 setfont("DOOMFONT");
@@ -713,7 +581,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
  
-          Script 116 (Void) // wave 16
+          Script 19 (Void) // wave 16
 { 	
 Delay(60);
 ACS_Terminate(301, 0);
@@ -736,7 +604,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
     
-              Script 117 (Void) // wave 17
+              Script 20 (Void) // wave 17
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -759,7 +627,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
   
-              Script 118 (Void) // wave 18
+              Script 21 (Void) // wave 18
 { 	
 Delay(50);
 ACS_Terminate(301, 0);
@@ -786,7 +654,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
 
-              Script 119 (Void) // wave 19
+              Script 22 (Void) // wave 19
 { 	
 Delay(50);
 Acs_Terminate(301,0);
@@ -809,7 +677,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
     
-                      Script 120 (Void) // wave 20
+                      Script 23 (Void) // wave 20
 { 	
 Delay(60);
 Acs_Terminate(301,0);
@@ -832,7 +700,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
     
-                         Script 121 (Void) // wave 21
+                         Script 24 (Void) // wave 21
 { 	
 Delay(50);
 Acs_Terminate(301,0);
@@ -855,7 +723,7 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
    
-                            Script 122 (Void) // wave 22
+                            Script 25 (Void) // wave 22
 { 	
 Delay(50);
 Acs_Terminate(301,0);
@@ -881,11 +749,11 @@ Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 } 
 
-                            Script 123 (Void) // wave 23
+                            Script 26 (Void) // wave 23
 { 	
 Delay(50);
-Acs_Terminate(25,0);
-Acs_Terminate(100,0);
+Acs_Terminate(31,0);
+Acs_Terminate(28,0);
 setfont("DOOMFONT");
 hudmessage(s:"the final door has opened!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);Delay(150);
 Delay(130);
@@ -912,17 +780,17 @@ setmusic ("D_boss");
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
 SpawnSpotfacing ("Devilform1", 1, 999); 
-ACS_Execute(4, 0, 0, 0, 0); 
-ACS_Execute(5, 0, 0, 0, 0); 
+ACS_Execute(29, 0, 0, 0, 0); 
+ACS_Execute(30, 0, 0, 0, 0); 
 Delay(35);
 Ambientsound("Dstalk6",255); 
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
     
-    Script 124 (Void) // END
+    Script 27 (Void) // END
 {   
 delay(50);
 Acs_Terminate(301,0);
@@ -933,14 +801,24 @@ Exit_normal(0);
 
 }
 
-Script 4 (void) 
+	Script 28 OPEN	//Regular sky with lightning
 {
-Scroll_ceiling(24,300,1,0);
-}
-    
-    		Script 5 (void)
-{
+Scroll_ceiling(24, 0, 16, 10);
+sector_setceilingscale(24, 0, 460, 0, 460);
+AmbientSound("dsThund", 127);
+delay(10);
+Light_ChangeToValue(2, 255);
+Light_ChangeToValue(24, 255);
+delay(10);
+Light_fade(2, 140, 200);
+Light_fade(24, 140, 200);
+delay(1000);
 
+Restart;
+}
+
+    		Script 29 (void) //Devil Fight changes the sky
+{
 delay(500);
 Light_ChangeToValue(2, 255);
 Light_ChangeToValue(24, 255);
@@ -964,80 +842,116 @@ Light_fade(24, 160, 200);
 Light_fade(2, 160, 200);
 
 Restart;
+}
 
-
+Script 30 (void) 
+{
+Scroll_ceiling(24,300,1,0);
 }
     
-	Script 100 OPEN
+Script 31 open  // Entrancetrap
 {
-Scroll_ceiling(24, 0, 16, 10);
-sector_setceilingscale(24, 0, 460, 0, 460);
-AmbientSound("dsThund", 127);
-delay(10);
-Light_ChangeToValue(2, 255);
-Light_ChangeToValue(24, 255);
-delay(10);
-Light_fade(2, 140, 200);
-Light_fade(24, 140, 200);
-delay(1000);
+SpawnProjectile (114,"hellshot2",80,150,-100,50,0);
+SpawnProjectile (115,"hellshot2",10,150,-100,50,0);
+SpawnProjectile (116,"hellshot2",120,150,-100,50,0);
+SpawnProjectile (117,"hellshot2",-85,150,-100,50,0);
 
-
+delay (100);
 Restart;
 
-
 }
 
-
-
-
-script 10 (void)      //archoncomet minigun
+script 32 OPEN // Devil Door trap
+{
+generic_crusher(118,30,30,0,300);
+delay(125);
+generic_crusher(119,30,30,0,300);
+delay(125);
+generic_crusher(120,30,30,0,300);
+}
+    
+    script 33 (void)      //Fightsword minigun
 {
 
 int k = random (100,150);
 	for (int i=0; i<1; i++)
 	{
 
+	SpawnProjectile (121,"Fswordmissile2",130,250,0,0,0);
 
-	SpawnProjectile (31,"archoncomet",0,250,0,0,0);
- SpawnProjectile (30,"archoncomet",0,250,0,0,0);
- 	SpawnProjectile (33,"archoncomet",0,250,0,0,0);
- SpawnProjectile (34,"archoncomet",0,250,0,0,0);
-	SpawnProjectile (35,"archoncomet",0,250,0,0,0);
- SpawnProjectile (36,"archoncomet",0,250,0,0,0);
-
+delay (60);
 
 	}
-
-
-delay (400);
+    
 }
 
-
-script 12 (void)      //SteelBall minigun
+    script 34 (void)      //Bfgballminigun
 {
 
 int k = random (100,150);
 	for (int i=0; i<1; i++)
 	{
 
-
-
-	SpawnProjectile (44,"SteelBall",130,250,0,0,0);
- SpawnProjectile (45,"SteelBall",130,250,0,0,0);
-	SpawnProjectile (46,"SteelBall",130,250,0,0,0);
-SpawnProjectile (47,"SteelBall",130,250,0,0,0);
-SpawnProjectile (48,"SteelBall",130,250,0,0,0);
-SpawnProjectile (49,"SteelBall",130,250,0,0,0);
-
-
+	SpawnProjectile (122,"Bfgball2",130,250,0,0,0);
+delay (300);
 
 	}
-
-
-delay (500);
+    
 }
 
-script 11 (void)      //hellshot2 minigun
+script 35 (void)          //BfgBallminigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+    
+SpawnProjectile (123,"Bfgball2",185,250,0,0,0);
+delay (300);
+	}
+    
+}
+
+script 36 (void)      //BFGball minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+	SpawnProjectile (126,"Bfgball2",0,250,0,0,0);
+delay (300);
+	}
+    
+}
+
+script 37 (void)      //Bfgball minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+	SpawnProjectile (124,"Bfgball2",0,250,0,0,0);
+delay (300);
+	}
+    
+}
+
+script 38 (void)      //Bfgball minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+	SpawnProjectile (125,"Bfgball2",0,250,0,0,0);
+delay (300);
+	}
+    
+}
+
+script 39 (void)      //hellshot2 minigun
 {
 
 int k = random (100,150);
@@ -1061,7 +975,53 @@ SpawnProjectile (43,"hellshot2",60,250,0,0,0);
 delay (500);
 }
 
-script 13 (void)      //scyberrocket minigun
+script 40 (void)      //BruiserBall minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+
+
+ SpawnProjectile (74,"BruiserBall",30,250,0,0,0);
+ SpawnProjectile (75,"BruiserBall",30,250,0,0,0);
+ SpawnProjectile (76,"BruiserBall",30,250,0,0,0);
+ SpawnProjectile (77,"BruiserBall",30,250,0,0,0);
+ SpawnProjectile (78,"BruiserBall",30,250,0,0,0);
+ SpawnProjectile (79,"BruiserBall",30,250,0,0,0);
+
+
+
+	}
+
+
+delay (500);
+}
+
+script 41 (void)      //archoncomet minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+
+	SpawnProjectile (31,"archoncomet",0,250,0,0,0);
+ 	SpawnProjectile (30,"archoncomet",0,250,0,0,0);
+ 	SpawnProjectile (33,"archoncomet",0,250,0,0,0);
+	 SpawnProjectile (34,"archoncomet",0,250,0,0,0);
+	SpawnProjectile (35,"archoncomet",0,250,0,0,0);
+	 SpawnProjectile (36,"archoncomet",0,250,0,0,0);
+
+
+	}
+
+
+delay (400);
+}
+
+script 42 (void)      //scyberrocket minigun
 {
 
 int k = random (100,150);
@@ -1083,168 +1043,45 @@ SpawnProjectile (55,"scyberrocket",185,250,0,0,0);
 delay (1000);
 }
 
-script 14 (void)      //Big minigun
+script 43 (void)      //DCBMiss1 minigun
 {
 
 int k = random (100,150);
 	for (int i=0; i<1; i++)
 	{
 
-    DamageThing (5);
-    delay(30);
-SpawnProjectile (31,"archoncomet",0,250,0,0,0);
-	DamageThing (5);
-	delay(5);
- SpawnProjectile (30,"archoncomet",0,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- 	SpawnProjectile (33,"archoncomet",0,250,0,0,0);
-    	DamageThing (5);
-	delay(5);
- SpawnProjectile (34,"archoncomet",0,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
-	SpawnProjectile (35,"archoncomet",0,250,0,0,0);
-    	DamageThing (5);
-	delay(5);
- SpawnProjectile (36,"archoncomet",0,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
-SpawnProjectile (44,"SteelBall",130,250,0,0,0);
-	DamageThing (5);
-	delay(5);
- SpawnProjectile (45,"SteelBall",130,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
+
+
+ SpawnProjectile (62,"DCBMiss1",-85,250,0,0,0);
+ SpawnProjectile (63,"DCBMiss1",-85,250,0,0,0);
+ SpawnProjectile (64,"DCBMiss1",-85,250,0,0,0);
+ SpawnProjectile (65,"DCBMiss1",-85,250,0,0,0);
+ SpawnProjectile (66,"DCBMiss1",-85,250,0,0,0);
+ SpawnProjectile (67,"DCBMiss1",-85,250,0,0,0);
+
+
+
+	}
+
+
+delay (500);
+}
+
+script 44 (void)      //SteelBall minigun
+{
+
+int k = random (100,150);
+	for (int i=0; i<1; i++)
+	{
+
+
+
+	SpawnProjectile (44,"SteelBall",130,250,0,0,0);
+        SpawnProjectile (45,"SteelBall",130,250,0,0,0);
 	SpawnProjectile (46,"SteelBall",130,250,0,0,0);
-    	DamageThing (5);
-	delay(5);
-SpawnProjectile (47,"SteelBall",130,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (48,"SteelBall",130,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (49,"SteelBall",130,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (37,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (38,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (39,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (40,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (41,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (42,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-SpawnProjectile (43,"hellshot2",60,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-	thing_projectile (56,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
-	thing_projectile (57,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
-	thing_projectile (58,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
-	thing_projectile (59,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
-	thing_projectile (60,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
-	thing_projectile (61,T_bfgshot,480,260,0);
-    	DamageThing (5);
-	delay(5);
- SpawnProjectile (62,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (63,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (64,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (65,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (66,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (67,"DCBMiss1",-85,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (68,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (69,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (70,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (71,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (72,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (73,"WoundMotherBall",105,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (74,"BruiserBall",30,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (75,"BruiserBall",30,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (76,"BruiserBall",30,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (77,"BruiserBall",30,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (78,"BruiserBall",30,250,0,0,0);
- 	DamageThing (5);
-	delay(5);
- SpawnProjectile (79,"BruiserBall",30,250,0,0,0);
-	DamageThing (5);
-	delay(5);
-
-
-
-	}
-
-
-delay (2000);
-}
-
-script 16 (void)      //DCBMiss1 minigun
-{
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-
-
- SpawnProjectile (62,"DCBMiss1",-85,250,0,0,0);
- SpawnProjectile (63,"DCBMiss1",-85,250,0,0,0);
- SpawnProjectile (64,"DCBMiss1",-85,250,0,0,0);
- SpawnProjectile (65,"DCBMiss1",-85,250,0,0,0);
- SpawnProjectile (66,"DCBMiss1",-85,250,0,0,0);
- SpawnProjectile (67,"DCBMiss1",-85,250,0,0,0);
+	SpawnProjectile (47,"SteelBall",130,250,0,0,0);
+	SpawnProjectile (48,"SteelBall",130,250,0,0,0);
+	SpawnProjectile (49,"SteelBall",130,250,0,0,0);
 
 
 
@@ -1254,7 +1091,8 @@ int k = random (100,150);
 delay (500);
 }
 
-script 17 (void)      //MotherFire minigun
+
+script 45 (void)      //MotherFire minigun
 {
 
 int k = random (100,150);
@@ -1278,94 +1116,54 @@ int k = random (100,150);
 delay (500);
 }
 
-script 18 (void)      //BruiserBall minigun
+Script 298 (void) // Monsters counter 
 {
-
-int k = random (100,150);
-	for (int i=0; i<1; i++)
-	{
-
-
-
- SpawnProjectile (74,"BruiserBall",30,250,0,0,0);
- SpawnProjectile (75,"BruiserBall",30,250,0,0,0);
- SpawnProjectile (76,"BruiserBall",30,250,0,0,0);
- SpawnProjectile (77,"BruiserBall",30,250,0,0,0);
- SpawnProjectile (78,"BruiserBall",30,250,0,0,0);
- SpawnProjectile (79,"BruiserBall",30,250,0,0,0);
-
-
-
-	}
-
-
-delay (500);
-}
-
-
-Script 233 (void)
-{
-	delay (1);
-    SpawnSpot ("Gmana", 18, 0);
-    SpawnSpot ("Gmana", 18, 0);
-    SpawnSpot ("Gmana", 18, 0);
-    delay (300);
-	
-}
-
-Script 234 (void)
-{
-	delay (1);
-    SpawnSpot ("Bmana", 28, 0);
-    SpawnSpot ("Bmana", 28, 0);
-    SpawnSpot ("Bmana", 28, 0);
-    delay (300);
-	
-}
-
-Script 235 (void)
-{
-	delay (1);
-    SpawnSpot ("Cultammo", 29, 0);
-    SpawnSpot ("cultammo", 29, 0);
-    SpawnSpot ("cultammo", 29, 0);
-    delay (100);
-	
-}
-
-Script 236 (void)
-{
-	delay (1);
-    thing_spawnnofog(42, T_ammobox,0,0);
-    thing_spawnnofog(42, T_ammobox,0,0);
-    thing_spawnnofog(42, T_ammobox,0,0);
-    delay (100);
-	
-}
-
-Script 237 (void)
-{
-	delay (1);
-    thing_spawnnofog(86, T_shellbox,0,0);
-    thing_spawnnofog(86, T_shellbox,0,0);
-    thing_spawnnofog(86, T_shellbox,0,0);
-    delay (100);
-	
-}
-
-Script 238 (void)
-{
-	delay (1);
-    thing_spawnnofog(87, T_backpack,0,0);
-    thing_spawnnofog(87, T_backpack,0,0);
-    thing_spawnnofog(87, T_backpack,0,0);
-    delay (500);
-	
-}
-
-Script 160 OPEN
-{
-SectorDamage (8, 20, "fire", "", DAMAGE_PLAYERS);
-delay(5);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (298, 0);
+  }
+Delay(const:35);
 Restart;
+}
+
+Script 299 (void) // Monsters counter 
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+
+                  script 301 (void) // bosses health
+{
+    SetFont("BIGFONT");
+    hudmessageBold(s: "Boss: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
 }  
