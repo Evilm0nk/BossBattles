@@ -85,63 +85,7 @@ SpawnProjectile (125,"rocket",60,250,0,0,0);
 delay(5);
 SpawnProjectile (125,"rocket",60,250,0,0,0);
 }
-  
-	script 300 (void)
-	{	
-Ambientsound("Dsyousuk",255);
-delay(5);
-SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"Nukerocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-delay(5);
-SpawnProjectile (151,"rocket",60,250,0,0,0);
-}
-  
+    
 script 100 OPEN
 {	
 	delay(200);
@@ -3382,13 +3326,13 @@ else{
 	delay(500);
 }
 
-	Script 298 (void)         ////bad
+	Script 410 (void)         ////bad
 {
 	SpawnSpotfacing ("SuperBabyCacodemon", 5, 989);
 	delay(500);
 }
 
-	Script 299 (void)         ////bad
+	Script 409 (void)         ////bad
 {
 if (ThingCount(T_NONE,998) >= 1){
 terminate;
@@ -3399,7 +3343,7 @@ else{
 }
 }
 
-	Script 301 (void)         ////bad
+	Script 408 (void)         ////bad
 {
 if (ThingCount(T_NONE,998) >= 1){
 terminate;
