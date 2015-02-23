@@ -623,10 +623,10 @@ SpawnSpotfacing ("hellsfury", 18, 964);
 Delay(2);
 SpawnSpotfacing ("bruiserdemon", 19, 964);
 Delay(2);
-SpawnSpotfacing ("hellpatriarch", 6, 979);
+SpawnSpotfacing ("hellpatriarch", 6, 999);
 Delay(2);
 ACS_Execute(300, 0, 0, 0, 0); // boss health multiplier
-ACS_Execute(297, 0, 0, 0, 0); // boss health displayed
+ACS_Execute(301, 0, 0, 0, 0); // boss health displayed
 Delay(20);
 ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
@@ -1225,7 +1225,7 @@ setfont("DOOMFONT");
 hudmessage(s:"Be prepared to stop this huge wave of demons!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(135);
 SetFont("BIGFONT");
-HudMessage(s:"Final Wave! Hell General hellpatriarch!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 3.0);
+HudMessage(s:"Final Wave! Hell General Avatar!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 3.0);
 Delay(140);
 SetFont("BIGFONT");
 HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
@@ -1277,10 +1277,10 @@ SpawnSpotfacing ("hellsfury", 18, 964);
 Delay(2);
 SpawnSpotfacing ("Baronofhell", 19, 964);
 Delay(2);
-SpawnSpotfacing ("EnragedAvatar", 6, 979);
+SpawnSpotfacing ("EnragedAvatar", 6, 999);
 Delay(2);
 ACS_Execute(300, 0, 0, 0, 0); // boss health multiplier
-ACS_Execute(296, 0, 0, 0, 0); // boss health displayed
+ACS_Execute(301, 0, 0, 0, 0); // boss health displayed
 Delay(20);
 ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
@@ -1468,69 +1468,6 @@ delay (35);
 SetFont("BIGFONT");
 HudMessagebold(s:"Heaven Reinforcements awaiting orders!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
 Ambientsound("HG-atak3",255);
-}
-
-                  script 296 (void) // bosses health
-{
-    SetFont("BIGFONT");
-    hudmessageBold(s: "Avatar: ", d:GetActorProperty(979, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-                  script 297 (void) // bosses health
-{
-    SetFont("BIGFONT");
-    hudmessageBold(s: "HellPatriarch: ", d:GetActorProperty(979, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-
-Script 298 (void) // MONSTERCounter
-{
-If ( (ThingCount(0, 979)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  AmbientSound("dswelld", 127); // "Welldone"
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (298, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-Script 299 (void) // Monsters counter 
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  AmbientSound("dswelld", 127); // "Welldone"
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for monsters
-{
-if(PlayerCount() > 1) SetActorProperty(979, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
 }
 
 	Script 305 open // popsoap heaven health divider

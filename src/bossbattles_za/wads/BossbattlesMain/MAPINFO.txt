@@ -1,0 +1,240 @@
+ClearEpisodes
+ClearSkills
+
+Skill Easy
+{
+   Name = "Too Easy"
+   TextColor = "Blue"
+   AmmoFactor = 2.0
+   DamageFactor = 0.3
+   SpawnFilter = 1
+   AutoUseHealth
+   MustConfirm = "Designed for SinglePlayer, Players take 1 quarter the damage, Press Y to continue."
+}
+
+Skill Normal
+{
+   Name = "SinglePlayer"
+   TextColor = "Green"
+   AmmoFactor = 2.0
+   DamageFactor = 0.5
+   SpawnFilter = 2
+   AutoUseHealth
+   MustConfirm = "Designed for SinglePlayer, Players take Half of the damage, Press Y to Continue."
+}
+
+Skill Survival
+{
+   Name = "Survival Coop"
+   TextColor = "Yellow"
+   DamageFactor = 0.7
+   SpawnFilter = 3
+   AutoUseHealth
+   MustConfirm = "Designed for Survival, Players Take 3 quarters the Damage, Press Y to Continue."
+}
+
+Skill MultiPlayer
+{
+   Name = "Coop"
+   TextColor = "Orange"
+   SpawnFilter = 4
+   AutoUseHealth
+   MustConfirm = "Designed for Coop, normal damage is applied! Press Y to Continue."
+}
+
+Skill NightMare //AKA bad-ass mode!
+{
+   Name = "BossBattles Champ"
+   TextColor = "Red"
+   AmmoFactor = 2.0
+   DamageFactor = 2.0
+   SpawnFilter = 5
+   MustConfirm = "Designed for someone who wants a huge challenge, monsters do twice the damage! Press Y to Continue."
+}
+
+Episode MAP01
+{
+   Name = "The Devil's Prophecy"
+}
+
+Episode MAP12
+{
+   Name = "demortrix's Demise"
+}
+
+Map TitleMap "Entrance to hell" // By Evilm0nk. Same as level 18.
+{
+   Sky1 = "SKY1", 0.1
+}
+
+Map MAP01 "Heaven's invasion" // By Evilm0nk, Gosimer. Hell calls upon heros from the past to stop hell from invading heaven.
+{
+   Sky1 = "Skyfog", 0.4
+   OutSideFog = "Gray10"
+   Next = "MAP02"
+   SecretNext = "MAP01"
+}
+
+Map MAP02 "Heaven's Gates" // By Gosimer. Heavens return entrance.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "Skyfog", 0.4
+   Sky2 = "Skyfog2", 0.7
+   Next = "MAP03"
+   SecretNext = "MAP02"
+}
+
+Map MAP03 "Heavens Burnt Land" // By Evilm0nk. The beginning of the satan servant saga, this takes place after defeating the devil.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "Skyfog", 0.4
+   Next = "MAP04"
+   OutSideFog = "Gray10"
+   SecretNext = "MAP03"
+}
+
+Map MAP04 "Heaven's Final Fight" // By Evilm0nk. Heavens finishing fight to fend off the demons.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "SKY1", 0.1
+   Next = "MAP05"
+}
+
+Map MAP05 "Hell's Entrance" // By Evilm0nk. You enter intp hell and this is where you begin your campaign.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Next = "MAP06"
+}
+
+Map MAP06 "Hell's Keep" // By Evilm0nk, Gosimer. A lava Area where your introduced to the hellish bosses.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Next = "MAP07"
+}
+
+Map MAP07 "Hellbound" // By Evilm0nk. a canyon where the devil discusses battle with his brothern.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Next = "MAP08"
+}
+
+Map MAP08 "Hell's Hangnail" // By Evilm0nk. A small Arena for battling demon hoards.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Next = "MAP09"
+}
+
+Map MAP09 "Hell Grounds" // By flame64mon. The devils castle.
+{
+   Sky1 = "SKY-0191", 0.1
+   Next = "MAP10"
+   Cluster = 1
+}
+
+Map MAP10 "Hellish Castle!" // By Evilm0nk. the first castle where the devil hides.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Next = "MAP11"
+}
+
+Map MAP11 "Hell's Challenge" // By Evilm0nk, Gosimer. Combination of maps from all the doom type games, Hell is testing you here.
+{
+   Sky1 = "SKY1", 0.1
+   Next = "MAP12"
+}
+
+Map MAP12 "The Final Confrontation" // By Evilm0nk. the devil final battle.
+{
+   Sky1 = "SKY-0191", 0.1
+   Next = "MAP13"
+   Cluster = 1
+}
+
+Map MAP13 "Chaos Realm" // By Evilm0nk. the entrance to the realm of satan servant ( unless untrustable wants a diffrent entrance map )
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "SKY1", 0.1
+   Next = "MAP14"
+}
+
+Map MAP14 "The belly of the beast" // By Evilm0nk. Enters the bowels of a demon, icon of sin rules this area.
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "SKY1", 0.1
+   Next = "MAP15"
+}
+
+Map MAP15 " The Graveyard of Chaos" // By Evilm0nk,. A Graveyard after the monsters belly.
+{
+   Sky1 = "SKY1", 0.1
+   Next = "MAP16"
+}
+
+Map MAP16 "Chaotic Castle" // By Evilm0nk, A castle full of growths and stuff that doesn't make sense
+{
+   Next = "MAP17"
+}
+
+Map MAP17 "Domain Of Magic" // By Evilm0nk, entering the 5 tiers of the chaos realm, first tier is magic.
+{
+   Next = "MAP18"
+}
+
+Map MAP18 "Into The Chaos Engine" // By Evilm0nk, A Machines Paradise
+{
+   Next = "MAP19"
+}
+
+Map MAP19 "Tip of the IceBerg" // By Evilm0nk, A SnowLand That Resembles earth in the Chaos Realm.
+{
+   Next = "MAP20"
+}
+
+Map MAP20 "Heart Of Chaos" // By Evilm0nk. The Chaos Realms Toughest Battle is at the Center of the realm!
+{
+   Sky1 = "SKY1", 0.1
+   Next = "MAP21"
+}
+
+Map MAP21 "Demortrix's lair" // By Evilm0nk, The final BAttle.
+{
+   Next = "MAP22"
+}
+
+Map MAP22 "Museum of Faces" // By Evilm0nk and gosimer. Museum map still needs alot of work
+{
+   Cluster = 1
+   LevelNum = 1
+   EvenLighting
+   Sky1 = "SKY1", 0.1
+   Next = "MAP01"
+   SecretNext = "MAP13"
+   music = D_MAP22
+}
+
+gameinfo
+{
+    titlepage = "TITLEPP"
+    creditpage = "CREDIT"
+
+}

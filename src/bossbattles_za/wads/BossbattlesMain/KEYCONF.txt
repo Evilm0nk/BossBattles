@@ -1,0 +1,15 @@
+Clearplayerclasses
+Addplayerclass Doomplayer2
+Addplayerclass Mage1
+Addplayerclass Fighter1
+Addplayerclass Cleric1
+Addplayerclass Corvus1
+Addplayerclass Strife1
+Addplayerclass Doom64Marine
+weaponsection Normal
+setslot 1 "Double-Bladed Chainsaw" "Mace of Contrition" "Timon's Axe" "Fire Crystal" "Punch Slicer" "Destructive Gauntlets" Ripper
+setslot 2 Tri-Staff gnasher "Skull Staff" "Serpent Staff" Voulge "Staff of Protection" Chewer
+setslot 3 "Mega Chaingun" "Phoenix Rod" "Frost Shards" "Hammer of Retribution" "Super Mauler" "Ice Bow" ElementalDoubleBarrel
+setslot 4 "R-300" Firestorm "Cult-of-the-Serpent Staff" "Frost Fang" Karasawa Quietus "Rampage Rocket Launcher"
+setslot 5 "Gauntlets of Triumph" Bloodscourge Firemace "Uranium Melter" "Tank Rifle" LightBringer PlasmaShocker
+setslot 6 BFG "Nova Cannon" "Vorpal Blade" "Rage Staff" "Soul Reaver" Wraithverge Unmaker

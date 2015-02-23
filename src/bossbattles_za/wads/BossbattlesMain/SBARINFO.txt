@@ -1,0 +1,472 @@
+//Thetis Hud version 5 with enhancements
+
+interpolatehealth true, 50;
+interpolatearmor true, 50;
+completeborder true;
+Base Doom;
+//Height 32;
+
+
+//Credits to TheShooter7 for the Bar Caps :)
+
+statusbar FullScreen, fullscreenoffsets
+{
+	
+	PlayerClass InvulnFighter
+	{
+	drawimage "FIGHTEPG", 170, -74;
+	}
+	PlayerClass Clericsummoner
+	{
+	drawimage "CLERICPG", 170, -73;
+	}
+	PlayerClass HasteMage
+	{
+	drawimage "MAGEEPG", 170, -72;
+	}
+	PlayerClass TomedCorvus
+	{
+	drawimage "HERETCPG", 170, -73;
+	}
+	PlayerClass StalkerStrifeg
+	{
+	drawimage "STRIFPG", 170, -72;
+	}
+	PlayerClass QuadMarine
+	{
+	drawimage "DOOMGPG", 170, -72;
+	}
+	PlayerClass ElementalSoldier
+	{
+	drawimage "64MARNPG", 170, -72;
+	}
+	
+	//Corvus weps
+    IsSelected "Frost Fang"
+    {
+	DrawImage "FSTFA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANBA0", -185, -3;
+    }
+
+    IsSelected "Frost Fang Powered"
+    {
+	DrawImage "FSTFA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANBA0", -185, -3;
+    }
+
+    IsSelected "Phoenix Rod"
+    {
+	DrawImage "WPHXA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+
+    IsSelected "Phoenix Rod Powered"
+    {
+	DrawImage "WPHXA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+
+    IsSelected "Skull Staff"
+    {
+	DrawImage "SKSTA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGC0", -185, -3;
+    }
+	
+	IsSelected "Skull Staff Powered"
+    {
+	DrawImage "SKSTA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGC0", -185, -3;
+    }
+
+    IsSelected "Firemace"
+    {
+	DrawImage "WMCEA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGA0", -185, -3;
+    }
+	
+	IsSelected "Firemace Powered"
+    {
+	DrawImage "WMCEA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGA0", -185, -3;
+    }
+	
+	IsSelected "Soul Reaver"
+    {
+	DrawImage "SLREL0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGE0", -185, -3;
+    }
+	
+	IsSelected "Soul Reaver Powered"
+    {
+	DrawImage "SLREL0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGE0", -185, -3;
+    }
+	
+	IsSelected "Destructive Gauntlets"
+    {
+	DrawImage "FGAUY0", -80, -45;
+    }
+
+	IsSelected "Destructive Gauntlets Powered"
+    {
+	DrawImage "FGAUY0", -80, -45;
+    }
+
+//Fighters weps
+
+	IsSelected "Staff of Protection"
+    {
+	DrawImage "REVIH0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+
+	IsSelected "Hammer of Retribution"
+    {
+	DrawImage "WFHMA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGC0", -185, -3;
+    }
+
+	IsSelected "Vorpal Blade"
+    {
+	DrawImage "VBLGG0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANBA0", -185, -3;
+    }
+
+	IsSelected "Quietus"
+    {
+	DrawImage "QUESA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGA0", -185, -3;
+    }
+
+	IsSelected "Timon's Axe"
+    {
+	DrawImage "WFAXA0", -80, -45;
+    }
+
+	IsSelected "Gauntlets of Triumph"
+    {
+	DrawImage "FGAUY0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGE0", -185, -3;
+    }
+
+//CLERICS WEPS
+
+	IsSelected "Mace of Contrition"
+    {
+	DrawImage "CMCEG0", -80, -22;
+    }
+	
+	IsSelected "Serpent Staff"
+    {
+	DrawImage "WCSSA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGA0", -185, -3;
+    }
+	
+	IsSelected "Ice Bow"
+    {
+	DrawImage "BWPUA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGC0", -185, -3;
+    }
+	
+	IsSelected "Firestorm"
+    {
+	DrawImage "WCFMD0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGE0", -185, -3;
+    }
+	
+	IsSelected "Lightbringer"
+    {
+	DrawImage "LTBRA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+	
+	IsSelected "Wraithverge"
+    {
+	DrawImage "WCHSA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANBA0", -185, -3;
+    }
+	
+//doomguy WEPS
+
+	
+	IsSelected "Double-Bladed Chainsaw"
+    {
+	DrawImage "2SAWA0", -80, -45;
+    }
+
+	IsSelected "Mega Chaingun"
+    {
+	DrawImage "SGUNZ0", -80, -42;
+	DrawImage "AMM1D0", -200, -12;
+    }
+
+	IsSelected "Gnasher"
+    {
+	DrawImage "REMIA0", -80, -29;
+	DrawImage "AMM1A0", -200, -12;
+    }
+
+	IsSelected "R-300"
+    {
+	DrawImage "CHIBI0", -80, -25;
+	DrawImage "AMM1B0", -200, -12;
+    }
+
+	IsSelected "Uranium Melter"
+    {
+	DrawImage "PLASA0", -80, -22;
+	DrawImage "AMM1C0", -200, -12;
+    }
+
+	IsSelected "BFG"
+    {
+	DrawImage "BFUGA0", -80, -22;
+	DrawImage "AMM1C0", -200, -12;
+    }
+
+//Strife Weps
+
+	IsSelected "Punch Slicer"
+    {
+	DrawImage "PNCHE0", -200, -22;
+    }
+
+	IsSelected "Voulge"
+    {
+	DrawImage "BNCPA0", -80, -29;
+	DrawImage "AMM1D0", -200, -12;
+    }
+
+
+	IsSelected "Super Mauler"
+    {
+	DrawImage "TRPDA0", -80, -29;
+	DrawImage "AMM1C0", -200, -12;
+    }
+
+	IsSelected "Karasawa"
+    {
+	DrawImage "KSWPA0", -80, -26;
+	DrawImage "AMM1C0", -200, -12;
+    }
+
+	IsSelected "Tank Rifle"
+    {
+	DrawImage "TPCWA0", -80, -32;
+	DrawImage "AMM1A0", -200, -12;
+    }
+
+	IsSelected "Nova Cannon"
+    {
+	DrawImage "M800X0", -80, -32;
+	DrawImage "AMM1B0", -200, -12;
+    }
+
+//MAGE WEPS
+
+	IsSelected "Fire Crystal"
+    {
+	DrawImage "FWNDZ0", -80, -45;
+    }
+
+	IsSelected "Tri-Staff"
+    {
+	DrawImage "STFFA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGC0", -185, -3;
+    }
+
+	IsSelected "Frost Shards"
+    {
+	DrawImage "WMCSA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+
+	IsSelected "Cult-of-the-Serpent Staff"
+    {
+	DrawImage "TSOGA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGE0", -185, -3;
+    }
+
+	IsSelected "Bloodscourge"
+    {
+	DrawImage "AMWPA0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGA0", -185, -3;
+	
+    }
+
+	IsSelected "Rage Staff"
+    {
+	DrawImage "HLTFK0", -80, -45;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANBA0", -185, -3;
+    }
+
+	//Doom64 weps
+    IsSelected "Ripper"
+    {
+	DrawImage "SAWHE0", -80, -45;
+    }
+
+	IsSelected "Chewer"
+    {
+	DrawImage "HCNGA0", -80, -42;
+	DrawImage "AMM1D0", -200, -12;
+    }
+
+	IsSelected "ElementalDoubleBarrel"
+    {
+	DrawImage "SHT5K0", -80, -29;
+	DrawImage "AMM1A0", -200, -12;
+    }
+
+	IsSelected "Rampage Rocket Launcher"
+    {
+	DrawImage "MGSIG0", -80, -25;
+	DrawImage "AMM1B0", -200, -12;
+    }
+
+	IsSelected "PlasmaShocker"
+    {
+	DrawImage "RGLLF0", -80, -22;
+	DrawImage "AMM1C0", -200, -12;
+    }
+
+	IsSelected "Unmaker"
+    {
+	DrawImage "LGUNA0", -80, -22;
+	DrawImage "MANGD0", -185, -18;
+	DrawImage "MANGF0", -185, -3;
+    }
+
+	
+//Bottom Right
+
+	UsesAmmo
+	{
+	drawbar "AMMO1B", "AMMO1DD", Ammo1, Horizontal, -137, -22;
+	drawshader 24, 16, Horizontal, -138, -22;
+	drawshader 24, 16, Horizontal, reverse, -34, -22;
+	drawimage "HUDCAP", -147, -22;
+	drawnumber 40, CONFONT, Yellow, Ammo1, -152, -18, 0;
+	}
+	
+	DrawImage runeicon, -208, -5;
+	drawselectedinventory artiflash, INDEXFON, -255, -33, -229, -11;
+	
+	UsesSecondaryAmmo
+	{
+	drawbar "AMMO2B", "AMMO2DD", Ammo2, Horizontal, -137, -38;
+	drawshader 24, 16, Horizontal, -138, -38;
+	drawshader 24, 16, Horizontal, reverse, -34, -38;
+	drawimage "HUDCAP", -147, -38;
+	drawnumber 40, CONFONT, Orange, Ammo2, -152, -34, 0;
+	}
+	
+	
+//Bottom Left
+
+	drawbar "ARMORBB", "ARMORDDD", Armor, Horizontal, 10, -38;
+	drawbar "HEALTHB", "HEALTHDD", Health, Horizontal, 10, -22;
+
+	drawshader 24, 16, Horizontal, 9, -22;
+	drawshader 24, 16, Horizontal, 9, -38;
+	drawshader 24, 16, Horizontal, reverse, 115, -22;
+	drawshader 24, 16, Horizontal, reverse, 115, -38;
+
+	drawimage "HUDCAP", 0, -22;
+	drawimage "HUDCAP", 0, -38;
+	drawnumber 40, CONFONT, Green, Armor, 170, -34, 0;
+	drawnumber 40, CONFONT, Yellow, Health, 170, -18, 0, red, 33, green, 66;
+
+	
+	drawimage armoricon, 120, -40;
+	
+	gamemode singleplayer, cooperative, survival, invasion
+	{
+	drawkeybar 30, Horizontal, auto, 14, -55;
+	}
+	
+	gamemode ctf, oneflagctf, skulltag, teampossession, teamlms
+    {
+	drawnumber 1, HUDFONT_DOOM, brick, teamscore "red", 69, -57;
+		DrawString HUDFONT_DOOM, white, "-", 78, -57;
+		drawnumber 1, HUDFONT_DOOM, lightblue, teamscore "blue", 93, -57;
+	}
+	
+	gamemode ctf
+	{
+	InInventory RedFlag, 1
+	{
+	DrawImage "RedFlag", 10, -63;
+	}
+	InInventory BlueFlag, 1
+	{
+	DrawImage "BlueFlag", 10, -63;
+	}
+	}
+	
+	gamemode oneflagctf
+	{
+	InInventory WhiteFlag, 1
+	{
+	DrawImage "WhiteFlag", 10, -63;
+	}
+	}
+
+	gamemode skulltag
+	{
+	InInventory RedSkullST, 1
+	{
+	DrawImage "RSKULL", 10, -56;
+	}
+	InInventory BlueSkullST, 1
+	{
+	DrawImage "BSKULL", 10, -56;
+	}
+	}
+	
+//Top Right
+
+	gamemode deathmatch, teamgame, teamdeathmatch, duel
+	{
+		drawnumber 2, HUDFONT_DOOM, untranslated, frags, drawshadow, -3, 1;
+	}
+	
+	gamemode cooperative
+	{
+	drawnumber 40, CONFONT, Green, Kills, -42, 0, 0;
+	drawimage "CONSLASH", -40, 1;
+	drawnumber 40, CONFONT, Green, Monsters, -1, 0, 0;
+	}
+
+}
+
+
+StatusBar InventoryFullScreen
+{
+	drawinventorybar Doom, 7, INDEXFON, 50, 170;
+}

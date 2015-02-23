@@ -1,0 +1,2127 @@
+//=======================================================================================================================
+// Gibs
+//=======================================================================================================================
+
+ACTOR Bone4 10111
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    BONE C 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+   Death:
+    BONE C 3 A_PlaySound("Gib/sound2")
+	BONE C 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    BONE C 300
+    Stop  
+  }
+}
+
+ACTOR Bone3 10112
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    BONE D 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    BONE D 3 A_PlaySound("Gib/sound2")
+	BONE D 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    BONE D 300
+    Stop  
+  }
+}
+
+ACTOR BrainMush1 10113
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    MUSH A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    MUSH A 3 A_PlaySound("Gib/sound2")
+	MUSH A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    MUSH A 300
+    Stop  
+  }
+}
+
+ACTOR GoreChunk6 10114
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    CHNK A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    CHNK A 3 A_PlaySound("Gib/sound2")
+	CHNK A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    CHNK A 300
+    Stop  
+  }
+}
+
+ACTOR GoreChunk5 10115
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    CHNK B 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    CHNK B 3 A_PlaySound("Gib/sound2")
+	CHNK B 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    CHNK B 300
+    Stop  
+  }
+}
+
+ACTOR GoreChunk4 10116
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    CHNK C 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    CHNK C 3 A_PlaySound("Gib/sound2")
+	CHNK C 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    CHNK C 300
+    Stop  
+  }
+}
+
+
+ACTOR EyeBalL1 10117
+{
+
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    EYEB A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    CHNK A 3 A_PlaySound("Gib/sound2")
+	CHNK C 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    CHNK A 300
+    Stop  
+  }
+}
+
+ACTOR Organ4 10118
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    ORGN A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    ORGN A 3 A_PlaySound("Gib/sound2")
+	ORGN A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    ORGN A 300
+    Stop  
+  }
+}
+
+ACTOR Organ3 10119
+{
+
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    ORGN B 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    ORGN B 3 A_PlaySound("Gib/sound2")
+	ORGN B 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    ORGN B 300
+    Stop  
+  }
+}
+
+ACTOR RibCage1 10110
+{
+
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    RIBC A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    RIBC A 3 A_PlaySound("Gib/sound2")
+	RIBC A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    RIBC A 300
+    Stop  
+  }
+}
+
+ACTOR SpinalCord1 10121
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    SPIN A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    SPIN A 3 A_PlaySound("Gib/sound2")
+	SPIN A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    SPIN A 300
+    Stop  
+  }
+}
+
+ACTOR Organs1 10123
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    ORGS A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    ORGS A 3 A_PlaySound("Gib/sound2")
+	ORGS A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    ORGS A 300
+    Stop  
+  }
+}
+
+ACTOR Torso1 10124
+{
+   Speed 8
+   Mass 5000
+   Radius 1
+   Height 1
+   +Missile
+   +DropOff
+   +LowGravity
+   -NoGravity
+  States
+  {
+  Spawn:
+    TRSO A 5 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,25),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    Loop
+  Death:
+    TRSO A 3 A_PlaySound("Gib/sound2")
+	TRSO A 0 A_SpawnItem("NashGore_BloodSpot",0,0,0,1)
+    TRSO A 300
+    Stop  
+  }
+}
+
+//=======================================================================================================================
+// Titlemap stuff
+//=======================================================================================================================
+
+
+actor Corvus4 13563
+{
+   //$Category TITLEMAPSTUFF
+Health 600
+Monster
+States
+{
+Spawn:
+HTIC A -1
+Loop
+See:
+HTIC ABCD 4
+Loop
+Missile:
+HTIC EF 12 
+Goto Spawn
+Melee:
+HTIC F 6 bright
+Goto Missile
+Pain:
+HTIC G 4
+HTIC G 4 A_Pain
+Goto Spawn
+Death:
+HTIC H 8
+HTIC I 8 A_PlayerScream
+HTIC J 8 A_NoBlocking
+HTIC KLM 8
+HTIC N 500
+NKXP BC 3 Bright
+NKXP D 3 Bright A_PlaySound ("duke/flame")
+NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+NULL A -1
+Stop
+XDeath:
+HTIC O 5
+HTIC P 5 A_XScream
+HTIC Q 5 A_NoBlocking
+HTIC RSTUV 5
+HTIC W 500
+NKXP BC 3 Bright
+NKXP D 3 Bright A_PlaySound ("duke/flame")
+NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+NULL A -1
+Stop
+}
+}
+
+actor Strifedude 13421
+{
+   //$Category TITLEMAPSTUFF
+Health 750
+Monster
+States
+{
+Spawn:
+COMM A -1
+Loop
+See:
+COMM ABCD 4
+Loop
+Missile:
+COMM EF 12 
+Goto Spawn
+Melee:
+COMM F 6 bright
+Goto Missile
+Pain:
+COMM A 4
+COMM A 4 A_Pain
+Goto Spawn
+Death:
+COMM GH 8
+COMM I 8 A_PlayerScream
+COMM J 8 A_NoBlocking
+COMM KLM 8
+COMM N 500
+NKXP BC 3 Bright
+NKXP D 3 Bright A_PlaySound ("duke/flame")
+NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+NULL A -1
+Stop
+XDeath:
+COMM O 5
+COMM P 5 A_XScream
+COMM Q 5 A_NoBlocking
+COMM RSTUV 5
+COMM W 500
+NKXP BC 3 Bright
+NKXP D 3 Bright A_PlaySound ("duke/flame")
+NKXP EFGHIJKLMNOPQRSTUV 3 Bright
+NULL A -1
+Stop
+}
+}
+
+//=======================================================================================================================
+// statues
+//=======================================================================================================================
+
+ACTOR ApprenticeStatue 6278
+{ 
+//$Category Statues
+Radius 40 
+Height 110 
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 C -1 
+       Loop 
+	}
+}
+
+ACTOR FuryStatue 6279
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 V -1 
+		Loop
+	}
+}
+
+ACTOR PyroStatue 6280
+{
+//$Category Statues
+Radius 26
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 D -1 
+		Loop
+	}
+}
+
+ACTOR HellsBatteryStatue 6206
+{
+//$Category Statues
+Radius 40
+Height 120
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 M -1
+		Loop
+	}
+}
+
+ACTOR HeavengStatue 6220
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 L -1 
+		Loop
+	}
+}
+
+ACTOR DoomguyStatue 6635
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 N -1 
+		Loop
+	}
+}
+
+ACTOR StrifeguyStatue 6636
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 O -1 
+		Loop
+	}
+}
+
+ACTOR MageStatue 6637
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 R -1 
+		Loop
+	}
+}
+
+ACTOR FighterStatue 6638
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 P -1 
+		Loop
+	}
+}
+
+ACTOR CorvusStatue 6639
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 Q -1 
+		Loop
+	}
+}
+
+ACTOR ClericStatue 6640
+{
+//$Category Statues
+Radius 24
+Height 64
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 S -1 
+		Loop
+	}
+}
+
+ACTOR HeresiarchStatue 6641
+{ 
+//$Category Statues
+Radius 40 
+Height 110 
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 B -1 
+       Loop 
+	}
+}
+
+ACTOR ACOLYTEStatue 6642
+{ 
+//$Category Statues
+Radius 20 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 U -1 
+       Loop 
+	}
+}
+
+ACTOR Demon1Statue 6643
+{ 
+//$Category Statues
+Radius 30 
+Height 70
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       DEMN A -1 
+       Loop 
+	}
+}
+
+ACTOR Cyberdemon2Statue 6420
+{ 
+//$Category Statues
+Radius 40 
+Height 110 
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 H -1 
+       Loop 
+	}
+}
+
+ACTOR SpidermastermindStatue 6671
+{
+//$Category Statues
+	Radius 70 
+	Height 100
+	Mass 1000000000000000 
+	+SOLID
+	+GHOST
+    States
+    {
+    Spawn:
+		STA1 I -1
+		Loop
+    }
+}
+
+ACTOR Cyberdemon64Statue 6917
+{ 
+//$Category Statues
+Radius 40 
+Height 110 
+Mass 1000000000000000 
+scale 0.75
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 S -1 
+       Loop 
+	}
+}
+
+ACTOR DsparilStatue1 14115
+{ 
+//$Category Statues
+Radius 30 
+Height 70
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 J -1 
+       Loop 
+	}
+}
+
+ACTOR DsparilStatue2 14116
+{ 
+//$Category Statues
+Radius 35 
+Height 80
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 K -1 
+       Loop 
+	}
+}
+
+ACTOR ThorStatue 14117
+{ 
+//$Category Statues
+Radius 35 
+Height 60
+Mass 1000000000000000 
+Scale 1.4
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 J -1 
+       Loop 
+	}
+}
+
+actor DeadAracnorbQueen 11518
+{
+//$Category Statues
+Radius 35 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+  States
+   {    
+   Spawn: 
+    ARNQ K -1
+	stop
+  }
+}
+
+ACTOR InquisitorStatue 6674
+{
+//$Category Statues
+	Radius 45 
+	Height 120
+	Mass 1000000000000000 
+	+SOLID
+	+GHOST
+    States
+    {
+    Spawn:
+		STA1 X -1
+		Loop
+    }
+}
+
+ACTOR DiabliostStatue 6195
+{ 
+//$Category Statues
+Radius 35 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 E -1 
+       Loop 
+	}
+}
+
+ACTOR DeathknightStatue 6426
+{ 
+//$Category Statues
+Radius 35 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 F -1 
+       Loop 
+	}
+}
+
+ACTOR ReddemonStatue 6677
+{ 
+//$Category Statues
+Radius 35 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+   {    
+   Spawn: 
+       STA1 G -1 
+       Loop 
+	}
+}
+
+ACTOR tchernobogStatue 15253
+{
+//$Category Statues
+Radius 40
+Height 130
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 W -1
+		Loop
+	}
+}
+
+ACTOR CerberusStatue 11491
+{
+//$Category Statues
+Radius 40
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 X -1
+		Loop
+	}
+}
+
+ACTOR EvolutionaryBaronStatue 11492
+{
+//$Category Statues
+ radius 30
+ height 84
+ Scale 2.0
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STA1 Y -1
+		Loop
+	}
+}
+
+ACTOR SourceGuardianStatue 11493
+{
+//$Category Statues
+  height 80
+  radius 69
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		STOR G -1
+		Loop
+	}
+}
+
+ACTOR CheoghStatue 11494
+{
+//$Category Statues
+translation "112:127=96:111" 
+  Radius 22
+  Height 65
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		LUCY F -1
+		Loop
+	}
+}
+
+ACTOR InfernalSpiderStatue 11495
+{
+//$Category Statues
+translation "128:159=96:111"
+  Radius 72
+  Height 120
+  Scale 2.0
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		SPI2 A -1
+		Loop
+	}
+}
+
+ACTOR QueenStatue 11496
+{
+//$Category Statues
+Translation "64:79=96:111", "48:79=96:111", "208:223=96:103", "232:235=96:102", "16:47=96:103", "168:191=96:102", "13:15=108:111"
+	Radius 40
+	Height 140
+	Scale 0.85
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		QUEE E -1
+		Loop
+	}
+}
+
+ACTOR TerminatorStatue 11497
+{
+//$Category Statues
+translation "16:47=96:111", "168:191=96:111", "48:79=96:111", "160:167=96:111", "13:15=108:111"
+Radius 24 
+Height 64 
+scale 1.2
+Mass 1000000000000000 
++SOLID
++GHOST
+	States
+	{
+	Spawn:
+		TERM D -1
+		Loop
+	}
+}
+
+actor Doom64MarineStatue  19311
+{
+//$Category Statues
+Translation ice
+Radius 35 
+Height 60
+Mass 1000000000000000 
++SOLID
++GHOST
+States
+{
+Spawn:
+MA64 E -1
+Loop
+}
+}
+
+//=======================================================================================================================
+// stuff
+//=======================================================================================================================
+
+actor TallTorchStick 9919
+{
+//$Category Stuff
+  Radius 16
+  Height 68
+  ProjectilePassHeight -8
+  Scale 0.75
+  +SOLID
+  +Ghost
+  States
+  {
+  Spawn:
+    TSTI A -1
+    stop
+  }
+}
+
+actor ShortTorchStick 9920
+{
+//$Category Stuff
+  Radius 16
+  Height 37
+  ProjectilePassHeight -8
+  Scale 0.75
+  +SOLID
+  +Ghost
+  States
+  {
+  Spawn:
+    SSTI A -1
+    stop
+  }
+}
+
+actor 64RedTorch : RedTorch replaces RedTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TRED A 0 bright
+    TRED A 0 bright A_SpawnItemEx ("TallTorchStick",0,0,0,0,0,0,0,0)
+    TRED ABCDE 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64BlueTorch : BlueTorch replaces BlueTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TBLU A 0 bright
+    TBLU A 0 bright A_SpawnItemEx ("TallTorchStick",0,0,0,0,0,0,0,0)
+    TBLU ABCD 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64GreenTorch : GreenTorch replaces GreenTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TGRE A 0 bright
+    TGRE A 0 bright A_SpawnItemEx ("TallTorchStick",0,0,0,0,0,0,0,0)
+    TGRE ABCDE 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64YellowTorch : RedTorch 9917
+{
+//$Category Stuff
+  RenderStyle Translucent
+  ProjectilePassHeight -8
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TYRN A 0 bright
+    TYRN A 0 bright A_SpawnItemEx ("TallTorchStick",0,0,0,0,0,0,0,0)
+    TYRN ABCDE 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64ShortRedTorch : ShortRedTorch replaces ShortRedTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TRED F 0 bright
+    TRED F 0 bright A_SpawnItemEx ("ShortTorchStick",0,0,0,0,0,0,0,0)
+    TRED FGHIJ 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64ShortBlueTorch : ShortBlueTorch replaces ShortBlueTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TBLU F 0 bright
+    TBLU F 0 bright A_SpawnItemEx ("ShortTorchStick",0,0,0,0,0,0,0,0)
+    TBLU FGHIJ 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64ShortGreenTorch : ShortGreenTorch replaces ShortGreenTorch
+{
+//$Category Stuff
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TGRE F 0 bright
+    TGRE F 0 bright A_SpawnItemEx ("ShortTorchStick",0,0,0,0,0,0,0,0)
+    TGRE FGHIJ 5 bright
+    Goto Spawn+2
+  }
+}
+
+actor 64ShortYellowTorch : ShortRedTorch 9918
+{
+//$Category Stuff
+  RenderStyle Translucent
+  ProjectilePassHeight -8
+  Alpha 0.6
+  Scale 0.75
+  +Ghost
+  States
+  {
+  Spawn:
+    TYRN F 0 bright
+    TYRN F 0 bright A_SpawnItemEx ("ShortTorchStick",0,0,0,0,0,0,0,0)
+    TYRN FGHIJ 5 bright
+    Goto Spawn+2
+  }
+}
+
+//=======================================================================================================================
+// Decorations 
+//=======================================================================================================================
+
+Actor HellTree 31055 
+{
+ //$Category stuff
+  Radius 19
+  Height 61
+  Mass 5000
+  Scale 0.8
+  +SOLID
+  +ghost
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR A -1
+	wait
+  }
+}
+
+//Scorched variants
+
+Actor HellTreeScorch1 : HellTree 31056
+ { 
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR B -1
+	stop
+  }
+}
+
+Actor HellTreeScorch2 : HellTree 31057
+ { 
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR C -1
+	stop
+  }
+}
+
+//Burned variants
+
+Actor HellTreeBurn1 : HellTree 31058
+ { 
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR D -1
+	stop
+  }
+}
+
+Actor HellTreeBurn2 : HellTree 31059
+ { 
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR E -1
+	stop
+  }
+}
+
+//Damaged (and scorched) variant
+
+Actor HellTreeScorch3 : HellTree 31060
+ { 
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR F -1
+	stop
+  }
+}
+
+Actor HellTreeBurn3 : HellTree 31061
+ { //Burned down (top) variant
+   //$Category stuff
+  Radius 15
+  Height 46
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR G -1
+	stop
+  }
+}
+
+Actor FleshTree1 : HellTree 31062
+ { //Blood tree, grown using >90% pure human blood!
+   //$Category stuff
+  +ghost
+  Radius 32
+  Height 89
+  Scale 1
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR H -1
+	stop
+  }
+}
+
+Actor FleshTree2 : FleshTree1 31063
+ { //Flesh tree, grown on live humans! (Lots of agony was delivered!)
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR I -1
+	stop
+  }
+}
+
+Actor FleshTree3 : FleshTree1 21163 
+{ //Skin tree, grown on dead waste. (Nice for cleaning the mess!)
+   //$Category stuff
+  States {
+  Spawn:
+	TNT1 A 0
+	HETR J -1
+	stop
+  }
+}
+
+ACTOR BonePile 10410
+{
+   //$Category stuff
+  Radius 24
+  Height 24
+  +ghost
+  +SOLID
+  States
+  {
+  Spawn:
+    SBON A -1
+    Stop
+  }
+}
+
+Actor ZCorpseBurning 10411
+{
+   //$Category stuff
+	+SOLID
+	+ghost
+	Radius 8
+	Height 100
+
+	States
+	{
+	Spawn:
+		WBRN ABCDEFG 4 Bright
+		Loop
+	}
+}
+
+ACTOR ZCorpseCrucified : ZBannerTattered 13521
+{
+   //$Category stuff
+    +ghost
+	States
+	{
+	Spawn:
+		CRUX A -1
+		Stop
+	}
+}
+
+ACTOR ZCorpseCrucifiedBloody : ZBannerTattered 12512
+{
+   //$Category stuff
+     +ghost
+	States
+	{
+	Spawn:
+		CRUX B -1
+		Stop
+	}
+}
+
+ACTOR ZCorpseCrucifiedSword : ZBannerTattered 13345
+{
+   //$Category stuff
+     +ghost
+	States
+	{
+	Spawn:
+		CRUX C -1
+		Stop
+	}
+}
+
+//Right version
+
+ACTOR DoomStatue1 21001 
+{
+   //$Category stuff
+	height 134
+	radius 19
+	  +ghost
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT A -1
+		Stop
+	}
+}
+
+//Left version
+
+ACTOR DoomStatue2 21002
+{
+   //$Category stuff
+	height 134
+	radius 19
+	+SOLID
+	  +ghost
+	states
+	{
+	spawn:
+		DST2 A -1
+		Stop
+	}
+}
+
+ACTOR DSparilStatue 21004
+{
+   //$Category stuff
+  Radius 16
+  Height 96
+  +SOLID
+    +ghost
+  States
+  {
+  Spawn:
+    STAD ABCDE 3 Bright
+    Loop
+  }
+}
+
+ACTOR HellGrowth 21003
+{
+   //$Category stuff
+  Radius 16
+  Height 56
+  +SOLID
+    +ghost
+  States
+  {
+  Spawn:
+    HTRE A -1
+    Stop
+  }
+}
+
+ACTOR PurpleLight 21043
+{
+   //$Category stuff
+  Radius 16
+  Height 56
+  +ghost
+  +SOLID
+  States
+  {
+  Spawn:
+    TPRP ABCD 3 Bright
+    Loop
+  }
+}
+
+ACTOR FloatingCandle : CandleStick 21045
+{
+  //$Category stuff
+  Radius 20
+  Height 14
+  +FLOAT
+  +FLOATBOB
+  +NOGRAVITY
+  +ghost
+  States
+  {
+  Spawn:
+    CAND A -1 bright
+    Stop
+  }
+}
+
+ACTOR RFloatingCandle : CandleStick 21046
+{
+  //$Category stuff
+  Radius 20
+  Height 14
+  +FLOAT
+  +FLOATBOB
+  +NOGRAVITY
+  +ghost
+  States
+  {
+  Spawn:
+    CAN1 A -1 bright
+    Stop
+  }
+}
+
+
+ACTOR DeadHGuard 21047
+{
+   //$Category stuff
+  Radius 20
+  Height 24
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    HEVN N -1
+    Stop
+  }
+}
+
+ACTOR SkullTree1 6454
+{
+   //$Category stuff
+	Radius 96
+	Height 157
+	ProjectilePassHeight -16
+	+SOLID
+  +ghost
+	States
+	{
+	Spawn:
+		TRES A -1
+		Stop
+	}
+}
+
+ACTOR SkullTree2 6455
+{
+   //$Category stuff
+	Radius 96
+	Height 157
+	ProjectilePassHeight -16
+	+SOLID
+	+ghost
+	States
+	{
+	Spawn:
+		TRES B -1
+		Stop
+	}
+}
+
+ACTOR SkullCandle 12368
+{
+   //$Category stuff
+     +ghost
+	 +solid
+  Radius 20
+  Height 14
+  States
+  {
+  Spawn:
+    SCND B -1 bright
+    Stop
+  }
+}
+
+//=======================================================================================================================
+// Trees
+//=======================================================================================================================
+
+actor wintertreespawner : RandomSpawner 20073
+{
+//$Category stuff
+    DropItem "winterA"
+    DropItem "winterB"
+    DropItem "winterC"
+    DropItem "winterD"
+    DropItem "winterE"
+    DropItem "winterF"
+    DropItem "winterG"
+}
+
+ACTOR winterA 
+{
+  Game Doom
+  Radius 20
+  Height 115
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT A -1
+    Stop
+  }
+}
+
+ACTOR winterB
+{
+  Game Doom
+  Radius 15
+  Height 90
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT B -1
+    Stop
+  }
+}
+
+ACTOR winterC 
+{
+  Game Doom
+  Radius 20
+  Height 140
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT C -1
+    Stop
+  }
+}
+
+ACTOR winterD 
+{
+  Game Doom
+  Radius 20
+  Height 60
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT D -1
+    Stop
+  }
+}
+
+ACTOR winterE 
+{
+  Game Doom
+  Radius 10
+  Height 45
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT E -1
+    Stop
+  }
+}
+
+ACTOR winterF 
+{
+  Game Doom
+  Radius 10
+  Height 110
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT F -1
+    Stop
+  }
+}
+
+ACTOR winterG 
+{
+  Game Doom
+  Radius 25
+  Height 130
+  +SOLID
+  +ghost
+  States
+  {
+  Spawn:
+    WINT G -1
+    Stop
+  }
+}
+
+
+
+//=======================================================================================================================
+// doom2 and skulltag stuff
+//=======================================================================================================================
+
+// Tech lamp ---------------------------------------------------------------
+
+Actor BossBattlesTechLamp : TechLamp replaces TechLamp
+{
+	+GHOST
+}
+
+// Tech lamp 2 -------------------------------------------------------------
+
+Actor BossBattlesTechLamp2 : TechLamp2 replaces TechLamp2
+{
+	+GHOST
+}
+
+// Column ------------------------------------------------------------------
+
+Actor BossBattlesColumn : Column replaces Column
+{
+	+GHOST
+}
+
+// Tall green column -------------------------------------------------------
+
+Actor BossBattlesTallGreenColumn : TallGreenColumn replaces TallGreenColumn
+{
+	+GHOST
+}
+
+// Short green column ------------------------------------------------------
+
+Actor BossBattlesShortGreenColumn : ShortGreenColumn replaces ShortGreenColumn
+{
+	+GHOST
+}
+
+// Tall red column ---------------------------------------------------------
+
+Actor BossBattlesTallRedColumn : TallRedColumn replaces TallRedColumn
+{
+	+GHOST
+}
+
+// Short red column --------------------------------------------------------
+
+Actor BossBattlesShortRedColumn : ShortRedColumn replaces ShortRedColumn
+{
+	+GHOST
+}
+
+// Skull column ------------------------------------------------------------
+
+Actor BossBattlesSkullColumn : SkullColumn replaces SkullColumn
+{
+	+GHOST
+}
+
+// Heart column ------------------------------------------------------------
+
+Actor BossBattlesHeartColumn : HeartColumn replaces HeartColumn
+{
+	+GHOST
+}
+
+// Evil eye ----------------------------------------------------------------
+
+Actor BossBattlesEvilEye : EvilEye replaces EvilEye
+{
+	+GHOST
+}
+
+// Floating skull ----------------------------------------------------------
+
+Actor BossBattlesFloatingSkull : FloatingSkull replaces FloatingSkull
+{
+	+GHOST
+}
+
+// Torch tree --------------------------------------------------------------
+
+Actor BossBattlesTorchTree : TorchTree replaces TorchTree
+{
+	+GHOST
+}
+
+// Stalagtite --------------------------------------------------------------
+
+Actor BossBattlesStalagtite : Stalagtite replaces Stalagtite
+{
+	+GHOST
+}
+
+// Tech pillar -------------------------------------------------------------
+
+Actor BossBattlesTechPillar : TechPillar replaces TechPillar
+{
+	+GHOST
+}
+
+// Candelabra --------------------------------------------------------------
+
+Actor BossBattlesCandelabra : Candelabra replaces Candelabra
+{
+	+GHOST
+}
+
+// Bloody twitch -----------------------------------------------------------
+
+Actor BossBattlesBloodyTwitch : BloodyTwitch replaces BloodyTwitch
+{
+	+GHOST
+}
+
+// Meat 2 ------------------------------------------------------------------
+
+Actor BossBattlesMeat2 : Meat2 replaces Meat2
+{
+	+GHOST
+}
+
+// Meat 3 ------------------------------------------------------------------
+
+Actor BossBattlesMeat3 : Meat3 replaces Meat3
+{
+	+GHOST
+}
+
+// Meat 4 ------------------------------------------------------------------
+
+Actor BossBattlesMeat4 : Meat4 replaces Meat4
+{
+	+GHOST
+}
+
+// Meat 5 ------------------------------------------------------------------
+
+Actor BossBattlesMeat5 : Meat5 replaces Meat5
+{
+	+GHOST
+}
+
+// Head on a stick ---------------------------------------------------------
+
+Actor BossBattlesHeadOnAStick : HeadOnAStick replaces HeadOnAStick
+{
+	+GHOST
+}
+
+// Heads (plural!) on a stick ----------------------------------------------
+
+Actor BossBattlesHeadsOnAStick : HeadsOnAStick replaces HeadsOnAStick
+{
+	+GHOST
+}
+
+// Head candles ------------------------------------------------------------
+
+Actor BossBattlesHeadCandles : HeadCandles replaces HeadCandles
+{
+	+GHOST
+}
+
+// Dead on a stick ---------------------------------------------------------
+
+Actor BossBattlesDeadStick : DeadStick replaces DeadStick
+{
+	+GHOST
+}
+
+// Still alive on a stick --------------------------------------------------
+
+Actor BossBattlesLiveStick : LiveStick replaces LiveStick
+{
+	+GHOST
+}
+
+// Big tree ----------------------------------------------------------------
+
+Actor BossBattlesBigTree : BigTree replaces BigTree
+{
+	+GHOST
+}
+
+// Burning barrel ----------------------------------------------------------
+
+Actor BossBattlesBurningBarrel : BurningBarrel replaces BurningBarrel
+{
+	+GHOST
+}
+
+// Hanging with no guts ----------------------------------------------------
+
+Actor BossBattlesHangNoGuts : HangNoGuts replaces HangNoGuts
+{
+	+GHOST
+}
+
+// Hanging from bottom with no brain ---------------------------------------
+
+Actor BossBattlesHangBNoBrain : HangBNoBrain replaces HangBNoBrain
+{
+	+GHOST
+}
+
+// Hanging from top, looking down ------------------------------------------
+
+Actor BossBattlesHangTLookingDown : HangTLookingDown replaces HangTLookingDown
+{
+	+GHOST
+}
+
+// Hanging from top, looking up --------------------------------------------
+
+Actor BossBattlesHangTLookingUp : HangTLookingUp replaces HangTLookingUp
+{
+	+GHOST
+}
+
+// Hanging from top, skully ------------------------------------------------
+
+Actor BossBattlesHangTSkull : HangTSkull replaces HangTSkull
+{
+	+GHOST
+}
+
+// Hanging from top without a brain ----------------------------------------
+
+Actor BossBattlesHangTNoBrain : HangTNoBrain replaces HangTNoBrain
+{
+	+GHOST
+}
+
+// Grey stalagmite (unused Doom sprite, definition taken from Skulltag -----
+
+Actor BossBattlesStalagmite : Stalagmite replaces Stalagmite
+{
+	+GHOST
+}
+
+// Short grey column -------------------------------------------------------
+
+Actor BossBattlesGreyColumn : GreyColumn replaces GreyColumn
+{
+	+GHOST
+}
+
+// Tall grey column --------------------------------------------------------
+
+Actor BossBattlesTallGreyColumn : TallGreyColumn replaces TallGreyColumn
+{
+	+GHOST
+}
+
+// Grey heart column -------------------------------------------------------
+
+Actor BossBattlesGreyHeartColumn : GreyHeartColumn replaces GreyHeartColumn
+{
+	+GHOST
+}
+
+// Tall gothic column ------------------------------------------------------
+
+Actor BossBattlesTallGothicColumn : TallGothicColumn replaces TallGothicColumn
+{
+	+GHOST
+}
+
+// Revenant Hand -----------------------------------------------------------
+
+Actor BossBattlesRevenantHand : RevenantHand replaces RevenantHand
+{
+	+GHOST
+}
+
+// Imp head ----------------------------------------------------------------
+
+Actor BossBattlesImpHead : ImpHead replaces ImpHead
+{
+	+GHOST
+}
+
+// Impse -------------------------------------------------------------------
+
+Actor BossBattlesImpse : Impse replaces Impse
+{
+	+GHOST
+}
+
+// Floating skull (bobs) ---------------------------------------------------
+
+Actor BossBattlesFloatingBobbingSkull : FloatingBobbingSkull replaces FloatingBobbingSkull
+{
+	+GHOST
+}
+
+// Impaling spike ----------------------------------------------------------
+
+Actor BossBattlesImpalingSpike : ImpalingSpike replaces ImpalingSpike
+{
+	+GHOST
+}
+
+// Impaling spike (chaingunner head) ---------------------------------------
+
+Actor BossBattlesImpalingSpike2 : ImpalingSpike2 replaces ImpalingSpike2
+{
+	+GHOST
+}
+
+// Impaling spike (zombieman head) -----------------------------------------
+
+Actor BossBattlesImpalingSpike3 : ImpalingSpike3 replaces ImpalingSpike3
+{
+	+GHOST
+}
+
+// White torch -------------------------------------------------------------
+
+Actor BossBattlesWhiteTorch : WhiteTorch replaces WhiteTorch
+{
+	+GHOST
+}
+
+// Short white torch -------------------------------------------------------
+
+Actor BossBattlesShortWhiteTorch : ShortWhiteTorch replaces ShortWhiteTorch
+{
+	+GHOST
+}
+
+// Yellow torch ------------------------------------------------------------
+
+Actor BossBattlesYellowTorch : YellowTorch replaces YellowTorch
+{
+	+GHOST
+}
+
+// Short yellow torch ------------------------------------------------------
+
+Actor BossBattlesShortYellowTorch : ShortYellowTorch replaces ShortYellowTorch
+{
+	+GHOST
+}
+
+// Evil eye (red) ----------------------------------------------------------
+
+Actor BossBattlesRedEvilEye : RedEvilEye replaces RedEvilEye
+{
+	+GHOST
+}
+
+// Evil eye (blue) ---------------------------------------------------------
+
+Actor BossBattlesBlueEvilEye : BlueEvilEye replaces BlueEvilEye
+{
+	+GHOST
+}
+
+// Tech lamp (red) ---------------------------------------------------------
+
+Actor BossBattlesRedTechLamp : RedTechLamp replaces RedTechLamp
+{
+	+GHOST
+}
+
+// Tech lamp 2 (red) -------------------------------------------------------
+
+Actor BossBattlesRedTechLamp2 : RedTechLamp2 replaces RedTechLamp2
+{
+	+GHOST
+}
+
+// Column (red) ------------------------------------------------------------
+
+Actor BossBattlesRedColumn : RedColumn replaces RedColumn
+{
+	+GHOST
+}
+
+// Column (blue) -----------------------------------------------------------
+
+Actor BossBattlesBlueColumn : BlueColumn replaces BlueColumn
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy head) -------------------------------------------
+
+Actor BossBattlesImpalingSpike4 : ImpalingSpike4 replaces ImpalingSpike4
+{
+	+GHOST
+}
+
+// Impaling spike (3 doomguy heads) ----------------------------------------
+
+Actor BossBattlesImpalingSpike5 : ImpalingSpike5 replaces ImpalingSpike5
+{
+	+GHOST
+}
+
+// Impaling spike (3 doomguy heads, short) ---------------------------------
+
+Actor BossBattlesImpalingSpike6 : ImpalingSpike6 replaces ImpalingSpike6
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy torso, one arm) ---------------------------------
+
+Actor BossBattlesImpalingSpike7 : ImpalingSpike7 replaces ImpalingSpike7
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy torso, two arms) --------------------------------
+
+Actor BossBattlesImpalingSpike8 : ImpalingSpike8 replaces ImpalingSpike8
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy skewered, twitching) ----------------------------
+
+Actor BossBattlesImpalingSpike9 : ImpalingSpike9 replaces ImpalingSpike9
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy skewered, long arm) -----------------------------
+
+Actor BossBattlesImpalingSpike10 : ImpalingSpike10 replaces ImpalingSpike10
+{
+	+GHOST
+}
+
+// Impaling spike (doomguy skewered, short arm) ----------------------------
+
+Actor BossBattlesImpalingSpike11 : ImpalingSpike11 replaces ImpalingSpike11
+{
+	+GHOST
+}
+
+// Imp statue --------------------------------------------------------------
+
+Actor BossBattlesImpStatue : ImpStatue replaces ImpStatue
+{
+	+GHOST
+}
+
+// Demon statue ------------------------------------------------------------
+
+Actor BossBattlesDemonStatue : DemonStatue replaces DemonStatue
+{
+	+GHOST
+}
+
+// Arch-vile statue --------------------------------------------------------
+
+Actor BossBattlesArchvileStatue : ArchvileStatue replaces ArchvileStatue
+{
+	+GHOST
+}
+
+// Baron statue ------------------------------------------------------------
+
+Actor BossBattlesBaronStatue : BaronStatue replaces BaronStatue
+{
+	+GHOST
+}
+
+// Cyberdemon statue -------------------------------------------------------
+
+Actor BossBattlesCyberdemonStatue : CyberdemonStatue replaces CyberdemonStatue
+{
+	+GHOST
+}
+
+// Massmouth statue --------------------------------------------------------
+
+Actor BossBattlesMassmouthStatue : MassmouthStatue replaces MassmouthStatue
+{
+	+GHOST
+}

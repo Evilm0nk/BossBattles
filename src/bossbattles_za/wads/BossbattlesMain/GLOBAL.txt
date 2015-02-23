@@ -1,0 +1,107 @@
+#library "GLOBAL"
+#library "Hints"
+#include "zcommon.acs"
+
+Int Wave = 1;
+Int WellDone = 0;
+
+#DEFINE HINTCOUNT 38
+str Hints[HINTCOUNT] = { 
+"HINT: Most weapons have a alt fire aswell!",
+"HINT: Each class has different power ups, they are in your inventory, Press the use key to use them!",
+"HINT: If your a magical class, remember to conserve Dark mana, as it is very precious!",
+"HINT: When you use a powerup you must wait 30 to 60 seconds to use it again, or die!",
+"HINT: When playing multiplayer, bosses health is multiplied by each player in server!",
+"HINT: Each monster/boss are different types, there are 6, Bullet, Fire, Ice, poison, Electric, and Explosive!",
+"HINT: Circle techniques are always best against bosses! Ofcourse, Homing Missiles will always get you.",
+"HINT: The Mage has the power of speed aswell as summoning spells and replenishing mana!",
+"HINT: Cleric summoners monsters are always transparent, they can't take damage from friendlies!",
+"HINT: Heaven guards are your friends, Battle along with them!",
+"HINT: Marine type Classes use standard ammunition besides Elemental Soldier!",
+"HINT: Magic type Classes use Mana to powerup There weapons, Dark Mana allows them to use very strong attacks!",
+"HINT: Some bosses can be very dangerous and some may be very easy, choose the best weapon against them!",
+"HINT: There are over a 50 bosses in this project!",
+"HINT: Not all classes jump the same height or run the same speed!",
+"HINT: Some powerups may darken your screen or make it red!",
+"HINT: The glowing yellow armor will protect you from 300 damage!",
+"HINT: The purple urns will heal you and friends near you!",
+"HINT: every enemy will drop potions, each potion will vary on the strength of the enemy!",
+"HINT: Blue and green urns will heal you and stay in your inventory!",
+"HINT: Ice enemies are weak against fire and vica-versa!",
+"HINT: There is 5 different difficulties in bossbattles, Very easy, Easy, Singleplayer normal, Multiplayer normal, Bossbattle champ!",
+"HINT: Most explosive weapons Will not carry over there explosive power to enemies who use it aswell!",
+"HINT: Just because your using the weapon in weapon slot 6 doesn't mean its the strongest!",
+"HINT: Every powerup will also grant protection to lava!",
+"HINT: Some enemies drop ammo, most will drop Combined mana and combat backpacks!",
+"HINT: Stalker Strifeguy can send a nuke into a bosses face, or summon a turrent, he can also go invisible!",
+"HINT: The cleric summoner can summon lots of different monsters, Give it a try!",
+"HINT: The invuln Fighter takes half the damage from everything!",
+"HINT: The invuln fighter has the power of invulnerability, but it is very short!",
+"HINT: The Elemental Marine Can launch a an Air Strike at his foes!",
+"HINT: The Elemental Marine Can steal enemies Health And add it to his own!",
+"HINT: The Elemental Marines Chaingun can eat up ammo very fast, but the outcome is always very good!",
+"HINT: The Elemental Marines Unmaker is his only weapon that uses Mana!",
+"HINT: Regen Corvus can give himself regeneration!",
+"HINT: Regen Corvus can summon health potions and armor onto the battlefield for others!",
+"HINT: Regen Corvus's Can use the tome of power to dramatically increase his weapons power!",
+"HINT: Quad marine can set mines and deal 4 times the damage!",
+};
+
+Script 298 (void) // Monsters counter 
+{
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (298, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+Script 299 (void) // Monsters counter 
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+	Script 300 (void)  // popsoap Boss health multiplier for monsters
+{
+if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
+}
+
+                  script 301 (void) // bosses health
+{
+    SetFont("BIGFONT");
+    hudmessageBold(s: "Boss: ", d:GetActorProperty(999, APROP_Health);
+                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
+    delay(const:35);
+    restart;
+    
+}
+
+script 989 DEATH 
+{
+SetHudSize(800,600,0);
+SetFont("SMALLFONT");
+hudmessage(s:Hints[random(0,HINTCOUNT)]; HUDMSG_FADEINOUT|HUDMSG_LOG, 665, CR_RED, 400.0, 585.0, 5.0, 3.5, 1.0);
+}

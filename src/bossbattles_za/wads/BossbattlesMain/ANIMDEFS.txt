@@ -1,0 +1,53 @@
+texture CGCANI00
+    allowdecals
+    pic CGCANI00 tics 1.5
+    pic CGCANI01 tics 1.5
+    pic CGCANI02 tics 1.5
+    pic CGCANI03 tics 1.5
+    pic CGCANI04 tics 1.5
+    pic CGCANI05 tics 1.5
+    pic CGCANI06 tics 1.5
+    pic CGCANI07 tics 1.5
+    
+
+texture LFALL1
+    pic 1 tics 3
+    pic 2 tics 2
+    pic 3 tics 3
+    pic 4 tics 2
+
+texture W_256
+    pic 1 tics 5
+    pic 2 tics 5
+    pic 3 tics 5
+    pic 4 tics 5
+    pic 5 tics 5
+    pic 6 tics 5
+    pic 7 tics 5
+    pic 8 tics 5
+texture SKY-0191
+
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 6
+pic 4 tics 5
+pic 5 tics 5
+pic 6 tics 5
+pic 7 tics 5
+pic 8 tics 5
+pic 9 tics 5
+pic 10 tics 5
+
+texture DPORTAL1
+
+pic 1 tics 6
+pic 2 tics 6
+pic 3 tics 6
+pic 4 tics 6
+pic 5 tics 6
+pic 6 tics 6
+pic 7 tics 6
+pic 8 tics 6
+pic 9 tics 6
+
+warp flat sno7

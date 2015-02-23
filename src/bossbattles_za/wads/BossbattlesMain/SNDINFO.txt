@@ -1,0 +1,160 @@
+//*****CLASSES*****//
+
+//STRIFE PLAYER Sounds
+
+$playersound Strifep male *death DSCMDIEH
+$playersound Strifep male *Xdeath DSCMDETH
+$playersound Strifep male *gibbed DSCMSLOP
+$playersound Strifep male *pain100 DSCMPAIN
+$playersound Strifep male *pain75 DSCMPAIN
+$playersound Strifep male *pain50 DSCMPAIN
+$playersound Strifep male *pain25 DSCMPAIN
+$playersound Strifep male *grunt DSCMOOF
+$playersound Strifep male *land DSCMOOF
+$playersound Strifep male *jump DSNONE
+$playersound Strifep male *fist DSPUNCH
+$playersound Strifep male *usefail DSWNOWAY
+$playersound Strifep male *taunt HG-SITE3
+
+
+Player/burning 		DSBURNME
+
+//*****Hells talking and thunder*****//
+
+dsthund		dsthund
+cavelau		cavelau
+mood		dsmood
+dsfight1	dsfight1
+dswelld		dswelld
+dsbossit	dsbossit
+dsyousuk	dsyousuk
+$AMBIENT 1 mood WORLD CONTINUOUS 0.5
+
+//======================================
+//Pickup sounds
+//======================================
+
+misc/weapon	dswepup
+misc/mana	dsmanaup
+misc/Ammo   dsammoup
+misc/armor	dsarmoru
+misc/health	dshealth
+misc/mpickup dsmajpk
+misc/use	dsuse
+
+//Jet Thruster
+misc/jetthruster	JETTHRST
+
+
+//Tome of Heaven
+items/unholytome	UNHLTOME
+
+
+//======================================
+//GIB SOUND
+//======================================
+
+Gib/sound2		DSGIB2
+
+//*****Voulge*****//
+
+$random weapons/voulgefire {weapons/bouncerfire1 weapons/bouncerfire2 weapons/bouncerfire3}
+weapons/bouncerfire1			dsbncfr1
+weapons/bouncerfire2			dsbncfr2
+weapons/bouncerfire3			dsbncfr3
+
+NGSPINDW	NGSPINDW
+NGSPINFS	NGSPINFS
+NGSPINSL	NGSPINSL
+NGSPINUP	NGSPINUP
+NAILFLY	    NAILFLY
+
+//*****DGauntlets*****//
+
+
+Gauntlethit		GNTHIT
+Gauntletmiss	GNTPOW
+
+
+//*****Knife*****//
+
+
+KnifeHitThing		DSKNIFE
+KnifeHitWall		DSKNIFE3	
+KnifeMiss		DSKNIFE2
+
+//*****Phoenix Rod*****//
+
+PhoenixRod/Flame			PHOPOW
+PhoenixRod/Shot			PHOSHT
+PhoenixRod/Hit			PHOHIT
+
+//*****Item*****//
+
+misc/power5	dspower5
+
+//*****SKULL STAFF*****//
+
+weapons/skulprojshot	skulfire
+weapons/skulprojdeath   skuldie
+IronDoom/impact		ripslop
+Spike/impact		wtrhit
+  
+//*****Mace*****//
+
+Weapons/maceshoot   LOBSHT
+Weapons/macealt     LOBPOW
+Weapons/maceDeath	LOBHIT
+weapons/maceexplode LOBHIT
+
+//*****NOVA CANNON*****//
+
+OBBFIRE	DSOBBFIR
+
+//*****Tank Rifle*****//
+
+Weapons/SniperFire SNIPRFIR
+Weapons/SniperBoom TP_FIRE
+
+//*****FrostFang*****//
+
+FrostFang/Fire1	FSTFFIR1
+FrostFang/Hit1	FSTFHIT1
+FrostFang/Fire2 FSTFFIR2
+FrostFang/Hit2	FSTFHIT2
+
+
+
+//*****Karasawa*****/
+
+Weapons/KarasawaHit	KSAWHIT
+Weapons/KarasawaFly	KSAWFLY
+Weapons/KarasawaFire	KSAWFIRE
+Weapons/KarasawaIdle	KSAWIDLE
+Weapons/KarasawaCharge	KSAWCHRG
+
+$Limit Weapons/KarasawaFly 	0
+$Limit Weapons/KarasawaHit	0
+$Limit Weapons/KarasawaFire    	0
+
+
+//*****Sentry gun*****/ Strifeguy
+
+
+Sentry/Active	DSSENTID
+Sentry/Death	DSSENTDI
+Sentry/Attack	DSSENTFI
+$limit Sentry/Attack	0
+
+//*****SOULREAVER*****/
+
+SoulReaverProjectile/See	FGTCDTH
+SoulReaverProjectile/Death	FIREDHIT
+
+SoulReaverRedProjectile/Spawn	HOLY3
+SoulReaverRedProjectile/Death	STRIKE1
+
+SoulReaver/Fire		WOOSH3
+SoulReaver/Fire2	VAMP5
+
+SoulReaver/Soul		SPIRTS1

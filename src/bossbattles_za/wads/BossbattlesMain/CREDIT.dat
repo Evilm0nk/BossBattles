@@ -1,0 +1,566 @@
+===========================================================================
+Advanced engine needed  : Zandronum Version (this Version will no longer run with skulltag, version 31 was the final version for that port)
+May not work with	: anything other then Zandronum, Zdoom may work or gZdoom, but It will have missing textures, version for those ports are already out!
+Purpose		        : Single player or coop ( coop Reccomended )
+===========================================================================
+Title                   : Bossbattles_V10ZA
+Filename                : Bossbattles_V10ZA
+Author                  : Project Leader: Evil Monk (Mapper, decorate ,Dehacked(Zdaemon Version),Inserted sounds,inserted sprites, ect..), 
+						  EvilmOnk 2 (Pictures, textures, monsters, Gibs)
+						  Gosimer (Mapper)
+						  Untrustable (spriter, Weapons, ECT..)
+						  Jason (Monsters, weapons, ECT..)
+						  SunMadCat (Spriter
+						  Monsoon (monsters, Blood effects, weapons, ECT..)	
+						  flame64mon (Mapper, Weapons)
+						  Popsoap (Awesome Coder for acs and decorate Ect..)
+						  Arkore (Tester)
+
+Release Date			: 2/20/14, started at version 36B where skulltag left off
+Email Address           : evilm0nk@hotmail.com
+Other Files By Authors  : Zdaemon: Bossbattles_V16Z, cacoConflict, cacocorruption.
+						  Skulltag: BossbattlesV36ST,CacocontaminationV12
+						  Zandronum: Bossbattles_V6ZA, CacoInvasion_V2ZA
+						  GZdoom/Zdoom: Bossbattles_V3GZ CacoInvasion_V1GZ
+				
+
+Description:        
+Bossbattles is a doom mod that allows you to play bosses from
+other doom engine games While following a 2 episode story. 
+You play as heros from the original doom engine games, doomguy, The fighter, 
+The mage, Corvus, Doom64 Marnie, and strifeguy. 
+All heros may have some original weapons and some weapons completely different.
+The bosses you do battles with range from Realm667, Doom1/2, Doom 3 (sorta), Hexen, Heretic, Blood, and more.
+So far there is 20 playble maps
+There will be more to come in the future as this project is still very much alive.	
+===========================================================================
+* What is included *
+
+New levels              : yes Maps 1-22
+Sounds                  : Yes
+Music                   : yes
+Graphics                : Yes
+Decorate				: Yes
+GLDEFS					: Yes
+Dehacked/BEX Patch      : no
+Demos                   : NA
+Other                   : NA
+Other files required    : OPTIONAL wad BossbattlesM_V6 (music wad that has mp3 music)
+Textures				: Needs the skulltag data and skulltag actors pk3 to run this right.
+
+* Mp3 music in bossbattle music wad  (newgrounds)*
+
+If for some reason you do not want your music in this wad,
+Please email me.
+
+*Music is from newgrounds heavy metal section*
+
+Map 1 Music Cloudformer By Elegancia
+
+Map 2 music Heavens Gate's By Evilm0nk, CakeWalk
+
+Map 3 Music Drawn by the light By Braiton
+
+Map 4 music Goodbye by Braiton
+
+Map 5 music THOF Part lV By GraveDigger87
+
+Map 6 music Insatiable By Tremulos
+
+Map 7 music Epic with a Vengeance Final By Shadrock
+
+Map 8 Music Simple metal by Lashmush
+
+Map 9 music Nope ft. DeadStringer By MagnumKlutch
+
+Map 10 music Quixotic By Denx
+
+Map 11 music Out of my Way by Braiton
+
+Map 12 music Dies Irae by Braiton
+
+Map 13 Music DenX - In Absentia by Ihceist41
+
+Map 14 Music Chaos Confined (Metroid) by MetalRenard
+
+Map 15 Music Rise By TheHeartgrinder
+
+Map 16 Music - Charisma By Arkraft
+
+Map 17 Music "CHS"The Heat from this Battle By ChaosPhoenix88
+
+Map 18 Music (E)Inc. - Machines Spoken By Nevrosia666
+
+Map 19 Music Metroid - Planet Zebes By PirateCrab
+
+Map 20 Music Anarchy Reigns By Megamannt92
+
+Map 21 Music One who Dared the World By Braiton
+
+Map 22 music Keire Temple on the snes game Dragons View
+
+Devil Battle Music Paper mario mix (Shadow Queen) By Terry-Sato (original by nintendo)
+
+Devil Final Battle music Tomahawk By Burn7
+
+Title Music Anarchy Reigns By Megamannt92
+
+
+
+=====MAPS=====	
+
+Titlemap By EvilMonk, Gosimer
+
+Map 1 By Evilm0nk and Gosimer ( HeavenBattle )
+
+Map 2 By Gosimer ( Heavens Invasion )
+
+Map 3 By Evilm0nk ( Heavens Distraught Land )
+
+Map 4 By Evilm0nk ( Heavens invasion part 2 )
+
+Map 5 BY Evilm0nk ( Hells Main Gate )
+
+Map 6 BY Gosimer ( Lava Lands of hell )
+
+Map 7 BY Evilm0nk  ( Devils Mountain throne )
+
+Map 8 By Evilm0nk/Gosimer ( Hells Arena )
+
+Map 9 By Flame46mon ( The devils Lair )
+
+Map 10 By Gosimer/Evilm0nk ( Hells Castle )
+
+Map 11 By Evilm0nk/Gosimer ( Hells Challenge )
+
+Map 12 By Evilm0nk ( Devil Final Battle )
+
+Map 13 By Evilm0nk ( Chaos Realm )
+
+Map 14 By Evilm0nk ( In the belly of a beast )
+
+Map 15 By Evilm0nk ( Grave yard of chaos )
+
+Map 16 By Evilm0nk ( The Chaotic Castle )
+
+Map 17 By Evilm0nk ( The Magic Domain )
+
+Map 18 By Evilm0nk ( The chaos Engine )
+
+Map 19 By Evilm0nk ( Tip Of the Iceberg )
+
+Map 20 By Evilm0nk ( Heart Of Chaos )
+
+Map 21 By Evilm0nk ( Demortrix's Lair )
+
+Map 22 By Evilm0nk/Gosimer ( Museum Map )
+
+=====Monsters===== ( Maybe missing a few )	
+
+If you see your monster in here and your not given credit or do not 
+want your monster in this wad please email me.
+
+Acolyte			Eriance, Ghastly Dragon, Tormentor667
+Afrit			Tormentor667, Nanami, Ghastly_dragon, Keksdose, Espi, Ebola
+AugArachnotron	Jimmy, Zdude, Sandypaper
+Annihilator		Tormentor667, Eriance, Ghastly Dragon
+Arachnophyte	Tormentor667, Xaser, Quasar
+Arachnotron		IdSoft
+AracnorbQueen	Yuraofthehairfan
+Archonofhell	Tormentor667, Eriance, Ghastly Dragon
+ArchonofhellR	Monsoon, Tormentor667, Eriance, Ghastly Dragon, Evilm0nk
+ArchonofhellB	Monsoon, Tormentor667, Eriance, Ghastly Dragon, Evilm0nk
+ArchonofhellY	Tormentor667, Eriance, Ghastly Dragon, Evilm0nk
+ArchonofhellG	Tormentor667, Eriance, Ghastly Dragon, Evilm0nk
+Avator			Tormentor667, Eriance, Ghastly Dragon
+Azazel			DBThanatos, Ghastly Dragon
+BabyCaco		Idsoft, Evilm0nk
+Baronofhell		Idsoft
+Bishop			RavenSoft
+Bruiserdemon	Tormentor667, Ghastly Dragon, Keksdose, Vader
+Cacaroo			EvilMonk, Popsoap, Tormentor667,  Ghastly Dragon, Keksdose, Eriance
+CacoKing		Evilm0nk
+CacoDad			Untrustable, Popsoap
+Captain ol Red	EvilMonk, (Uan)EvilMonk 2, idsoftware, Nintendo
+ChaosWyvern     ETTiNGRiNDER
+Cheogh			Callum Sanderson 
+Conqueror		Evilm0nk, ravensoft
+CyberArach		Darklord,CyberKid
+CyberBaron		Ben2k9,Virtue
+CyberDemolisher	Darklord,CyberKid
+Cyberdemon		Idsoft
+Cyberdemon64	Doom64 Resource Wad, Midway, Idsofware
+CyberDestroyer  Darklord,CyberKid
+CyberImp		Virtue
+CyberMastermind Tormentor667, Nanami
+Cybruiser		Eriance, Dreadopp, SandyPaper
+D3 CYber		Evilm0nk
+DarkCardinal    Jimmy, zrrion the insect, Espi, Ebola
+DarkFaith		EvilMonk, Monolith, Maelstrom, StarScreeam
+DarkInquisitor  ProjectAngel, Ichor, Ghastly_Dragon
+Deathknight		Tormentor667, Eriance, Ghastly Dragon
+DeathIncarnate	Eriance, Ghastly Dragon, Sandypaper (Brightmaps)
+Deepone			Shadowman. Dr. Doctor
+Demolisher		Tormentor667, Eriance, Ghastly Dragon
+DemonHeart		Evilm0nk, Monolith Games
+Demortrix		Evilm0nk, Untrustable(his satan servant idea), Monolith
+Desciple		Eriance, Ghastly Dragon, Tormentor667
+Destructionimp	Realm667
+Diabolist		Tormentor667, Eriance, Ghastly Dragon
+Dominator		Tormentor667, Eriance, Ghastly Dragon, Evilm0nk
+Dsparildesciple RavenSoft
+Dsparil			RavenSoft, Untrustable
+Entity			Rogue Entertainment
+EvilKnight		Mr.Green, Bullfrog
+EvilDoomGuy		Boss Resource Wad
+EvolutionaryBar	UnTrustable
+Eyesore			EvilMonk, Idsoftware, DBThanatos, Ghastly Dragon
+Fallen			Tormentor667, Eriance, Ghastly Dragon
+FireWizard		Evilm0nk,Ravensoft
+FlameCacodemon	EvilM0nk, Popsoap, Idsoftware
+FuryIronLich	Untrustable
+Gaguuro			Evilm0nk
+Gatekeeper		zrrion the insect
+GoldLich		Evil Space Tomato
+GretelGrosse	Untrustble
+HadesElemental  Tormentor667,  Ghastly Dragon, Keksdose, Eriance
+HansGrosse		UnTrustable, Idsoftware
+HeavenGuard		Xaser, Zero Prophet, Neoworm
+HellWarrior		Tormentor667
+HellWaromega	Tormentor667, Ghastly Dragon, Sandypaper, Vader
+HellHound		Boss Resource Wad
+Hellknight		Idsoft
+HellPatriarch	gothic, Richard Smith, Evilm0nk ( I just did a recolor of heresiarch )
+HellsApprentice	Ghastly Dragon, Tormentor667, Eriance
+Hellsbattery	Boss Resource Wad
+HellsFury		Tormentor667, Vader, Ghastly Dragon, Keksdose
+HellSmith		Ghastly Dragon, Tormentor667, Eriance
+HellStormArchon Ghastly Dragon, Tormentor667, Eriance
+Heresiarch		ravensoft
+Hitler			Untrustable, (Idsoft)
+IceBishop		Evilm0nk, Ravensoft
+IceGolem		Ghastly
+IceLich			Fury3, Ichor
+InfernalSpider Ghastly Dragon, Icytux, Tormentor667, spiderphobia
+Infernodemon    Maelstrom, StarScream, Nanami, Eriance, Keksdose, Jimmy91
+Inquisitor		Rogue Entertainment
+InsanitySpider	Boss Resource Wad
+Insanityarach	Boss Resource Wad
+IronLich		RavenSoft
+InvertedCaco    Lord Damager, ashurathechimera
+Lavedemon		Virtue, CodenniumRed
+Loremaster		Rogue Entertainment
+LordOfHeresy    Bouncy, Tormentor667, Zippy, Vader
+Korax			EvilMonk (ravensoft)
+Maephisto		Virtue
+Mancubus		Idsoft
+Metal Head		Untrustable
+Minotaur		RavenSoft
+Moloch			ProjectAngel, Eriance, Clebardman
+Motherdemon2.0	ProjectAngel, Midway
+Motherdemon		Jason
+Mummy			Ravensoft
+NetherQueen		Chilvence, Tormentor667, Dreadopp
+Overlord		Eriance
+Paladin			Captain Toenail
+PoisonWizard	Evilm0nk, Ravensoft
+PyroDemon		Maelstrom, Dreadopp, Eriance
+Reddemon		Fury3, Ichor
+RotWraith		Captain Toenail
+Scanner		    Rogue Entertainment
+Schabbs			Untrustable
+Scourge			ProjectAngel, Eriance
+Scourceguardian Tormentor667
+Sentinel		Tormentor667, Eriance, Ghastly Dragon, Sandypaper
+Serpent			RavenSoft
+Serpent2		RavenSoft
+Sewercaco		EvilMonk
+SilvAnnihilator	Monsoon,Tormentor667, Eriance, Ghastly Dragon
+SnowCaco		EvilMonk 2, EvilMonk
+SteelCaco		EvilMonk
+Storm			Yuzoo
+Spidermaster	Idsoft
+SpiderMast64    Doom64 Resource Wad, Idsoftware, Midway Games
+Strifebishop	Rogue Entertainment
+SupreDeepone	Popsoap,Shadowman. Dr. Doctor
+SuperDemon		Xim
+SupremeFiend    Ghastly Dragon, Raz
+Tchernobog		Monolith Games
+Terminator		Dreadopp, Sandypaper, Vader, Eriance
+Thamuz			DBThanatos, Jimmy, Dreadopp
+Thor			Dreadopp, Starscream
+Ultimaspider	Gerolf, Eriance, BloodyAcid, Evilm0nk (originally Bfg SPider )
+Uzombiecaco		EvilMonk 2, EvilMonk, Monolith Games
+Vampire			Maelstrom, Nash, Nanami
+Zardaz			Virtue
+Zombiecacodemon	EvilMonk 2, EvilMonk, Idsoftware
+
+=====Weapons=====
+
+Some weapons were taken off of realm667, some I have got permission. 
+If your weapon is on here and your not given permission or don't want
+your weapon in this wad please email me.
+
+Bfg				IdSoft
+BloodScourge	RavenSoft
+CultofSerpentS	zrrion the insect
+DualChaingun	WRW? ( It has been so long i forgot who made it, if anyone knows please tell me )
+DoubleBladeC	Xim, PopSoap
+HammerofR		RavenSoft, Flame64mon, Neoworm
+Quietus			RavenSoft
+Sawedoff		lolo_is_cool, PopSoap
+SerpentWand		RavenSoft
+Skullstaff 		CodenniumRed, Eriance, Ghastly_Dragon, Disguise
+Tri-Wand		EvilMonk, Flame64mon, RavenSoftware
+Nova Cannon		Monsoon
+R-300			Monsoon
+Tank rifle		Monsoon
+Voulger			Monsoon
+Gnasher			Monsoon, MartyKirra
+Fire Staff		Evil Space Tomato, Neoworm
+Phoenixrod		RavenSoft
+HuntingRifle	TODM, VALVe
+Wraithverge		Ravensoft
+LightBringer	Ghastly_dragon, Xaser, Zero Prophet, Neoworm, Raven Software, Eriance, NeuralStunner
+VileStaff		Fanboy, Cutmanmike
+Knife			ScubaSteve, Xim
+Gauntlets		RavenSoft
+Gauntlets of T	Ravensoft, Untrustable
+Cleric Mace		RavenSoft
+UraniumMelter	Jason
+FrostShards		RavenSoft
+FireGloves		RavenSoft flam64mon
+FrostFangs		Ghastly_dragon, Eriance, Cutmanmike
+Vapor Sword		Eriance, Jason, Lord Damager
+Karasawa		Unknown, Mechadon, Eriance
+BoneGUN			Eriance, Evil Space Tomato, Evilm0nk
+HellStaff		Eriance, Jason
+SoulReaver		Eriance, Jason
+Bow				Gothic, Bethesda, Raven Software, Monolith, GVH
+64SSG			Cage, DOOM64 RESOURCE WAD, Midway games, Idsoftware
+Unmaker			DOOM64 RESOURCE WAD, Midway games, Idsoftware
+64PlasmaG		DOOM64 RESOURCE WAD, Midway games, Idsoftware
+64Chainsaw		DOOM64 RESOURCE WAD, Midway games, Idsoftware
+Chewer			Z86, RavenSoftware, Eriance
+64RocketL		DOOM64 RESOURCE WAD, Midway games, Idsoftware
+
+=====flesh hit sounds for bullet guns=====
+
+Nailgunmg sounds: TheShooter7, Mechadon, Ghastly_dragon,  Lazureus
+
+=====flesh hit sounds for bullet guns=====
+
+Heavy rifle bullet sprites: Xim, ZChronos
+
+=====Zombie cacos Death=====
+
+David G (ItsNatureToDie)
+
+=====Blood Effects=====
+
+By popsoap
+
+=====Textures=====
+
+Realm667
+Blood
+Doom
+Hexen
+Hexen2
+Heretic
+Quake
+Skulltag
+
+=====Decorations=====
+
+Doom64ResourcePack
+Realm667
+Skulltag Data
+
+=====Other Effects=====
+
+LavaBall	Ghastly, Espi, Eriance
+Fire		SolarSnowFall, Tormentor667, Ghastly_dragon
+ThunderFX	Tormentor667, Solarsnowfall, Kurt Kessler
+
+=====Power Ups=====
+
+FlamingInferno	Raven Software, MagicWazard
+HasteSphere	scalliano
+Regeneration	scalliano
+ShieldSphere	Captain Toenail
+Mirrorsphere	Evilm0nk, Powerup resource wad
+firestorm	Evilm0nk, powerup resource wad
+Firewall	Evilm0nk, powerup resource wad
+Summonsphere	scalliano, Eriance
+RitualKnife	Infirnex
+Nuke		
+Beacon(usedcode)scalliano
+SentryGun	Captain Toenail
+Sickness	Evilm0nk, Raven soft, Sentinel projectile
+TripMines	LucasArts, bloax, ID Software, Gothic
+Egg Ovium	Ravensoft
+Jetthruster	PillowBlaster, 3drealms
+Tombofforsaken	ChronoSeth, ravensoft
+Armorsphere	Blue Shadow, Captain Toenail
+Tomeofunholy	Lucario, GhastlyDragon, PillowBlaster
+
+=======Skins======== (Don't work in this version but are in it anyways.)
+
+    * Cleric Firestorm - SunMadCat
+	* Cleric Wraithverge - SunMadCat
+	* Cleric SerpentStaff - SunMadCat
+	* Cleric Lightbringer - SunMadCat
+	* Fighter KoraxStaff - SunMadCat
+	* Fighter VorpalBlade - SunMadCat
+	* Fighter Gauntlets - SunMadCat
+	* Fighter Axe - SunMadCat
+	* Fighter Hammer - SunMadCat
+	* Corvus PhoenixStaff - SunMadCat
+	* Mage TriStaff - SunMadCat
+	* Mage CultStaff - SunMadCat
+	* Mage FrostShards - SunMadCat
+	* Mage ArcofDeath - SunMadCat
+	* Mage BloodScourge - SunMadCat
+    * Plasma Marine - Sprite by: CaptainToenail
+    * BFG9000 Marine - Sprite by: Toke
+    * Stronghold Chainsaw Marine - Eriance, JoeyTD and Ghastly_dragon
+    * Stronghold Shotgun Marine - Sprite by: Eriance and Ghastly_dragon
+    * Super-Chaingun Marine - Sprite by: Xim and Anthony Cole
+    * Stronghold Rocket Marine - Sprite by: Eriance and Ghastly_dragon
+
+  Crouching sprites
+
+    * Base Sprites - Sprite by: Unknown. If anyone knows, please say.
+    * Plasma Marine - Sprite by: CaptainToenail and Ghastly_dragon
+    * BFG9000 Marine - Sprite by: Toke and Xim
+    * Stronghold Chainsaw Marine - Sprite by: Eriance, JoeyTD and Ghastly_dragon
+    * Stronghold Shotgun Marine - Sprite by: Eriance and Ghastly_dragon
+    * Super-Chaingun Marine - Sprite by: Xim, Anthony Cole and Ghastly_dragon
+    * Stronghold Rocket Marine - Sprite by: Eriance and Ghastly_dragon
+
+=====Hexen weps pickups, comets, and Thetis Hud=====
+
+Thetis
+
+=====Other Stuff=====
+
+Potion Vaiants	BlueShadow, Tormentor667
+SuperSHield	Ghastly_dragon, Tormentor667
+RocketPile	Dreadopp
+CellKit		Dreadopp
+ShellKit	Dreadopp
+CombatPack	Ghastly_dragon
+AmmoBelt	Ghastly_dragon
+Dmana		Ravensoft, Evilm0nk (recolored it)
+Bmana		Ravensoft, Evilm0nk (recolored it)
+Rmana		Ravensoft, Evilm0nk (recolored it)
+Pmana		Ravensoft
+Gmana		Ravensoft, Evilm0nk (recolored it)
+Omana		Ravensoft, Evilm0nk (recolored it)
+CombinedMana	Ravensoft
+Red Armor	Ravensoft, Evilm0nk
+Yellow Armor	Ravensoft, Evilm0nk
+
+=====Other Creds=====
+
+AS A SIDENOTE: I Can't take 100% for this wad, my idea was to get bosses from all other
+games and mods. I did not create everything here, as more I just compiled other stuff
+into one wad. Most of the credit goes to realm667 and other people for the work they 
+submitted or helped with. without there help this mod wouldn't exist.
+
+Credits: Id Software, monolith software, Zandronum, Raven Software, Skulltag, Zdaemon, Zdoom, Zdoom wiki, Action doom,  3d Realms, wrw and monster
+resource wad, Midway, netherrealm studios, Vgmusic, Fathax Wadhost,
+The people who remade doom 64 for pc, Everyone who put monsters up on Realm667 Beastiary and armory. 
+midi music was borrowed from metal slug, Metroid, Dragon view, contra for ps2, doom 3,
+and paper mario tyt, thanks to those artists and there great work on those music pieces. 
+If I forget You, YES YOU! please tell me.
+
+Special thanks too:
+
+Thetis
+
+Doorhenge
+
+BatteryBlack
+
+Jason
+
+Untrustable
+
+Aiur850		
+
+President people
+
+General Mike
+
+Popsoap
+
+Lord Damager
+
+Monsoon
+
+Gosimer
+
+Flame46mon
+
+Evilm0nk 2
+
+Darklord
+
+Project Angel
+
+Leon_Kenny
+
+Itouy
+
+[DKT]GODSDOOMER
+
+Super X
+
+Miami_Vice
+
+Realm667
+
+CyberApocalypse
+
+FSR_ZOMBIE
+
+=====Forums=====
+
+http://forums.zdaemon.org/viewtopic.php?t=11829&highlight=bossbattles
+
+http://www.skulltag.com/forum/viewtopic.php?f=13&t=21741
+
+http://forum.zdoom.org/viewtopic.php?f=19&t=32157    
+
+http://zandronum.com/forum/showthread.php?tid=205
+        
+* NOTE: *
+If you spot anything like a bug or anything that should not be in the wad 
+PLEASE Email me Evilm0nk about the problem and I will take care of it A.S.A.P.
+
+* Play Information *
+
+Game                    : DOOM, Doom2, TNT, Plutonia
+Map #                   : 1-22 are playable
+Single Player           : Yes
+Cooperative 2-4 Player  : Yes
+Deathmatch 2-4 Player   : NO
+Other game styles       : Survival
+Difficulty Settings     : Yes, There is single player difficulties and multiplayer difficulties
+
+* Construction *
+
+Base                    : From scratch, everything came from, hexen,heretic,strife,doom,realm667,quake,doom3,quake4,quake2, and more, I (evilm0nk) merely compiled it together.
+Build Time              : 3 years on Zdaemon, 3 years on skulltag, 2 Years on zandronum, 6 Months on Gzdoom/Zdoom
+Editor(s) used          : doombuilder, doombuilder2, XWE, SLumpEd, Wintex, WhackEd2. Paint Shop Pro, Audacity, paint, Slade3
+Known Bugs              : Health bars may disappear online, Maps sometimes lock up do to lag, Devil may lag a server badly!
+
+* Copyright / Permissions *
+
+Authors may use all sprites other then "Untrustables".
+Authors May not use maps as a Base of there own.
+Authors may use music as long as they give credit to the people who made them as like I did, Follow the newgrounds Licensing Terms
+Authors May use sounds 
+This file is not to be tampered with and reuploaded.

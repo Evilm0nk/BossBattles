@@ -1,0 +1,1026 @@
+//HeavenTomb
+
+object HeavenBalloftruth
+{
+    frame FX11A { light ARMOR4 }
+    frame FX11B { light ARMOR4 }
+	frame FX11C { light ARMOR4 }
+    frame FX11D { light ARMOR4 }
+    frame FX11E { light ARMOR4 }
+    frame FX11F { light ARMOR4 }
+    frame FX11G { light ARMOR4 }
+}
+
+object Heavensdrain
+{
+    frame MSP2E { light ARMOR4 }
+    frame MSP2F { light ARMOR4 }
+	frame MSP2G { light ARMOR4 }
+    frame MSP2H { light ARMOR4 }
+    frame MSP2I { light ARMOR4 }
+}
+
+//blue gizmo
+
+flickerlight2 BLUEFLAME
+{
+color 0.0 0.0 1.0
+size 16
+secondarySize 25
+interval 0.1
+}
+
+object BF
+{
+    frame BKFO { light BLUEFLAME }
+}
+
+//ElectricalCurrent
+
+Object Electricalcurrent
+{
+Frame ZOT1A { Light LightningRod3 }
+Frame ZOT1B { Light LightningRod3 }
+Frame ZOT1C { Light LightningRod3 }
+Frame ZOT1D { Light LightningRod3 }
+Frame ZOT1E { Light LightningRod3 }
+}
+
+//Electricalcurrent2
+
+Object Electricalcurrent2
+{
+Frame ZAP7A { Light LightningBallL }
+Frame ZAP7B { Light LightningBallL }
+Frame ZAP7C { Light LightningBallL }
+Frame ZAP7D { Light LightningBallL }
+Frame ZAP7E { Light LightningBallL }
+}
+
+// BlueENERGYbALL
+pointlight BLUEENERGYBALL
+{
+    color 0.0 0.0 1.0
+    size 80
+}
+
+flickerlight BLUEENERGYBALL_X1
+{
+    color 0.2 0.2 1.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight BLUEENERGYBALL_X2
+{
+    color 0.3 0.3 1.0
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight BLUEENERGYBALL_X3
+{
+    color 0.5 0.5 1.0
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight BLUEENERGYBALL_X4
+{
+    color 0.2 0.2 0.7
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight BLUEENERGYBALL_X5
+{
+    color 0.1 0.1 0.3
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object BLUEenergyball
+{
+    frame BFS1A { light BLUEENERGYBALL }
+    frame BFS1B { light BLUEENERGYBALL }
+
+    frame BFE1A { light BLUEENERGYBALL_X1 }
+    frame BFE1B { light BLUEENERGYBALL_X2 }
+    frame BFE1C { light BLUEENERGYBALL_X3 }
+    frame BFE1D { light BLUEENERGYBALL_X1 }
+    frame BFE1E { light BLUEENERGYBALL_X4 }
+    frame BFE1F { light BLUEENERGYBALL_X5 }
+}
+
+//BluePowerNode
+
+object BLUEPowernode
+{
+    frame BFS1A { light BLUEENERGYBALL }
+    frame BFS1B { light BLUEENERGYBALL }
+
+    frame BFE1A { light BLUEENERGYBALL_X1 }
+    frame BFE1B { light BLUEENERGYBALL_X2 }
+    frame BFE1C { light BLUEENERGYBALL_X3 }
+    frame BFE1D { light BLUEENERGYBALL_X1 }
+    frame BFE1E { light BLUEENERGYBALL_X4 }
+    frame BFE1F { light BLUEENERGYBALL_X5 }
+}
+
+
+// rEDeNERGYbALL
+pointlight REDENERGYBALL
+{
+    color 1.0 0.0 0.0
+    size 80
+}
+
+flickerlight REDENERGYBALL_X1
+{
+    color 1.0 0.2 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight REDENERGYBALL_X2
+{
+    color 1.0 0.3 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight REDENERGYBALL_X3
+{
+    color 1.0 0.5 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight REDENERGYBALL_X4
+{
+    color 0.7 0.2 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight REDENERGYBALL_X5
+{
+    color 0.3 0.1 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object Redenergyball
+{
+    frame BFS1A { light REDENERGYBALL }
+    frame BFS1B { light REDENERGYBALL }
+
+    frame BFE1A { light REDENERGYBALL_X1 }
+    frame BFE1B { light REDENERGYBALL_X2 }
+    frame BFE1C { light REDENERGYBALL_X3 }
+    frame BFE1D { light REDENERGYBALL_X1 }
+    frame BFE1E { light REDENERGYBALL_X4 }
+    frame BFE1F { light REDENERGYBALL_X5 }
+}
+
+//RedPowerNode
+
+object RedPowerNode
+{
+    frame BFS1A { light REDENERGYBALL }
+    frame BFS1B { light REDENERGYBALL }
+
+    frame BFE1A { light REDENERGYBALL_X1 }
+    frame BFE1B { light REDENERGYBALL_X2 }
+    frame BFE1C { light REDENERGYBALL_X3 }
+    frame BFE1D { light REDENERGYBALL_X1 }
+    frame BFE1E { light REDENERGYBALL_X4 }
+    frame BFE1F { light REDENERGYBALL_X5 }
+}
+
+//GreenEnergyBall
+
+object Greenenergyball
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+//GreenpowerNode
+
+object Greenpowernode
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+//YellowEnergyBall
+
+object YellowEnergyBall
+{
+    frame BFS1A { light CFLAME1 }
+    frame BFS1B { light CFLAME2 }
+
+    frame BFE1A { light CFLAME1 }
+    frame BFE1B { light CFLAME2 }
+    frame BFE1C { light CFLAME1 }
+    frame BFE1D { light CFLAME2 }
+    frame BFE1E { light CFLAME1 }
+    frame BFE1F { light CFLAME2 }
+}
+
+//YellowPowerNode
+
+object YellowPowerNode
+{
+    frame BFS1A { light CFLAME1 }
+    frame BFS1B { light CFLAME2 }
+
+    frame BFE1A { light CFLAME1 }
+    frame BFE1B { light CFLAME2 }
+    frame BFE1C { light CFLAME1 }
+    frame BFE1D { light CFLAME2 }
+    frame BFE1E { light CFLAME1 }
+    frame BFE1F { light CFLAME2 }
+}
+
+//YELLOWoRB
+
+object YellowORB1
+{
+    frame FX11A { light CFLAME1 }
+    frame FX11B { light CFLAME2 }
+}
+
+//Blue orb
+
+object Blueorb1
+{
+    frame FX11A { light BLUEFLAME }
+	frame FX11B { light BLUEFLAME }
+}
+
+//RED ORB
+
+object Redorb1
+{
+    frame FX11A { light REDTRAPBALL1 }
+    frame FX11B { light REDTRAPBALL1 }
+}
+
+//Green Orb
+
+Object Greenorb1
+{
+frame FX11A { light CSGASBALL }
+frame FX11B { light CSGASBALL }
+}
+
+//Purple orb
+
+object Purpleorb1
+{
+    frame FX11A { light DISCIPLEBALL }
+    frame FX11B { light DISCIPLEBALL }
+}
+
+//Silver Orb
+
+object SilverOrb1
+{
+    frame FX11A { light ARMOR4 }
+    frame FX11B { light ARMOR4 }
+}
+
+//IceTrap
+
+object IceTrap
+{
+	frame FX23G { light MFROSTSHARD_X1 }
+}
+
+//FireTrap
+
+Object FireTrap
+{
+Frame FX09 { Light EXPFLASH }
+}
+
+//PoisonTrap
+
+object PoisonTrap
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+//skullcandle
+
+object SkullCandle
+{
+    frame SCND { light CANDLE }
+}
+
+//Orbits
+
+Object OrbitFire
+{
+Frame TNT1 { Light AfritBall1 }
+}
+
+Object OrbitRed
+{
+Frame TNT1 { Light RedElecPlasma1 }
+}
+
+Object OrbitWhite
+{
+Frame TNT1 { Light DiscipleShot12 }
+}
+
+Pointlight BlueOrbitLight
+{
+Color 0.0 0.0 1.0
+Size 48
+}
+
+Object OrbitBlue
+{
+Frame TNT1 { Light BlueOrbitLight }
+}
+
+Object OrbitGreen
+{
+Frame TNT1 { Light CSGASBALL }
+}
+
+//Gas Cloud
+
+Object Gascloud
+{
+Frame PSBGE { Light GreenFire4 }
+Frame PSBGF { Light GreenFire4 }
+Frame PSBGG { Light GreenFire4 }
+Frame PSBGH { Light GreenFire4 }
+Frame PSBGI { Light GreenFire4 }
+}
+
+// Doom Teleport fog
+flickerlight DTFOG1
+{
+    color 0.4 1.0 0.4
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight DTFOG2
+{
+    color 0.4 1.0 0.4
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight DTFOG3
+{
+    color 0.4 1.0 0.4
+    size 24
+    secondarySize 32
+    chance 0.4
+}
+
+flickerlight DTFOG4
+{
+    color 0.4 1.0 0.4
+    size 10
+    secondarySize 16
+    chance 0.4
+}
+
+object TeleportFog
+{
+    frame TFOGA { light DTFOG1 }
+    frame TFOGB { light DTFOG2 }
+    frame TFOGC { light DTFOG2 }
+    frame TFOGD { light DTFOG2 }
+    frame TFOGE { light DTFOG3 }
+    frame TFOGF { light DTFOG4 }
+    frame TFOGI { light DTFOG4 }
+    frame TFOGJ { light DTFOG3 }
+}
+
+//purplelight
+
+FlickerLight2 BigPurpleTorch
+{
+Color 1.0 0.0 1.0
+Size 64
+SecondarySize 72
+Interval 0.1
+Offset 0 60 0
+}
+
+Object PurpleLight
+{
+Frame TPRP { Light BigPurpleTorch }
+}
+
+//healthviles
+
+Object mediumHealthvile
+{
+Frame MRP2 { Light Redmana }
+}
+
+object LargeHealthvile
+{
+    frame RGP2 { light GREENMANA }
+}
+
+object smallhealthvile
+{
+    frame HPP2 { light BLUEMANA }
+}
+
+// PURPLE FLASK
+pointlight HEALINGRADIUS
+{
+    color 1.0 0.0 1.0
+    size 32
+	offset 0 36 0
+}
+
+object ArtiHealingRadius1
+{
+    frame SPHL{ light HEALINGRADIUS }
+}
+
+// BLUE FLASK
+
+pointlight MEDIKIT1
+{
+    color 0.3 0.3 1.0
+    size 40
+	    offset 0 36 0
+}
+
+object MEDIKIT3
+{
+    frame MED3 { light MEDIKIT1 }
+}
+
+// GREEN FLASK
+
+pointlight MEDIKIT2
+{
+    color 0.3 1.0 0.3
+    size 40
+	    offset 0 36 0
+}
+
+object MEDIKIT4
+{
+    frame MED5 { light MEDIKIT2 }
+}
+
+// BLUE ARMOR
+
+pointlight ARMOR4
+{
+    color 1.0 1.0 1.0
+    size 40
+	    offset 0 36 0
+}
+
+object ARMOR4
+{
+    frame ARM4 { light ARMOR4 }
+}
+
+// GREEN ARMOR
+
+pointlight ARMOR5
+{
+    color 1.0 1.0 1.0
+    size 40
+	    offset 0 36 0
+}
+
+object ARMOR5
+{
+    frame ARM5 { light ARMOR5 }
+}
+
+
+// Blue mana
+pointlight BLUEMANA
+{
+    color 0.0 0.0 1.0
+    size 40
+    offset 0 36 0
+}
+
+object BMANA
+{
+    frame MAN1 { light BLUEMANA }
+}
+
+object BMANAPICKUP
+{
+    frame MAN1 { light BLUEMANA }
+}
+
+object BMANADROP
+{
+    frame MAN1 { light BLUEMANA }
+}
+
+// Green mana
+pointlight GREENMANA
+{
+    color 0.0 0.7 0.0
+    size 40
+    offset 0 36 0
+}
+
+object GMANA
+{
+    frame MAN2 { light GREENMANA }
+}
+
+object GMANAPICKUP
+{
+    frame MAN2 { light GREENMANA }
+}
+
+object GMANADROP
+{
+    frame MAN2 { light GREENMANA }
+}
+
+// Dark mana
+pointlight Darkmana
+{
+    color 1.0 1.0 1.0
+    size 40
+	offset 0 36 0
+}
+
+object DMANA
+{
+    frame MAN5 { light Darkmana }
+}
+
+object DMANAPICKUP
+{
+    frame MAN5 { light Darkmana }
+}
+
+object DMANADROP
+{
+    frame MAN5 { light Darkmana }
+}
+
+// Purple mana
+pointlight purplemana
+{
+    color 1.0 0.0 1.0
+    size 40
+	offset 0 36 0
+}
+
+object Pmana
+{
+    frame MAN4 { light purplemana }
+}
+
+object PmanaPickup
+{
+    frame MAN4 { light purplemana }
+}
+
+object PmanaDrop
+{
+    frame MAN4 { light purplemana }
+}
+
+// RED mana
+Pointlight Redmana
+{
+Color 0.7 0.0 0.0
+Size 40
+offset 0 36 0
+}
+
+Object Rmana
+{
+Frame MAN6 { Light Redmana }
+}
+
+Object RmanaPickup
+{
+Frame MAN6 { Light Redmana }
+}
+
+Object RmanaDrop
+{
+Frame MAN6 { Light Redmana }
+}
+
+// Orange mana
+
+Pointlight Orangemana
+{
+    color 0.5 0.5 0.0
+    Size 40
+    offset 0 36 0
+}
+
+Object Omana
+{
+Frame MAN7 { Light Orangemana }
+}
+
+Object OmanaPickup
+{
+Frame MAN7 { Light Orangemana }
+}
+
+Object OmanaDrop
+{
+Frame MAN7 { Light Orangemana }
+}
+
+// Combined mana
+pointlight COMBINEDMANA
+{
+    color 0.7 0.0 0.0
+    size 40
+    offset 0 36 0
+}
+
+object CMANA
+{
+    frame MAN3 { light COMBINEDMANA }
+}
+
+
+//Red Trap ball
+
+flickerlight REDTRAPBALL1
+{
+    color 1.0 0.0 0.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight REDTRAPBALL_X1
+{
+    color 1.0 0.0 0.0
+    size 16
+    secondarySize 24
+    chance 0.3
+}
+
+flickerlight REDTRAPBALL_X2
+{
+    color 1.0 0.0 0.0
+    size 8
+    secondarySize 16
+    chance 0.3
+}
+
+
+object Redtrapball
+{
+    frame FX11A { light REDTRAPBALL1 }
+    frame FX11B { light REDTRAPBALL1 }
+    frame FX11C { light REDTRAPBALL1 }
+
+    frame FX11D { light REDTRAPBALL1    }
+    frame FX11E { light REDTRAPBALL1    }
+    frame FX11F { light REDTRAPBALL_X1 }
+    frame FX11G { light REDTRAPBALL_X2 }
+}
+
+
+//Bluetrap ball
+
+pointlight BLUETRAPBALL1
+{
+    color 0.0 0.0 1.0
+    size 48
+}
+
+flickerlight BLUETRAPBALL_X1
+{
+    color 0.0 0.0 1.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight BLUETRAPBALL_X2
+{
+    color 0.0 0.0 1.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight BLUETRAPBALL_X3
+{
+    color 0.0 0.0 1.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+flickerlight BLUETRAPBALL_X4
+{
+    color 0.0 0.0 1.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+
+object bluetrapball
+{
+    frame BPFXA { light BLUETRAPBALL1 }
+    frame BPFXB { light BLUETRAPBALL1 }
+
+    frame BPFXC { light BLUETRAPBALL_X1 }
+    frame BPFXD { light BLUETRAPBALL_X2 }
+    frame BPFXE { light BLUETRAPBALL_X2 }
+    frame BPFXF { light BLUETRAPBALL_X3 }
+    frame BPFXG { light BLUETRAPBALL_X3 }
+    frame BPFXH { light BLUETRAPBALL_X4 }
+}
+
+// Burning corpses
+
+flickerlight2 ZCorpseBurning1
+{
+	COLOR 1.0 0.7 0.1
+	Size 24
+	SecondarySize 48
+	Interval 0.01
+}
+
+Object ZCorpseBurning
+{
+	Frame WBRN
+	{
+		light ZCorpseBurning1
+	}
+}
+
+
+//supershield
+
+PulseLight SUPERSHIELD
+{
+Color 0.6 0.6 0.0
+Size 32
+SecondarySize 48
+Interval 2.5
+}
+
+Object SuperShield
+{
+Frame ARMX { Light SUPERSHIELD }
+}
+
+//Decorations
+
+object BossBattlesColumn
+{
+	frame COLU { light LAMP }
+}
+
+object BossBattlesTechLamp2
+{
+	frame TLP2 { light SMALLLAMP }
+}
+
+object BossBattlesTechLamp
+{
+	frame TLMP { light BIGLAMP }
+}
+
+object BossBattlesBurningBarrel
+{
+	frame FCAN { light FIREBARREL }
+}
+
+object BossBattlesHeadCandles
+{
+	frame POL3 { light SKULLCANDLES }
+}
+
+object BossBattlesCandelabra
+{
+	frame CBRA { light CANDELABRA }
+}
+
+object BossBattlesShortWhiteTorch
+{
+	frame SMWT { light SMALLWHITETORCH }
+}
+
+object BossBattlesShortYellowTorch
+{
+	frame SMYT { light SMALLYELLOWTORCH }
+}
+
+object BossBattlesWhiteTorch
+{
+	frame TWHI { light BIGWHITETORCH }
+}
+
+object BossBattlesYellowTorch
+{
+	frame TYEL { light BIGYELLOWTORCH }
+}
+
+object BossBattlesRedEvilEye
+{
+	frame CEYR { light RedEvilEye }
+}
+
+object BossBattlesBlueEvilEye
+{
+	frame CEYB { light BlueEvilEye }
+}
+
+object BossBattlesRedTechLamp
+{
+	frame TLP3 { light RedTechLamp }
+}
+
+object BossBattlesRedTechLamp2
+{
+	frame TLP4 { light RedTechLamp2 }
+}
+
+object BossBattlesRedColumn
+{
+	frame RCOL { light RedColumn }
+}
+
+object BossBattlesBlueColumn
+{
+	frame BCOL { light BlueColumn }
+}
+
+// Tall red torch
+flickerlight2 BIGREDTORCH
+{
+    color 1.0 0.3 0.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 60 0
+}
+
+object 64RedTorch
+{
+    frame TRED { light BIGREDTORCH }
+}
+
+// Tall green torch
+flickerlight2 BIGGREENTORCH
+{
+    color 0.0 1.0 0.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 60 0
+}
+
+object 64GreenTorch
+{
+    frame TGRE { light BIGGREENTORCH }
+}
+
+// Tall blue torch
+flickerlight2 BIGBLUETORCH
+{
+    color 0.0 0.0 1.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 60 0
+}
+
+object 64BlueTorch
+{
+    frame TBLU { light BIGBLUETORCH }
+}
+
+// Small red torch
+flickerlight2 SMALLREDTORCH
+{
+    color 1.0 0.3 0.0
+    size 48
+    secondarySize 54
+    interval 0.1
+    offset 0 35 0
+}
+
+object 64ShortRedTorch
+{
+    frame TRED { light SMALLREDTORCH }
+}
+
+// Small green torch
+flickerlight2 SMALLGREENTORCH
+{
+    color 0.0 1.0 0.0
+    size 48
+    secondarySize 54
+    interval 0.1
+    offset 0 35 0
+}
+
+object 64ShortGreenTorch
+{
+    frame TGRE { light SMALLGREENTORCH }
+}
+
+// Small blue torch
+flickerlight2 SMALLBLUETORCH
+{
+    color 0.0 0.0 1.0
+    size 48
+    secondarySize 54
+    interval 0.1
+    offset 0 35 0
+}
+
+object 64ShortBlueTorch
+{
+    frame TBLU { light SMALLBLUETORCH }
+}
+
+// Tall yellow flame
+flickerlight2 YELLOWFLAME
+{
+    color 1.0 0.8 0.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 35 0
+}
+
+object 64yellowTorch
+{
+    frame TYRN { light YELLOWFLAME }
+}
+
+// Short yellow flame
+flickerlight2 YELLOWFLAME1
+{
+    color 1.0 0.8 0.0
+    size 48
+    secondarySize 54
+    interval 0.1
+    offset 0 35 0
+}
+
+object 64ShortYellowTorch
+{
+    frame TYRN { light YELLOWFLAME1 }
+}
