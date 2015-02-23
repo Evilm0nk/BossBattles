@@ -1,0 +1,167 @@
+//===========================================================================
+//
+// Scorpion Mastermind
+//
+//
+//
+//===========================================================================
+actor ScorpionMastermind 21324
+{
+	//$Category DemortrixMinions
+    Health 32000
+    Radius 96
+    Height 100
+    Speed 17
+    PainChance 1
+    Mass 1000000
+    MONSTER 
+    +BOSS
+    +FLOORCLIP
+    +NORADIUSDMG
+    +DONTMORPH
+    +DONTSQUASH
+    +DONTBLAST
+    +NOTARGET
+    +DONTGIB
+    +Missilemore
+    +MISSILEEVENMORE
+    +TELESTOMP
+    +QUICKTORETALIATE
+    SeeSound "Spidermastermind64/Sight"
+    PainSound "spider/pain"
+    DeathSound "spider/death"
+    ActiveSound "spider/active"
+    Obituary "%o was stung by a scorpion mastermind."
+    States
+    {
+    Spawn:
+        SCRP AB 10 A_Look
+        Loop
+    See:
+        SCRP AABB 3 A_Chase
+        SCRP B 0 A_PlaySound("spider/walk")
+        SCRP CCDD 3 A_Chase
+        SCRP D 0 A_PlaySound("spider/walk")
+        Loop
+    Missile:
+        SCRP EE 10 A_FaceTarget
+        SCRP E 0 A_Jump(120,8)
+	SCRP E 0 A_PlayWeaponSound ("spider/attack")
+        SCRP F 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
+        SCRP F 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
+	SCRP G 0 A_PlayWeaponSound ("spider/attack")
+        SCRP G 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
+        SCRP G 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
+        SCRP G 1 A_SpidRefire
+        Goto Missile+3
+        SCRP H 6 A_CustomMissile("BlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("BlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("BlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("BlackRocket", 24, 40, 0)
+        SCRP I 6 A_FaceTarget
+        SCRP A 24
+        Goto See
+    Pain:
+        SCRP J 4
+        SCRP K 4 A_Pain
+        Goto See
+    Death:
+        SCRP L 8
+        SCRP M 8 A_ScreamAndUnblock
+        SCRP N 6
+        SCRP O 6 A_Fall
+        SCRP P 520 A_SetFloorClip
+		SCRP P 2 A_FadeOut
+		Wait
+    }
+}
+
+actor BlackRocket
+{
+    Damagetype "explosive"
+    +SPECTRAL
+    Radius 11
+    Height 8
+    Speed 35
+    Damage 15
+    PROJECTILE
+    SeeSound "weapons/rocklf"
+    States
+    {
+    Spawn:
+        NRK1 A 1 Bright A_SpawnItem("CyberRocketSmoke64")
+        Loop
+    Death:
+        NRK1 A 0 A_SpawnItem("BlackRocketExplosion",0,0,0)
+        MISL BCD 5 
+        Stop
+    }
+}
+
+Actor BlackRocketExplosion
+{
+Damagetype "explosive"
+Projectile
++SPECTRAL
+Speed 0
+States
+{
+Spawn:
+TNT1 A 1
+Goto Death
+Death:
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,12,0,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,-12,-5,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,19,13,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,-17,15,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,26,7,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,-20,26,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,23,30,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,30,22,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,20,-10,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,12,-15,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,35,0,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,-40,-10,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("BlackRocketExplosion2",0,55,25,0,0,0,0,0,0)
+Stop
+}
+}
+
+Actor BlackRocketExplosion2
+{
+Scale 0.4
+RenderStyle Add
+Projectile
+Speed 0
+radius 4
+height 4
+DeathSound "cyber64/missilehit"
+Damagetype "explosive"
++SPECTRAL
+States
+{
+Spawn:
+TNT1 A 1
+Goto Death
+Death:
+MISL B 0 bright a_playsound("cyber64/missilehit")
+MISL B 8 Bright A_Explode(5,30,0)
+MISL C 6 Bright A_Explode(5,30,0)
+MISL D 4 Bright A_Explode(5,30,0)
+Stop
+}
+}
+
+Actor ScorpionMastermind2 : ScorpionMastermind 19148	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+actor SuperScorpionMastermind : ScorpionMastermind //SinglePlayerOnly
+{
+    Health 42000
+}
