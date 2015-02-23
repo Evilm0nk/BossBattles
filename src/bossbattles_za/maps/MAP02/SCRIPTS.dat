@@ -436,22 +436,23 @@ Delay (35);
 setmusic ("D_Boss");
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-SpawnSpot ("silverannihilator", 8, 943);
+SpawnSpot ("silverannihilator", 8, 999);
 SpawnSpot ("HellWarrior", 18, 0);
 SpawnSpot ("HellstormArchon", 10, 0);
 SpawnSpot ("HellWarriorOmega", 17, 0);
 SpawnSpot ("Bruiserdemon", 6, 0);
 Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);   
-ACS_Execute(302, 0, 0, 0, 0); 
+ACS_Execute(301, 0, 0, 0, 0); 
 Delay(20);
-ACS_Execute(303, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
   Script 14 (Void) // wave 10
 { 	
 Delay(100);
 ACS_Terminate(25, 0);
+ACS_Terminate(301, 0);
 PrintBold(s:"This Areas Has been Defended successfully, Next area by the stone."); 
 delay (100); 
 Floor_LowerToLowest(31,100);
@@ -905,7 +906,7 @@ Delay (35);
 setmusic ("D_Boss");
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-SpawnSpot ("GreyAnnihilator", 8, 943);
+SpawnSpot ("GreyAnnihilator", 8, 999);
 SpawnSpot ("HellWarrior", 18, 0);
 SpawnSpot ("BaronofHell", 6, 0);
 SpawnSpot ("Hellsfury", 5, 0);
@@ -913,7 +914,7 @@ SpawnSpot ("HellWarrior", 10, 0);
 Delay(20);
 ACS_Execute(301, 0, 0, 0, 0);   
 Delay(20);
-ACS_Execute(303, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
   Script 25 (Void) // wave 10
@@ -1075,68 +1076,6 @@ delay (35);
 SetFont("BIGFONT");
 HudMessagebold(s:"Heaven Reinforcements awaiting orders!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
 Ambientsound("HG-atak3",255);
-}
-
-Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(943, APROP_Health, (GetActorProperty (943, APROP_SpawnHealth)) * PlayerCount());
-}
-
-                  script 301 (void) // bosses health
-{
-    SetFont("BIGFONT");
-    hudmessageBold(s: "Annihilator: ", d:GetActorProperty(943, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-                  script 302 (void) // bosses health
-{
-    SetFont("BIGFONT");
-    hudmessageBold(s: "Silver Annihilator: ", d:GetActorProperty(943, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, 0.5, -0.15, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-    Script 303 (void) // untrustables Monsters counter
-{
-If ( (ThingCount(0, 943)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  AmbientSound("dswelld", 127); // "Welldone"
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (303, 0);
-  }
-Delay(const:35);
-Restart;
 }
 
 	Script 305 open // popsoap heaven health divider
