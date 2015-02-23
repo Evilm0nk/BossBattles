@@ -220,40 +220,6 @@ Delay(35);
 Restart;
 }
 
-Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-
-
-                  script 301 (void) // bosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
 
 	script 149 open
 	{	
@@ -824,7 +790,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 106 (Void) // wave 6
@@ -855,7 +821,7 @@ ACS_Execute(2, 0, 0, 0, 0);
 ACS_Execute(6, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 107 (Void) // wave 7
@@ -996,7 +962,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 112 (Void) // wave 12
@@ -1004,7 +970,7 @@ Script 112 (Void) // wave 12
 delay (50);
 ACS_terminate(301, 0);
 setfont("DOOMFONT");
-hudmessage(s:"Anothwe Power Node to Destroy!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+hudmessage(s:"Another Power Node to Destroy!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(150);
 setfont("BIGFONT");
 hudmessage(s:"Wave 12/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
@@ -1027,7 +993,7 @@ ACS_Execute(8, 0, 0, 0, 0);
 ACS_Execute(9, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 113 (Void) // wave 13
@@ -1041,8 +1007,6 @@ ACS_terminate(9, 0);
 ACS_terminate(301, 0);
 setfont("DOOMFONT");
 hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
-Delay(250);
-hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(150);
 hudmessage(s:"Lets head back to the main hall!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -1173,7 +1137,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 118 (Void) // wave 18
@@ -1181,7 +1145,7 @@ Script 118 (Void) // wave 18
 delay (60);
 ACS_terminate(301, 0);
 setfont("DOOMFONT");
-hudmessage(s:"Another power Node, You know What to DO!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+hudmessage(s:"Another power Node!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(150);
 setfont("BIGFONT");
 hudmessage(s:"Wave 18/29!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
@@ -1204,7 +1168,7 @@ ACS_Execute(14, 0, 0, 0, 0);
 ACS_Execute(15, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 119 (Void) // wave 19
@@ -1218,8 +1182,6 @@ ACS_terminate(15, 0);
 ACS_terminate(301, 0);
 setfont("DOOMFONT");
 hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
-Delay(250);
-hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(150);
 hudmessage(s:"Lets head back to the main hall!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
@@ -1347,7 +1309,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 124 (Void) // wave 24
@@ -1378,7 +1340,7 @@ ACS_Execute(20, 0, 0, 0, 0);
 ACS_Execute(21, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 125 (Void) // wave 25
@@ -1393,8 +1355,6 @@ ACS_terminate(301, 0);
 Floor_lowertonearest(59,10);
 setfont("DOOMFONT");
 hudmessage(s:"The power Node Has been destroyed!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
-Delay(250);
-hudmessage(s:"The Power in this side of the building is flickering!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(150);
 hudmessage(s:"The final door is open to us!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(140);
@@ -1435,7 +1395,7 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 60, 0);
-SpawnSpotfacing ("Terminator", 60, 999);
+SpawnSpotfacing ("UltimateTerminator", 60, 999);
 delay (100); 
 SpawnSpotfacing ("spawnfire", 6, 0);
 SpawnSpotfacing ("arachnotronmk2", 6, 999);
@@ -1466,7 +1426,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 128 (Void) // wave 28
@@ -1526,17 +1486,6 @@ hudmessage(s:"ehh the lights are getting dim!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0
 Delay(70);
 SpawnSpotfacing ("spawnfire", 74, 0);
 Thing_Remove(73);
-setfont("BIGFONT");
-hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-Delay(40);
-setmusic ("D_Boss2");
-SetFont("BIGFONT");
-HudMessage(s:"Starting in 3..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-Delay (35);
-HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-Delay (35);
-HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 70, 0);
@@ -1545,7 +1494,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 130 (Void) // wave 30
