@@ -406,7 +406,7 @@ SpawnSpotfacing ("spawnfire", 1, 0);
 SpawnSpotfacing ("DarkFaith", 1, 999);
 delay(10);
 SpawnSpotfacing ("spawnfire", 2, 0);
-SpawnSpotfacing ("Terminator", 2, 999);
+SpawnSpotfacing ("UltimateTerminator", 2, 999);
 delay(10);
 SpawnSpotfacing ("spawnfire", 6, 0);
 SpawnSpotfacing ("CaptainolRed", 6, 999);
@@ -513,15 +513,15 @@ HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("Demortrix", 6, 999);
 delay(35);
 acs_execute (300,0,0,0,0);
-acs_execute (3,0,0,0,0);
+acs_execute (301,0,0,0,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 	script 113 (void) //END
 	{	
 delay(50);
-ACS_Terminate(3, 0);
+ACS_Terminate(301, 0);
 ACS_Terminate(151, 0);
 delay (35); 
 setfont("BIGFONT");
@@ -538,40 +538,6 @@ hudmessage(s:"Now We must find The heaven portal and escape before it seals fore
 	exit_normal(0);
 	}
     
-   Script 299 (void) // Untrustables Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-} 
-
-	Script 3 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-
-                  script 300 (void) // Finalbosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
 
     		Script 12 open
 {
