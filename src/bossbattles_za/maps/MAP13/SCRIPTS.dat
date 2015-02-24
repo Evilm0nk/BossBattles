@@ -181,111 +181,6 @@ Delay(35);
 Restart;
 }
 
-Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-Script 399 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 969);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 969)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (399, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-Script 398 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 966);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 966)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (398, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 302 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(969, APROP_Health, (GetActorProperty (969, APROP_SpawnHealth)) * PlayerCount());
-}
-
-
-                  script 303 (void) // bosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(969, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-
-
-                  script 301 (void) // bosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-	Script 304 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(966, APROP_Health, (GetActorProperty (966, APROP_SpawnHealth)) * PlayerCount());
-}
-
-
-                  script 305 (void) // bosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(966, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
 	script 149 open
 	{	
         setmusic ("D_map13");
@@ -440,7 +335,7 @@ delay (35);
 Acs_Execute(300,0,0,0,0);
 Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
     Script 106 (Void) // wave 6
@@ -572,7 +467,7 @@ delay (35);
 Acs_Execute(300,0,0,0,0);
 Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
         Script 110 (Void) // wave 10
@@ -708,18 +603,18 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 68, 0);
-SpawnSpot ("Maximus1", 68, 969);
+SpawnSpot ("Maximus1", 68, 999);
 delay (35); 
-Acs_Execute(303,0,0,0,0);
-Acs_Execute(302,0,0,0,0);
+Acs_Execute(300,0,0,0,0);
+Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(399, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
         Script 114 (Void) // wave 14
 { 	
 delay(50);
-Acs_Terminate(303,0);
+Acs_Terminate(301,0);
  Floor_LowerToLowest(46,10);		
 setfont("DOOMFONT");
 hudmessage(s:"Spiders Nest!!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
@@ -790,16 +685,6 @@ delay (20);
 SpawnSpotfacing ("Veryminispider", 47, 999);
 delay (20); 
 SpawnSpotfacing ("Veryminispider", 47, 999);
-delay (20); 
-SpawnSpotfacing ("spawnfire", 47, 0);
-SpawnSpotfacing ("Veryminispider", 47, 999);
-delay (20); 
-SpawnSpotfacing ("spawnfire", 49, 0);
-SpawnSpotfacing ("SmallInfernalSpider", 49, 999);
-delay (20); 
-SpawnSpotfacing ("Veryminispider", 47, 999);
-delay (20);  
-SpawnSpotfacing ("SmallInfernalSpider", 49, 999);
 delay (20); 
 SpawnSpotfacing ("spawnfire", 47, 0);
 SpawnSpotfacing ("minispider", 47, 999);
@@ -884,18 +769,18 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 51, 0);
-SpawnSpot ("BiginfernalSpider", 51, 969);
+SpawnSpot ("BiginfernalSpider", 51, 999);
 delay (35); 
-Acs_Execute(303,0,0,0,0);
-Acs_Execute(302,0,0,0,0);
+Acs_Execute(300,0,0,0,0);
+Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(399, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
         Script 118 (Void) // wave 18
 { 	
 delay(50);
-Acs_Terminate(303,0);
+Acs_Terminate(301,0);
 Floor_LowerToLowest(52,10);	
 Floor_LowerToLowest(72,10);
 setfont("DOOMFONT");
@@ -935,7 +820,7 @@ SpawnSpotfacing ("spawnfire", 57, 0);
 SpawnSpotfacing ("spawnfire", 53, 0);
 SpawnSpotfacing ("spawnfire", 55, 0);
 SpawnSpotfacing ("Hellsfury", 57, 999); 
-SpawnSpotfacing ("Deathknight", 53, 999);
+SpawnSpotfacing ("HellWarrior", 53, 999);
 SpawnSpotfacing ("Deathknight", 55, 999);
 delay (70);
 SpawnSpotfacing ("spawnfire", 56, 0);
@@ -1010,18 +895,18 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 56, 0);
-SpawnSpot ("Flembomination", 56, 966);
+SpawnSpot ("Flembomination", 56, 999);
 delay (35); 
-Acs_Execute(304,0,0,0,0);
-Acs_Execute(305,0,0,0,0);
+Acs_Execute(300,0,0,0,0);
+Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(398, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
              Script 121 (Void) // wave 21
 { 	
 delay(60);
-Acs_Terminate(305,0);
+Acs_Terminate(301,0);
 Floor_LowerToLowest(58,10);	
 setfont("DOOMFONT");
 hudmessage(s:"Another gate open!!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
@@ -1139,22 +1024,22 @@ Delay (35);
 setmusic ("D_BOSS2");
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
-SpawnSpot ("Azazel", 67, 969);
+SpawnSpot ("Azazel", 67, 999);
 SpawnSpotfacing ("spawnfire", 67, 0);
 delay (35); 
-Acs_Execute(302,0,0,0,0);
-Acs_Execute(303,0,0,0,0);
+Acs_Execute(300,0,0,0,0);
+Acs_Execute(301,0,0,0,0);
 Delay(20);
-ACS_Execute(399, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
  
           Script 124 (void) //end
 {	
     
  delay (35); 
-Acs_Terminate(303,0);
+Acs_Terminate(301,0);
 setfont("DOOMFONT");
-hudmessage(s:"Can't believe we're in somethings mouth"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+hudmessage(s:"Can't believe we are in this things mouth"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 delay (120); 
 setfont("DOOMFONT");
 hudmessage(s:"Then again we have worse problems, This isn't the end yet!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
