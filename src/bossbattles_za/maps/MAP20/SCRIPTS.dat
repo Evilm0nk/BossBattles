@@ -146,27 +146,6 @@ Delay(35);
 Restart;
 }
 
-Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-
     		script 51 open
 	{	
 setmusic ("D_tpt1");
@@ -181,19 +160,6 @@ Restart;
 	Script 23 open
 {
  Sector_SetDamage(6, 50, 20);
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-                  script 301 (void) // Finalbosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
 }
 
 
@@ -289,7 +255,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 
@@ -312,7 +278,7 @@ Delay (35);
 HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
 Delay(20);
-SpawnSpotfacing ("Terminator", 7, 999);
+SpawnSpotfacing ("UltimateTerminator", 7, 999);
 Delay(30);
 SpawnSpotfacing ("Ironlich2", 8, 999);
 Delay(30);
@@ -395,7 +361,7 @@ SpawnSpotfacing ("Lordofheresy", 7, 0);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }   
 
 Script 108 (Void) // wave 8
@@ -425,7 +391,7 @@ Delay(80);
 SpawnSpotfacing ("diabloist", 2, 999);
 Delay(80);
 SpawnSpotfacing ("Arachnophyte", 3, 999);
-SpawnSpotfacing ("LordOfHeresy", 2, 999);
+SpawnSpotfacing ("HellWarrior", 2, 999);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
@@ -492,7 +458,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 
 }   
 
@@ -552,7 +518,7 @@ Delay(70);
 SpawnSpotfacing ("Incubus", 14, 999);
 Delay(90);
 SpawnSpotfacing ("Lordofheresy", 17, 999);
-SpawnSpotfacing ("SilverAnnihilator", 16, 999);
+SpawnSpotfacing ("HellWarriorOmega", 16, 999);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
@@ -623,7 +589,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }   
 
 Script 115 (Void) // wave 15
@@ -686,7 +652,7 @@ SpawnSpotfacing ("PyroDemon", 2, 999);
 Delay(20);
 SpawnSpotfacing ("Hellsfury", 1, 999);
 Delay(20);
-SpawnSpotfacing ("Wyvern2", 12, 999);
+SpawnSpotfacing ("HellWarrior", 12, 999);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }  
@@ -720,7 +686,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 
 }   
  
@@ -746,22 +712,20 @@ HudMessage(s:"FIGHT!."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Ambientsound("Dsfight1",255);
 SpawnSpotfacing ("Hellsfury", 1, 0);
 Delay(60);
-SpawnSpotfacing ("Diabloist", 1, 0);
+SpawnSpotfacing ("HellWarrior", 1, 0);
 Delay(150);
 SpawnSpotfacing ("Lavademon", 2, 0);
 Delay(80);
-SpawnSpotfacing ("Recubus", 2, 0);
+SpawnSpotfacing ("Hellsfury", 2, 0);
 Delay(80);
-SpawnSpotfacing ("Hellsmith1", 3, 0);
+SpawnSpotfacing ("HellWarriorOmega", 3, 0);
 Delay(20);
 SpawnSpotfacing ("Bruiserdemon", 2, 0);
 Delay(20);
 SpawnSpotfacing ("Hellsfury", 1, 0);
 Delay(20);
-SpawnSpotfacing ("SteelCacodemon", 12, 0);
+SpawnSpotfacing ("PainGasm", 12, 0);
 SpawnSpotfacing ("Conqueror", 19, 0);
-Delay(150);
-SpawnSpotfacing ("Korax2", 20, 0);
 Delay(150);
 SpawnSpotfacing ("HellPatriarch", 19, 0);
 Delay(150);
@@ -778,7 +742,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
     Script 119 (Void) // END
