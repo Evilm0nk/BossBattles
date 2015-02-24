@@ -118,41 +118,6 @@ Delay(35);
 Restart;
 }
 
-Script 299 (void) // Untrustables Monster counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-
-
-                  script 301 (void) // bosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
 	script 149 open
 	{	
         setmusic ("D_map15");
@@ -300,7 +265,7 @@ Acs_Execute(301,0);
 Delay(20);
 Acs_Execute(300,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 105 (Void) // wave 5
@@ -449,7 +414,7 @@ Acs_Execute(301,0);
 Delay(20);
 Acs_Execute(300,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 109 (Void) // wave 10
@@ -567,7 +532,7 @@ Acs_Execute(301,0);
 Delay(20);
 Acs_Execute(300,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 112 (Void) // wave 12
@@ -645,7 +610,7 @@ Script 114 (Void) // wave 14
 Delay(60);
 setmusic ("D_boss2");
 setfont("DOOMFONT");
-hudmessage(s:"DArk Faith!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+hudmessage(s:"ScorpionMastermind!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
 setfont("BIGFONT");
 hudmessage(s:"Final Wave!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
@@ -660,13 +625,13 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 18, 0);
-SpawnSpotfacing ("DarkFaith", 18, 999);
+SpawnSpotfacing ("ScorpionMastermind", 18, 999);
 Delay(20);
 Acs_Execute(301,0);
 Delay(20);
 Acs_Execute(300,0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 115 (Void) // wave 9
