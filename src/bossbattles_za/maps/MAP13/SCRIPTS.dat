@@ -895,7 +895,7 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("spawnfire", 56, 0);
-SpawnSpot ("Flembomination", 56, 999);
+SpawnSpot ("Flembomination1", 56, 999);
 delay (35); 
 Acs_Execute(300,0,0,0,0);
 Acs_Execute(301,0,0,0,0);
