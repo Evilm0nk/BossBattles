@@ -1,0 +1,11 @@
+Sabaoth/See1  D3SARGE4
+Sabaoth/See2  D3SARGE5
+Sabaoth/See3  D3SARGE6
+$RANDOM Sabaoth/See { Sabaoth/See1 Sabaoth/See2 Sabaoth/See3 }
+
+Sabaoth/Active1  D3SARGE1
+Sabaoth/Active2  D3SARGE2
+Sabaoth/Active3  D3SARGE3
+$RANDOM Sabaoth/See { Sabaoth/Active1 Sabaoth/Active2 Sabaoth/Active3 }
+
+ZTank/Run DSZTANK2

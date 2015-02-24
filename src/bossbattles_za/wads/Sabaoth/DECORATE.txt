@@ -1,0 +1,140 @@
+actor Sabaoth 27113
+{
+  //$Category DemortrixMinions
+  obituary "%o was demoralized by Sabaoth."
+  health 32500
+  radius 27
+  height 64
+  mass 1000000
+  speed 12
+  painchance 1
+  seesound "Sabaoth/See"
+  painsound "player/male/pain100_1"
+  deathsound "cyberdeath"
+  activesound "Sabaoth/Active"
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0
+  Damagefactor "EXPLOSIVE", 0.8
+  Damagefactor "Fire", 0.7
+  Damagefactor "PFire", 0.6
+  Damagefactor "Electric", 0.4
+  Damagefactor "PElectric", 0.4
+  Damagefactor "Poison", 0.7
+  Damagefactor "PPoison", 0.7
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.9
+  dropitem "MediumHealthVile" 70
+  DropItem "Combatpack" 60
+  DropItem "Cmana" 60
+  DropItem "DmanaDrop" 60
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  DropItem "SuperArmor" 3
+  DropItem "Greenarmor" 7  
+  DropItem "Bluearmor" 5
+  DropItem "ArtiHealingRadius1" 5
+  DropItem "Medikit" 6
+  DropItem "Stimpack" 8
+  missiletype DEMOLISHERBFGBALL
+  MONSTER
+  +FLOORCLIP
+  +NOTARGET
+  +NOTARGET
+  +BOSS 
+  +MISSILEEVENMORE
+  +AMBUSH
+  +DONTMORPH
+  +QUICKTORETALIATE
+  +TELESTOMP
+  states
+  {
+  Spawn:
+    SBTH A 10 A_Look
+    loop
+  See:
+    SBTH A 0 A_PlaySound ("ZTank/Run")
+    SBTH AABBCC 1 A_Chase
+    loop
+  Missile:
+    SBTH A 0 A_ChangeFlag ("NOPAIN", 1)
+    SBTH A 0 A_PlaySound ("weapons/bfgf")
+    SBTH ABC 2 A_Chase ("", "")
+    SBTH ABC 2 A_Chase ("", "")
+    SBTH ABC 2 A_Chase ("", "")
+    SBTH ABC 2 A_Chase ("", "")
+    SBTH C 0 A_FaceTarget
+    SBTH D 30 Bright 
+    SBTH D 0 A_MissileAttack
+    SBTH A 0 A_ChangeFlag ("NOPAIN", 0)
+    SBTH A 0 A_PlaySound ("ZTank/Run")
+    SBTH ABC 3 A_Chase ("", "")
+    SBTH A 0 A_PlaySound ("ZTank/Run")
+    SBTH ABC 3 A_Chase ("", "")
+    SBTH A 0 A_PlaySound ("ZTank/Run")
+    SBTH ABC 3 A_Chase ("", "")
+    goto See
+  Melee:
+    SBTH E 4 A_FaceTarget
+    SBTH F 4 
+    SBTH G 4 A_CustomMeleeAttack (random (25, 40) *3, "imp/melee", "skeleton/swing")
+	goto See
+  Pain:
+    SBTH H 3
+    SBTH H 3 A_Pain
+    goto See
+  Death:
+    SBTH I 0 A_Scream
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",0,0,55,55,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",20,20,110,0,0,0,0,128,100)
+    SBTH I 4 A_SpawnItemEx ("BossExplosion",-20,-20,55,0,0,0,0,128,100)
+    SBTH I 0 A_NoBlocking
+    SBTH J 4 A_SpawnItemEx ("BossExplosion",20,20,55,0,0,0,0,128,100)
+    SBTH K 4 A_SpawnItemEx ("BossExplosion",0,0,110,0,0,0,0,128,100)
+    SBTH LMNOPQ 10
+    SBTH R 0 A_BossDeath
+    SBTH R -1
+    stop
+  }
+}
+
+actor BossExplosion
+{
+  Renderstyle Translucent
+  Alpha 1
+  Damage 0
+  PROJECTILE
+  +RANDOMIZE
+  states
+  {
+  Spawn:
+    MISL B 0 Bright
+    MISL B 0 Bright 
+    MISL B 8 Bright A_PlaySoundEx ("weapons/rocklx", "Body")
+    MISL C 6 Bright 
+    MISL D 4 Bright
+    MISL E 3 Bright
+    MISL F 3 Bright
+    stop
+  }
+}
