@@ -146,27 +146,6 @@ Delay(35);
 Restart;
 }
 
-Script 299 (void) // Monsters counter - Experimental. Normally Skulltag does the monster counting in invasion mode...
-{
-SetFont("BIGFONT");
-HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
-                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
-If ( (ThingCount(0, 999)) == 0 )
-  {
-  SetFont("BIGFONT");
-  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
-  Ambientsound("dswelld",255);
-  Delay(10);
-  Wave = Wave + 1;
-  WellDone = 0;
-  Delay(10);
-  Acs_Terminate (299, 0);
-  }
-Delay(const:35);
-Restart;
-}
-
-
     		script 51 open
 	{	
 setmusic ("D_map16");
@@ -177,21 +156,6 @@ setmusic ("D_map16");
  Sector_SetDamage(6, 50, 20);
 }
 
-	Script 300 (void)  // popsoap Boss health multiplier for good monsters
-{
-if(PlayerCount() > 1) SetActorProperty(999, APROP_Health, (GetActorProperty (999, APROP_SpawnHealth)) * PlayerCount());
-}
-                  script 301 (void) // Finalbosses health
-{
-    hudmessageBold(s: "Bosses health: ", d:GetActorProperty(999, APROP_Health);
-                HUDMSG_PLAIN, 0, CR_Black, -0.0, -0.55, 1.0, 0.03, 0);
-    delay(const:35);
-    restart;
-    
-}
-
-
-    
 //Monster Spawner
 
 Script 101 (Void) // wave 1 / wave 1
@@ -244,7 +208,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
 Script 103 (Void) // wave 3
@@ -330,7 +294,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
    Script 106 (Void) // wave 6
@@ -357,7 +321,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 } 
     
      Script 107 (Void) // wave 7
@@ -475,7 +439,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }   
 
      Script 111 (Void) // wave 11
@@ -532,7 +496,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
      Script 113 (Void) // wave 13
@@ -623,7 +587,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
 
      Script 116 (Void) // wave 16
@@ -725,7 +689,7 @@ Delay(20);
 ACS_Execute(300, 0, 0, 0, 0);
 ACS_Execute(301, 0, 0, 0, 0);
 Delay(20);
-ACS_Execute(299, 0, 0, 0, 0); // start monster counter
+ACS_Execute(298, 0, 0, 0, 0); // start monster counter
 }
     
     Script 119 (Void) // END
