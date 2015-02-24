@@ -1560,7 +1560,7 @@ terminate;
 }
 else{
 	delay(10);
-	SpawnSpotfacing ("Terminator2", 151, 999);
+	SpawnSpotfacing ("UltimateTerminator2", 151, 999);
 }
 }
 
@@ -3294,7 +3294,7 @@ terminate;
 }
 else{
 	delay(10);
-	SpawnSpotfacing ("Terminator", 3, 998);
+	SpawnSpotfacing ("UltimateTerminator", 3, 998);
 }
 }
 
