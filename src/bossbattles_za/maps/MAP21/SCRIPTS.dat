@@ -497,7 +497,7 @@ hudmessage(s:"Gather Gear now as we get ready to fight in one minute!"; HUDMSG_T
 delay (240);
 setfont("DOOMFONT");
 hudmessage(s:"Music By Braiton: One who Dared the World"; HUDMSG_TYPEON, 2, CR_brown, 0.5, 0.5, 3.0, 0.02, 1.0);
-delay (2000);
+delay (1800);
 setfont("BIGFONT");
 hudmessage(s:"Ultimate Wave FINAL!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
 Delay(80);
@@ -629,4 +629,41 @@ SpawnSpot ("artihealingradius1", 11, 0);
 SpawnSpot ("bluearmor", 21, 0);
 SpawnSpot ("Heaventome", 22, 0);
 Delay (2500);
+}
+
+Script 298 (void) // Monsters counter 
+{
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (298, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+Script 299 (void) // Monsters counter 
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
+Restart;
 }  
