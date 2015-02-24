@@ -253,8 +253,6 @@ Thing_Remove (51);
 delay(10);
 SpawnSpotfacing ("spawnfire", 30, 0);
 SpawnSpotfacing ("zedek", 30, 999);
-delay(35);
-acs_execute (3,0,0,0,0);
 Delay(20);
 ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 }
@@ -697,7 +695,7 @@ Delay (35);
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Thing_Remove (300);
-SpawnSpotfacing ("Devilform5", 3, 998);
+SpawnSpotfacing ("Devilform5", 3, 999);
 delay(35);
 acs_execute (300,0,0,0,0);
 acs_execute (301,0,0,0,0);
@@ -813,5 +811,42 @@ Script 164 OPEN
 {
 SectorDamage (2, 20, "fire", "", DAMAGE_PLAYERS);
 delay(5);
+Restart;
+}
+
+Script 298 (void) // Monsters counter 
+{
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (298, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+Script 299 (void) // Monsters counter 
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
 Restart;
 }  
