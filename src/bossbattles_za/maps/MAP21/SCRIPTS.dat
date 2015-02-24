@@ -488,16 +488,16 @@ ACS_Execute(299, 0, 0, 0, 0); // start monster counter
 Script 112 (Void) // wave 12
 { 	
 Delay (100);
-setmusic ("D_map21");
+setmusic ("D_intr21");
 setfont("DOOMFONT");
 hudmessage(s:"Finally we will meet this powerful being!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
 Delay(100);
 setfont("DOOMFONT");
-hudmessage(s:"Show him no mercy, Heaven will be free!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
-delay (250);
+hudmessage(s:"Gather Gear now as we get ready to fight in one minute!"; HUDMSG_TYPEON, 2, CR_red, 0.5, 0.525, 3.0, 0.02, 1.0);
+delay (240);
 setfont("DOOMFONT");
 hudmessage(s:"Music By Braiton: One who Dared the World"; HUDMSG_TYPEON, 2, CR_brown, 0.5, 0.5, 3.0, 0.02, 1.0);
-delay (100);
+delay (2000);
 setfont("BIGFONT");
 hudmessage(s:"Ultimate Wave FINAL!"; HUDMSG_TYPEON, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
 Delay(80);
@@ -508,6 +508,7 @@ HudMessage(s:"Starting in 2..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1
 Delay (35);
 HudMessage(s:"Starting in 1..."; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 Delay (35);
+setmusic ("D_map21");
 AmbientSound("dsfight1", 255); // Wave Starts
 HudMessage(s:"Fight!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 1.0, 0.05, 1.0);
 SpawnSpotfacing ("Demortrix", 6, 999);
