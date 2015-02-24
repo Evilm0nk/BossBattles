@@ -1,0 +1,59 @@
+
+//Fighter Sounds
+
+$playersound Fightp male *death FGTDDTH
+$playersound Fightp male *Xdeath FGTXDTH1
+$playersound Fightp male *gibbed FGTXDTH1
+$playersound Fightp male *pain100 FGTPAIN
+$playersound Fightp male *pain75 FGTPAIN
+$playersound Fightp male *pain50 FGTPAIN
+$playersound Fightp male *pain25 FGTPAIN
+$playersound Fightp male *grunt FGTGRUNT
+$playersound Fightp male *land FGTGRUNT
+$playersound Fightp male *jump DSNONE
+$playersound Fightp male *fist DSPUNCH
+$playersound Fightp male *usefail FGTGRUNT
+$playersound Fightp male *taunt LAUGH2
+
+
+//*****StaffofProtection*****//
+
+weapons/vilesht1                sorboss2
+weapons/vilesht2                koract
+
+//*****Fighter hammer and sword*****//
+
+//hammer
+FighterHammerMiss       hammis2
+FighterHammerHitWall    hamwal1
+FighterHammerHitThing   hmhit1a
+FighterHammerContinuous hamfly1
+FighterHammerExplode    impact3
+
+//sword
+FighterSwordFire        sword2
+FighterSwordExplode     impact3
+
+//axe
+weapons/swingaxe	PUNCHMIS
+weapons/elecaxehit	ELAXEHIT
+missile/arwhit			AXE5
+missile/arwdth			DSBANG1
+weapons/voltfire		DSLIGHT
+
+//*****VorpalBlade*****//
+
+VorpalBlade/Attack				dsvbatk
+VorpalBladePowered/Attack		dsvbptk
+VorpalBladeBall/Death			dsdevexp
+VorpalBladeLightning/Death		dsdevzap
+
+//*****Ragestaff*****/
+
+HellStaff/BShot				SFX1_01
+HellStaff/SmallShot			SFX1_02
+HellStaff/SmallShotDeath	SFX1_05
+HellStaff/BigShot			SFX1_03
+HellStaff/BigshotDeath		SFX1_04
+
+//*****Gauntlets of triumph*****/

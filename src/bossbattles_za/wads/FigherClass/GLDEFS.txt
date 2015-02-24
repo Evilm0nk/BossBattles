@@ -1,0 +1,527 @@
+//Fighter Death
+
+flickerlight FIGHTERBURNING1
+{
+    color 1.0 0.8 0.0
+    size 68
+    secondarySize 86
+    chance 0.4
+}
+
+object Fighter1
+{
+    frame FDTHC { light FIGHTERBURNING1 }
+    frame FDTHD { light FIGHTERBURNING1 }
+
+    frame FDTHG { light FIGHTERBURNING1 }
+    frame FDTHH { light FIGHTERBURNING1 }
+    frame FDTHI { light FIGHTERBURNING1 }
+    frame FDTHJ { light FIGHTERBURNING1 }
+    frame FDTHK { light FIGHTERBURNING1 }
+    frame FDTHL { light FIGHTERBURNING1 }
+	frame FDTHM { light FIGHTERBURNING1 }
+    frame FDTHN { light FIGHTERBURNING1 }
+    frame FDTHO { light FIGHTERBURNING1 }
+    frame FDTHP { light FIGHTERBURNING1 }
+    frame FDTHQ { light FIGHTERBURNING1 }
+    frame FDTHR { light FIGHTERBURNING1 }
+	frame FDTHS { light FIGHTERBURNING1 }
+    frame FDTHT { light FIGHTERBURNING1 }
+    frame FDTHU { light FIGHTERBURNING1 }
+    frame FDTHV { light FIGHTERBURNING1 }
+}
+
+//Fighter Powerup
+
+Object ProtectionLine3
+{
+Frame CFCF { Light PentaFire }
+}
+
+//fighter vapor sword
+Object fStormBolt2
+{
+Frame LFX2F { Light HadesBolt1 }
+Frame LFX2G { Light HadesBolt1 }
+Frame LFX2H { Light HadesBolt1 }
+Frame LFX2I { Light HadesBolt2 }
+Frame LFX2J { Light HadesBolt3 }
+}
+
+Object fStormlite2
+{
+
+Frame LFX1S { Light HadesBolt1 }
+Frame LFX1T { Light HadesBolt1 }
+Frame LFX1U { Light HadesBolt1 }
+Frame LFX1V { Light HadesBolt2 }
+Frame LFX1W { Light HadesBolt3 }
+Frame LFX1X { Light HadesBolt2 }
+}
+
+Object fStormshot2
+{
+Frame LFX2A { Light HadesBolt1 }
+Frame LFX2B { Light HadesBolt1 }
+Frame LFX2C { Light HadesBolt1 }
+Frame LFX2D { Light HadesBolt2 }
+Frame LFX2E { Light HadesBolt3 }
+Frame LFX2F { Light HadesBolt1 }
+Frame LFX2G { Light HadesBolt1 }
+Frame LFX2H { Light HadesBolt1 }
+Frame LFX2I { Light HadesBolt2 }
+Frame LFX2J { Light HadesBolt3 }
+Frame LFX2K { Light HadesBolt1 }
+Frame LFX2L { Light HadesBolt1 }
+Frame LFX2M { Light HadesBolt1 }
+Frame LFX2N { Light HadesBolt2 }
+Frame LFX2O { Light HadesBolt3 }
+}
+
+//Timon's Axe
+
+flickerlight CAXEPUFF1
+{
+    color 0.4 0.4 1.0
+    size 40
+    secondarySize 44
+    chance 0.5
+}
+
+flickerlight CAXEPUFF2
+{
+    color 0.2 0.2 0.8
+    size 48
+    secondarySize 52
+    chance 0.5
+}
+
+flickerlight CAXEPUFF3
+{
+    color 0.0 0.0 0.5
+    size 44
+    secondarySize 48
+    chance 0.5
+}
+
+object Taxepuff-333
+{
+    frame FAX1R { light CAXEPUFF1 }
+    frame FAX1S { light CAXEPUFF1 }
+    frame FAX1T { light CAXEPUFF2 }
+    frame FAX1U { light CAXEPUFF2 }
+    frame FAX1V { light CAXEPUFF3 }
+    frame FAX1W { light CAXEPUFF3 }
+    frame FAX1X { light CAXEPUFF3 }
+}
+
+object Tielecmis-222
+{
+	frame MLFXR { light AvatarElectroBall25 }
+	frame MLFXS { light AvatarElectroBall26 }
+	frame MLFXT { light LightningBallC1T11 }
+	frame MLFXU { light MiniLightningPuff1 }
+}
+//Hammer1
+
+flickerlight THROWHAMMER
+{
+    color 1.0 0.2 0.0
+    size 48
+    secondarySize 52
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X1
+{
+    color 1.0 0.7 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X2
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X3
+{
+    color 1.0 0.7 0.0
+    size 72
+    secondarySize 80
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X4
+{
+    color 0.8 0.8 0.0
+    size 80
+    secondarySize 84
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X5
+{
+    color 0.5 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight THROWHAMMER_X6
+{
+    color 0.2 0.2 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+object HammerMissile
+{
+    frame FHFXA { light THROWHAMMER }
+    frame FHFXB { light THROWHAMMER }
+    frame FHFXC { light THROWHAMMER }
+    frame FHFXD { light THROWHAMMER }
+    frame FHFXE { light THROWHAMMER }
+    frame FHFXF { light THROWHAMMER }
+    frame FHFXG { light THROWHAMMER }
+    frame FHFXH { light THROWHAMMER }
+
+    frame FHFXI { light THROWHAMMER_X1 }
+    frame FHFXJ { light THROWHAMMER_X2 }
+    frame FHFXK { light THROWHAMMER_X3 }
+    frame FHFXL { light THROWHAMMER_X4 }
+    frame FHFXM { light THROWHAMMER_X4 }
+    frame FHFXN { light THROWHAMMER_X4 }
+    frame FHFXO { light THROWHAMMER_X4 }
+    frame FHFXP { light THROWHAMMER_X4 }
+    frame FHFXQ { light THROWHAMMER_X5 }
+    frame FHFXR { light THROWHAMMER_X6 }
+}
+
+object HammerMissile2
+{
+    frame FHFXA { light THROWHAMMER }
+    frame FHFXB { light THROWHAMMER }
+    frame FHFXC { light THROWHAMMER }
+    frame FHFXD { light THROWHAMMER }
+    frame FHFXE { light THROWHAMMER }
+    frame FHFXF { light THROWHAMMER }
+    frame FHFXG { light THROWHAMMER }
+    frame FHFXH { light THROWHAMMER }
+
+    frame FHFXI { light THROWHAMMER_X1 }
+    frame FHFXJ { light THROWHAMMER_X2 }
+    frame FHFXK { light THROWHAMMER_X3 }
+    frame FHFXL { light THROWHAMMER_X4 }
+    frame FHFXM { light THROWHAMMER_X4 }
+    frame FHFXN { light THROWHAMMER_X4 }
+    frame FHFXO { light THROWHAMMER_X4 }
+    frame FHFXP { light THROWHAMMER_X4 }
+    frame FHFXQ { light THROWHAMMER_X5 }
+    frame FHFXR { light THROWHAMMER_X6 }
+}
+
+object HammerPOWER
+{
+    frame FHFXA { light THROWHAMMER }
+    frame FHFXB { light THROWHAMMER }
+    frame FHFXC { light THROWHAMMER }
+    frame FHFXD { light THROWHAMMER }
+    frame FHFXE { light THROWHAMMER }
+    frame FHFXF { light THROWHAMMER }
+    frame FHFXG { light THROWHAMMER }
+    frame FHFXH { light THROWHAMMER }
+
+    frame FHFXI { light THROWHAMMER_X1 }
+    frame FHFXJ { light THROWHAMMER_X2 }
+    frame FHFXK { light THROWHAMMER_X3 }
+    frame FHFXL { light THROWHAMMER_X4 }
+    frame FHFXM { light THROWHAMMER_X4 }
+    frame FHFXN { light THROWHAMMER_X4 }
+    frame FHFXO { light THROWHAMMER_X4 }
+    frame FHFXP { light THROWHAMMER_X4 }
+    frame FHFXQ { light THROWHAMMER_X5 }
+}
+
+object Thammerclod-222
+{
+    frame CFCFQ { light THROWHAMMER_X1 }
+    frame CFCFR { light THROWHAMMER_X2 }
+    frame CFCFS { light THROWHAMMER_X3 }
+    frame CFCFT { light THROWHAMMER_X4 }
+    frame CFCFU { light THROWHAMMER_X4 }
+    frame CFCFV { light THROWHAMMER_X4 }
+    frame CFCFW { light THROWHAMMER_X4 }
+    frame CFCFX { light THROWHAMMER_X4 }
+    frame CFCFY { light THROWHAMMER_X5 }
+}
+
+//Quietus1 
+
+flickerlight SWORDSHOT
+{
+    color 0.0 1.0 0.0
+    size 48
+    secondarySize 44
+    chance 0.4
+}
+
+flickerlight SWORDSHOT_X1
+{
+    color 0.0 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight SWORDSHOT_X2
+{
+    color 0.0 1.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight SWORDSHOT_X3
+{
+    color 0.0 0.7 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight SWORDSHOT_X4
+{
+    color 0.0 0.4 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight SWORDSHOT_X5
+{
+    color 0.0 0.2 0.0
+    size 32
+    secondarySize 40
+    chance 0.4
+}
+
+object FSwordMissile
+{
+    frame FSFXA { light SWORDSHOT }
+    frame FSFXB { light SWORDSHOT }
+    frame FSFXC { light SWORDSHOT }
+
+    frame FSFXD { light SWORDSHOT_X1 }
+    frame FSFXE { light SWORDSHOT_X2 }
+    frame FSFXF { light SWORDSHOT_X2 }
+    frame FSFXG { light SWORDSHOT_X2 }
+    frame FSFXH { light SWORDSHOT_X3 }
+    frame FSFXI { light SWORDSHOT_X3 }
+    frame FSFXJ { light SWORDSHOT_X4 }
+    frame FSFXK { light SWORDSHOT_X5 }
+    frame FSFXL { light SWORDSHOT_X5 }
+}
+
+object GreenFireSpread
+{
+    frame FSFXN { light SWORDSHOT_X6 }
+    frame FSFXO { light SWORDSHOT_X7 }
+    frame FSFXP { light SWORDSHOT_X7 }
+    frame FSFXQ { light SWORDSHOT_X7 }
+    frame FSFXR { light SWORDSHOT_X8 }
+    frame FSFXS { light SWORDSHOT_X8 }
+    frame FSFXT { light SWORDSHOT_X9 }
+    frame FSFXU { light SWORDSHOT_X10 }
+    frame FSFXV { light SWORDSHOT_X10 }
+	frame FSFXW { light SWORDSHOT_X10 }
+}
+
+object GreenFire
+{
+    frame FSFXN { light SWORDSHOT_X6 }
+    frame FSFXO { light SWORDSHOT_X7 }
+    frame FSFXP { light SWORDSHOT_X7 }
+    frame FSFXQ { light SWORDSHOT_X7 }
+    frame FSFXR { light SWORDSHOT_X8 }
+    frame FSFXS { light SWORDSHOT_X8 }
+    frame FSFXT { light SWORDSHOT_X9 }
+    frame FSFXU { light SWORDSHOT_X10 }
+    frame FSFXV { light SWORDSHOT_X10 }
+	frame FSFXW { light SWORDSHOT_X10 }
+}
+
+object FSwordFIRE2
+{
+    frame FSFXA { light SWORDSHOT }
+    frame FSFXB { light SWORDSHOT }
+    frame FSFXC { light SWORDSHOT }
+
+    frame FSFXD { light SWORDSHOT_X1 }
+    frame FSFXE { light SWORDSHOT_X2 }
+    frame FSFXF { light SWORDSHOT_X2 }
+    frame FSFXG { light SWORDSHOT_X2 }
+    frame FSFXH { light SWORDSHOT_X3 }
+    frame FSFXI { light SWORDSHOT_X3 }
+    frame FSFXJ { light SWORDSHOT_X4 }
+    frame FSFXK { light SWORDSHOT_X5 }
+    frame FSFXL { light SWORDSHOT_X5 }
+}
+
+
+object FSwordMissile2
+{
+    frame FSFXA { light SWORDSHOT }
+    frame FSFXB { light SWORDSHOT }
+    frame FSFXC { light SWORDSHOT }
+
+    frame FSFXD { light SWORDSHOT_X1 }
+    frame FSFXE { light SWORDSHOT_X2 }
+    frame FSFXF { light SWORDSHOT_X2 }
+    frame FSFXG { light SWORDSHOT_X2 }
+    frame FSFXH { light SWORDSHOT_X3 }
+    frame FSFXI { light SWORDSHOT_X3 }
+    frame FSFXJ { light SWORDSHOT_X4 }
+    frame FSFXK { light SWORDSHOT_X5 }
+    frame FSFXL { light SWORDSHOT_X5 }
+}
+
+// Gauntlets of triumph
+
+PointLight RedElecPlasma1
+{
+Color 1.0 0.0 0.0
+Size 48
+}
+
+PointLight RedElecPlasma2
+{
+Color 1.0 0.0 0.0
+Size 32
+}
+
+PointLight RedElecPlasma3
+{
+Color 1.0 0.0 0.0
+Size 24
+}
+
+PointLight RedElecPlasma4
+{
+Color 1.0 0.0 0.0
+Size 16
+}
+
+PointLight RedElecPlasma5
+{
+Color 1.0 0.0 0.0
+Size 8
+}
+
+Object ApocalypseMeteor2
+{
+Frame AF02A { Light ApocalypseMeteor1 }
+Frame AF02B { Light ApocalypseMeteor1 }
+Frame AF02C { Light ApocalypseMeteor1 }
+Frame AF02D { Light ApocalypseMeteor2 }
+Frame AF02E { Light ApocalypseMeteor3 }
+Frame AF02F { Light ApocalypseMeteor4 }
+
+Frame AF02G { Light ApocalypseMeteor5 }
+Frame AF02H { Light ApocalypseMeteor6 }
+Frame AF02I { Light ApocalypseMeteor7 }
+}
+
+Object ElectricalPlasmaBall
+{
+Frame FPECA {Light RedElecPlasma1 }
+Frame FPECB {Light RedElecPlasma1 }
+Frame FPECC {Light RedElecPlasma2 }
+Frame FPECD {Light RedElecPlasma2 }
+Frame FPECE {Light RedElecPlasma1 }
+Frame FPECF {Light RedElecPlasma1 }
+Frame FPECG {Light RedElecPlasma2 }
+Frame FPECH {Light RedElecPlasma2 }
+}
+
+Object ElectricalPlasmaBall2
+{
+Frame FGA2L {Light RedElecPlasma5 }
+Frame FGA2M {Light RedElecPlasma5 }
+Frame FGA2N {Light RedElecPlasma4 }
+Frame FGA2O {Light RedElecPlasma4 }
+}
+
+Object ElectricalPlasmaBall3
+{
+Frame FGA2P {Light RedElecPlasma2 }
+Frame FGA2Q {Light RedElecPlasma3 }
+}
+
+//Staff of protection
+
+Object flameofDestruction
+{
+Frame FLBE { Light STracer1 }
+}
+
+Object Dropfire4
+{
+Frame FLME { Light EXPFLASH1 }
+}
+
+Object STracerPuff6
+{
+Frame FTRA { Light STracer1 }
+}
+
+Object STracer6
+{
+Frame FTRAK { Light STracer2 }
+Frame FTRAL { Light STracer3 }
+Frame FTRAM { Light STracer4 }
+Frame FTRAN { Light STracer5 }
+Frame FTRAO { Light STracer6 }
+}
+
+object Protectionblast
+{
+    frame VFBLA { light REAVERBALL }
+    frame VFBLB { light REAVERBALL }
+
+    frame XPL1A { light REAVERBALL_X1 }
+    frame XPL1B { light REAVERBALL_X1 }
+    frame XPL1C { light REAVERBALL_X2 }
+	frame XPL1D { light REAVERBALL_X2 }
+    frame XPL1E { light REAVERBALL_X3 }
+    frame XPL1F { light REAVERBALL_X3 }
+}
+
+
+//runesphere
+
+Object RuneSphere
+{
+Frame ARSP { Light ArmorSphere }
+}
+
+
+// Shield Sphere
+pulselight SHIELD
+{
+    color 1.0 0.5 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object ShieldSphere
+{
+    frame SPOT { light SHIELD }
+}
