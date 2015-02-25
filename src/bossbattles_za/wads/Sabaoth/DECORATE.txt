@@ -3,11 +3,12 @@ actor Sabaoth 27113
   //$Category DemortrixMinions
   obituary "%o was demoralized by Sabaoth."
   health 32500
-  radius 27
-  height 64
+  radius 57
+  height 84
   mass 1000000
   speed 12
   painchance 1
+  Scale 1.5
   seesound "Sabaoth/See"
   painsound "player/male/pain100_1"
   deathsound "cyberdeath"
@@ -65,7 +66,7 @@ actor Sabaoth 27113
     SBTH ABC 2 A_Chase ("", "")
     SBTH C 0 A_FaceTarget
     SBTH D 30 Bright 
-    SBTH D 0 A_MissileAttack
+    SBTH DD 0 A_MissileAttack
     SBTH A 0 A_ChangeFlag ("NOPAIN", 0)
     SBTH A 0 A_PlaySound ("ZTank/Run")
     SBTH ABC 3 A_Chase ("", "")
