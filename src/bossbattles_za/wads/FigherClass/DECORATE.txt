@@ -1338,6 +1338,7 @@ ACTOR ColumnShot
    +FLOORHUGGER
    +THRUGHOST
    +MTHRUSPECIES
+   +BLOODLESSIMPACT
    -NOGRAVITY
    DeathSound "weapons/stab"
    States
