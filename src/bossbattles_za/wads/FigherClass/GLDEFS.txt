@@ -503,6 +503,63 @@ object Protectionblast
 }
 
 
+// VorpalSword
+
+PointLight REDLIGHTNING1
+{
+Color 1.0 0.0 0.0
+Size 48
+}
+
+PointLight REDLIGHTNING2
+{
+Color 1.0 0.0 0.0
+Size 32
+}
+
+PointLight REDLIGHTNING3
+{
+Color 1.0 0.0 0.0
+Size 24
+}
+
+PointLight REDLIGHTNING4
+{
+Color 1.0 0.0 0.0
+Size 16
+}
+
+PointLight REDLIGHTNING5
+{
+Color 1.0 0.0 0.0
+Size 8
+}
+
+Object FighterLightningCeiling
+{
+Frame MLF2A {Light REDLIGHTNING1 }
+Frame MLF2B {Light REDLIGHTNING1 }
+Frame MLF2C {Light REDLIGHTNING1 }
+Frame MLF2D {Light REDLIGHTNING2 }
+Frame MLF2D {Light REDLIGHTNING3 }
+}
+
+Object MageLightningFloor
+{
+Frame MLF2E {Light REDLIGHTNING1 }
+Frame MLF2F {Light REDLIGHTNING1 }
+Frame MLF2G {Light REDLIGHTNING1 }
+Frame MLF2H {Light REDLIGHTNING2 }
+}
+
+Object MageLightningParticle
+{
+Frame MLF2N {Light REDLIGHTNING2 }
+Frame MLF2O {Light REDLIGHTNING3 }
+Frame MLF2P {Light REDLIGHTNING4 }
+Frame MLF2Q {Light REDLIGHTNING5 }
+}
+
 //runesphere
 
 Object RuneSphere
