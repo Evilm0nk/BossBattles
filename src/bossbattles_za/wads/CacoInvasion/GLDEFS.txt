@@ -1,0 +1,1197 @@
+//FlameCacodemon
+
+pointlight FIRECACODEMONHAIR
+{
+Color 1.0 0.6 0.0
+Size 50
+}
+
+object FlameHead
+{
+    frame FIREA { light FIRECACODEMONHAIR }
+	frame FIREB { light FIRECACODEMONHAIR }
+    frame FIREC { light FIRECACODEMONHAIR }
+    frame FIRED { light FIRECACODEMONHAIR }
+    frame FIREE { light FIRECACODEMONHAIR }
+    frame FIREF { light FIRECACODEMONHAIR }
+	frame FIREG { light FIRECACODEMONHAIR }
+    frame FIREH { light FIRECACODEMONHAIR }
+}
+
+// GiantGreenCacodemon
+flickerlight SERPENTBALL
+{
+    color 1.0 0.95 0.0
+    size 100
+    secondarySize 127
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X1
+{
+    color 1.0 0.95 0.0
+    size 110
+    secondarySize 125
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X2
+{
+    color 0.8 0.8 0.0
+    size 116
+    secondarySize 129
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X3
+{
+    color 0.5 0.5 0.0
+    size 120
+    secondarySize 130
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X4
+{
+    color 0.2 0.2 0.0
+    size 130
+    secondarySize 140
+    chance 0.5
+}
+
+object KINGBALL
+{
+    frame D2FXA { light SERPENTBALL }
+    frame D2FXB { light SERPENTBALL }
+    frame D2FXC { light SERPENTBALL }
+
+    frame D2FXD { light SERPENTBALL_X1 }
+    frame D2FXE { light SERPENTBALL_X2 }
+    frame D2FXF { light SERPENTBALL_X3 }
+    frame D2FXG { light SERPENTBALL_X4 }
+    frame D2FXH { light SERPENTBALL_X4 }
+}
+
+// inverted caco
+
+pointlight INVERTEDBALL3
+{
+    color 1.0 1.0 1.0
+    size 40
+}
+
+object Invertball
+{
+    frame IEPJ { light INVERTEDBALL3 }
+	
+	frame BAL2 { light Redmana }
+}
+//===========================================================================
+//
+// Gaguuro
+//
+//===========================================================================
+
+flickerlight MAGELIGHT
+{
+    color 0.4 0.4 1.0
+    size 48
+    secondarySize 52
+    chance 0.7
+}
+
+object BlueLiteTop
+{
+    frame MLFX { light MAGELIGHT }
+    frame MLF2 { light MAGELIGHT }
+}
+
+object BlueLiteBot
+{
+    frame MLFX { light MAGELIGHT }
+    frame MLF2 { light MAGELIGHT }
+}
+
+object BlueLiteCenter
+{
+    frame MLFX { light MAGELIGHT }
+    frame MLF2 { light MAGELIGHT }
+}
+
+pointlight GAGUUROBALL
+{
+    color 1.0 0.5 0.0
+    size 48
+}
+
+flickerlight GAGUUROBALL_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+}
+
+flickerlight GAGUUROBALL_X2
+{
+    color 0.6 0.2 0.0
+    size 60
+    secondarySize 68
+}
+
+flickerlight GAGUUROBALL_X3
+{
+    color 0.2 0.0 0.0
+    size 56
+    secondarySize 64
+}
+
+object GBALL
+{
+    frame WRBLA { light GAGUUROBALL }
+    frame WRBLB { light GAGUUROBALL }
+    frame WRBLC { light GAGUUROBALL }
+
+    frame WRBLD { light GAGUUROBALL_X1 }
+    frame WRBLE { light GAGUUROBALL_X2 }
+    frame WRBLF { light GAGUUROBALL_X3 }
+}
+
+//===========================================================================
+//
+// Steelcacodemon
+//
+//===========================================================================
+pointlight STEELCACODEMONBALL
+{
+    color 1.0 0.5 0.0
+    size 70
+}
+
+flickerlight STEELCACODEMONBALL_X1
+{
+    color 1.0 0.7 0.0
+    size 70
+    secondarySize 80
+}
+
+flickerlight STEELCACODEMONBALL_X2
+{
+    color 0.6 0.2 0.0
+    size 75
+    secondarySize 85
+}
+
+flickerlight STEELCACODEMONBALL_X3
+{
+    color 0.2 0.0 0.0
+    size 76
+    secondarySize 90
+}
+
+object STEELBALL
+{
+    frame WRBLA { light STEELCACODEMONBALL }
+    frame WRBLB { light STEELCACODEMONBALL }
+    frame WRBLC { light STEELCACODEMONBALL }
+
+    frame WRBLD { light STEELCACODEMONBALL_X1 }
+    frame WRBLE { light STEELCACODEMONBALL_X2 }
+    frame WRBLF { light STEELCACODEMONBALL_X3 }
+}
+
+// SEWER CACO slimeball
+pointlight STALKERSLIME
+{
+    color 0.0 1.0 0.0
+    size 40
+}
+
+flickerlight STALKERSLIME_X1
+{
+    color 0.0 1.0 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X2
+{
+    color 0.0 0.7 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X3
+{
+    color 0.0 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X4
+{
+    color 0.0 0.2 0.0
+    size 68
+    secondarySize 76
+    chance 0.4
+}
+
+object SEWERBALL
+{
+    frame SSFXA { light STALKERSLIME }
+    frame SSFXB { light STALKERSLIME }
+
+    frame SSFXC { light STALKERSLIME_X1 }
+    frame SSFXD { light STALKERSLIME_X2 }
+    frame SSFXE { light STALKERSLIME_X3 }
+    frame SSFXF { light STALKERSLIME_X3 }
+    frame SSFXG { light STALKERSLIME_X4 }
+    frame SSFXH { light STALKERSLIME_X4 }
+}
+
+pointlight STALKERSLIME
+{
+    color 0.0 1.0 0.0
+    size 40
+}
+
+flickerlight STALKERSLIME_X1
+{
+    color 0.0 1.0 0.0
+    size 79
+    secondarySize 95
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X2
+{
+    color 0.0 0.7 0.0
+    size 85
+    secondarySize 98
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X3
+{
+    color 0.0 0.5 0.0
+    size 95
+    secondarySize 110
+    chance 0.4
+}
+
+flickerlight STALKERSLIME_X4
+{
+    color 0.0 0.2 0.0
+    size 90
+    secondarySize 100
+    chance 0.4
+}
+
+object SEWERBALL2
+{
+    frame SSFXA { light STALKERSLIME }
+    frame SSFXB { light STALKERSLIME }
+
+    frame SSFXC { light STALKERSLIME_X1 }
+    frame SSFXD { light STALKERSLIME_X2 }
+    frame SSFXE { light STALKERSLIME_X3 }
+    frame SSFXF { light STALKERSLIME_X3 }
+    frame SSFXG { light STALKERSLIME_X4 }
+    frame SSFXH { light STALKERSLIME_X4 }
+}
+
+// SnowCacodemon
+
+flickerlight MFROSTSHARD
+{
+    color 0.3 0.3 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X1
+{
+    color 0.3 0.3 1.0
+    size 40
+    secondarySize 48
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X2
+{
+    color 0.2 0.2 0.8
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X3
+{
+    color 0.1 0.1 0.5
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X4
+{
+    color 0.0 0.0 0.2
+    size 64
+    secondarySize 68
+    chance 0.3
+}
+
+object SnowCacodemonBall
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+pointlight FROSTBALL
+{
+    color 0.4 0.4 1.0
+    size 48
+}
+
+pointlight FROSTBALL_X1
+{
+    color 0.4 0.4 1.0
+    size 64
+}
+
+pointlight FROSTBALL_X2
+{
+    color 0.2 0.2 0.7
+    size 56
+}
+
+pointlight FROSTBALL_X3
+{
+    color 0.0 0.0 0.4
+    size 48
+}
+
+pointlight FROSTBALL_X4
+{
+    color 0.0 0.0 0.2
+    size 40
+}
+
+object Snowcacodemonball2
+{
+    frame FX05A { light FROSTBALL }
+    frame FX05B { light FROSTBALL }
+    frame FX05C { light FROSTBALL }
+
+    frame FX05D { light FROSTBALL_X1 }
+    frame FX05E { light FROSTBALL_X2 }
+    frame FX05F { light FROSTBALL_X3 }
+    frame FX05G { light FROSTBALL_X4 }
+}
+//cacodad
+
+object Greenball
+{
+    frame BFS1A { light BARONBALL }
+    frame BFS1B { light BARONBALL }
+
+    frame BFE1A { light BARONBALL_X1 }
+    frame BFE1B { light BARONBALL_X2 }
+    frame BFE1C { light BARONBALL_X3 }
+    frame BFE1D { light BARONBALL_X1 }
+    frame BFE1E { light BARONBALL_X2 }
+    frame BFE1F { light BARONBALL_X3 }
+}
+
+object CacoBallbig1
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+object CacoBallbig2
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+object CacoBallbig3
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+//CaptainOlRed
+
+object BurningBall
+{
+    frame SBLLA { light LAVABALL3 }
+	frame SBLLB { light LAVABALL3 }
+	frame SBLLC { light LAVABALL3 }
+	frame SBLLD { light LAVABALL3 }
+	frame SBLLE { light LAVABALL3 }
+	frame SBLLF { light LAVABALL3 }
+	frame SBLLG { light LAVABALL3 }
+	frame SBLLH { light LAVABALL3 }
+    frame SBLLI { light LAVABALL3 }
+	frame SBLLJ { light LAVABALL3 }
+	frame SBLLK { light LAVABALL3 }
+	frame SBLLL { light LAVABALL3 }
+	frame SBLLM { light LAVABALL3 }
+	frame SBLLN { light LAVABALL3 }
+	frame SBLLO { light LAVABALL3 }
+	frame SBLLP { light LAVABALL3 }
+	frame SBLLQ { light LAVABALL3 }
+	frame SBLLR { light LAVABALL3 }
+    frame SBLLS { light LAVABALL3 }
+	frame SBLLT { light LAVABALL3 }
+	frame SBLLU { light LAVABALL3 }
+	frame SBLLV { light LAVABALL3 }
+}
+
+object BurningBall2
+{
+    frame SBLLA { light LAVABALL3 }
+	frame SBLLB { light LAVABALL3 }
+	frame SBLLC { light LAVABALL3 }
+	frame SBLLD { light LAVABALL3 }
+	frame SBLLE { light LAVABALL3 }
+	frame SBLLF { light LAVABALL3 }
+	frame SBLLG { light LAVABALL3 }
+	frame SBLLH { light LAVABALL3 }
+    frame SBLLI { light LAVABALL3 }
+	frame SBLLJ { light LAVABALL3 }
+	frame SBLLK { light LAVABALL3 }
+	frame SBLLL { light LAVABALL3 }
+	frame SBLLM { light LAVABALL3 }
+	frame SBLLN { light LAVABALL3 }
+	frame SBLLO { light LAVABALL3 }
+	frame SBLLP { light LAVABALL3 }
+	frame SBLLQ { light LAVABALL3 }
+	frame SBLLR { light LAVABALL3 }
+    frame SBLLS { light LAVABALL3 }
+	frame SBLLT { light LAVABALL3 }
+	frame SBLLU { light LAVABALL3 }
+	frame SBLLV { light LAVABALL3 }
+}
+
+Object FireHomingBall
+{
+Frame BRBAA { Light BruiserBall11 }
+Frame BRBAB { Light BruiserBall11 }
+Frame BRBAK { Light BruiserBall11 }
+Frame BRBAL { Light BruiserBall12 }
+Frame BRBAM { Light BruiserBall12 }
+Frame BRBAN { Light BruiserBall13 }
+Frame BRBAO { Light BruiserBall13 }
+Frame BRBAP { Light BruiserBall12 }
+Frame BRBAQ { Light BruiserBall12 }
+Frame BRBAR { Light BruiserBall11 }
+Frame BRBAS { Light BruiserBall14 }
+Frame BRBAT { Light BruiserBall15 }
+Frame BRBAU { Light BruiserBall16 }
+Frame BRBAV { Light BruiserBall17 }
+Frame BRBAW { Light BruiserBall18 }
+}
+
+// HadeElemental
+Flickerlight2 HadesBolt1
+{
+Color 1.0 0.2 0.2
+Size 48
+SecondarySize 56
+Interval 2
+}
+
+Pointlight HadesBolt2
+{
+Color 1.0 0.5 0.5
+Size 24
+}
+
+Pointlight HadesBolt3
+{
+Color 1.0 0.3 0.3
+Size 32
+}
+
+Pointlight HadesBolt4
+{
+Color 0.8 0.0 0.0
+Size 40
+}
+
+Pointlight HadesBolt5
+{
+Color 0.7 0.0 0.0
+Size 32
+}
+
+Pointlight HadesBolt6
+{
+Color 0.4 0.0 0.0
+Size 24
+}
+
+Object HadesBolt2
+{
+Frame LFX3A { Light HadesBolt1 }
+Frame LFX3B { Light HadesBolt1 }
+Frame LFX3C { Light HadesBolt1 }
+Frame LFX1D { Light HadesBolt2 }
+Frame LFX1E { Light HadesBolt3 }
+Frame LFX1F { Light HadesBolt4 }
+Frame LFX1G { Light HadesBolt5 }
+Frame LFX1H { Light HadesBolt6 }
+}
+
+//Cacaroo
+
+PointLight BlueHadesSphere_1
+{
+Color 0.0 0.0 1.0
+Offset 0 4 0
+Size 10
+}
+
+PointLight BlueHadesSphere_2
+{
+Color 0.0 0.0 1.0
+Offset 0 4 0
+Size 20
+}
+
+PointLight BlueHadesSphere_3
+{
+Color 0.0 0.0 1.0
+Offset 0 4 0
+Size 30
+}
+
+PointLight BlueHadesSphere_4
+{
+Color 0.0 0.0 1.0
+Offset 0 4 0
+Size 40
+}
+
+FlickerLight2 BlueHadesSphere
+{
+Color 0.0 0.0 1.0
+Offset 0 8 0
+Size 50
+SecondarySize 70
+Interval 2.0
+}
+
+PointLight BlueHadesBoom_1
+{
+Color 0.0 0.0 1.0
+Offset 0 14 0
+Size 80
+}
+
+PointLight BlueHadesBoom_2
+{
+Color 0.0 0.0 0.9
+Offset 0 14 0
+Size 92
+}
+
+PointLight BlueHadesBoom_3
+{
+Color 0.0 0.0 0.78
+Offset 0 14 0
+Size 96
+}
+
+PointLight BlueHadesBoom_4
+{
+Color 0.0 0.0 0.56
+Offset 0 14 0
+Size 100
+}
+
+PointLight BlueHadesBoom_5
+{
+Color 0.0 0.0 0.32
+Offset 0 14 0
+Size 110
+}
+
+Object BlueHadesSphere
+{
+Frame HADEA { Light BlueHadesSphere }
+Frame HADEB { Light BlueHadesSphere }
+Frame HADEC { Light BlueHadesSphere }
+Frame HADED { Light BlueHadesSphere }
+Frame HADEE { Light BlueHadesSphere_1 }
+Frame HADEF { Light BlueHadesSphere_2 }
+Frame HADEG { Light BlueHadesSphere_3 }
+Frame HADEH { Light BlueHadesSphere_4 }
+Frame HADEM { Light BlueHadesBoom_1 }
+Frame HADEN { Light BlueHadesBoom_2 }
+Frame HADEO { Light BlueHadesBoom_3 }
+Frame HADEP { Light BlueHadesBoom_4 }
+Frame HADEQ { Light BlueHadesBoom_5 }
+}
+
+Flickerlight2 HadeslightningA
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 50
+ SecondarySize 100
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningB
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 80
+ SecondarySize 90
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningC
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 98
+ SecondarySize 138
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningD
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 77
+ SecondarySize 157
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningE
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 72
+ SecondarySize 132
+ Interval 0.005
+}
+
+Object Hadesbolt
+{
+ Frame LFX2F { Light HadeslightningA }
+ Frame LFX2G { Light HadeslightningB }
+ Frame LFX2H { Light HadeslightningC }
+ Frame LFX2I { Light HadeslightningD }
+ Frame LFX2J { Light HadeslightningE }
+}
+
+Object HadesBolt3
+{
+ Frame LFX2F { Light HadeslightningA }
+ Frame LFX2G { Light HadeslightningB }
+ Frame LFX2H { Light HadeslightningC }
+ Frame LFX2I { Light HadeslightningD }
+ Frame LFX2J { Light HadeslightningE }
+}
+
+Pointlight BlueHadesBall1
+{
+Color 0.0 0.0 0.8
+Size 40
+}
+
+Pointlight BlueHadesBall2
+{
+Color 0.0 0.0 0.9
+Size 48
+}
+
+Pointlight BlueHadesBall3
+{
+Color 0.0 0.0 0.7
+Size 56
+}
+
+Pointlight BlueHadesBall4
+{
+Color 0.0 0.0 0.6
+Size 40
+}
+
+Pointlight BlueHadesBall5
+{
+Color 0.0 0.0 0.5
+Size 32
+}
+
+Pointlight BlueHadesBall6
+{
+Color 0.0 0.0 0.4
+Size 24
+}
+
+Pointlight BlueHadesBall7
+{
+Color 0.0 0.0 0.3
+Size 16
+}
+
+Object BlueHadesBall
+{
+Frame HEFXA { Light BlueHadesBall1 }
+Frame HEFXB { Light BlueHadesBall1 }
+Frame HEFXC { Light BlueHadesBall2 }
+Frame HEFXD { Light BlueHadesBall3 }
+Frame HEFXE { Light BlueHadesBall4 }
+Frame HEFXF { Light BlueHadesBall5 }
+Frame HEFXG { Light BlueHadesBall6 }
+Frame HEFXH { Light BlueHadesBall7 }
+}
+
+Object BlueHadesMiniBall
+{
+Frame HEFXA { Light BlueHadesBall1 }
+Frame HEFXB { Light BlueHadesBall1 }
+Frame HEFXC { Light BlueHadesBall2 }
+Frame HEFXD { Light BlueHadesBall3 }
+Frame HEFXE { Light BlueHadesBall4 }
+Frame HEFXF { Light BlueHadesBall5 }
+Frame HEFXG { Light BlueHadesBall6 }
+Frame HEFXH { Light BlueHadesBall7 }
+}
+
+Flickerlight2 BlueHadesBolt1
+{
+Color 0.2 0.2 1.0
+Size 48
+SecondarySize 56
+Interval 2
+}
+
+Pointlight BlueHadesBolt2
+{
+Color 0.5 0.5 1.0
+Size 24
+}
+
+Pointlight BlueHadesBolt3
+{
+Color 0.3 0.3 1.0
+Size 32
+}
+
+Pointlight BlueHadesBolt4
+{
+Color 0.0 0.0 0.8
+Size 40
+}
+
+Pointlight BlueHadesBolt5
+{
+Color 0.0 0.0 0.7
+Size 32
+}
+
+Pointlight BlueHadesBolt6
+{
+Color 0.0 0.0 0.4
+Size 24
+}
+
+Object BlueHadesBolt
+{
+Frame LFX1A { Light BlueHadesBolt1 }
+Frame LFX1B { Light BlueHadesBolt1 }
+Frame LFX1C { Light BlueHadesBolt1 }
+Frame LFX1D { Light BlueHadesBolt2 }
+Frame LFX1E { Light BlueHadesBolt3 }
+Frame LFX1F { Light BlueHadesBolt4 }
+Frame LFX1G { Light BlueHadesBolt5 }
+Frame LFX1H { Light BlueHadesBolt6 }
+}
+
+Flickerlight2 BlueHadeslightningA
+{
+ Color 0.0 0.0 1.0
+ Offset 0 0 0
+ Size 50
+ SecondarySize 100
+ Interval 0.005
+}
+
+Flickerlight2 BlueHadeslightningB
+{
+ Color 0.0 0.0 1.0
+ Offset 0 0 0
+ Size 80
+ SecondarySize 90
+ Interval 0.005
+}
+
+Flickerlight2 BlueHadeslightningC
+{
+ Color 0.0 0.0 1.0
+ Offset 0 0 0
+ Size 98
+ SecondarySize 138
+ Interval 0.005
+}
+
+Flickerlight2 BlueHadeslightningD
+{
+ Color 0.0 0.0 1.0
+ Offset 0 0 0
+ Size 77
+ SecondarySize 157
+ Interval 0.005
+}
+
+Flickerlight2 BlueHadeslightningE
+{
+ Color 0.0 0.0 1.0
+ Offset 0 0 0
+ Size 72
+ SecondarySize 132
+ Interval 0.005
+}
+
+Object BlueHadesbolt
+{
+ Frame LFX2F { Light BlueHadeslightningA }
+ Frame LFX2G { Light BlueHadeslightningB }
+ Frame LFX2H { Light BlueHadeslightningC }
+ Frame LFX2I { Light BlueHadeslightningD }
+ Frame LFX2J { Light BlieHadeslightningE }
+}
+
+Object BlueHadesBolt3
+{
+ Frame LFX2F { Light BlueHadeslightningA }
+ Frame LFX2G { Light BlueHadeslightningB }
+ Frame LFX2H { Light BlueHadeslightningC }
+ Frame LFX2I { Light BlueHadeslightningD }
+ Frame LFX2J { Light BlieHadeslightningE }
+}
+
+//Brightmaps
+
+BrightMap Sprite HELEA1
+{
+Map BMHELEA1
+DisableFullBright
+}
+
+BrightMap Sprite HELEA2A8
+{
+Map BMHELEA2
+DisableFullBright
+}
+
+BrightMap Sprite HELEA3A7
+{
+Map BMHELEA3
+DisableFullBright
+}
+
+BrightMap Sprite HELEA4A6
+{
+Map BMHELEA4
+DisableFullBright
+}
+
+BrightMap Sprite HELEA5
+{
+Map BMHELEA5
+DisableFullBright
+}
+
+BrightMap Sprite HELEB1
+{
+Map BMHELEB1
+DisableFullBright
+}
+
+BrightMap Sprite HELEB2B8
+{
+Map BMHELEB2
+DisableFullBright
+}
+
+BrightMap Sprite HELEB3B7
+{
+Map BMHELEB3
+DisableFullBright
+}
+
+BrightMap Sprite HELEB4
+{
+Map BMHELEB4
+DisableFullBright
+}
+
+BrightMap Sprite BMHELEA5
+{
+Map BMHELEB5
+DisableFullBright
+}
+
+BrightMap Sprite HELEC1
+{
+Map BMHELEC1
+DisableFullBright
+}
+
+BrightMap Sprite HELEC2C8
+{
+Map BMHELEC2
+DisableFullBright
+}
+
+BrightMap Sprite HELEC3C7
+{
+Map BMHELEC3
+DisableFullBright
+}
+
+BrightMap Sprite HELEC4C6
+{
+Map BMHELEC4
+DisableFullBright
+}
+
+BrightMap Sprite HELEC5
+{
+Map BMHELEC5
+DisableFullBright
+}
+
+BrightMap Sprite HELED1
+{
+Map BMHELED1
+DisableFullBright
+}
+
+BrightMap Sprite HELED2D8
+{
+Map BMHELED2
+DisableFullBright
+}
+
+BrightMap Sprite HELED3D7
+{
+Map BMHELED3
+DisableFullBright
+}
+
+BrightMap Sprite HELED4D6
+{
+Map BMHELED4
+DisableFullBright
+}
+
+BrightMap Sprite HELED5
+{
+Map BMHELED5
+DisableFullBright
+}
+
+BrightMap Sprite HELEE1
+{
+Map BMHELEE1
+DisableFullBright
+}
+
+BrightMap Sprite HELEE2E8
+{
+Map BMHELEE2
+DisableFullBright
+}
+
+BrightMap Sprite HELEE3E7
+{
+Map BMHELEE3
+DisableFullBright
+}
+
+BrightMap Sprite HELEE4E6
+{
+Map BMHELEE4
+DisableFullBright
+}
+
+BrightMap Sprite HELEE5
+{
+Map BMHELEE5
+DisableFullBright
+}
+
+BrightMap Sprite HELEF1
+{
+Map BMHELEF1
+DisableFullBright
+}
+
+BrightMap Sprite HELEF2F8
+{
+Map BMHELEF2
+DisableFullBright
+}
+
+BrightMap Sprite HELEF3F7
+{
+Map BMHELEF3
+DisableFullBright
+}
+
+BrightMap Sprite HELEF4F6
+{
+Map BMHELEF4
+DisableFullBright
+}
+
+BrightMap Sprite HELEF5
+{
+Map BMHELEF5
+DisableFullBright
+}
+
+BrightMap Sprite HELEG1
+{
+Map BMHELEG1
+DisableFullBright
+}
+
+BrightMap Sprite HELEG2G8
+{
+Map BMHELEG2
+DisableFullBright
+}
+
+BrightMap Sprite HELEG3G7
+{
+Map BMHELEG3
+DisableFullBright
+}
+
+BrightMap Sprite HELEG4G6
+{
+Map BMHELEG4
+DisableFullBright
+}
+
+BrightMap Sprite HELEG5
+{
+Map BMHELEG5
+DisableFullBright
+}
+
+BrightMap Sprite HELEH1
+{
+Map BMHELEH1
+DisableFullBright
+}
+
+BrightMap Sprite HELEH2H8
+{
+Map BMHELEH2
+DisableFullBright
+}
+
+BrightMap Sprite HELEH3H7
+{
+Map BMHELEH3
+DisableFullBright
+}
+
+BrightMap Sprite HELEH4H6
+{
+Map BMHELEH4
+DisableFullBright
+}
+
+BrightMap Sprite HELEH5
+{
+Map BMHELEH5
+DisableFullBright
+}
+
+BrightMap Sprite HELEI0
+{
+Map BMHELEI0
+DisableFullBright
+}
+
+BrightMap Sprite HELEJ0
+{
+Map BMHELEJ0
+DisableFullBright
+}
+
+BrightMap Sprite HELEK0
+{
+Map BMHELEK0
+DisableFullBright
+}
+
+BrightMap Sprite HELEL0
+{
+Map BMHELEL0
+DisableFullBright
+}
+
+BrightMap Sprite HELEM0
+{
+Map BMHELEM0
+DisableFullBright
+}
+
+BrightMap Sprite HELEN0
+{
+Map BMHELEN0
+DisableFullBright
+}
+
+BrightMap Sprite HELEO0
+{
+Map BMHELEO0
+DisableFullBright
+}
+
+BrightMap Sprite HELEP0
+{
+Map BMHELEP0
+DisableFullBright
+}

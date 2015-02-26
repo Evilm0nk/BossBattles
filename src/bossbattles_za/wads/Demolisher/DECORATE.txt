@@ -1,0 +1,180 @@
+
+//==========================================================
+//
+//        Demolisher
+//       
+//       
+//
+//==========================================================
+
+ACTOR Demolisher 30110
+{
+//$Category Spiders
+Obituary "%o felt the power of the Spider-Demolisher."
+Health 31000 
+Radius 96 
+Height 100 
+Mass 100000000
+Speed 20 
+MinMissileChance 30
+Damagefactor "HEAVENPOWER", 1.0
+Damagefactor "PEXPLOSIVE", 1.0
+Damagefactor "EXPLOSIVE", 1.0
+Damagefactor "Fire", 1.0
+Damagefactor "PFire", 1.0
+Damagefactor "Electric", 1.1
+Damagefactor "PElectric", 1.1
+Damagefactor "Poison", 1.0
+Damagefactor "PPoison", 1.0
+Damagefactor "PBullet", 1.0
+Damagefactor "Bullet", 1.0
+Damagefactor "ice", 0.8
+dropitem "MediumHealthVile" 70
+DropItem "Combatpack" 60
+DropItem "Cmana" 60
+DropItem "DmanaDrop" 60
+DropItem "SmallhealthVile" 150
+DropItem "LargeHealthvile" 50
+DropItem "SuperArmor" 3
+DropItem "Greenarmor" 7
+DropItem "Bluearmor" 5
+DropItem "ArtiHealingRadius1" 5
+DropItem "Medikit" 6
+DropItem "Stimpack" 8
+PainChance 1
+MONSTER
++NOTARGET
++FLOORCLIP 
++NOTARGET
++BOSS 
++MISSILEEVENMORE
+ +AMBUSH
+	+DONTMORPH
+ +QUICKTORETALIATE
+ +TELESTOMP
+SeeSound "monster/demsit" 
+AttackSound "spider/dscannon" 
+PainSound "spider/pain" 
+DeathSound "monster/demdth" 
+ActiveSound "spider/active" 
+States 
+   { 
+   Spawn: 
+       DEMO AB 10 A_Look 
+       Loop 
+   See: 
+       DEMO A 3 A_Metal 
+       DEMO ABB 3 A_Chase 
+       DEMO C 3 A_Metal 
+       DEMO CDD 3 A_Chase 
+       DEMO E 3 A_Metal 
+       DEMO EFF 3 A_Chase 
+       Loop 
+   Missile:
+       DEMO A 0 BRIGHT A_Jump (128,20)
+       DEMO A 20 BRIGHT A_FaceTarget
+       DEMO T 1 BRIGHT A_Playsound ("weapons/bfgf")
+       DEMO T 4 BRIGHT A_FaceTarget
+       DEMO T 4 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO U 10 BRIGHT A_CustomMissile ("DEMOLISHERBFGBALL",32,0,0)
+       DEMO T 0 BRIGHT A_Jump (128,10)
+       DEMO T 1 BRIGHT A_Playsound ("weapons/bfgf")
+       DEMO T 4 BRIGHT A_FaceTarget
+       DEMO T 4 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget
+       DEMO T 5 BRIGHT A_FaceTarget 
+       DEMO U 10 BRIGHT A_CustomMissile ("DEMOLISHERBFGBALL",32,0,0)
+       DEMO T 0 BRIGHT A_Jump (192,1)
+       Goto See
+       DEMO A 20 BRIGHT A_FaceTarget
+	   DEMO G 0 A_PlayWeaponSound ("spider/attack")
+       DEMO G 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(45, -45),0)
+       DEMO G 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(45, -45),0)
+	   DEMO G 0 A_PlayWeaponSound ("spider/attack")
+       DEMO H 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(45, -45),0)
+       DEMO H 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(45, -45),0)
+       DEMO H 1 BRIGHT A_SpidRefire 
+       Goto Missile+21 
+   Pain: 
+       DEMO I 3 
+       DEMO I 3 A_Pain 
+       Goto See 
+   Death:
+	   DEMO I 0 
+	   DEMO IIIIIIIIIIIIIIIIII 8 A_SpawnItemEx("BossExplosion64",random(-60,60),random(-60,60),random(25,90),0,0,0,0,0,0)
+       DEMO J 15 A_ScreamAndUnblock
+       DEMO KL 10 
+	   DEMO MMMMMMMMMMM 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO MMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO NNNNNNNNNNN 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO NNNNN 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO OOOOOOOOOOOO 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO OOOOO 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO PPPPPPPPPPPP 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO PPPPP 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO QQQQQQQQQQQQ 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO QQQQQQQQQQQQ 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	   DEMO RRRRR 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+       DEMO S 520 A_SetFloorClip
+       DEMO S 2 A_FadeOut
+	   Wait
+   } 
+}
+
+actor DemolisherBullet : FastProjectile
+{ 
+    Radius 3
+	Height 3  
+	Mass 1
+	Damage 3
+	Speed 200
+	RenderStyle ADD
+    Alpha		1
+	Scale		.15
+	DamageType "Bullet"
+	PROJECTILE
+	Decal BulletChip
+	+NOTELEPORT
+	+BLOODSPLATTER
+	+Spectral
+	
+	States{
+		Spawn:
+			TNT1 A 1
+			Loop
+		Death:
+			TNT1 A 1
+			BPUF A 0
+			BPUF A 1 A_PlaySound("Weapons/NailHit")
+			BPUF A 1 Bright A_SpawnDebris("BulletSpark")
+			BPUF B 1 Bright A_SetTranslucent(.75,1)
+			BPUF C 1 Bright A_SetTranslucent(.5,1)
+			BPUF D 1 Bright A_SetTranslucent(.25,1)
+			Stop	
+		XDeath:
+            BPUF A 0 A_PlaySound("Weapons/NailHitBleed")
+            Stop	
+   	}
+}
+
+
+actor DEMOLISHERBFGBALL : BFGBall 
+{
+Speed 50
+DamageType "Electric"
++SPECTRAL
++EXTREMEDEATH
+Damage 30
+}
+
+Actor demolisher2 : demolisher 1117	
+{
+//$Category Friendlies
+	+FRIENDLY
+}

@@ -1,0 +1,191 @@
+// Demolisher
+pointlight DEMOLISHERBFGBALL
+{
+    color 0.0 1.0 0.0
+    size 80
+}
+
+flickerlight DEMOLISHERBFGBALL_X1
+{
+    color 0.2 1.0 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight DEMOLISHERBFGBALL_X2
+{
+    color 0.3 1.0 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight DEMOLISHERBFGBALL_X3
+{
+    color 0.5 1.0 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight DEMOLISHERBFGBALL_X4
+{
+    color 0.2 0.7 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight DEMOLISHERBFGBALL_X5
+{
+    color 0.1 0.3 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object DEMOLISHERBFGBALL
+{
+    frame BFS1A { light DEMOLISHERBFGBALL }
+    frame BFS1B { light DEMOLISHERBFGBALL }
+
+    frame BFE1A { light DEMOLISHERBFGBALL_X1 }
+    frame BFE1B { light DEMOLISHERBFGBALL_X2 }
+    frame BFE1C { light DEMOLISHERBFGBALL_X3 }
+    frame BFE1D { light DEMOLISHERBFGBALL_X1 }
+    frame BFE1E { light DEMOLISHERBFGBALL_X4 }
+    frame BFE1F { light DEMOLISHERBFGBALL_X5 }
+}
+
+PointLight DemolisherAttack11
+{
+Color 1.0 1.0 0.0
+Size 64
+Offset 0 30 0
+}
+
+PointLight DemolisherAttack12
+{
+Color 1.0 1.0 0.0
+Size 92
+Offset 0 30 0
+}
+
+PointLight DemolisherAttack21
+{
+Color 0.3 1.0 0.3
+Size 64
+Offset 0 30 0
+}
+
+PointLight DemolisherAttack22
+{
+Color 0.3 1.0 0.3
+Size 96
+Offset 0 30 0
+}
+
+Pointlight DemolisherExplode1
+{
+Color 1.0 0.3 0.0
+Size 48
+}
+
+Pointlight DemolisherExplode2
+{
+Color 1.0 0.3 0.0
+Size 56
+}
+
+Pointlight DemolisherExplode3
+{
+Color 1.0 0.5 0.0
+Size 64
+}
+
+Pointlight DemolisherExplode4
+{
+Color 1.0 0.5 0.0
+Size 80
+}
+
+Pointlight DemolisherExplode5
+{
+Color 1.0 0.5 0.0
+Size 96
+}
+
+Pointlight DemolisherExplode6
+{
+Color 1.0 0.5 0.0
+Size 128
+}
+
+Pointlight DemolisherExplode7
+{
+Color 0.6 0.2 0.0
+Size 96
+}
+
+Pointlight DemolisherExplode8
+{
+Color 0.5 0.0 0.0
+Size 64
+}
+
+Pointlight DemolisherExplode9
+{
+Color 0.3 0.0 0.0
+Size 32
+}
+
+Object Demolisher
+{
+Frame DEMOG { Light DemolisherAttack11 }
+Frame DEMOH { Light DemolisherAttack12 }
+Frame DEMOT { Light DemolisherAttack21 }
+Frame DEMOU { Light DemolisherAttack22 }
+Frame DEMOJ { Light DemolisherExplode1 }
+Frame DEMOK { Light DemolisherExplode2 }
+Frame DEMOL { Light DemolisherExplode3 }
+Frame DEMOM { Light DemolisherExplode4 }
+Frame DEMON { Light DemolisherExplode5 }
+Frame DEMOO { Light DemolisherExplode6 }
+Frame DEMOP { Light DemolisherExplode7 }
+Frame DEMOQ { Light DemolisherExplode8 }
+Frame DEMOR { Light DemolisherExplode9 }
+}
+
+pointlight DEMOLISHERPUFF1
+{
+    color 1.0 1.0 0.0
+    size 32
+}
+
+pointlight DEMOLISHERPUFF2
+{
+    color 0.7 0.7 0.0
+    size 24
+}
+
+pointlight DEMOLISHERPUFF3
+{
+    color 0.4 0.4 0.0
+    size 16
+}
+
+pointlight DEMOLISHERPUFF4
+{
+    color 0.2 0.2 0.0
+    size 8
+}
+
+
+object Demolisherbullet
+{
+    frame BPUFA { light DEMOLISHERPUFF1 }
+    frame BPUFB { light DEMOLISHERPUFF2 }
+    frame BPUFC { light DEMOLISHERPUFF3 }
+    frame BPUFD { light DEMOLISHERPUFF4 }
+}
