@@ -1,0 +1,136 @@
+//DESTRUCTION imp boss
+
+Pointlight DestructionBall
+{
+Color 1.0 0.0 0.0
+Size 25
+}
+
+Pointlight DestructionBall2
+{
+Color 1.0 0.0 0.0
+Size 30
+}
+
+Pointlight DestructionBall3
+{
+Color 0.7 0.0 0.0
+Size 25
+}
+
+Pointlight DestructionBall4
+{
+Color 0.4 0.0 0.0
+Size 20
+}
+
+Pointlight DestructionBall5
+{
+Color 0.2 0.0 0.0
+Size 15
+}
+
+Object DestructionBall
+{
+Frame BLVBA { Light DestructionBall }
+Frame BLVBB { Light DestructionBall }
+Frame BLVBC { Light DestructionBall2 }
+Frame BLVBD { Light DestructionBall3 }
+Frame BLVBE { Light DestructionBall4 }
+Frame BLVBF { Light DestructionBall5 }
+}
+
+Object DestructionBall2
+{
+Frame BLVBA { Light DestructionBall }
+Frame BLVBB { Light DestructionBall }
+Frame BLVBC { Light DestructionBall2 }
+Frame BLVBD { Light DestructionBall3 }
+Frame BLVBE { Light DestructionBall4 }
+Frame BLVBF { Light DestructionBall5 }
+}
+
+Pointlight VoidBallNormal
+{
+Color 0.5 0.2 0.8
+Size 48
+}
+
+Pointlight VoidBallNormal2
+{
+Color 0.4 0.2 0.8
+Size 64
+}
+
+Pointlight VoidBallNormal3
+{
+Color 0.2 0.2 0.8
+Size 56
+}
+
+Pointlight VoidBallNormal4
+{
+Color 0.0 0.0 0.5
+Size 32
+}
+
+
+Object DarkNormal
+{
+Frame DKB1A { Light VoidBallNormal }
+Frame DKB1B { Light VoidBallNormal }
+Frame DKB1C { Light VoidBallNormal2 }
+Frame DKB1D { Light VoidBallNormal3 }
+Frame DKB1E { Light VoidBallNormal4 }
+}
+
+Pointlight VoidBallStrong
+{
+Color 0.8 0.2 0.8
+Size 48
+}
+
+Pointlight VoidBallStrong2
+{
+Color 0.6 0.1 0.6
+Size 64
+}
+
+Pointlight VoidBallStrong3
+{
+Color 0.5 0.0 0.2
+Size 56
+}
+
+Pointlight VoidBallStrong4
+{
+Color 0.3 0.0 0.0
+Size 32
+}
+
+Object DarkStrong
+{
+Frame DKB2A { Light VoidBallStrong }
+Frame DKB2B { Light VoidBallStrong }
+Frame DKB2C { Light VoidBallStrong2 }
+Frame DKB2D { Light VoidBallStrong3 }
+Frame DKB2E { Light VoidBallStrong4 }
+}
+
+Flickerlight2 VoidDarkImpFire1
+{
+Color 0.5 0.2 0.8
+Size 48
+SecondarySize 56
+Interval 0.8
+Offset 0 28 0
+}
+
+Flickerlight2 VoidDarkImpFire2
+{
+Color 0.8 0.2 0.8
+Size 56
+SecondarySize 64
+Interval 0.8
+Offset 0 28 0
+}

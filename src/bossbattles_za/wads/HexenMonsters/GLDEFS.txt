@@ -1,0 +1,1124 @@
+// Zedek
+flickerlight ZEDEKTHROWHAMMER
+{
+    color 1.0 0.2 0.0
+    size 48
+    secondarySize 52
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X1
+{
+    color 1.0 0.7 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X2
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X3
+{
+    color 1.0 0.7 0.0
+    size 72
+    secondarySize 80
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X4
+{
+    color 0.8 0.8 0.0
+    size 80
+    secondarySize 84
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X5
+{
+    color 0.5 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight ZEDEKTHROWHAMMER_X6
+{
+    color 0.2 0.2 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+object HammerThrow
+{
+    frame FHFXA { light ZEDEKTHROWHAMMER }
+    frame FHFXB { light ZEDEKTHROWHAMMER }
+    frame FHFXC { light ZEDEKTHROWHAMMER }
+    frame FHFXD { light ZEDEKTHROWHAMMER }
+    frame FHFXE { light ZEDEKTHROWHAMMER }
+    frame FHFXF { light ZEDEKTHROWHAMMER }
+    frame FHFXG { light ZEDEKTHROWHAMMER }
+    frame FHFXH { light ZEDEKTHROWHAMMER }
+
+    frame FHFXI { light ZEDEKTHROWHAMMER_X1 }
+    frame FHFXJ { light ZEDEKTHROWHAMMER_X2 }
+    frame FHFXK { light ZEDEKTHROWHAMMER_X3 }
+    frame FHFXL { light ZEDEKTHROWHAMMER_X4 }
+    frame FHFXM { light ZEDEKTHROWHAMMER_X4 }
+    frame FHFXN { light ZEDEKTHROWHAMMER_X4 }
+    frame FHFXO { light ZEDEKTHROWHAMMER_X4 }
+    frame FHFXP { light ZEDEKTHROWHAMMER_X4 }
+    frame FHFXQ { light ZEDEKTHROWHAMMER_X5 }
+    frame FHFXR { light ZEDEKTHROWHAMMER_X6 }
+}
+
+
+flickerlight ZEDEKSWORDSHOT
+{
+    color 0.0 1.0 0.0
+    size 48
+    secondarySize 44
+    chance 0.4
+}
+
+flickerlight ZEDEKSWORDSHOT_X1
+{
+    color 0.0 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight ZEDEKSWORDSHOT_X2
+{
+    color 0.0 1.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight ZEDEKSWORDSHOT_X3
+{
+    color 0.0 0.7 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight ZEDEKSWORDSHOT_X4
+{
+    color 0.0 0.4 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight ZEDEKSWORDSHOT_X5
+{
+    color 0.0 0.2 0.0
+    size 32
+    secondarySize 40
+    chance 0.4
+}
+
+object FSwordFIRE
+{
+    frame FSFXA { light ZEDEKSWORDSHOT }
+    frame FSFXB { light ZEDEKSWORDSHOT }
+    frame FSFXC { light ZEDEKSWORDSHOT }
+
+    frame FSFXD { light ZEDEKSWORDSHOT_X1 }
+    frame FSFXE { light ZEDEKSWORDSHOT_X2 }
+    frame FSFXF { light ZEDEKSWORDSHOT_X2 }
+    frame FSFXG { light ZEDEKSWORDSHOT_X2 }
+    frame FSFXH { light ZEDEKSWORDSHOT_X3 }
+    frame FSFXI { light ZEDEKSWORDSHOT_X3 }
+    frame FSFXJ { light ZEDEKSWORDSHOT_X4 }
+    frame FSFXK { light ZEDEKSWORDSHOT_X5 }
+    frame FSFXL { light ZEDEKSWORDSHOT_X5 }
+}
+
+//ZEROX
+
+Object ElectricalPlasmaBallZ
+{
+Frame FPECA {Light RedElecPlasma1 }
+Frame FPECB {Light RedElecPlasma1 }
+Frame FPECC {Light RedElecPlasma2 }
+Frame FPECD {Light RedElecPlasma2 }
+Frame FPECE {Light RedElecPlasma1 }
+Frame FPECF {Light RedElecPlasma1 }
+Frame FPECG {Light RedElecPlasma2 }
+Frame FPECH {Light RedElecPlasma2 }
+}
+
+Object ElectricalPlasmaBall2Z
+{
+Frame FGA2L {Light RedElecPlasma5 }
+Frame FGA2M {Light RedElecPlasma5 }
+Frame FGA2N {Light RedElecPlasma4 }
+Frame FGA2O {Light RedElecPlasma4 }
+}
+
+Object ElectricalPlasmaBall3Z
+{
+Frame FGA2P {Light RedElecPlasma2 }
+Frame FGA2Q {Light RedElecPlasma3 }
+}
+
+object HammerPOWER2
+{
+    frame FHFXA { light THROWHAMMER }
+    frame FHFXB { light THROWHAMMER }
+    frame FHFXC { light THROWHAMMER }
+    frame FHFXD { light THROWHAMMER }
+    frame FHFXE { light THROWHAMMER }
+    frame FHFXF { light THROWHAMMER }
+    frame FHFXG { light THROWHAMMER }
+    frame FHFXH { light THROWHAMMER }
+
+    frame FHFXI { light THROWHAMMER_X1 }
+    frame FHFXJ { light THROWHAMMER_X2 }
+    frame FHFXK { light THROWHAMMER_X3 }
+    frame FHFXL { light THROWHAMMER_X4 }
+    frame FHFXM { light THROWHAMMER_X4 }
+    frame FHFXN { light THROWHAMMER_X4 }
+    frame FHFXO { light THROWHAMMER_X4 }
+    frame FHFXP { light THROWHAMMER_X4 }
+    frame FHFXQ { light THROWHAMMER_X5 }
+}
+
+object Thammerclod-223
+{
+    frame CFCFQ { light THROWHAMMER_X1 }
+    frame CFCFR { light THROWHAMMER_X2 }
+    frame CFCFS { light THROWHAMMER_X3 }
+    frame CFCFT { light THROWHAMMER_X4 }
+    frame CFCFU { light THROWHAMMER_X4 }
+    frame CFCFV { light THROWHAMMER_X4 }
+    frame CFCFW { light THROWHAMMER_X4 }
+    frame CFCFX { light THROWHAMMER_X4 }
+    frame CFCFY { light THROWHAMMER_X5 }
+}
+
+
+// Traducutus
+pointlight CSTAFFBALL
+{
+    color 0.0 1.0 0.0
+    size 40
+}
+
+flickerlight CSTAFFBALL_X1
+{
+    color 0.0 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X2
+{
+    color 0.0 0.7 0.0
+    size 60
+    secondarySize 68
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X3
+{
+    color 0.0 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X4
+{
+    color 0.0 0.3 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+object Greenmissile
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+flickerlight DCFLAMETRAIL
+{
+    color 1.0 0.8 0.0
+    size 40
+    secondarySize 44
+    chance 0.5
+}
+
+flickerlight CFLAME1
+{
+    color 1.0 0.8 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight CFLAME2
+{
+    color 1.0 0.8 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight CFLAME3
+{
+    color 0.7 0.4 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight CFLAME4
+{
+    color 0.5 0.2 0.0
+    size 32
+    secondarySize 40
+    chance 0.4
+}
+
+flickerlight CFLAME5
+{
+    color 0.2 0.2 0.0
+    size 24
+    secondarySize 32
+    chance 0.4
+}
+
+object Dmissile
+{
+    frame CFFXB { light CFLAME1 }
+    frame CFFXC { light CFLAME2 }
+    frame CFFXD { light CFLAME2 }
+    frame CFFXE { light CFLAME2 }
+    frame CFFXF { light CFLAME2 }
+    frame CFFXG { light CFLAME2 }
+    frame CFFXH { light CFLAME2 }
+    frame CFFXI { light CFLAME2 }
+    frame CFFXJ { light CFLAME3 }
+    frame CFFXK { light CFLAME4 }
+    frame CFFXL { light CFLAME5 }
+}
+
+object HolySpirit7
+{
+    frame SPIRA { light GHOST }
+    frame SPIRB { light GHOST }
+}
+
+//Ractus
+
+Object SunProjectile3
+{
+Frame SUNP { Light SUNPROJECTILE1 }
+}
+
+Object Holyspirit5
+{
+Frame SPIRA { Light HadesBolt1 }
+Frame SPIRB { Light HadesBolt1 }
+Frame SPIRD { Light HadesBolt1 }
+Frame SPIRE { Light HadesBolt2 }
+Frame SPIRF { Light HadesBolt3 }
+Frame SPIRG { Light HadesBolt1 }
+Frame SPIRH { Light HadesBolt2 }
+Frame SPIRI { Light HadesBolt3 }
+}
+
+object IceArrow7
+{
+	frame ARR2 { light MFROSTSHARD }
+	frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+object CStaffMissile5
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+object SerpentStaffPower3
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+//cronus
+
+object CronusWavePowered
+{
+    frame B1TT { light FIREWANDLIGHT }
+}
+
+object CFrostMissile2
+{
+    frame FX05A { light MFROSTSHARD_X1 }
+    frame FX05B { light MFROSTSHARD_X2 }
+    frame FX05C { light MFROSTSHARD_X3 }
+    frame FX05E { light MFROSTSHARD_X4 }
+	frame FX05F { light MFROSTSHARD_X3 }
+    frame FX05G { light MFROSTSHARD_X4 }
+}
+
+object CFrostMissile3
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+
+object MMageWandMissileB
+{
+    frame MWNDE { light MWAND_X1 }
+    frame MWNDF { light MWAND_X2 }
+    frame MWNDG { light MWAND_X3 }
+    frame MWNDH { light MWAND_X4 }
+}
+
+object MMageWandMissileG
+{
+    frame MWN1E { light MWAND_X5 }
+    frame MWN1F { light MWAND_X6 }
+    frame MWN1G { light MWAND_X7 }
+    frame MWN1H { light MWAND_X8 }
+}
+
+object MMageWandMissileR
+{
+    frame MWN2E { light MWAND_X9 }
+    frame MWN2F { light MWAND_X10 }
+    frame MWN2G { light MWAND_X11 }
+    frame MWN2H { light MWAND_X12 }
+}
+
+object CPowershot
+{
+    frame MSP2A { light BSBALL }
+    frame MSP2B { light BSBALL }
+    frame MSP2C { light BSBALL }
+    frame MSP2D { light BSBALL }
+
+    frame MSP2E { light BSBALL_X1 }
+    frame MSP2F { light BSBALL_X2 }
+    frame MSP2G { light BSBALL_X3 }
+    frame MSP2H { light BSBALL_X4 }
+}
+
+object CCultShot1
+{
+    frame SCBLA { light CultLight2 }
+    frame SCBLB { light CultLight2 }
+
+    frame SCBLC { light CultLight1 }
+    frame SCBLD { light CultLight2 }
+    frame SCBLE { light CultLight3 }
+}
+
+object CCultShot2
+{
+    frame SCB2A { light CultLight2 }
+    frame SCB2B { light CultLight2 }
+    frame SCB2C { light CultLight2 }
+
+    frame SSBLG { light CultLight1 }
+    frame SSBLH { light CultLight1 }
+    frame SSBLI { light CultLight2 }
+    frame SSBLJ { light CultLight2 }
+    frame SSBLK { light CultLight3 }
+}
+
+// KorAx
+
+Pointlight KORAXDEATH1
+{
+Color 0.7 0.0 0.0
+Size 30
+}
+
+
+Object KoraxDeathExplosion
+{
+Frame MTHX { Light KORAXDEATH1 }
+}
+
+flickerlight FGARG
+{
+    color 1.0 1.0 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight FGARGATK
+{
+    color 1.0 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight FGARGBALL_X1
+{
+    color 0.8 0.8 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight FGARGBALL_X2
+{
+    color 0.5 0.5 0.0
+    size 50
+    secondarySize 54
+    chance 0.4
+}
+
+flickerlight FGARGBALL_X3
+{
+    color 0.2 0.2 0.0
+    size 44
+    secondarySize 48
+    chance 0.4
+}
+
+object FireDemon
+{
+    frame FDMNA { light FGARG }
+    frame FDMNB { light FGARG }
+    frame FDMNC { light FGARG }
+    frame FDMND { light FGARG }
+    frame FDMNH { light FGARG }
+    frame FDMNI { light FGARG }
+    frame FDMNJ { light FGARG }
+
+    frame FDMNK { light FGARGATK }
+}
+
+object FireDemonMissile
+{
+    frame FDMBA { light FGARG }
+
+    frame FDMBB { light FGARGBALL_X1 }
+    frame FDMBC { light FGARGBALL_X2 }
+    frame FDMBD { light FGARGBALL_X3 }
+}
+
+//centaur ball
+
+pointlight TAURBALL
+{
+    color 0.2 0.2 1.0
+    size 48
+}
+
+flickerlight TAURBALL_X1
+{
+    color 0.2 0.2 1.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight TAURBALL_X2
+{
+    color 0.2 0.2 0.7
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight TAURBALL_X3
+{
+    color 0.1 0.1 0.5
+    size 72
+    secondarySize 80
+    chance 0.4
+}
+
+flickerlight TAURBALL_X4
+{
+    color 0.0 0.0 0.3
+    size 80
+    secondarySize 88
+    chance 0.4
+}
+
+object CentaurFX2
+{
+    frame CTFXA { light TAURBALL }
+
+    frame CTFXB { light TAURBALL_X1 }
+    frame CTFXC { light TAURBALL_X2 }
+    frame CTFXD { light TAURBALL_X3 }
+    frame CTFXE { light TAURBALL_X4 }
+    frame CTFXF { light TAURBALL_X4 }
+}
+
+// Reaver fireball
+pointlight REAVERBALL
+{
+    color 1.0 0.5 0.0
+    size 48
+}
+
+flickerlight REAVERBALL_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+}
+
+flickerlight REAVERBALL_X2
+{
+    color 0.6 0.2 0.0
+    size 60
+    secondarySize 68
+}
+
+flickerlight REAVERBALL_X3
+{
+    color 0.2 0.0 0.0
+    size 56
+    secondarySize 64
+}
+
+object WraithFX1
+{
+    frame WRBLA { light REAVERBALL }
+    frame WRBLB { light REAVERBALL }
+    frame WRBLC { light REAVERBALL }
+
+    frame WRBLD { light REAVERBALL_X1 }
+    frame WRBLE { light REAVERBALL_X2 }
+    frame WRBLF { light REAVERBALL_X3 }
+}
+
+
+flickerlight DISCIPLEBALL
+{
+    color 1.0 0.0 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight DISCIPLEBALL_X1
+{
+    color 0.7 0.0 0.7
+    size 16
+    secondarySize 24
+    chance 0.3
+}
+
+flickerlight DISCIPLEBALL_X2
+{
+    color 0.3 0.0 0.3
+    size 8
+    secondarySize 16
+    chance 0.3
+}
+
+object KoraxAtk
+{
+    frame FX11A { light DISCIPLEBALL }
+    frame FX11B { light DISCIPLEBALL }
+    frame FX11C { light DISCIPLEBALL }
+
+    frame FX11D { light DISCIPLEBALL    }
+    frame FX11E { light DISCIPLEBALL    }
+    frame FX11F { light DISCIPLEBALL_X1 }
+    frame FX11G { light DISCIPLEBALL_X2 }
+}
+
+flickerlight DISCIPLEBALL
+{
+    color 1.0 0.0 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight DISCIPLEBALL_X1
+{
+    color 0.7 0.0 0.7
+    size 16
+    secondarySize 24
+    chance 0.3
+}
+
+flickerlight DISCIPLEBALL_X2
+{
+    color 0.3 0.0 0.3
+    size 8
+    secondarySize 16
+    chance 0.3
+}
+
+object KoraxAtk2
+{
+    frame FX11A { light DISCIPLEBALL }
+    frame FX11B { light DISCIPLEBALL }
+    frame FX11C { light DISCIPLEBALL }
+
+    frame FX11D { light DISCIPLEBALL    }
+    frame FX11E { light DISCIPLEBALL    }
+    frame FX11F { light DISCIPLEBALL_X1 }
+    frame FX11G { light DISCIPLEBALL_X2 }
+}
+
+//Wizard Projectile
+
+object FwizardFX1
+{
+    frame FX11A { light DISCIPLEBALL }
+    frame FX11B { light DISCIPLEBALL }
+    frame FX11C { light DISCIPLEBALL }
+
+    frame FX11D { light DISCIPLEBALL    }
+    frame FX11E { light DISCIPLEBALL    }
+    frame FX11F { light DISCIPLEBALL_X1 }
+    frame FX11G { light DISCIPLEBALL_X2 }
+}
+
+// Green Chaos Serpent fireball
+flickerlight SERPENTBALL
+{
+    color 1.0 0.95 0.0
+    size 56
+    secondarySize 64
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X1
+{
+    color 1.0 0.95 0.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X2
+{
+    color 0.8 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X3
+{
+    color 0.5 0.5 0.0
+    size 88
+    secondarySize 96
+    chance 0.5
+}
+
+flickerlight SERPENTBALL_X4
+{
+    color 0.2 0.2 0.0
+    size 96
+    secondarySize 104
+    chance 0.5
+}
+
+object Demon1FX11
+{
+    frame DMFXA { light SERPENTBALL }
+    frame DMFXB { light SERPENTBALL }
+    frame DMFXC { light SERPENTBALL }
+
+    frame DMFXD { light SERPENTBALL_X1 }
+    frame DMFXE { light SERPENTBALL_X2 }
+    frame DMFXF { light SERPENTBALL_X3 }
+    frame DMFXG { light SERPENTBALL_X4 }
+    frame DMFXH { light SERPENTBALL_X4 }
+}
+
+// Brown Chaos Serpent gasball
+pointlight CSGASBALL
+{
+    color 0.0 1.0 0.0
+    size 48
+}
+
+flickerlight CSGASBALL_X1
+{
+    color 0.0 1.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+flickerlight CSGASBALL_X2
+{
+    color 0.0 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.5
+}
+
+flickerlight CSGASBALL_X3
+{
+    color 0.0 0.5 0.0
+    size 88
+    secondarySize 96
+    chance 0.5
+}
+
+flickerlight CSGASBALL_X4
+{
+    color 0.0 0.2 0.0
+    size 96
+    secondarySize 104
+    chance 0.5
+}
+
+object Demon2FX12
+{
+    frame D2FXA { light CSGASBALL }
+    frame D2FXB { light CSGASBALL }
+    frame D2FXC { light CSGASBALL }
+    frame D2FXD { light CSGASBALL }
+    frame D2FXE { light CSGASBALL }
+    frame D2FXF { light CSGASBALL }
+
+    frame D2FXG { light CSGASBALL_X1 }
+    frame D2FXH { light CSGASBALL_X2 }
+    frame D2FXI { light CSGASBALL_X2 }
+    frame D2FXJ { light CSGASBALL_X3 }
+    frame D2FXK { light CSGASBALL_X4 }
+    frame D2FXL { light CSGASBALL_X4 }
+}
+
+// Dragon Fireball
+flickerlight DWyvernBall2
+{
+    color 1.0 1.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+object DWyvernBall2
+{
+    frame DRFXA { light DRAGONBALL }
+    frame DRFXB { light DRAGONBALL }
+    frame DRFXC { light DRAGONBALL }
+    frame DRFXD { light DRAGONBALL }
+    frame DRFXE { light DRAGONBALL }
+    frame DRFXF { light DRAGONBALL }
+
+    frame DRFXG { light DRAGONBALL_X1 }
+    frame DRFXH { light DRAGONBALL_X2 }
+    frame DRFXI { light DRAGONBALL_X2 }
+    frame DRFXJ { light DRAGONBALL_X3 }
+    frame DRFXK { light DRAGONBALL_X4 }
+}
+
+flickerlight DRAGONBALL_X1
+{
+    color 0.8 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+flickerlight DRAGONBALL_X2
+{
+    color 0.6 0.6 0.0
+    size 96
+    secondarySize 104
+    chance 0.3
+}
+
+flickerlight DRAGONBALL_X3
+{
+    color 0.4 0.4 0.0
+    size 88
+    secondarySize 96
+    chance 0.3
+}
+
+flickerlight DRAGONBALL_X4
+{
+    color 0.2 0.2 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+object DeathwyvernExplosion
+{
+    frame CFCFQ { light DRAGONBALL_X1 }
+    frame CFCFR { light DRAGONBALL_X2 }
+    frame CFCFS { light DRAGONBALL_X2 }
+    frame CFCFT { light DRAGONBALL_X2 }
+    frame CFCFU { light DRAGONBALL_X3 }
+    frame CFCFV { light DRAGONBALL_X3 }
+    frame CFCFW { light DRAGONBALL_X4 }
+}
+
+// Heresiarch
+flickerlight HARCHATK
+{
+    color 1.0 0.0 1.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+pointlight HARCHBLUCUBE
+{
+    color 0.0 0.0 1.0
+    size 32
+}
+
+pointlight HARCHGRNCUBE
+{
+    color 0.0 1.0 0.0
+    size 32
+}
+
+pointlight HARCHPURCUBE
+{
+    color 1.0 0.0 1.0
+    size 32
+}
+
+flickerlight HARCHBALL_X1
+{
+    color 0.8 0.0 0.8
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight HARCHBALL_X2
+{
+    color 0.5 0.0 0.5
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight HARCHBALL_X3
+{
+    color 0.2 0.0 0.2
+    size 72
+    secondarySize 76
+    chance 0.4
+}
+
+flickerlight HARCHBALL2_X1
+{
+    color 0.0 0.8 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight HARCHBALL2_X2
+{
+    color 0.0 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight HARCHBALL2_X3
+{
+    color 0.0 0.2 0.0
+    size 72
+    secondarySize 76
+    chance 0.4
+}
+
+flickerlight HARCHHEAD
+{
+    color 1.0 0.5 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+object Sorc1FX1
+{
+    frame SBS1 { light HARCHHEAD }
+}
+
+object Sorc1FX2
+{
+    frame SBS2 { light HARCHPURCUBE }
+}
+
+object SorcFX3
+{
+    frame SBS3A { light HARCHGRNCUBE }
+    frame SBS3B { light HARCHGRNCUBE }
+
+    frame SBS3C { light HARCHBALL2_X1 }
+    frame SBS3D { light HARCHBALL2_X2 }
+    frame SBS3E { light HARCHBALL2_X3 }
+}
+
+object Sorc1FX4
+{
+    frame SBS4A { light HARCHPURCUBE }
+    frame SBS4B { light HARCHPURCUBE }
+
+    frame SBS4C { light HARCHBALL_X1 }
+    frame SBS4D { light HARCHBALL_X2 }
+    frame SBS4E { light HARCHBALL_X3 }
+}
+
+object SorcBall1
+{
+    frame SBMP { light HARCHPURCUBE }
+}
+
+object SorcBall2
+{
+    frame SBMB { light HARCHBLUCUBE }
+}
+
+object SorcBall3
+{
+    frame SBMG { light HARCHGRNCUBE }
+}
+
+object Heresiarch2
+{
+    frame SORCE { light HARCHATK }
+    frame SORCF { light HARCHATK }
+}
+
+
+// Bishop fireball
+pointlight BISHOPBALL
+{
+    color 0.6 1.0 0.0
+    size 48
+}
+
+flickerlight BISHOPBALL_X1
+{
+    color 0.6 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight BISHOPBALL_X2
+{
+    color 0.2 0.8 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight BISHOPBALL_X3
+{
+    color 0.1 0.5 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+flickerlight BISHOPBALL_X4
+{
+    color 0.0 0.3 0.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+object FBishopFX
+{
+    frame BPFXA { light BISHOPBALL }
+    frame BPFXB { light BISHOPBALL }
+
+    frame BPFXC { light BISHOPBALL_X1 }
+    frame BPFXD { light BISHOPBALL_X2 }
+    frame BPFXE { light BISHOPBALL_X2 }
+    frame BPFXF { light BISHOPBALL_X3 }
+    frame BPFXG { light BISHOPBALL_X3 }
+    frame BPFXH { light BISHOPBALL_X4 }
+}
+
+object FBishopFX2
+{
+    frame BPFXA { light BISHOPBALL }
+    frame BPFXB { light BISHOPBALL }
+
+    frame BPFXC { light BISHOPBALL_X1 }
+    frame BPFXD { light BISHOPBALL_X2 }
+    frame BPFXE { light BISHOPBALL_X2 }
+    frame BPFXF { light BISHOPBALL_X3 }
+    frame BPFXG { light BISHOPBALL_X3 }
+    frame BPFXH { light BISHOPBALL_X4 }
+}
+
+//ice guy
+
+object IceGuyFX26
+{
+    frame FX05A { light FROSTBALL }
+    frame FX05B { light FROSTBALL }
+    frame FX05C { light FROSTBALL }
+
+    frame FX05D { light FROSTBALL_X1 }
+    frame FX05E { light FROSTBALL_X2 }
+    frame FX05F { light FROSTBALL_X3 }
+    frame FX05G { light FROSTBALL_X4 }
+}
+
+
+object IceGuyFX25
+{
+    frame FX05A { light FROSTBALL }
+    frame FX05B { light FROSTBALL }
+    frame FX05C { light FROSTBALL }
+
+    frame FX05D { light FROSTBALL_X1 }
+    frame FX05E { light FROSTBALL_X2 }
+    frame FX05F { light FROSTBALL_X3 }
+    frame FX05G { light FROSTBALL_X4 }
+}

@@ -1,0 +1,98 @@
+//piggy
+
+Piggy/Sight		SQUEAL1
+Piggy/Pain		PIGPAIN2
+Piggy/Death		PIGDTH2
+Piggy/Active	PIGRUNT1
+Piggy/Attack	Bite4
+
+$playersound Piggy male *death PIGDTH2
+$playersound Piggy male *Xdeath PIGDTH2
+$playersound Piggy male *gibbed PIGDTH2
+$playersound Piggy male *pain100 PIGPAIN2
+$playersound Piggy male *pain75 PIGPAIN2
+$playersound Piggy male *pain50 PIGPAIN2
+$playersound Piggy male *pain25 PIGPAIN2
+$playersound Piggy male *grunt SQUEAL1
+$playersound Piggy male *land SQUEAL1
+$playersound Piggy male *jump PIGRUNT1
+$playersound Piggy male *fist DSPUNCH
+$playersound Piggy male *usefail SQUEAL1
+$playersound Piggy male *taunt PIGRUNT1
+
+//Fighter Boss
+$random fighter/death	{ Fighter/death1 Fighter/death2 }
+Fighter/death1		fgtddth
+Fighter/death2		fgtcdth
+$Random fighter/zdeath	{ Fighter/Xdeath1 Fighter/Xdeath2 Fighter/Xdeath3 }
+Fighter/Xdeath1		fgtxdth1
+Fighter/Xdeath2		fgtxdth2
+Fighter/Xdeath3		fgtxdth3
+Fighter/pain		fgtpain
+Fighter/Sight		fgtgrunt
+
+//Cleric Boss
+$Random Cleric/zdeath	{ Cleric/Xdeath1 Cleric/Xdeath2 Cleric/Xdeath3 }
+Cleric/Xdeath1		clxdth1
+Cleric/Xdeath2		clxdth2
+Cleric/Xdeath3		clxdth3
+Cleric/Pain			clepain3
+$random Cleric/death	{ Cleric/death1 Cleric/death2 }
+Cleric/death1		CLEDTH
+Cleric/death2		CLERDTH
+Cleric/Sight		grunt1
+
+//Mage Boss
+$random Mage/death	{ Mage/death1 Mage/death2 }
+Mage/death1			mgdth
+Mage/death2			mgcdth
+$Random Mage/zdeath	{ Mage/Xdeath1 Mage/Xdeath2 Mage/Xdeath3 }
+Mage/Xdeath1		mgxdth1
+Mage/Xdeath2		mgxdth2
+Mage/Xdeath3		mgxdth3
+Mage/pain			mgpain
+Mage/Sight			mggrunt
+
+//Bishop
+$random bishopactivesounds	{ bishopactive bishopsight }
+bishopactive			stb1d
+bishopsight				syab2d
+bishoppain				bshpn1
+bishopattack			pop
+bishopdeath				bishdth1
+bishopmissileexplode		bshhit2
+bishopblur				blur6
+
+//Heresiarch
+sorcerersight			sorboss1
+sorcereractive			sorboss2
+sorcererpain			sorboss3
+sorcererspellcast		woosh3
+sorcererdeathscream		sordie2
+sorcererbishopspawn		bishapp
+sorcererballpop			cork
+sorcererheadscream		sorblexp
+sorcererballwoosh		balls1
+sorcererballbounce		impact3
+sorcererbigballexplode	sorblexp
+
+//Wyvern
+dragonsight				dragsit1
+dragonactive			dragsit1
+dragonwingflap			wing1
+dragonattack			mage4
+dragonpain				dragpn2
+dragondeath				dragdie2
+dragonfireballexplode		mageball
+
+//Korax
+koraxsight				korsit
+koraxactive				koract
+koraxdeath				kordth1
+koraxpain				korpn1
+koraxattack				koratk
+koraxcommand			korcom
+koraxstep				step
+
+//Wendigo
+IceguySight				Frosty1
