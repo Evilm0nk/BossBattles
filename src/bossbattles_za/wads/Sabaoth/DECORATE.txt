@@ -138,3 +138,9 @@ actor BossExplosion
     stop
   }
 }
+
+Actor Sabaoth2 : Sabaoth	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
