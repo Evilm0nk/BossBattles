@@ -1515,7 +1515,7 @@ terminate;
 }
 else{
 	delay(10);
-	SpawnSpotfacing ("Cyberbruiser2", 151, 999);
+	SpawnSpotfacing ("Cybruiser2", 151, 999);
 }
 }
 
@@ -1820,6 +1820,28 @@ terminate;
 else{
 	delay(10);
 	SpawnSpotfacing ("Snowcacodemon2", 151, 999);
+}
+}
+
+	Script 411 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Snowmancacodemon2", 151, 999);
+}
+}
+
+	Script 413 (void)         ////good
+{
+if (ThingCount(T_NONE,999) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Sabaoth2", 151, 999);
 }
 }
 
@@ -3249,7 +3271,7 @@ terminate;
 }
 else{
 	delay(10);
-	SpawnSpotfacing ("Cyberbruiser", 3, 998);
+	SpawnSpotfacing ("Cybruiser", 3, 998);
 }
 }
 
@@ -3601,6 +3623,28 @@ terminate;
 else{
 	delay(10);
 	SpawnSpotfacing ("SnowCacodemon", 3, 998);
+}
+}
+
+	Script 412 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("SnowManCacodemon", 3, 998);
+}
+}
+
+	Script 414 (void)         ////bad
+{
+if (ThingCount(T_NONE,998) >= 1){
+terminate;
+}
+else{
+	delay(10);
+	SpawnSpotfacing ("Sabaoth", 3, 998);
 }
 }
 
