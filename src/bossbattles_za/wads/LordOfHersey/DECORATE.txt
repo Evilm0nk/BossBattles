@@ -1,0 +1,176 @@
+//===========================================================================
+//
+// Lordofheresy
+//
+// 
+//
+//
+//===========================================================================
+
+ACTOR LordofHeresy 3121
+{ 
+//$Category Devilminions
+    Health 5750 
+    Radius 20 
+    Height 56 
+    Speed 13 
+    PainChance 1
+    BloodColor "7D 9D 59"
+    Mass 1000000
+    dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	Damagefactor "HEAVENPOWER", 1.0
+	Damagefactor "PEXPLOSIVE", 1.0 
+	Damagefactor "EXPLOSIVE", 1.0
+	Damagefactor "Fire", 0.1
+	Damagefactor "PFire", 0.1
+	Damagefactor "Electric", 0.5
+	Damagefactor "PElectric", 0.5
+	Damagefactor "Poison", 0.8
+	Damagefactor "PPoison", 0.8
+	Damagefactor "PBullet", 1.0
+	Damagefactor "Bullet", 1.0
+	Damagefactor "ice", 1.2
+    MONSTER 
+	Species "HellMonsters"
+    +THRUSPECIES
+	+FLOORCLIP
+    +AMBUSH
+    +QUICKTORETALIATE
+	+TELESTOMP
+	+NOTARGET
+    Obituary "%o was annihilated by the heresy lord." 
+    SeeSound "LordOfHeresy/sight" 
+    PainSound "LordOfHeresy/Pain" 
+    DeathSound "LordOfHeresy/death" 
+    ActiveSound "LordOfHeresy/act"  
+    States 
+    { 
+    Spawn: 
+        LOHS AB 10 A_Look 
+        Loop 
+    See: 
+        LOHS AABBCCDD 4 A_Chase 
+        Loop 
+    Missile: 
+        LOHS E 0 A_Jump(85,5) 
+        LOHS E 0 A_Jump(128,9)
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 8 A_BruisAttack 
+        Goto See 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall", 32, 0, 8) 
+        LOHS G 0 A_Custommissile ("BaronBall", 32, 0, 0) 
+        LOHS G 8 A_Custommissile ("BaronBall", 32, 0, -8) 
+        Goto See 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall", 32, 0, -20) 
+        LOHS G 8 A_Custommissile ("BaronBall", 32, 0, 0) 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall", 32, 0, 20) 
+        LOHS G 8 A_Custommissile ("BaronBall", 32, 0, 0) 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall", 32, 0, -12) 
+        LOHS G 8 A_Custommissile ("BaronBall", 32, 0, 12) 
+        Goto See 
+    Pain: 
+        LOHS H 5 
+        LOHS H 5 A_Pain 
+        Goto See 
+    Death: 
+        LOHS I 8 
+        LOHS J 8 A_ScreamAndUnblock
+        LOHS K 8 
+        LOHS LMN 8 
+	    LOHS O 150 A_SetFloorClip
+		LOHS O 2 A_FadeOut
+		Wait
+    } 
+}
+
+//Friendly Lordofheresy for ClericSummoner
+ACTOR FLordofHeresy : LordofHeresy
+{
+	Health 5500
+    +NOBLOCKMONST
+    +FRIENDLY
+    +BRIGHT
+	+NOBLOOD
+	+QUICKTORETALIATE
+	+Ghost
+	+NORADIUSDMG
+	+THRUSPECIES
+    Species "Player"
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+    Renderstyle Add
+    Alpha 0.8
+    deathsound "null"
+   States
+   {
+    Spawn:
+	   LOHS A 0
+	   LOHS A 0 A_GiveInventory("FriendlyMonsterTimer2",1)
+	   Goto Super::Spawn
+	See:	    
+	   LOHS A 0 A_JumpIfInventory("FriendlyMonsterTimer2",1,1)
+	   Goto ALTPAIN
+       LOHS AABBCCDD 4 A_Chase 
+       Loop 
+       Missile: 
+        LOHS E 0 A_Jump(85,5) 
+        LOHS E 0 A_Jump(128,9)
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 8 A_BruisAttack 
+        Goto See 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall2", 32, 0, 8) 
+        LOHS G 0 A_Custommissile ("BaronBall2", 32, 0, 0) 
+        LOHS G 8 A_Custommissile ("BaronBall2", 32, 0, -8) 
+        Goto See 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall2", 32, 0, -20) 
+        LOHS G 8 A_Custommissile ("BaronBall2", 32, 0, 0) 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall2", 32, 0, 20) 
+        LOHS G 8 A_Custommissile ("BaronBall2", 32, 0, 0) 
+        LOHS E 8 A_FaceTarget 
+        LOHS F 8 A_FaceTarget 
+        LOHS G 0 A_Custommissile ("BaronBall2", 32, 0, -12) 
+        LOHS G 8 A_Custommissile ("BaronBall2", 32, 0, 12) 
+        Goto See 
+	Death:
+	TNT1 A 1 A_CustomMissile("SummonFog2")
+	stop
+  ALTPAIN:
+    LOHS H 4
+    LOHS H 4 A_PlaySound("items/unholytome")
+    Goto ALTDEATH
+  ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+}
+}
+
+Actor lordofheresy2 : lordofheresy 5679	
+{
+//$Category Friendlies
+Species "Player"
+	+FRIENDLY
+}
+

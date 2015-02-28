@@ -1,0 +1,57 @@
+//===========================================================================
+//
+// SPIDERMASTERMIND 64
+//
+//===========================================================================
+
+Spidermastermind64/Sight		DS64SPI2
+Spidermastermind64/Walk			DS64SPI1
+Spidermastermind64/Active	    DS64SPI4
+Spidermastermind64/Death		DS64SPI2
+Spidermastermind64/Attack		DS64SPI5
+
+//===========================================================================
+//
+// Doomed imp
+//
+//===========================================================================
+
+Doomedimp/Sight		DSDOOMI1
+Doomedimp/Active	DSDOOMI2
+Doomedimp/Death		DSDOOMI3
+
+//===========================================================================
+//
+// motherdemon
+//
+//===========================================================================
+
+mother/active dsmthact
+mother/attack dsmthatk
+mother/death dsmthdth
+mother/pain dsmthpai
+mother/sight dsmthsit
+mother/missile dsmisfir
+mother/explode dsmisexp
+mother/deathexplosion dsdthexp
+mother/teleport dsmthtel
+mother/melee dsmthclw
+
+
+monster/demsit dsdemsit
+
+//===========================================================================
+//
+// Cyberdemon 64
+//
+//===========================================================================
+
+
+cyber64/sight			64cybsit
+cyber64/active			64dmact
+cyber64/pain			64dmpain
+cyber64/death			64cybdth
+cyber64/hoof			64hoof
+cyber64/metal			64metal
+cyber64/fire			64rlaunc
+cyber64/missilehit		64barexp

@@ -1,0 +1,27 @@
+//Disciple
+
+monster/dissit dsdissit
+
+monster/disdth dsdisdth
+monster/disact dsdisact
+monster/blur dsblur
+monster/disat1 dsdisat1
+monster/disat2 dsdisat2
+monster/disht1 dsdisht1
+monster/disht2 dsdisht2
+
+//Vampire
+
+vampire/see VAMPSEE
+vampire/beam VAMPBEAM
+vampire/bats BATATK
+vampire/death VAMPDETH
+vampire/pain VAMPPAIN
+monster/blur dsblur
+
+vampireblood1 vampbl01
+vampireblood2 vampbl02
+vampireblood3 vampbl03
+
+$random vampireblood { vampireblood1 vampireblood2 vampireblood3 }
+$limit vampireblood 1

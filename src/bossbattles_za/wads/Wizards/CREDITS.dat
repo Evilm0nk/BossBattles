@@ -1,0 +1,39 @@
+Disciple
+
+Submitted: Tormentor667 
+Decorate: Eriance
+GLDEFs: Ghastly Dragon
+Sounds: Raven Software, Eriance
+Sprites: Raven Software
+Sprite Edit: Eriance
+Idea Base: Hellstorm Disciple
+
+Acolyte
+
+Submitted: Tormentor667
+Decorate: Eriance
+GLDEFs: Ghastly Dragon
+Sounds: Raven Software, Eriance
+Sprites: Raven Software
+Sprite Edit: Eriance
+Idea Base: Hexen Dark Bishop, Hellstorm Acolyte
+
+Vampire
+
+Name: Vampire
+Difficulty: Medium
+Connections: None
+Summon: Vampire
+Melee: No
+Distance: Projectile
+Type: Undead, Magical
+Submitted: Maelstrom
+Decorate: Maelstrom
+GLDefs: Maelstrom
+Sounds: Blizzard Entertainment, Raven Software
+Sprites: Raven Software(Bishop, BishopProjectile and FogClouds), Nash(BloodSpurt), Nanami(BatSprites and BatTrailSmoke)
+Sprite Edit: Maelstrom
+Idea Base: Bishop
+
+Description: A dark hooded creature, that prefers the darkness, can regenerate itself slowly by absorbing life from close foes, also attacks with a blood beam,
+and a swarm of bats. Explodes into a cloud of bats upon death.

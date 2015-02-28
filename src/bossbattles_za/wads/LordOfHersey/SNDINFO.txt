@@ -1,0 +1,7 @@
+LordOfHeresy/sight DSLOHSIT
+LordOfHeresy/act DSLOHACT
+LordOfHeresy/death DSLOHDTH
+LordOfHeresy/Pain DSLORPN
+
+
+

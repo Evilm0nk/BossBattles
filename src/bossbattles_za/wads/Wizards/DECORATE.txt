@@ -1,0 +1,1868 @@
+//==========================================================
+//
+//       FireWizard
+//       
+//       
+//
+//==========================================================
+Actor FireWizard 12321	
+{
+//$Category DemortrixMinions
+  Translation "96:111=176:191", "250:254=217:223"
+  Health 4080
+  dropitem "MediumHealthVile" 70
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  Radius 16
+  Height 68
+  Mass 10000000000
+  Speed 12
+  PainChance 1
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 0.2
+   Damagefactor "PFire", 0.2
+   Damagefactor "Electric", 1.0
+   Damagefactor "PElectric", 1.0
+   Damagefactor "Poison", 0.8
+   Damagefactor "PPoison", 0.8
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 1.3
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +QUICKTORETALIATE
+  +TELESTOMP
+  +NOTARGET
+  +DONTOVERLAP
+  SeeSound "wizard/sight"
+  AttackSound "wizard/attack"
+  PainSound "wizard/pain"
+  DeathSound "wizard/death"
+  ActiveSound "wizard/active"
+  Obituary "%o was fried to a crisp by a fire wizard."
+  BloodColor red
+	+QUICKTORETALIATE
+	+TELESTOMP
+	States
+	{
+  Spawn:
+    WZRD AB 5 A_Look
+    Loop
+  See:
+    WZRD A 3 A_Chase
+	WZRD A 1 A_fastChase
+    WZRD B 4 A_Chase
+	WZRD B 0 A_stop
+    Loop
+  Melee:
+    WZRD CC 5 bright A_facetarget
+    WZRD D 0 bright A_custommissile("PhoenixFX3",49,16,0,1,0)    
+    WZRD D 2 bright A_custommissile("PhoenixFX3",49,-21,0,1,0)    
+    WZRD D 0 bright A_custommissile("PhoenixFX3",49,16,0,1,0)    
+    WZRD D 2 bright A_custommissile("PhoenixFX3",49,-21,0,1,0)    
+    WZRD D 0 bright A_custommissile("PhoenixFX3",49,16,0,1,0)    
+    WZRD D 2 bright A_custommissile("PhoenixFX3",49,-21,0,1,0)    
+    WZRD D 0 bright A_custommissile("PhoenixFX3",49,16,0,1,0)    
+    WZRD D 2 bright A_custommissile("PhoenixFX3",49,-21,0,1,0)    
+    WZRD D 0 bright A_custommissile("PhoenixFX3",49,16,0,1,0)    
+    WZRD D 2 bright A_custommissile("PhoenixFX3",49,-21,0,1,0)
+    goto see
+  Missile:
+	TNT1 A 0 A_Jump(256,"Missile1","MISSILE2")
+  Missile1:
+    WZRD C 1 Bright A_PlaySound("monster/disat1")
+    WZRD CC 3 Bright A_FaceTarget
+    WZRD D 0 Bright A_CustomMissile("RedTrapball",36,0,-4,0)
+    WZRD D 0 Bright A_CustomMissile("RedTrapball",36,0,4,0)
+    WZRD D 0 Bright A_CustomMissile("RedTrapball",36,0,-8,0)
+    WZRD D 0 Bright A_CustomMissile("RedTrapball",36,0,8,0)
+    WZRD D 8 Bright A_CustomMissile("RedTrapball",36,0,0,0)
+	Goto see
+  Missile2:
+    WZRD C 1 Bright A_PlaySound("monster/disat1")
+    WZRD CC 3 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("beastball2",36,0,0,0)
+	WZRD C 0 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("beastball2",36,0,0,0)
+	WZRD C 0 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("beastball2",36,0,0,0)
+	WZRD C 0 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("beastball2",36,0,0,0)
+	WZRD C 0 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("beastball2",36,0,0,0)
+	WZRD C 0 Bright A_FaceTarget
+	Goto see
+  Pain:
+    WZRD E 3 A_Pain
+    Goto See
+  Death:
+    WZRD F 6 
+    WZRD G 0 A_ScreamAndUnblock
+    WZRD GHI 6 A_SpawnDebris("NashGore_FlyingBlood", 1)
+    WZRD J 0 
+    WZRD JKL 6 A_SpawnDebris("NashGore_FlyingBlood", 1)
+	WZRD M 520 A_SetFloorClip
+    WZRD M 2 A_FadeOut
+	Wait
+	}
+}
+
+Actor Firewizard2 : FireWizard 21127
+{
+//$Category Friendlies
+   +FRIENDLY
+}
+
+//==========================================================
+//
+//       PoisonWizard
+//       
+//       
+//
+//==========================================================
+Actor PoisonWizard 12324	
+{
+//$Category DemortrixMinions
+  Translation "41:47=121:127", "160:167=112:123", "176:191=112:127", "208:223=112:123", "232:235=124:127", "250:254=112:127"
+  Health 5080
+    dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+  Radius 16
+  Height 68
+  Mass 10000000000
+  Speed 7
+  PainChance 3
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.2
+   Damagefactor "PFire", 1.2
+   Damagefactor "Electric", 1.0
+   Damagefactor "PElectric", 1.0
+   Damagefactor "Poison", 0.2
+   Damagefactor "PPoison", 0.2
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 1.0
+  BloodColor Green
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +NOTARGET
+  +QUICKTORETALIATE
+  +TELESTOMP
+  +DONTOVERLAP
+  SeeSound "wizard/sight"
+  AttackSound "wizard/attack"
+  PainSound "wizard/pain"
+  DeathSound "wizard/death"
+  ActiveSound "wizard/active"
+  Obituary "%o was poisoned by a poison wizard."
+
+	+QUICKTORETALIATE
+	+TELESTOMP
+	States
+	{
+  Spawn:
+    WZRD AB 5 A_Look
+    Loop
+  See:
+    WZRD A 3 A_Chase
+	WZRD A 1 A_fastChase
+    WZRD B 4 A_Chase
+	WZRD B 0 A_stop
+    Loop
+  Missile:
+	TNT1 A 0 A_Jump(256,"Missile1","MISSILE2","Missile3")
+  Missile1:
+    WZRD C 1 Bright A_PlaySound("monster/disat1")
+    WZRD CC 3 Bright A_FaceTarget
+    WZRD D 0 Bright A_CustomMissile("greenmissile",36,0,-4,0)
+    WZRD D 0 Bright A_CustomMissile("greenmissile",36,0,4,0)
+    WZRD D 0 Bright A_CustomMissile("greenmissile",36,0,-8,0)
+    WZRD D 0 Bright A_CustomMissile("greenmissile",36,0,8,0)
+    WZRD D 8 Bright A_CustomMissile("greenmissile",36,0,0,0)
+	Goto see
+  Missile2:
+    WZRD C 1 Bright A_PlaySound("monster/disat1")
+    WZRD CC 3 Bright A_FaceTarget
+    WZRD D 2 Bright A_CustomMissile("SerpentStaffPower3",36,0,0,0)
+	WZRD C 2 Bright A_FaceTarget
+	Goto see
+  Missile3:
+    WZRD CC 5 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,16,0,1,0)    
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,-21,0,1,0)    
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,16,0,1,0)  
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,-21,0,1,0)    
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,16,0,1,0)   
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,-21,0,1,0)  
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,16,0,1,0)   
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,-21,0,1,0) 
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,16,0,1,0)   
+	WZRD C 0 bright A_facetarget
+    WZRD D 2 bright A_custommissile("greenmissile",49,-21,0,1,0)
+	WZRD C 0 bright A_facetarget
+    goto see
+  Pain:
+    WZRD E 3 A_Pain
+    Goto See
+  Death:
+    WZRD F 6
+    WZRD G 0 A_ScreamAndUnblock
+    WZRD GHI 6 A_SpawnDebris("GreenNashGore_FlyingBlood", 1)
+    WZRD J 0 
+    WZRD JKL 6 A_SpawnDebris("GreenNashGore_FlyingBlood", 1)
+	WZRD M 520 A_SetFloorClip
+    WZRD M 2 A_FadeOut
+	Wait
+	}
+}
+
+Actor Poisonwizard2 : PoisonWizard 21128
+{
+//$Category Friendlies
+   +FRIENDLY
+}
+
+//==========================================================
+//
+//        Ice Mage
+//       
+//       
+//
+//==========================================================
+
+ACTOR Icemage 12612
+{
+//$Category DemortrixMinions
+  dropitem "MediumHealthVile" 70
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  Health 4530
+  Radius 22
+  Height 65
+  Speed 17
+  mass 100000000
+  translation "112:127=195:207", "160:167=5:8"
+  PainChance 1
+  Monster
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 1.4
+  Damagefactor "PFire", 1.4
+  Damagefactor "Electric", 0.8
+  Damagefactor "PElectric", 0.8
+  Damagefactor "Poison", 1.1
+  Damagefactor "PPoison", 1.1
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.0
+  BloodColor Blue
+  +FLOAT
+  +NOGRAVITY
+  +TELESTOMP
+  +NOTARGET
+  +DONTOVERLAP
+  +QUICKTORETALIATE
+  SeeSound "BishopSight"
+  AttackSound "BishopAttack"
+  PainSound "BishopPain"
+  DeathSound "BishopDeath"
+  ActiveSound "BishopActiveSounds"
+  Obituary "%o Froze from fear of the IceMage"
+
+  States
+  {
+  Spawn:
+    BISH A 5 A_Look
+    Loop
+  See:
+    BISH A 3 A_Chase
+	BISH A 0 A_SpawnItemEx("IcemageGhost1",0,0,0,0,0,0,0,128)
+	BISH A 3 A_Chase
+	BISH A 0 A_SpawnItemEx("IcemageGhost1",0,0,0,0,0,0,0,128)
+    BISH B 3 A_Chase
+	BISH B 0 A_SpawnItemEx("IcemageGhost2",0,0,0,0,0,0,0,128)
+	BISH B 3 A_Chase
+	BISH B 0 A_SpawnItemEx("IcemageGhost2",0,0,0,0,0,0,0,128)
+    Loop
+  Pain:
+    BISH C 3 A_Pain
+    Goto See
+  Melee:
+    BISH DE 5 bright A_facetarget
+    BISH F 0 bright A_PlaySoundEx("FrostBreath", auto)
+    BISH F 0 bright A_FaceTarget
+    BISH FFF 2 bright A_CustomMissile("IceBreath", 36, 0, random(-10,10), CMF_CHECKTARGETDEAD)
+    BISH F 0 bright A_PlaySoundEx("FrostBreath", auto)
+    BISH F 0 bright A_FaceTarget
+    BISH FFF 2 bright A_CustomMissile("IceBreath", 36, 0, random(-10,10), CMF_CHECKTARGETDEAD)
+    BISH F 0 bright A_PlaySoundEx("FrostBreath", auto)
+    BISH F 0 bright A_FaceTarget
+    BISH FFF 2 bright A_CustomMissile("IceBreath", 36, 0, random(-10,10), CMF_CHECKTARGETDEAD)
+    BISH F 0 bright A_PlaySoundEx("FrostBreath", auto)
+    BISH F 0 bright A_FaceTarget
+    BISH FFF 2 bright A_CustomMissile("IceBreath", 36, 0, random(-10,10), CMF_CHECKTARGETDEAD)
+    BISH F 0 bright A_PlaySoundEx("FrostBreath", auto)
+    BISH F 0 bright A_FaceTarget
+    BISH FFF 2 bright A_CustomMissile("IceBreath", 36, 0, random(-10,10), CMF_CHECKTARGETDEAD)
+    goto see
+  Missile:
+	TNT1 A 0 A_Jump(256,"Missile1","MISSILE2")
+  Missile1:
+    BISH D 1 Bright A_PlaySound("monster/disat1")
+    BISH DE 3 Bright A_FaceTarget
+    BISH F 0 Bright A_CustomMissile("IceGuyFX25",36,0,-2,0)
+    BISH F 0 Bright A_CustomMissile("IceGuyFX25",36,0,2,0)
+	Goto see
+  Missile2:
+    BISH D 1 Bright A_PlaySound("monster/disat1")
+    BISH DE 3 Bright A_FaceTarget
+    BISH F 2 Bright A_CustomMissile("SnowCacodemonBall",36,0,0,0)
+	BISH F 0 Bright A_FaceTarget
+    BISH F 2 Bright A_CustomMissile("SnowCacodemonBall",36,0,0,0)
+	BISH F 0 Bright A_FaceTarget
+    BISH F 2 Bright A_CustomMissile("SnowCacodemonBall",36,0,0,0)
+	BISH F 0 Bright A_FaceTarget
+    BISH F 2 Bright A_CustomMissile("SnowCacodemonBall",36,0,0,0)
+	BISH F 0 Bright A_FaceTarget
+    BISH F 2 Bright A_CustomMissile("SnowCacodemonBall",36,0,0,0)
+	BISH F 0 Bright A_FaceTarget
+	Goto see
+  Death:
+    BISH G 6 Bright 
+    BISH H 6 Bright A_ScreamAndUnblock
+    BISH I 5 Bright 
+    BISH J 5 Bright
+    BISH K 5 Bright
+    BISH LM 4 Bright
+    BISH N 4 A_SpawnItemEx("BishopPuff", 0, 0, 40, 0, 0, 0.5)
+    BISH O 4 
+	BISH P 520 A_SetFloorClip
+    BISH P 2 A_FadeOut
+	Wait
+  Ice:
+    BISH X 5 A_FreezeDeath
+    BISH X 1 A_FreezeDeathChunks
+    Wait
+  }
+}
+
+ACTOR IcemageGhost1
+{
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Mass 100
+	translation "112:127=195:207", "160:167=5:8"
+	RenderStyle Translucent
+	Alpha 0.9
+	+CLIENTSIDEONLY
+	PROJECTILE
+	Scale 0.9
+	States
+	{
+	Spawn:
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 Thing_ChangeTid(0,390)
+    BISH A 2 A_fadeout(0.05)
+	loop
+	}
+}
+
+ACTOR IcemageGhost2
+{
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Mass 100
+	translation "112:127=195:207", "160:167=5:8"
+	RenderStyle Translucent
+	Alpha 0.9
+	+CLIENTSIDEONLY
+	PROJECTILE
+	scale 0.9
+	States
+	{
+	Spawn:
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 Thing_ChangeTid(0,390)
+    BISH B 2 A_fadeout(0.05)
+	loop
+	}
+}
+
+Actor Icemage2 : IceMage 21130
+{
+//$Category Friendlies
+   +FRIENDLY
+}
+
+//==========================================================
+//
+//     Disciple
+//       
+//       
+//
+//==========================================================
+
+ACTOR Disciple 30114
+{ 
+//$Category DemortrixMinions
+Health 4600
+PainChance 5
+Speed 8
+Scale 0.90
+Radius 20 
+Height 56 
+Mass 320000 
+    dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0 
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.8
+  Damagefactor "PFire", 0.8
+  Damagefactor "Electric", 0.7
+  Damagefactor "PElectric", 0.7
+  Damagefactor "Poison", 0.7
+  Damagefactor "PPoison", 0.7
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.8
+Damagefactor "Heartattack", 0.0
+MONSTER
++FLOORCLIP
++DONTHURTSPECIES
++NOTARGET
++FLOAT
++NOGRAVITY
+Obituary "%o was smoten by an Discple."
+SeeSound "monster/dissit" 
+PainSound "monster/dispai" 
+DeathSound "monster/disdth" 
+ActiveSound "monster/disact"
+States 
+   { 
+   Spawn: 
+       DISC AB 10 A_Look 
+       Loop 
+   See: 
+       DISC AAABBB 2 A_Chase
+       DISC A 0 A_Jump(80,1)
+       Loop
+       DISC A 0 A_Chase(0,"MissileStop",1)
+       DISC A 1 A_PlaySound("monster/blur")
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0) 
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0) 
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 0 A_Jump(96,1)
+       Goto See+8
+       DISC B 0 A_Stop
+       Goto See
+   MissileStop:
+       DISC A 0 A_Stop
+   Missile:
+       DISC A 1 A_Jump(192,28)
+       DISC A 0 A_FaceTarget
+       DISC A 1 A_SkullAttack
+       DISC A 1 A_PlaySound("monster/blur")
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+	   DISC A 0 A_Stop
+       Goto See
+       DISC C 0 Bright A_Jump(128,10)
+       DISC C 1 Bright A_PlaySound("monster/disat1")
+       DISC CC 5 Bright A_FaceTarget
+       DISC D 0 Bright A_CustomMissile("DiscipleShot1",36,0,-4,0)
+       DISC D 0 Bright A_CustomMissile("DiscipleShot1",36,0,4,0)
+       DISC D 0 Bright A_CustomMissile("DiscipleShot1",36,0,-8,0)
+       DISC D 0 Bright A_CustomMissile("DiscipleShot1",36,0,8,0)
+       DISC D 8 Bright A_CustomMissile("DiscipleShot1",36,0,0,0)
+       DISC D 0 Bright A_Jump(64,1)
+       Goto See
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("DiscipleShot2",36,0,0,0)
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("DiscipleShot2",36,0,0,0)
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("DiscipleShot2",36,0,0,0)
+       Goto See
+   Pain: 
+       DISC G 2 
+       DISC G 2 A_Pain 
+       Goto See 
+   Death: 
+       DISC H 0 Bright
+       DISC H 8 Bright A_ScreamAndUnblock
+       DISC I 5 Bright
+       DISC J 5 Bright 
+       DISC K 5 Bright 
+       DISC LMN 4 Bright  
+       DISC O 100   
+	   DISC O 150 A_SetFloorClip
+       DISC O 2 A_FadeOut
+	   Wait
+   } 
+}
+
+ACTOR DSFX3
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   Scale 0.90
+   PROJECTILE
+   RENDERSTYLE Translucent
+      +ClientSideOnly
+   ALPHA 0.90
+   States
+   {
+   Spawn:
+      NULL A 3
+      DISC A 3 A_FadeOut(0.10)
+      goto spawn+1
+   }
+}
+
+ACTOR DiscipleShot1
+{
+   Radius 8
+   Height 16
+   Speed 15
+   Damage 13
+   Damagetype "Electric"
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   PROJECTILE
+   +SPECTRAL
+   
+   DeathSound "monster/disht1"
+   States
+   {
+   Spawn:
+      CFX2 ABCD 2 Bright A_CustomMissile("DSFX1",0,0,0,0)
+      loop
+   Death:
+      CFX2 EFGHI 3 Bright
+      stop
+   }
+}
+
+ACTOR DiscipleShot2
+{
+   Radius 8
+   Height 16
+   Speed 15
+   Damage 14
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   Damagetype "electric"
+   PROJECTILE
+   
+   +SPECTRAL
+   +SEEKERMISSILE
+   DeathSound "monster/disht2"
+   States
+   {
+   Spawn:
+      CFX3 A 3 Bright A_CustomMissile("DSFX2",0,0,0,0)
+      CFX3 A 0 Bright A_SeekerMissile(5,8)
+      CFX3 B 3 Bright A_CustomMissile("DSFX2",0,0,0,0)
+      CFX3 B 0 Bright A_SeekerMissile(5,8)
+      loop
+   Death:
+      CFX3 CDEFG 3 Bright
+      stop
+   }
+}
+
+ACTOR DSFX1
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   PROJECTILE
+   RENDERSTYLE ADD
+   +ClientSideOnly
+   ALPHA 0.67
+   States
+   {
+   Spawn:
+      NULL A 3 Bright
+      CFX2 EFGHI 3 Bright
+      Stop 
+   }
+}
+
+ACTOR DSFX2
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   PROJECTILE
+   RENDERSTYLE ADD
+   +ClientSideOnly
+   ALPHA 0.67
+   States
+   {
+   Spawn:
+      NULL A 3 Bright
+      CFX3 HIJK 3 Bright
+      Stop 
+   }
+}
+
+//Friendly Disciple for ClericSummoner
+ACTOR FDisciple : Disciple
+{ 
+Health 5600 
+Damagefactor "HEAVENPOWER", 0
+Damagefactor "PEXPLOSIVE", 0
+Damagefactor "PFire", 0
+Damagefactor "PElectric", 0
+Damagefactor "PPoison", 0
+Damagefactor "PBullet", 0
+DamageFactor "ice", 0.1
+Renderstyle Add
+Alpha 0.8
+deathsound "null"
+MONSTER
++FLOORCLIP
++DONTHURTSPECIES
++NOGRAVITY
++FLOAT
++NOBLOOD
++QUICKTORETALIATE
++NOBLOCKMONST
++FRIENDLY
++NORADIUSDMG
++Ghost
++THRUSPECIES
+Species "Player"
++BRIGHT
+Obituary "An Acolyte was promoted for killing %o."
+SeeSound "bishopactive" 
+PainSound "bishoppain" 
+DeathSound "bishopdeath" 
+ActiveSound "bishopactive"
+States 
+   { 
+     Spawn:
+	   DISC A 0
+	   DISC A 0 A_GiveInventory("FriendlyMonsterTimer2",1)
+	   Goto Super::Spawn
+	See:	    
+	   DISC A 0 A_JumpIfInventory("FriendlyMonsterTimer2",1,1)
+	   Goto ALTPAIN
+       DISC AAABBB 2 A_Chase
+       DISC A 0 A_Jump(80,1)
+       Loop
+       DISC A 0 A_Chase(0,"MissileStop",1)
+       DISC A 1 A_PlaySound("monster/blur")
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0) 
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0) 
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC B 1 A_Chase(0,"MissileStop",1)
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+	   DISC A 0 A_Jump(1,"ALTPAIN")
+       DISC A 0 A_Jump(96,1)
+       Goto See+8
+       DISC B 0 A_Stop
+       Goto See
+      Missile:
+       DISC A 1 A_Jump(192,28)
+       DISC A 0 A_FaceTarget
+       DISC A 1 A_SkullAttack
+       DISC A 1 A_PlaySound("monster/blur")
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+       DISC A 1 A_SkullAttack
+       DISC A 0 A_SpawnItem("DSFX3",0,0)
+	   DISC A 0 A_Stop
+       Goto See
+       DISC C 0 Bright A_Jump(128,10)
+       DISC C 1 Bright A_PlaySound("monster/disat1")
+       DISC CC 5 Bright A_FaceTarget
+       DISC D 0 Bright A_CustomMissile("FDiscipleShot1",36,0,-4,0)
+       DISC D 0 Bright A_CustomMissile("FDiscipleShot1",36,0,4,0)
+       DISC D 0 Bright A_CustomMissile("FDiscipleShot1",36,0,-8,0)
+       DISC D 0 Bright A_CustomMissile("FDiscipleShot1",36,0,8,0)
+       DISC D 8 Bright A_CustomMissile("FDiscipleShot1",36,0,0,0)
+       DISC D 0 Bright A_Jump(64,1)
+       Goto See
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("FDiscipleShot2",36,0,0,0)
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("FDiscipleShot2",36,0,0,0)
+       DISC E 1 Bright A_PlaySound("monster/disat2")
+       DISC EE 5 Bright A_FaceTarget
+       DISC F 8 Bright A_CustomMissile("FDiscipleShot2",36,0,0,0)
+       Goto See
+	Death:
+	TNT1 A 1 A_CustomMissile("SummonFog2")
+	stop
+  ALTPAIN:
+    DISC G 4
+    DISC G 4 A_PlaySound("items/unholytome")
+    Goto ALTDEATH
+  ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+   } 
+}
+
+
+ACTOR FDiscipleShot1
+{
+   Radius 8
+   Height 16
+   Speed 15
+   Damage 13
+   Damagetype "PElectric"
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   PROJECTILE
+   +THRUGHOST
+   +MTHRUSPECIES
+   DeathSound "monster/disht1"
+   States
+   {
+   Spawn:
+      CFX2 ABCD 2 Bright A_CustomMissile("DSFX1",0,0,0,0)
+      loop
+   Death:
+      CFX2 EFGHI 3 Bright
+      stop
+   }
+}
+
+ACTOR FDiscipleShot2
+{
+   Radius 8
+   Height 16
+   Speed 15
+   Damage 16
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   Damagetype "Pelectric"
+   PROJECTILE
+   +THRUGHOST
+   +SEEKERMISSILE
+   +MTHRUSPECIES
+   DeathSound "monster/disht2"
+   States
+   {
+   Spawn:
+      CFX3 A 3 Bright A_CustomMissile("DSFX2",0,0,0,0)
+      CFX3 A 0 Bright A_SeekerMissile(5,8)
+      CFX3 B 3 Bright A_CustomMissile("DSFX2",0,0,0,0)
+      CFX3 B 0 Bright A_SeekerMissile(5,8)
+      loop
+   Death:
+      CFX3 CDEFG 3 Bright
+      stop
+   }
+}
+
+
+Actor Disciple1 : Disciple 30115	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+
+//==========================================================
+//
+//     acolyte
+//       
+//       
+//
+//==========================================================
+
+ACTOR Priest 30118 
+{ 
+//$Category DemortrixMinions
+Health 5600 
+PainChance 5
+Speed 8
+Scale 0.90
+Radius 20 
+Height 56 
+Mass 150000
+    dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0 
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.9
+  Damagefactor "PFire", 0.9
+  Damagefactor "Electric", 0.7
+  Damagefactor "PElectric", 0.7
+  Damagefactor "Poison", 0.8
+  Damagefactor "PPoison", 0.8
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 1.0
+MONSTER
++FLOORCLIP
++NOTARGET
++DONTHURTSPECIES
++NOGRAVITY
++FLOAT
+Obituary "An Acolyte was promoted for killing %o."
+SeeSound "bishopactive" 
+PainSound "bishoppain" 
+DeathSound "bishopdeath" 
+ActiveSound "bishopactive"
+States 
+   { 
+   Spawn: 
+       ACOL AB 10 A_Look 
+       Loop 
+   See: 
+       ACOL AAABBB 4 A_Chase
+       ACOL A 0 A_Jump(96,1)
+       Loop
+       ACOL A 0 A_Chase
+       ACOL A 1 A_Playsound("bishopblur/blur6")
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL A 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL A 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 1 A_Chase
+       ACOL B 0 Bright A_SpawnItem("AcolFX2",0,0)
+       ACOL B 0 A_Jump(96,1)
+       Goto See+8
+       ACOL B 0
+       Goto See
+   Missile:
+       ACOL D 8 Bright A_FaceTarget
+       ACOL E 5 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       ACOL F 0 Bright A_FaceTarget
+       ACOL F 3 Bright A_CustomMissile("AcolyteShot",34,0,0,0)
+       Goto See
+   Pain: 
+       ACOL C 2 
+       ACOL C 2 A_Pain 
+       Goto See 
+   Death: 
+       ACOL G 8 Bright 
+       ACOL H 5 Bright A_ScreamAndUnblock
+       ACOL I 5 Bright
+       ACOL J 5 Bright  
+       ACOL KLM 5 Bright
+       ACOL N 5 A_CustomMissile("AcolFX1",54,0,0,0)
+       ACOL O 5  
+       ACOL P 100
+	   ACOL P 150 A_SetFloorClip
+       ACOL P 2 A_FadeOut
+	   Wait
+   } 
+}
+
+ACTOR AcolFX2
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   Scale 0.90
+   PROJECTILE
+   +ClientSideOnly
+   RENDERSTYLE Translucent
+   ALPHA 0.90
+   States
+   {
+   Spawn:
+      Null A 3
+      ACOL A 5 A_FadeOut(0.10)
+      goto Spawn+1
+   }
+}
+
+ACTOR AcolyteShot
+{
+   Radius 8
+   Height 16
+   Speed 10
+   Damage 13
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   PROJECTILE
+   Damagetype "Electric"
+   +SPECTRAL
+   +SEEKERMISSILE
+   +FLOATBOB
+   SeeSound "bishopattack"
+   DeathSound "bishopmissileexplode"
+   Decal "BishopScorch"
+   States
+   {
+   Spawn:
+      CFX1 A 1 Bright A_CStaffMissileSlither
+      CFX1 A 1 Bright A_CStaffMissileSlither
+      CFX1 B 1 Bright A_CStaffMissileSlither
+      CFX1 B 1 Bright A_CStaffMissileSlither
+      CFX1 B 0 Bright A_SeekerMissile(1,3)
+      loop
+   Death:
+      CFX1 CDEFGH 3 Bright
+      stop
+   }
+}
+
+ACTOR AcolFX1
+{   
+   Radius 0
+   Height 2
+   Speed 0
+   +ClientSideOnly
+   PROJECTILE
+   RENDERSTYLE Translucent
+   ALPHA 0.67
+   States
+   {
+   Spawn:
+      ACOL QRSTUVW 4
+      Stop 
+   }
+}
+
+
+
+Actor Priest1 : Priest 30117	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//      Vampire
+//       
+//       
+//
+//==========================================================
+
+ACTOR Vampire 2153
+{ 
+//$Category DemortrixMinions
+Health 3500
+PainChance 170
+Speed 8
+Scale 0.90
+Radius 20 
+Height 56 
+Mass 150000
+    dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+SeeSound "vampire/see"
+DeathSound "vampire/death"
+PainSound "vampire/pain"
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0 
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.9
+  Damagefactor "PFire", 0.9
+  Damagefactor "Electric", 0.7
+  Damagefactor "PElectric", 0.7
+  Damagefactor "Poison", 0.8
+  Damagefactor "PPoison", 0.8
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 1.0
+MONSTER
++FLOORCLIP
++DONTHURTSPECIES
++NOTARGET
++TELESTOMP
++FLOAT
++NOGRAVITY
++QUICKTORETALIATE
+Obituary "A Vampire drained all of %o's life."
+States 
+   { 
+   Spawn: 
+       VAM1 AB 10 A_Look 
+       Loop 
+   See:
+       VAM1 AAABBB 4 A_Chase
+	   VAM1 A 0 A_Jump(64,2)
+       VAM1 A 0 A_Jump(96,2)
+       goto see
+	   VAM1 A 0 HealThing(50)
+	   goto see
+       VAM1 A 0 A_Chase
+       VAM1 A 1 A_Playsound("monster/blur")
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+	   VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 A 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 1 A_Chase
+       VAM1 A 0 Bright A_SpawnItemEx("VampFX2", 0, 0, 0, 0, 0, 0, 0, 128)
+       VAM1 B 0 A_Jump(96,1)
+       Goto See
+       VAM1 B 0
+       Goto See
+   Missile:
+       VAM1 X 1 Bright A_Jump(96,28)
+       VAM1 X 8 Bright A_FaceTarget
+	   VAM1 Y 0 
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+       VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 0 Bright A_CustomMissile("BatAttack",Random(8,64),Random(-32,32),Random(20,-20),2,0)
+	   VAM1 Y 8 Bright 
+       goto see
+       VAM1 E 8 Bright A_FaceTarget
+       VAM1 F 0 Bright A_FaceTarget
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+       VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+       VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+	   VAM1 A 0 A_SpawnDebris("VampireBloodBoom",1)
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       VAM1 F 0 Bright 
+       VAM1 F 1 Bright A_CustomMissile("VampireRoundBeam",34,0,0,0)
+       Goto See
+   Pain: 
+       VAM1 C 2 
+       VAM1 C 2 A_Pain 
+       Goto See
+   Death: 
+       VAM1 G 0 Bright 
+       VAM1 G 1 Bright 
+       VAM1 G 8 Bright A_ScreamAndUnblock
+       VAM1 H 5 Bright 
+       VAM1 I 5 Bright 
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("VampCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+	   TNT1 A 0 A_SpawnItemEx("BatAttackSafe", 0, 0, 0, random(-8, 8), random(-8, 8), random(16, 32))
+       VAM1 J 5 Bright 
+       VAM1 KLM 5 Bright 
+       VAM1 N 5 
+       VAM1 O 5 
+	   VAM1 P 150 A_SetFloorClip
+       VAM1 P 2 A_FadeOut
+	   Wait
+   } 
+}
+
+ACTOR VampFX2
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   Scale 0.90
+   +SPECTRAL
+   PROJECTILE
+   RENDERSTYLE Translucent
+   ALPHA 0.90
+   States
+   {
+   Spawn:
+      Null A 3
+      VAM1 A 5 A_FadeOut(0.10)
+      goto Spawn+1
+   }
+}
+
+
+ACTOR VampireRoundBeam
+{
+   Radius 2
+   Height 4
+   Speed 10
+   Damage 11
+   Scale 0.50
+   DamageType "Electric"
+   PROJECTILE
+   +SPECTRAL
+   +FLOATBOB
+   States
+   {
+   Spawn:
+      VAM2 A 0 Bright
+	  VAM2 A 0 Bright A_PlaySound("vampire/beam")
+      VAM2 A 1 Bright A_CStaffMissileSlither
+      VAM2 A 0 Bright A_SpawnItemEx("VampireRoundBeamTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+      VAM2 A 1 Bright A_CStaffMissileSlither
+      VAM2 A 0 Bright A_SpawnItemEx("VampireRoundBeamTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+      VAM2 A 1 Bright A_CStaffMissileSlither
+      VAM2 A 0 Bright A_SpawnItemEx("VampireRoundBeamTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+      VAM2 A 1 Bright A_CStaffMissileSlither
+      VAM2 A 0 Bright A_SpawnItemEx("VampireRoundBeamTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+      loop
+   Death:
+      VAM2 CDEFGH 3 Bright
+      stop
+   }
+}
+
+
+ACTOR VampireRoundBeamTrail
+{
+   Radius 8
+   Height 16
+   RENDERSTYLE ADD
+   ALPHA 0.67
+   Scale 0.50
+   PROJECTILE
+   
+   +ClientSideOnly
+   +FLOATBOB
+   SeeSound "monster/acosht"
+   DeathSound "monster/acohit"
+   States
+   {
+   Spawn:
+      VAM2 A 2 Bright
+      VAM2 A 2 Bright 
+      VAM2 A 2 Bright
+      VAM2 A 2 Bright 
+      VAM2 A 0 Bright
+      goto death
+   Death:
+      VAM2 A 1 Bright A_SetTranslucent(0.60)
+	  VAM2 A 1 Bright A_SetTranslucent(0.50)
+	  VAM2 A 1 Bright A_SetTranslucent(0.40)
+	  VAM2 A 1 Bright A_SetTranslucent(0.30)
+	  VAM2 A 1 Bright A_SetTranslucent(0.20)
+	  VAM2 A 1 Bright A_SetTranslucent(0.10)
+	  VAM2 A 1 Bright A_SetTranslucent(0.00)
+      stop
+   }
+}
+
+
+actor VampireBloodBoom
+{
+ game Doom
+ scale 0.75
+ health 1
+ radius 8
+ height 1
+ mass 1
+ +CORPSE
+ +SPECTRAL
+ +NOTELEPORT
+ +NOBLOCKMAP
+ states
+ {
+ Spawn:
+  TNT1 A 0
+  VAB1 A 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 A 1 
+  VAB1 A 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 A 1
+  VAB1 B 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 B 1
+  VAB1 B 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 B 1
+  VAB1 C 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 C 1
+  VAB1 C 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 C 1
+  VAB1 D 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 D 1
+  VAB1 D 1 A_SpawnItemEx("VampireBloodTrail",0,0,0,1,0,0,0,128)
+  VAB1 D 1
+  loop
+ Crash:
+  TNT1 A 1 A_SpawnItemEx("VampireBloodSpot",0,0,0,1,0,0,0,128)
+  stop
+ }
+}
+
+actor VampireBloodSpot
+{
+ game Doom
+ radius 12
+ height 2
+ mass 1
+ +NOTELEPORT
+ +SPECTRAL
+ -NOBLOCKMAP
+ states
+ {
+ Spawn:
+  TNT1 A 0
+  TNT1 A 0 A_PlaySound("vampireblood")
+  TNT1 A 0 A_Jump(64,4)
+  TNT1 A 0 A_Jump(128,4)
+  TNT1 A 0 A_Jump(192,4)
+  TNT1 A 0 A_Jump(255,4)
+  VAB3 A 750
+  stop
+  VAB3 B 750
+  stop
+  VAB3 C 750
+  stop
+  VAB3 D 750
+  stop
+ }
+}
+
+actor VampireBloodTrail
+{
+ game Doom
+ scale 0.70
+ mass 1
+ +LOWGRAVITY
+ +NOTELEPORT
+ +NOBLOCKMAP
+   +ClientSideOnly
+ states
+ {
+  Spawn:
+  VAB2 A 4
+  VAB2 B 4
+  VAB2 C 4
+  VAB2 D 4
+  stop
+ }
+}
+
+ACTOR BatAttack
+{
+  Radius 8
+  Height 16
+  Speed 12 
+  Damage 12
+  PROJECTILE
+  Damagetype "Electric"
+  +Randomize
+  +SPECTRAL
+  +NoGravity
+  +Float
+  seesound "vampire/bats"
+  states
+  {
+  Spawn:
+    VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+    Goto death
+  Death:
+    TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+    VAM4 A 2 A_SetTranslucent(0.9) 
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.8)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.7)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 A 2 A_SetTranslucent(0.6)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.5)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.4)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 A 2 A_SetTranslucent(0.3)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.2)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.1)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+    Stop
+  }
+}
+
+ACTOR BatTrail
+{
+  Radius 8
+  Height 16
+  RenderStyle Add
+  Alpha 0.8
+  Scale 0.3
+  PROJECTILE
+  +Randomize
+  +NoGravity
+  +Float
+    +ClientSideOnly
+  states
+  {
+  Spawn:
+    VAM5 ABCDEFGHI 3 BRIGHT
+    Goto death
+  Death:
+	VAM5 I 1
+    Stop
+  }
+}
+
+Actor VampCloudSpawner
+{
+  radius 0
+  height 0
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +NOLIFTDROP
+  +NOTARGET
+  +DONTSQUASH
+  +SPECTRAL
+  +NOTELEOTHER
+  +NONSHOOTABLE
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1 A_SpawnItemEx("VampCloud", 0, 0, 0, random(-2, 2), random(-2, 2), random(-1, 1))
+    Stop
+  }
+}
+
+Actor VampCloud
+{
+  renderstyle translucent
+  alpha 0.9
+  Scale 0.5
+  radius 0
+  height 0
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +NOLIFTDROP
+  +NOTARGET
+  +DONTSQUASH
+  +NOTELEOTHER
+  +NONSHOOTABLE
+  +SPECTRAL
+  States
+  {
+  Spawn:
+    VAM6 A 0
+    VAM6 A 0 A_Jump(128, 6)
+    VAM6 ABCDE 3 A_FadeOut(0.05)
+    Goto Spawn+1
+    VAM6 F 0 A_Jump(128, 6)
+    VAM6 FGHIJ 3 A_FadeOut(0.05)
+    Goto Spawn+7
+    VAM6 KLMNO 3 A_FadeOut(0.05)
+    Goto Spawn+12
+  }
+}
+
+Actor BatCloudSpawner
+{
+  radius 0
+  height 0
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +NOLIFTDROP
+  +NOTARGET
+  +DONTSQUASH
+  +NOTELEOTHER
+  +NONSHOOTABLE
+  +SPECTRAL
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1 A_SpawnItemEx("BatCloud", 0, 0, 0, random(-2, 2), random(-2, 2), random(-1, 1))
+    Stop
+  }
+}
+
+Actor BatCloud
+{
+  renderstyle translucent
+  alpha 0.9
+  Scale 0.2
+  radius 0
+  height 0
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +NOLIFTDROP
+  +NOTARGET
+  +DONTSQUASH
+  +NOTELEOTHER
+  +NONSHOOTABLE
+  +SPECTRAL
+  States
+  {
+  Spawn:
+    VAM6 A 0
+    VAM6 A 0 A_Jump(128, 6)
+    VAM6 ABCDE 3 A_FadeOut(0.10)
+    Goto Spawn+1
+    VAM6 F 0 A_Jump(128, 6)
+    VAM6 FGHIJ 3 A_FadeOut(0.10)
+    Goto Spawn+7
+    VAM6 KLMNO 3 A_FadeOut(0.10)
+    Goto Spawn+12
+  }
+}
+
+ACTOR BatAttackSafe
+{
+  Radius 8
+  Height 16
+  Speed 15 
+  Damage 0
+  PROJECTILE
+  +Randomize
+  +NoGravity
+  +SPECTRAL
+  +Float
+  seesound "vampire/bats"
+  states
+  {
+  Spawn:
+    VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+	VAM4 ABCABCABCABC 3 BRIGHT A_SpawnItemEx("BatTrail")
+    Goto death
+  Death:
+    TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+    VAM4 A 2 A_SetTranslucent(0.9) 
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.8)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.7)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 A 2 A_SetTranslucent(0.6)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.5)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.4)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 A 2 A_SetTranslucent(0.3)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 B 2 A_SetTranslucent(0.2)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+	VAM4 C 2 A_SetTranslucent(0.1)
+	TNT1 A 0 A_SpawnItemEx("BatCloudSpawner", 0, 0, 30, 0, 0, 0, 0, 128)
+    Stop
+  }
+}
+
+Actor Vampire2 : Vampire 2357	
+{
+//$Category Friendlies
+	+FRIENDLY
+}

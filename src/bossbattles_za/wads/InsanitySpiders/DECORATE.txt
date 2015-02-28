@@ -1,0 +1,445 @@
+//==========================================================
+//
+//       Insanity spider
+//       
+//       
+//
+//==========================================================
+
+ACTOR InsanitySpider : SpiderMastermind 9604 
+{ 
+//$Category Spiders
+    Speed 32
+    Health 28000
+    PainChance 1
+	Mass 1000000
+	MinMissileChance 30
+    dropitem "MediumHealthVile" 70
+    DropItem "Combatpack" 60
+	DropItem "Cmana" 60
+	DropItem "DmanaDrop" 60
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	DropItem "SuperArmor" 3
+	DropItem "Greenarmor" 7
+	DropItem "Bluearmor" 5
+	DropItem "ArtiHealingRadius1" 5
+	DropItem "Medikit" 6
+	DropItem "Stimpack" 8
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.2
+   Damagefactor "PFire", 1.2
+   Damagefactor "Electric", 1.1
+   Damagefactor "PElectric", 1.1
+   Damagefactor "Poison", 1.0
+   Damagefactor "PPoison", 1.0
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+	+TELESTOMP
+	+BOSS
+	+NOTARGET
+	+AMBUSH
+    +QUICKTORETALIATE
+	+DONTMORPH
+    Radius 96
+    MissileType InsanityPlasma
+    Obituary "%o was nuked into oblivion by the Insanty Spider."
+    States
+    {
+    Spawn:
+        INSP AB 10 A_Look
+        Loop
+    See:
+        INSP A 3 A_Metal
+        INSP ABB 3 A_Chase
+        INSP C 3 A_Metal
+        INSP CDD 3 A_Chase
+        INSP E 3 A_Metal
+        INSP EFF 3 A_Chase
+        Loop
+    Missile:
+        INSP A 20 A_FaceTarget
+        INSP G 2 A_FaceTarget
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 0) 
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 10)
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, -10)
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 20)
+        INSP H 2 A_CustomMissile ("InsanityPlasma", 32, 0, -20) 
+        INSP G 2 A_FaceTarget
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 0) 
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 10)
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, -10) 
+        INSP H 0 A_CustomMissile ("InsanityPlasma", 32, 0, 5)
+        INSP H 2 A_CustomMissile ("InsanityPlasma", 32, 0, -5) 
+        INSP G 0 A_SpidRefire
+        Goto Missile+1
+    Pain:
+        INSP I 3 
+        INSP I 3 A_Pain
+        Goto See
+    Death:
+		INSP I 0 
+		INSP IIIIIIIIIIIIIIIIII 8 A_SpawnItemEx("BossExplosion64",random(-60,60),random(-60,60),random(25,90),0,0,0,0,0,0)
+		INSP J 15 A_ScreamAndUnblock
+		INSP KL 10 
+		INSP MMMMMMMMMMM 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP MMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP NNNNNNNNNNN 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP NNNNN 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP OOOOOOOOOOOO 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP OOOOO 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP PPPPPPPPPPPP 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP PPPPP 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP QQQQQQQQQQQQ 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP QQQQQQQQQQQQ 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP RRRRR 1 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+		INSP S 520 A_SetFloorClip
+		INSP S 2 A_FadeOut
+		Wait
+    }
+} 
+
+ACTOR InsanityPlasma : PlasmaBall 
+{ 
+    Damage 6
+	Speed 30
+	+SPECTRAL
+	DamageType "Electric"
+    States
+    {
+    Spawn:
+        IPLS A 2 A_VileStart
+        IPLS BABABAB 2
+        Loop
+    Death:
+        IPLE ABCDE 4
+        Stop
+    }
+} 
+
+Actor InsanitySpider2 : InsanitySpider 9605
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//      Arachnophyte
+//       
+//       
+//
+//==========================================================
+
+
+ACTOR Arachnophyte 22445
+{
+//$Category Spiders
+    Health 32500
+    Radius 64
+    Height 100
+    Speed 6
+    PainChance 1
+    Mass 500000000
+	MinMissileChance 30
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.0
+   Damagefactor "PFire", 1.0
+   Damagefactor "Electric", 0.8
+   Damagefactor "PElectric", 0.8
+   Damagefactor "Poison", 0.8
+   Damagefactor "PPoison", 0.8
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+   DamageType "Bullet"
+   dropitem "MediumHealthVile" 70
+   DropItem "Combatpack" 60
+   dropItem "Cmana" 60
+   DropItem "DmanaDrop" 60
+   DropItem "SmallhealthVile" 150
+   DropItem "LargeHealthvile" 50
+   DropItem "SuperArmor" 3
+   DropItem "Greenarmor" 7
+   DropItem "Bluearmor" 5
+   DropItem "ArtiHealingRadius1" 5
+   DropItem "Medikit" 6
+   DropItem "Stimpack" 8
+   MONSTER 
+    +NoGravity
+    +FloatBob
+    +Float
+	+QUICKTORETALIATE
+	+DONTMORPH
+	+TELESTOMP
+    SEESOUND "arachnophyte/sight"
+    PAINSOUND "arachnophyte/pain"
+    DEATHSOUND "arachnophyte/death"
+    ATTACKSOUND "spider/attack"
+    OBITUARY "%o was perforated by an Arachnophyte."
+    ExplosionDamage 128
+    ExplosionRadius 255
+    Decal Bulletchip
+    states
+    {
+    Spawn:
+        APYT A 0 A_PlaySound("arachnophyte/engine")
+        APYT ABABAB 4 A_Look
+        Loop
+    See:
+        APYT A 0 A_PlaySound("arachnophyte/engine")
+        APYT AABBAABBAABB 1 A_Chase
+        Loop
+    Missile:
+        APYT A 0 A_PlaySound("arachnophyte/engine")
+        APYT BA 2 A_FaceTarget
+		APYT A 0 A_PlayWeaponSound ("spider/attack")
+        APYT CD 2 A_CustomMissile ("ArachnophyteBullet",40,Random(40, -40),0)
+		APYT C 0 A_PlayWeaponSound ("spider/attack")
+		APYT CD 2 A_CustomMissile ("ArachnophyteBullet",40,Random(40, -40),0)
+        APYT D 1 A_SpidRefire
+        Goto Missile+6
+    Pain:
+        APYT A 1 A_Pain
+        Goto See
+    Death:
+        APYT A 0 A_PlaySound("spider/death")
+		APYT A 0 a_explode
+        APYT A 4 A_ScreamAndUnblock
+        APYT B 4 a_explode
+		NULL YYYYYYYYYYYYYYYY 0 A_CustomMissile("NashGore_Blood",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL X 0 A_CustomMissile("TORSO1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL Y 0 A_CustomMissile("SPINALCORD1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("ORGANS1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL Y 0 A_CustomMissile("RIBCAGE1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("ORGAN4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("ORGAN3",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL X 0 A_CustomMissile("BRAINMUSH1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("BONE3",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("BONE4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YYY 0 A_CustomMissile("GORECHUNK4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XXX 0 A_CustomMissile("GORECHUNK5",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YYY 0 A_CustomMissile("GORECHUNK6",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("EYEBALL1",random(0,90),random(0,40),random(-180,180),2,random(-15,15))
+        APYT E 8 a_explode
+        APYT F 8 a_explode
+        APYT G 6 
+        APYT H 6 
+        APYT I 6
+        APYT J 6
+        Stop
+    }
+}
+
+actor ArachnophyteBullet : FastProjectile
+{ 
+    Radius 3
+	Height 3  
+	Mass 1
+	Damage 3
+	Speed 200
+	RenderStyle ADD
+    Alpha		1
+	Scale		.15
+	DamageType "Bullet"
+	PROJECTILE
+	Decal BulletChip
+	+NOTELEPORT
+	+BLOODSPLATTER
+	+Spectral
+	
+	States{
+		Spawn:
+			TNT1 A 1
+			Loop
+		Death:
+			TNT1 A 1
+			BPUF A 0
+			BPUF A 1 A_PlaySound("Weapons/NailHit")
+			BPUF A 1 Bright A_SpawnDebris("BulletSpark")
+			BPUF B 1 Bright A_SetTranslucent(.75,1)
+			BPUF C 1 Bright A_SetTranslucent(.5,1)
+			BPUF D 1 Bright A_SetTranslucent(.25,1)
+			Stop	
+		XDeath:
+            BPUF A 0 A_PlaySound("Weapons/NailHitBleed")
+            Stop	
+   	}
+}
+
+//Friendly Arachnophyte for ClericSummoner
+ACTOR FArachnophyte : Arachnophyte
+{
+   +NOBLOOD
+   +QUICKTORETALIATE
+   +NOBLOCKMONST
+   +NORADIUSDMG
+   +FRIENDLY
+   +Ghost
+   +BRIGHT
+   +THRUSPECIES
+   +NoGravity
+   +FloatBob
+   +Float
+    Species "Player"
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+    Renderstyle Add
+    Alpha 0.8
+    deathsound "null" 
+    OBITUARY "%o was perforated by a Friendly Arachnophyte."
+    states
+    {
+   Spawn: 
+	   APYT A 0
+	   APYT A 0 A_GiveInventory("FriendlyMonsterTimer3",1)
+		Goto Super::Spawn
+   See:	    
+	   APYT A 0 A_JumpIfInventory("FriendlyMonsterTimer3",1,1)
+	   Goto ALTPAIN
+       APYT A 0 A_PlaySound("arachnophyte/engine")
+       APYT AABBAABBAABB 2 A_Chase
+       Loop
+    Missile:
+        APYT A 0 A_PlaySound("arachnophyte/engine")
+        APYT BA 2 A_FaceTarget
+		APYT A 0 A_PlayWeaponSound ("spider/attack")
+        APYT CD 4 A_CustomMissile ("Chaingunbullet1",40,Random(30, -30),0)
+		APYT C 0 A_PlayWeaponSound ("spider/attack")
+        APYT CD 4 A_CustomMissile ("Chaingunbullet1",40,Random(30, -30),0)
+        APYT D 1 A_SpidRefire
+        Goto Missile+6
+   Death:
+	   TNT1 A 1 A_CustomMissile("SummonFog2")
+	   stop
+   ALTPAIN:
+		APYT A 4
+		APYT A 4 A_PlaySound("items/unholytome")
+		Goto ALTDEATH
+   ALTDEATH:
+		TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+		stop
+    }
+}
+
+Actor Arachnophyte1 : Arachnophyte 22446	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+
+//==========================================================
+//
+//       Insanity spider Arachnophyte
+//       
+//       
+//
+//==========================================================
+ACTOR InsanityArachnophyte 9610           
+{
+//$Category Spiders
+    Health 29250
+    Radius 64
+    Height 100
+    Speed 6
+    PainChance 1
+    Mass 10000000
+	MinMissileChance 30
+  dropitem "mediumhealthvile" 256
+  DropItem "Combatpack" 256
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.0
+   Damagefactor "PFire", 1.0
+   Damagefactor "Electric", 0.8
+   Damagefactor "PElectric", 0.8
+   Damagefactor "Poison", 0.8
+   Damagefactor "PPoison", 0.8
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+    MONSTER 
+    +NOGRAVITY
+    +FLOATBOB
+    +FLOAT
+	+TELESTOMP
+	+BOSS
+	+NOTARGET
+	+DONTMORPH
+	+AMBUSH
+    +QUICKTORETALIATE
+    SeeSound "Spider/sight"
+    DeathSound "Spider/death"
+    Obituary "%o was nuked into oblivion by The Insanity Arachnophyte."
+    States
+    {
+    Spawn:
+	    IPYT A 0 A_PlaySound("arachnophyte/engine")
+        IPYT AB 4 A_Look
+        Loop
+    See:
+		IPYT A 0 A_PlaySound("arachnophyte/engine")
+        IPYT AA 2 A_Chase
+		IPYT A 0 A_PlaySound("arachnophyte/engine")
+		IPYT BB 2 A_Chase
+        Loop
+    Missile:
+		IPYT A 0 A_PlaySound("arachnophyte/engine")
+        IPYT ABABA 4 A_FaceTarget
+        IPYT C 2 A_FaceTarget
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 0) 
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 10)
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, -10)
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 20)
+        IPYT D 2 A_CustomMissile ("InsanityPlasma", 32, 0, -20) 
+        IPYT C 2 A_FaceTarget
+	    IPYT A 0 A_PlaySound("arachnophyte/engine")
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 0) 
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 10)
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, -10) 
+        IPYT D 0 A_CustomMissile ("InsanityPlasma", 32, 0, 5)
+        IPYT D 2 A_CustomMissile ("InsanityPlasma", 32, 0, -5) 
+        IPYT C 0 A_SpidRefire
+        Goto Missile+5
+    Death:
+        IPYT E 8 
+		NULL YYYYYYYYYYYYYYYY 0 A_CustomMissile("NashGore_Blood",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL X 0 A_CustomMissile("TORSO1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL Y 0 A_CustomMissile("SPINALCORD1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("ORGANS1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL Y 0 A_CustomMissile("RIBCAGE1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("ORGAN4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("ORGAN3",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL X 0 A_CustomMissile("BRAINMUSH1",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YY 0 A_CustomMissile("BONE3",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("BONE4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YYY 0 A_CustomMissile("GORECHUNK4",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XXX 0 A_CustomMissile("GORECHUNK5",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL YYY 0 A_CustomMissile("GORECHUNK6",random(0,90),random(0,40),random(-180,180),2,random(-15,15)) 
+		NULL XX 0 A_CustomMissile("EYEBALL1",random(0,90),random(0,40),random(-180,180),2,random(-15,15))
+        IPYT F 8 A_ScreamAndUnblock
+        IPYT G 6
+        IPYT H 6 
+        IPYT I 6
+        IPYT J 6
+        Stop
+    }
+}
+
+Actor InsanityArachnophyte2 : InsanityArachnophyte 9609
+{
+//$Category Friendlies
+	+FRIENDLY
+}

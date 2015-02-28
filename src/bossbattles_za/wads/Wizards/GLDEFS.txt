@@ -1,0 +1,461 @@
+//Disciple
+
+Pointlight DiscipleShot11
+{
+Color 1.0 1.0 1.0
+Size 32
+}
+
+Pointlight DiscipleShot12
+{
+Color 1.0 1.0 1.0
+Size 48
+}
+
+Pointlight DiscipleShot13
+{
+Color 1.0 1.0 1.0
+Size 40
+}
+
+Pointlight DiscipleShot14
+{
+Color 1.0 1.0 1.0
+Size 24
+}
+
+Pointlight DiscipleShot15
+{
+Color 1.0 1.0 1.0
+Size 16
+}
+
+Pointlight DiscipleShot16
+{
+Color 1.0 1.0 1.0
+Size 8
+}
+
+Object DiscipleShot1
+{
+Frame CFX2A { Light DiscipleShot11 }
+Frame CFX2B { Light DiscipleShot11 }
+Frame CFX2C { Light DiscipleShot11 }
+Frame CFX2D { Light DiscipleShot11 }
+Frame CFX2E { Light DiscipleShot12 }
+Frame CFX2F { Light DiscipleShot13 }
+Frame CFX2G { Light DiscipleShot14 }
+Frame CFX2H { Light DiscipleShot15 }
+Frame CFX2I { Light DiscipleShot16 }
+}
+
+Object FDiscipleShot1		//Friendly Disciple located in cleric wad
+{
+Frame CFX2A { Light DiscipleShot11 }
+Frame CFX2B { Light DiscipleShot11 }
+Frame CFX2C { Light DiscipleShot11 }
+Frame CFX2D { Light DiscipleShot11 }
+Frame CFX2E { Light DiscipleShot12 }
+Frame CFX2F { Light DiscipleShot13 }
+Frame CFX2G { Light DiscipleShot14 }
+Frame CFX2H { Light DiscipleShot15 }
+Frame CFX2I { Light DiscipleShot16 }
+}
+
+Pointlight DiscipleShot21
+{
+Color 1.0 0.3 0.3
+Size 48
+}
+
+Pointlight DiscipleShot22
+{
+Color 1.0 0.3 0.3
+Size 56
+}
+
+Pointlight DiscipleShot23
+{
+Color 0.7 0.2 0.2
+Size 64
+}
+
+Pointlight DiscipleShot24
+{
+Color 0.5 0.1 0.1
+Size 72
+}
+
+Pointlight DiscipleShot25
+{
+Color 0.3 0.0 0.0
+Size 64
+}
+
+Pointlight DiscipleShot26
+{
+Color 0.1 0.0 0.0
+Size 56
+}
+
+Object DiscipleShot2
+{
+Frame CFX3A { Light DiscipleShot21 }
+Frame CFX3B { Light DiscipleShot21 }
+Frame CFX3C { Light DiscipleShot22 }
+Frame CFX3D { Light DiscipleShot23 }
+Frame CFX3E { Light DiscipleShot24 }
+Frame CFX3F { Light DiscipleShot25 }
+Frame CFX3G { Light DiscipleShot26 }
+}
+
+Object FDiscipleShot2		//Friendly Disciple located in cleric wad
+{
+Frame CFX3A { Light DiscipleShot21 }
+Frame CFX3B { Light DiscipleShot21 }
+Frame CFX3C { Light DiscipleShot22 }
+Frame CFX3D { Light DiscipleShot23 }
+Frame CFX3E { Light DiscipleShot24 }
+Frame CFX3F { Light DiscipleShot25 }
+Frame CFX3G { Light DiscipleShot26 }
+}
+
+
+Pointlight DiscipleFire11
+{
+Color 1.0 1.0 1.0
+Size 24
+Offset 0 48 0
+}
+
+Pointlight DiscipleFire12
+{
+Color 1.0 1.0 1.0
+Size 24
+Offset 0 32 0
+}
+
+Pointlight DiscipleFire21
+{
+Color 1.0 0.0 0.0
+Size 24
+Offset 0 48 0
+}
+
+Pointlight DiscipleFire22
+{
+Color 1.0 0.0 0.0
+Size 24
+Offset 0 32 0
+}
+
+Object Disciple
+{
+Frame DISCC { Light DiscipleFire11 }
+Frame DISCD { Light DiscipleFire12 }
+Frame DISCE { Light DiscipleFire21 }
+Frame DISCF { Light DiscipleFire22 }
+}
+
+//Acolyte
+
+Pointlight AcolyteShot1
+{
+Color 0.4 0.4 0.0
+Size 32
+}
+
+Pointlight AcolyteShot2
+{
+Color 0.7 0.7 0.2
+Size 56
+}
+
+Pointlight AcolyteShot3
+{
+Color 0.7 0.7 0.2
+Size 64
+}
+
+Pointlight AcolyteShot4
+{
+Color 0.6 0.6 0.0
+Size 48
+}
+
+Pointlight AcolyteShot5
+{
+Color 0.4 0.4 0.0
+Size 32
+}
+
+Pointlight AcolyteShot5
+{
+Color 0.2 0.2 0.0
+Size 16
+}
+
+Object AcolyteShot
+{
+Frame CFX1A { Light AcolyteShot1 }
+Frame CFX1B { Light AcolyteShot1 }
+Frame CFX1C { Light AcolyteShot1 }
+Frame CFX1D { Light AcolyteShot2 }
+Frame CFX1E { Light AcolyteShot3 }
+Frame CFX1F { Light AcolyteShot4 }
+Frame CFX1G { Light AcolyteShot1 }
+Frame CFX1H { Light AcolyteShot5 }
+}
+
+Flickerlight2 AcolyteFire1
+{
+Color 0.4 0.4 0.0
+Size 16
+SecondarySize 32
+Interval 0.7
+Offset 0 42 0
+}
+
+Flickerlight2 AcolyteFire2
+{
+Color 0.4 0.4 0.0
+Size 32
+SecondarySize 56
+Interval 0.7
+Offset 0 42 0
+}
+
+Flickerlight2 AcolyteFire3
+{
+Color 0.4 0.4 0.0
+Size 56
+SecondarySize 64
+Interval 0.7
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode1
+{
+Color 0.6 0.6 0.0
+Size 32
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode2
+{
+Color 0.6 0.6 0.0
+Size 64
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode3
+{
+Color 0.6 0.6 0.0
+Size 80
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode4
+{
+Color 0.8 0.8 0.0
+Size 140
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode5
+{
+Color 0.7 0.7 0.0
+Size 96
+Offset 0 42 0
+}
+
+Pointlight AcolyteExplode6
+{
+Color 0.6 0.6 0.0
+Size 48
+Offset 0 48 0
+}
+
+Object Priest
+{
+Frame ACOLD { Light AcolyteFire1 }
+Frame ACOLE { Light AcolyteFire2 }
+Frame ACOLF { Light AcolyteFire3 }
+Frame ACOLG { Light AcolyteExplode1 }
+Frame ACOLH { Light AcolyteExplode2 }
+Frame ACOLI { Light AcolyteExplode3 }
+Frame ACOLJ { Light AcolyteExplode4 }
+Frame ACOLK { Light AcolyteExplode5 }
+Frame ACOLL { Light AcolyteExplode6 }
+Frame ACOLM { Light AcolyteExplode7 }
+}
+
+//Vampire
+
+Pointlight VampireBeam
+{
+Color 1.0 0.0 0.0
+Size 16
+}
+
+Pointlight VampireBeamEnd1
+{
+Color 1.0 0.0 0.0
+Size 24
+}
+
+Pointlight VampireBeamEnd2
+{
+Color 1.0 0.0 0.0
+Size 20
+}
+
+Pointlight VampireBeamEnd3
+{
+Color 1.0 0.0 0.0
+Size 16
+}
+
+Pointlight VampireBeamEnd4
+{
+Color 1.0 0.0 0.0
+Size 12
+}
+
+Pointlight VampireBeamEnd5
+{
+Color 1.0 0.0 0.0
+Size 8
+}
+
+Pointlight VampireBeamEnd6
+{
+Color 1.0 0.0 0.0
+Size 4
+}
+
+Object VampireRoundBeam
+{
+Frame VAM2A { Light VampireBeam }
+Frame VAM2C { Light VampireBeamEnd1 }
+Frame VAM2D { Light VampireBeamEnd2 }
+Frame VAM2E { Light VampireBeamEnd3 }
+Frame VAM2F { Light VampireBeamEnd4 }
+Frame VAM2G { Light VampireBeamEnd5 }
+Frame VAM2H { Light VampireBeamEnd6 }
+}
+
+Pointlight FlyingBat1
+{
+Color 0.5 0.5 0.5
+Size 16
+}
+
+
+Object BatAttack
+{
+Frame VAM4A { Light FlyingBat1 }
+Frame VAM4B { Light FlyingBat1 }
+Frame VAM4C { Light FlyingBat1 }
+}
+
+Object BatAttackSafe
+{
+Frame VAM4A { Light FlyingBat1 }
+Frame VAM4B { Light FlyingBat1 }
+Frame VAM4C { Light FlyingBat1 }
+}
+
+Flickerlight2 VampireFire1
+{
+Color 1.0 0.0 0.0
+Size 16
+SecondarySize 32
+Interval 0.7
+Offset 0 42 0
+}
+
+Flickerlight2 VampireFire2
+{
+Color 1.0 0.0 0.0
+Size 32
+SecondarySize 56
+Interval 0.7
+Offset 0 42 0
+}
+
+Flickerlight2 VampireFire3
+{
+Color 0.5 0.5 0.5
+Size 16
+SecondarySize 32
+Interval 0.7
+Offset 0 42 0
+}
+
+Flickerlight2 VampireFire4
+{
+Color 0.5 0.5 0.5
+Size 32
+SecondarySize 56
+Interval 0.7
+Offset 0 42 0
+}
+
+Pointlight VampireExplode1
+{
+Color 0.5 0.5 0.5
+Size 32
+Offset 0 42 0
+}
+
+Pointlight VampireExplode2
+{
+Color 0.5 0.5 0.5
+Size 64
+Offset 0 42 0
+}
+
+Pointlight VampireExplode3
+{
+Color 0.5 0.5 0.5
+Size 80
+Offset 0 42 0
+}
+
+Pointlight VampireExplode4
+{
+Color 0.5 0.5 0.5
+Size 140
+Offset 0 42 0
+}
+
+Pointlight VampireExplode5
+{
+Color 0.5 0.5 0.5
+Size 96
+Offset 0 42 0
+}
+
+Pointlight VampireExplode6
+{
+Color 0.5 0.5 0.5
+Size 48
+Offset 0 48 0
+}
+
+Object Vampire
+{
+Frame VAM1E { Light VampireFire1 }
+Frame VAM1F { Light VampireFire2 }
+Frame VAM1X { Light VampireFire3 }
+Frame VAM1Y { Light VampireFire4 }
+Frame VAM1G { Light VampireExplode1 }
+Frame VAM1H { Light VampireExplode2 }
+Frame VAM1I { Light VampireExplode3 }
+Frame VAM1J { Light VampireExplode4 }
+Frame VAM1K { Light VampireExplode5 }
+Frame VAM1L { Light VampireExplode6 }
+Frame VAM1M { Light VampireExplode7 }
+}
+

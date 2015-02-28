@@ -1,0 +1,1073 @@
+
+//Dynamic Lights
+
+Flickerlight DiabloistFire1
+{
+Color 1.0 1.0 0.0
+Size 24
+SecondarySize 32
+Chance 0.3
+Offset 0 8 0
+}
+
+Flickerlight DiabloistFire2
+{
+Color 1.0 1.0 0.0
+Size 40
+SecondarySize 48
+Chance 0.3
+Offset 0 24 0
+}
+
+Flickerlight DiabloistFire3
+{
+Color 1.0 1.0 0.0
+Size 64
+SecondarySize 72
+Chance 0.3
+Offset 0 32 0
+}
+
+Flickerlight DiabloistFire4
+{
+Color 0.8 0.8 0.0
+Size 64
+SecondarySize 72
+Chance 0.3
+Offset 0 40 0
+}
+
+Flickerlight DiabloistFire5
+{
+Color 0.8 0.8 0.0
+Size 64
+SecondarySize 72
+Chance 0.3
+Offset 0 48 0
+}
+
+Flickerlight DiabloistFire6
+{
+Color 0.6 0.6 0.0
+Size 48
+SecondarySize 56
+Chance 0.3
+Offset 0 64 0
+}
+
+Flickerlight DiabloistFire7
+{
+Color 0.4 0.4 0.0
+Size 32
+SecondarySize 40
+Chance 0.3
+Offset 0 72 0
+}
+
+Flickerlight DiabloistFire8
+{
+Color 0.2 0.2 0.0
+Size 16
+SecondarySize 24
+Chance 0.3
+Offset 0 80 0
+}
+
+Object DFire
+{
+Frame HLFRA { Light DiabloistFire1 }
+Frame HLFRB { Light DiabloistFire2 }
+Frame HLFRC { Light DiabloistFire3 }
+Frame HLFRD { Light DiabloistFire4 }
+Frame HLFRE { Light DiabloistFire5 }
+Frame HLFRF { Light DiabloistFire6 }
+Frame HLFRG { Light DiabloistFire7 }
+Frame HLFRH { Light DiabloistFire8 }
+}
+
+Object DFire2	//Friendly Diabloist in cleric wad
+{
+Frame FIREA { Light DiabloistFire1 }
+Frame FIREB { Light DiabloistFire2 }
+Frame FIREC { Light DiabloistFire3 }
+Frame FIRED { Light DiabloistFire4 }
+Frame FIREE { Light DiabloistFire5 }
+Frame FIREF { Light DiabloistFire6 }
+Frame FIREG { Light DiabloistFire7 }
+Frame FIREH { Light DiabloistFire8 }
+}
+
+PointLight DiabloistFlare1
+{
+Color 1.0 0.2 0.0
+Size 32
+}
+
+PointLight DiabloistFlare2
+{
+Color 1.0 0.4 0.0
+Size 48
+}
+
+PointLight DiabloistFlare3
+{
+Color 1.0 0.4 0.0
+Size 40
+}
+
+PointLight DiabloistFlare4
+{
+Color 0.8 0.3 0.0
+Size 32
+}
+
+PointLight DiabloistFlare5
+{
+Color 0.6 0.2 0.0
+Size 24
+}
+
+PointLight DiabloistFlare6
+{
+Color 0.5 0.1 0.0
+Size 16
+}
+
+Object DFlare
+{
+Frame VBALA { Light DiabloistFlare1 }
+Frame VBALB { Light DiabloistFlare1 }
+Frame CBALC { Light DiabloistFlare2 }
+Frame CBALD { Light DiabloistFlare3 }
+Frame CBALE { Light DiabloistFlare4 }
+Frame CBALF { Light DiabloistFlare5 }
+Frame CBALG { Light DiabloistFlare6 }
+}
+
+Object DFlare2	//Friendly Diabloist in cleric wad
+{
+Frame VBALA { Light DiabloistFlare1 }
+Frame VBALB { Light DiabloistFlare1 }
+Frame CBALC { Light DiabloistFlare2 }
+Frame CBALD { Light DiabloistFlare3 }
+Frame CBALE { Light DiabloistFlare4 }
+Frame CBALF { Light DiabloistFlare5 }
+Frame CBALG { Light DiabloistFlare6 }
+}
+
+Pointlight DiabloistTracer1
+{
+Color 0.7 0.2 0.0
+Size 8
+}
+
+Pointlight DiabloistTracer2
+{
+Color 0.8 0.5 0.0
+Size 16
+}
+
+Pointlight DiabloistTracer3
+{
+Color 0.8 0.6 0.0
+Size 32
+}
+
+Pointlight DiabloistTracer4
+{
+Color 0.8 0.5 0.0
+Size 28
+}
+
+Pointlight DiabloistTracer5
+{
+Color 0.7 0.2 0.0
+Size 24
+}
+
+Pointlight DiabloistTracer6
+{
+Color 0.7 0.2 0.0
+Size 20
+}
+
+Pointlight DiabloistTracer7
+{
+Color 0.6 0.2 0.0
+Size 16
+}
+
+Pointlight DiabloistTracer8
+{
+Color 0.5 0.1 0.0
+Size 12
+}
+
+Pointlight DiabloistTracer9
+{
+Color 0.4 0.0 0.0
+Size 8
+}
+
+Pointlight DiabloistTracer10
+{
+Color 0.3 0.0 0.0
+Size 4
+}
+
+Pointlight DiabloistTracer11
+{
+Color 0.8 0.6 0.0
+Size 48
+}
+
+Pointlight DiabloistTracer12
+{
+Color 1.0 0.8 0.0
+Size 64
+}
+
+Pointlight DiabloistTracer13
+{
+Color 0.8 0.3 0.0
+Size 56
+}
+
+Pointlight DiabloistTracer14
+{
+Color 0.6 0.0 0.0
+Size 48
+}
+
+Pointlight DiabloistTracer15
+{
+Color 0.3 0.0 0.0
+Size 24
+}
+
+Object DTracer
+{
+Frame FTRAK { Light DiabloistTracer11 }
+Frame FTRAL { Light DiabloistTracer12 }
+Frame FTRAM { Light DiabloistTracer13 }
+Frame FTRAN { Light DiabloistTracer14 }
+Frame FTRAO { Light DiabloistTracer15 }
+}
+
+Object DTracer2		//Friendly Diabloist in cleric wad
+{
+Frame FTRAK { Light DiabloistTracer11 }
+Frame FTRAL { Light DiabloistTracer12 }
+Frame FTRAM { Light DiabloistTracer13 }
+Frame FTRAN { Light DiabloistTracer14 }
+Frame FTRAO { Light DiabloistTracer15 }
+}
+
+Object DTracerPuff
+{
+Frame FTRAA { Light DiabloistTracer1 }
+Frame FTRAB { Light DiabloistTracer2 }
+Frame FTRAC { Light DiabloistTracer3 }
+Frame FTRAD { Light DiabloistTracer4 }
+Frame FTRAE { Light DiabloistTracer5 }
+Frame FTRAF { Light DiabloistTracer6 }
+Frame FTRAG { Light DiabloistTracer7 }
+Frame FTRAH { Light DiabloistTracer8 }
+Frame FTRAI { Light DiabloistTracer9 }
+Frame FTRAJ { Light DiabloistTracer10 }
+}
+
+Object DTracerPuff2		//Friendly Diabloist in cleric wad
+{
+Frame FTRAA { Light DiabloistTracer1 }
+Frame FTRAB { Light DiabloistTracer2 }
+Frame FTRAC { Light DiabloistTracer3 }
+Frame FTRAD { Light DiabloistTracer4 }
+Frame FTRAE { Light DiabloistTracer5 }
+Frame FTRAF { Light DiabloistTracer6 }
+Frame FTRAG { Light DiabloistTracer7 }
+Frame FTRAH { Light DiabloistTracer8 }
+Frame FTRAI { Light DiabloistTracer9 }
+Frame FTRAJ { Light DiabloistTracer10 }
+}
+
+
+FlickerLight DMissileTrail1
+{
+Color 1.0 0.4 0.0
+Size 40
+SecondarySize 44
+Chance 0.5
+}
+
+FlickerLight DMissileTrail2
+{
+Color 1.0 0.4 0.0
+Size 48
+SecondarySize 56
+Chance 0.4
+}
+
+flickerlight DMissileTrail3
+{
+Color 1.0 0.4 0.0
+Size 64
+SecondarySize 72
+Chance 0.4
+}
+
+FlickerLight DMissileTrail4
+{
+Color 0.7 0.2 0.0
+Size 48
+SecondarySize 56
+Chance 0.4
+}
+
+FlickerLight DMissileTrail5
+{
+Color 0.5 0.1 0.0
+Size 32
+SecondarySize 40
+Chance 0.4
+}
+
+FlickerLight DMissileTrail6
+{
+Color 0.2 0.0 0.0
+Size 24
+SecondarySize 32
+Chance 0.4
+}
+
+Object FlamePuff2
+{
+Frame CFFXB { Light DMissileTrail2 }
+Frame CFFXC { Light DMissileTrail3 }
+Frame CFFXD { Light DMissileTrail3 }
+Frame CFFXE { Light DMissileTrail3 }
+Frame CFFXF { Light DMissileTrail3 }
+Frame CFFXG { Light DMissileTrail3 }
+Frame CFFXH { Light DMissileTrail3 }
+Frame CFFXI { Light DMissileTrail3 }
+Frame CFFXJ { Light DMissileTrail4 }
+Frame CFFXK { Light DMissileTrail5 }
+Frame CFFXL { Light DMissileTrail6 }
+}
+
+Object CFlameFloor
+{
+Frame CFFX { Light DMissileTrail1 }
+}
+
+//Brightmaps
+
+
+BrightMap Sprite DIABA1D1
+{
+Map BMDIABA1
+DisableFullBright
+}
+
+BrightMap Sprite DIABA2D8
+{
+Map BMDIABA2
+DisableFullBright
+}
+
+BrightMap Sprite DIABA7D3
+{
+Map BMDIABA7
+DisableFullBright
+}
+
+BrightMap Sprite DIABA8D2
+{
+Map BMDIABA8
+DisableFullBright
+}
+
+BrightMap Sprite DIABB1E1
+{
+Map BMDIABB1
+DisableFullBright
+}
+
+BrightMap Sprite DIABB2E8
+{
+Map BMDIABB2
+DisableFullBright
+}
+
+BrightMap Sprite DIABB8E2
+{
+Map BMDIABB8
+DisableFullBright
+}
+
+BrightMap Sprite DIABC1F1
+{
+Map BMDIABC1
+DisableFullBright
+}
+
+BrightMap Sprite DIABC2F8
+{
+Map BMDIABC2
+DisableFullBright
+}
+
+BrightMap Sprite DIABC8F2
+{
+Map BMDIABC8
+DisableFullBright
+}
+
+BrightMap Sprite DIABG1
+{
+Map BMDIABG1
+DisableFullBright
+}
+
+BrightMap Sprite DIABG2
+{
+Map BMDIABG2
+DisableFullBright
+}
+
+BrightMap Sprite DIABG3
+{
+Map BMDIABG3
+DisableFullBright
+}
+
+BrightMap Sprite DIABG4
+{
+Map BMDIABG4
+DisableFullBright
+}
+
+BrightMap Sprite DIABG5
+{
+Map BMDIABG5
+DisableFullBright
+}
+
+BrightMap Sprite DIABG6
+{
+Map BMDIABG6
+DisableFullBright
+}
+
+BrightMap Sprite DIABG7
+{
+Map BMDIABG7
+DisableFullBright
+}
+
+BrightMap Sprite DIABG8
+{
+Map BMDIABG8
+DisableFullBright
+}
+
+BrightMap Sprite DIABH1
+{
+Map BMDIABH1
+DisableFullBright
+}
+
+BrightMap Sprite DIABH2
+{
+Map BMDIABH2
+DisableFullBright
+}
+
+BrightMap Sprite DIABH3
+{
+Map BMDIABH3
+DisableFullBright
+}
+
+BrightMap Sprite DIABH4
+{
+Map BMDIABH4
+DisableFullBright
+}
+
+BrightMap Sprite DIABH5
+{
+Map BMDIABH5
+DisableFullBright
+}
+
+BrightMap Sprite DIABH6
+{
+Map BMDIABH6
+DisableFullBright
+}
+
+BrightMap Sprite DIABH7
+{
+Map BMDIABH7
+DisableFullBright
+}
+
+BrightMap Sprite DIABH8
+{
+Map BMDIABH8
+DisableFullBright
+}
+
+BrightMap Sprite DIABI1
+{
+Map BMDIABI1
+DisableFullBright
+}
+
+BrightMap Sprite DIABI2
+{
+Map BMDIABI2
+DisableFullBright
+}
+
+BrightMap Sprite DIABI3
+{
+Map BMDIABI3
+DisableFullBright
+}
+
+BrightMap Sprite DIABI4
+{
+Map BMDIABI4
+DisableFullBright
+}
+
+BrightMap Sprite DIABI5
+{
+Map BMDIABI5
+DisableFullBright
+}
+
+BrightMap Sprite DIABI6
+{
+Map BMDIABI6
+DisableFullBright
+}
+
+BrightMap Sprite DIABI7
+{
+Map BMDIABI7
+DisableFullBright
+}
+
+BrightMap Sprite DIABI8
+{
+Map BMDIABI8
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ1
+{
+Map BMDIABJ1
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ2
+{
+Map BMDIABJ2
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ3
+{
+Map BMDIABJ3
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ4
+{
+Map BMDIABJ4
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ5
+{
+Map BMDIABJ5
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ6
+{
+Map BMDIABJ6
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ7
+{
+Map BMDIABJ7
+DisableFullBright
+}
+
+BrightMap Sprite DIABJ8
+{
+Map BMDIABJ8
+DisableFullBright
+}
+
+BrightMap Sprite DIABK1
+{
+Map BMDIABK1
+DisableFullBright
+}
+
+BrightMap Sprite DIABK2
+{
+Map BMDIABK2
+DisableFullBright
+}
+
+BrightMap Sprite DIABK3
+{
+Map BMDIABK3
+DisableFullBright
+}
+
+BrightMap Sprite DIABK4
+{
+Map BMDIABK4
+DisableFullBright
+}
+
+BrightMap Sprite DIABK5
+{
+Map BMDIABK5
+DisableFullBright
+}
+
+BrightMap Sprite DIABK6
+{
+Map BMDIABK6
+DisableFullBright
+}
+
+BrightMap Sprite DIABK7
+{
+Map BMDIABK7
+DisableFullBright
+}
+
+BrightMap Sprite DIABK8
+{
+Map BMDIABK8
+DisableFullBright
+}
+
+BrightMap Sprite DIABL1
+{
+Map BMDIABL1
+DisableFullBright
+}
+
+BrightMap Sprite DIABL2
+{
+Map BMDIABL2
+DisableFullBright
+}
+
+BrightMap Sprite DIABL3
+{
+Map BMDIABL3
+DisableFullBright
+}
+
+BrightMap Sprite DIABL4
+{
+Map BMDIABL4
+DisableFullBright
+}
+
+BrightMap Sprite DIABL5
+{
+Map BMDIABL5
+DisableFullBright
+}
+
+BrightMap Sprite DIABL6
+{
+Map BMDIABL6
+DisableFullBright
+}
+
+BrightMap Sprite DIABL7
+{
+Map BMDIABL7
+DisableFullBright
+}
+
+BrightMap Sprite DIABL8
+{
+Map BMDIABL8
+DisableFullBright
+}
+
+BrightMap Sprite DIABM1
+{
+Map BMDIABM1
+DisableFullBright
+}
+
+BrightMap Sprite DIABM2
+{
+Map BMDIABM2
+DisableFullBright
+}
+
+BrightMap Sprite DIABM3
+{
+Map BMDIABM3
+DisableFullBright
+}
+
+BrightMap Sprite DIABM4
+{
+Map BMDIABM4
+DisableFullBright
+}
+
+BrightMap Sprite DIABM5
+{
+Map BMDIABM5
+DisableFullBright
+}
+
+BrightMap Sprite DIABM6
+{
+Map BMDIABM6
+DisableFullBright
+}
+
+BrightMap Sprite DIABM7
+{
+Map BMDIABM7
+DisableFullBright
+}
+
+BrightMap Sprite DIABM8
+{
+Map BMDIABM8
+DisableFullBright
+}
+
+BrightMap Sprite DIABN1
+{
+Map BMDIABN1
+DisableFullBright
+}
+
+BrightMap Sprite DIABN2
+{
+Map BMDIABN2
+DisableFullBright
+}
+
+BrightMap Sprite DIABN3
+{
+Map BMDIABN3
+DisableFullBright
+}
+
+BrightMap Sprite DIABN4
+{
+Map BMDIABN4
+DisableFullBright
+}
+
+BrightMap Sprite DIABN5
+{
+Map BMDIABN5
+DisableFullBright
+}
+
+BrightMap Sprite DIABN6
+{
+Map BMDIABN6
+DisableFullBright
+}
+
+BrightMap Sprite DIABN7
+{
+Map BMDIABN7
+DisableFullBright
+}
+
+BrightMap Sprite DIABN8
+{
+Map BMDIABN8
+DisableFullBright
+}
+
+BrightMap Sprite DIABO1
+{
+Map BMDIABO1
+DisableFullBright
+}
+
+BrightMap Sprite DIABO2
+{
+Map BMDIABO3
+DisableFullBright
+}
+
+BrightMap Sprite DIABO3
+{
+Map BMDIABO3
+DisableFullBright
+}
+
+BrightMap Sprite DIABO4
+{
+Map BMDIABO4
+DisableFullBright
+}
+
+BrightMap Sprite DIABO5
+{
+Map BMDIABO5
+DisableFullBright
+}
+
+BrightMap Sprite DIABO6
+{
+Map BMDIABO6
+DisableFullBright
+}
+
+BrightMap Sprite DIABO7
+{
+Map BMDIABO7
+DisableFullBright
+}
+
+BrightMap Sprite DIABO8
+{
+Map BMDIABO8
+DisableFullBright
+}
+
+BrightMap Sprite DIABP1
+{
+Map BMDIABP1
+DisableFullBright
+}
+
+BrightMap Sprite DIABP2
+{
+Map BMDIABP2
+DisableFullBright
+}
+
+BrightMap Sprite DIABP3
+{
+Map BMDIABP3
+DisableFullBright
+}
+
+BrightMap Sprite DIABP4
+{
+Map BMDIABP4
+DisableFullBright
+}
+
+BrightMap Sprite DIABP5
+{
+Map BMDIABP5
+DisableFullBright
+}
+
+BrightMap Sprite DIABP6
+{
+Map BMDIABP6
+DisableFullBright
+}
+
+BrightMap Sprite DIABP7
+{
+Map BMDIABP7
+DisableFullBright
+}
+
+BrightMap Sprite DIABP8
+{
+Map BMDIABP8
+DisableFullBright
+}
+
+BrightMap Sprite DIABQ1
+{
+Map BMDIABQ1
+DisableFullBright
+}
+
+BrightMap Sprite DIABQ2
+{
+Map BMDIABQ2
+DisableFullBright
+}
+
+BrightMap Sprite DIABQ3
+{
+Map BMDIABQ3
+DisableFullBright
+}
+
+BrightMap Sprite DIABQ4
+{
+Map BMDIABQ4
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A1
+{
+Map BMDIA2A1
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A2
+{
+Map BMDIA2A2
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A3
+{
+Map BMDIA2A3
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A4
+{
+Map BMDIA2A4
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A5
+{
+Map BMDIA2A5
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A6
+{
+Map BMDIA2A6
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A7
+{
+Map BMDIA2A7
+DisableFullBright
+}
+
+BrightMap Sprite DIA2A8
+{
+Map BMDIA2A8
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B1
+{
+Map BMDIA2B1
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B2
+{
+Map BMDIA2B2
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B3
+{
+Map BMDIA2B3
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B4
+{
+Map BMDIA2B4
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B5
+{
+Map BMDIA2B5
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B6
+{
+Map BMDIA2B6
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B7
+{
+Map BMDIA2B7
+DisableFullBright
+}
+
+BrightMap Sprite DIA2B8
+{
+Map BMDIA2B8
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C1
+{
+Map BMDIA2C1
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C2
+{
+Map BMDIA2C2
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C3
+{
+Map BMDIA2C3
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C4
+{
+Map BMDIA2C4
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C5
+{
+Map BMDIA2C5
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C6
+{
+Map BMDIA2C6
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C7
+{
+Map BMDIA2C7
+DisableFullBright
+}
+
+BrightMap Sprite DIA2C8
+{
+Map BMDIA2C8
+DisableFullBright
+}
+

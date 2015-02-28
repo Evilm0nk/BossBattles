@@ -1,0 +1,194 @@
+//Triton
+
+object EUnmakerLaser 
+{
+    frame LAZRA { light REDUNMAKERBEAM }
+    frame LAZRB { light REDUNMAKERBEAM }
+
+    frame LPUFA { light REDUNMAKERBEAM_X1 }
+    frame LPUFB { light REDUNMAKERBEAM_X2 }
+}
+
+object EPoweredRail
+{
+    frame MWNDE { light MWAND_X1 }
+    frame MWNDF { light MWAND_X2 }
+    frame MWNDG { light MWAND_X3 }
+    frame MWNDH { light MWAND_X4 }
+}
+
+object E64PlasmaBall
+{
+    frame RGL1A { light BLUETRAPBALL1 }
+    frame RGL1B { light BLUETRAPBALL1 }
+
+    frame RGL2A { light BLUETRAPBALL_X1 }
+    frame RGL2B { light BLUETRAPBALL_X2 }
+    frame RGL2C { light BLUETRAPBALL_X2 }
+    frame RGL2D { light BLUETRAPBALL_X3 }
+    frame RGL2E { light BLUETRAPBALL_X3 }
+}
+
+Object ERampagingRocket
+{
+Frame CRCK { Light CFLAME1 }
+}
+
+
+Object EMiniExplosion2
+{
+Frame CRCK { Light CFLAME1 }
+}
+
+//Spidermastermind64
+
+flickerlight2 SPIDERMASTERMIND64LIGHT
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+object SpiderMastermind64
+{
+    frame BSGIE { light SPIDERMASTERMIND64LIGHT }
+}
+
+object Spider64Bullet
+{
+    frame BPUFA { light WANDPUFF1 }
+    frame BPUFB { light WANDPUFF2 }
+    frame BPUFC { light WANDPUFF3 }
+    frame BPUFD { light WANDPUFF4 }
+}
+
+//Doomedimp
+
+Object DoomedfireBall
+{
+Frame BLVBA { Light DestructionBall }
+Frame BLVBB { Light DestructionBall }
+Frame BLVBC { Light DestructionBall2 }
+Frame BLVBD { Light DestructionBall3 }
+Frame BLVBE { Light DestructionBall4 }
+Frame BLVBF { Light DestructionBall5 }
+}
+
+//Cyberdemon64
+
+pointlight 64ROCKET
+{
+    color 1.0 0.7 0.0
+    size 56
+}
+
+flickerlight 64ROCKET_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight 64ROCKET_X2
+{
+    color 0.5 0.1 0.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight 64ROCKET_X3
+{
+    color 0.3 0.0 0.0
+    size 96
+    secondarySize 104
+    chance 0.3
+}
+
+object CyberRocket64
+{
+    frame CRCKA { light 64ROCKET }
+
+    frame CRCKB { light 64ROCKET_X1 }
+    frame CRCKC { light 64ROCKET_X2 }
+    frame CRCKD { light 64ROCKET_X3 }
+	frame CRCKE { light 64ROCKET_X3 }
+    frame CRCKF { light 64ROCKET_X3 }
+}
+
+object FCyberRocket64
+{
+    frame CRCKA { light 64ROCKET }
+
+    frame CRCKB { light 64ROCKET_X1 }
+    frame CRCKC { light 64ROCKET_X2 }
+    frame CRCKD { light 64ROCKET_X3 }
+	frame CRCKE { light 64ROCKET_X3 }
+    frame CRCKF { light 64ROCKET_X3 }
+}
+
+// Motherdemon
+Pointlight REDFLAME1
+{
+Color 0.7 0.0 0.0
+Size 60
+}
+
+Object Motherflame
+{
+Frame MBAL { Light REDFLAME1 }
+
+Frame BRNR { Light REDFLAME1 }
+}
+
+Object MotherDeathExplosion
+{
+Frame MTHX { Light REDFLAME2 }
+}
+
+Pointlight REDFLAME2
+{
+Color 1.0 0.6 0.0
+Size 60
+}
+
+Object Motherball
+{
+Frame MBAL { Light REDFLAME1 }
+}
+
+Object MotherballO
+{
+Frame MBAL { Light REDFLAME1 }
+}
+
+Object Flametrail
+{
+Frame FIR5 { Light REDFLAME2 }
+}
+
+Pointlight REDFLAME3
+{
+Color 1.0 0.6 0.0
+Size 80
+}
+
+Object WoundMotherFlame
+{
+Frame FLBE { Light REDFLAME3 }
+}
+
+Object WoundMotherBall
+{
+Frame PROJ { Light REDFLAME3 }
+
+Frame MTHX { Light REDFLAME3 }
+}
+
+Object WoundFlameTrail
+{
+Frame FLBE { Light REDFLAME3 }
+}

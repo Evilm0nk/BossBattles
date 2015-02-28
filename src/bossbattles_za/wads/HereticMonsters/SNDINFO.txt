@@ -1,0 +1,148 @@
+Chicken/See 	CHICACT
+Chicken/Attack CHICATK
+Chicken/Pain 	CHICPAI
+Chicken/Death 	CHICDTH
+Chicken/Active 	CHICACT
+
+$playersound Chickenp male *death CHICDTH
+$playersound Chickenp male *Xdeath CHICDTH
+$playersound Chickenp male *gibbed CHICDTH
+$playersound Chickenp male *pain100 CHICPAI
+$playersound Chickenp male *pain75 CHICPAI
+$playersound Chickenp male *pain50 CHICPAI
+$playersound Chickenp male *pain25 CHICPAI
+$playersound Chickenp male *grunt CHICACT
+$playersound Chickenp male *land CHICACT
+$playersound Chickenp male *jump CHICACT
+$playersound Chickenp male *fist CHICATK
+$playersound Chickenp male *usefail CHICATK
+$playersound Chickenp male *taunt CHICACT
+
+//===========================================================================
+//
+// Evil Corvus
+//
+//===========================================================================
+
+EvilCorvus/blaster		DSBLSTER
+EvilCorvus/bowshoot		DSBOWSHT
+EvilCorvus/bowhit		DSBOWHIT
+EvilCorvus/WAND			DSGOLDHT
+
+//===========================================================================
+//
+// minotaur
+//
+//===========================================================================
+
+minotaur/sight			minsit
+minotaur/melee			stfhit
+minotaur/attack1		minat1
+minotaur/attack2		minat2
+minotaur/attack3		minat3
+minotaur/pain			minpai
+minotaur/death			mindth
+minotaur/active			minact
+minotaur/fx2hit			phohit
+minotaur/fx3hit			phohit
+
+//===========================================================================
+//
+// wizard
+//
+//===========================================================================
+
+wizard/sight			wizsit
+wizard/attack			wizatk
+wizard/death			wizdth
+wizard/pain			wizpai
+wizard/active1			wizact
+$random wizard/active 		{ wizard/sight wizard/active1 }
+
+//===========================================================================
+//
+// Mummy
+//
+//===========================================================================
+
+mummy/attack1		mumat1
+mummy/attack2		mumat2
+mummy/pain			mumpai
+mummy/death			mumdth
+mummy/active		mumsit
+mummy/Sight 		mumsit
+
+//===========================================================================
+//
+// ironlich
+//
+//===========================================================================
+
+ironlich/sight			hedsit
+ironlich/attack1		hedat1
+ironlich/attack2		hedat2
+ironlich/attack3		hedat3
+ironlich/pain			hedpai
+ironlich/death			heddth
+ironlich/active			hedact
+
+//===========================================================================
+//
+// Metal head
+//
+//===========================================================================
+
+Metalhead/See              HEDSIT
+Metalhead/Pain             HEDPAI
+Metalhead/Death            HEDDTH
+Metalhead/Fire             HEDAT1
+Metalhead/explode          HEDFRHIT
+
+Metalhead/NailShot         DSNAIL
+Ricochet1                  DSNAILR1
+Ricochet2                  DSNAILR2
+$RANDOM Metalhead/NailHit { Ricochet1 Ricochet2 }
+Metalhead/NailHitBleed     DSNAIIMP
+
+
+
+Metalhead/electricball     HEDELC
+Metalhead/electricshot     HEDELS
+Metalhead/Hammerswoosh     HEDHMM
+
+//===========================================================================
+//
+// ice lich
+//
+//===========================================================================
+
+FrostBreath		FROSTB
+
+IceGuyAttack            frosty2
+IceGuyMissileExplode    shards1b
+
+
+
+//===========================================================================
+//
+// dsparil
+//
+//===========================================================================
+
+dsparilserpent/sight		bstsit
+dsparilserpent/attack		bstatk
+dsparilserpent/pain		sbtpai
+dsparilserpent/death		sbtdth
+dsparilserpent/active		sbtact
+
+dsparil/sight			sorsit
+dsparil/attack			soratk
+dsparil/pain			sorpai
+dsparil/active			soract
+dsparil/rise			sorrise
+dsparil/zap			sorzap
+dsparil/scream			sordsph
+dsparil/explode			sordexp
+dsparil/bones			sordbon
+
+Apocalypse/cast			apocast
