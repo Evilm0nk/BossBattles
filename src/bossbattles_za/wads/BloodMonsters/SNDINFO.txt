@@ -1,0 +1,82 @@
+//===========================================================================
+//
+// cheogh
+//
+//===========================================================================
+SUPA1 SUPA1
+SUPA2 SUPA3
+ZZZ3 ZZ3
+SUPA3 SUPA3
+SUPA4 SUPA4
+SUPA5 SUPA5
+SUPA6 SUPA6
+SUPA7 SUPA7
+SUPA7 SUPA7
+GORG8 GORG8
+BOWL BOWL
+$RANDOM CHEOGHDIE {SUPA5 SUPA4 SUPA3 SUPA2}
+
+dswingfl		dswingfl
+
+
+//===========================================================================
+//
+// CERBERUS
+//
+//===========================================================================
+Cerberus/Sight		DSCERESI
+Cerberus/Pain		DSCEREPA
+Cerberus/active		DSCEREAT
+Cerberus/Death		DSCEREDT
+
+//===========================================================================
+//
+// tchernobog
+//
+//===========================================================================
+tchernobog/Napalm 			 DSNAPALM
+tchernobog/Napalm2           DSNAP
+$random tchernobog/sight { tchernobog/waited tchernobog/bowdown tchernobog/kneel }
+$random tchernobog/idle	 { tchernobog/sacrifice1 tchernobog/sacrifice2 tchernobog/laugh1 tchernobog/laugh2 tchernobog/laugh3 }
+tchernobog/death			DSTBDIES
+tchernobog/dissapear		DSTBDISA
+tchernobog/waited			DSTBWAI2
+tchernobog/bowdown	    	DSTBBOW2
+tchernobog/kneel			DSTBKNE3
+tchernobog/sacrifice1		DSTBSAC2
+tchernobog/sacrifice2		DSTBSAC3
+tchernobog/laugh1			DSTBLAU2
+tchernobog/laugh2			DSTBLAU4
+tchernobog/laugh3			DSTBLAU5
+tchernobog/pain1			DSTBPAI1
+
+//===========================================================================
+//
+// infernalspider
+//
+//===========================================================================
+spider2/sight SPISIT
+spider2/death SPIDTH
+spider2/pain SPIPAI
+spider2/active SPIACT
+spider2/land SPILND
+
+
+$random spider/step {spider/step1 spider/step2}
+spider/step1 SPIST1
+spider/step2 SPIST2
+
+//===========================================================================
+//
+// plague spiders
+//
+//===========================================================================
+SPIDDIE1       SPIDDIE1
+SPIDDIE2       SPIDDIE2
+SPIDDIE3       SPIDDIE3
+SPIDDIE4       SPIDDIE4
+
+PlagueSpider/Acive   SPIDROAM
+PlagueSpider/See     SPIDSPOT
+PlagueSpider/Pain    SPIDPAIN
+$Random PlagueSpider/Death { SPIDDIE1 SPIDDIE2 SPIDDIE3 SPIDDIE4}

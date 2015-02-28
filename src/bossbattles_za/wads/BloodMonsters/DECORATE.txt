@@ -1,0 +1,1372 @@
+//==========================================================
+//
+//       CERBERUS
+//       
+//       
+//
+//==========================================================
+
+ACTOR Cerberus 25385
+{
+//$Category Blood
+  Health 28000
+  Radius 68
+  Height 77
+  Mass 100000000
+  Speed 18
+  SCALE 1.5
+  MinMissileChance 35
+  PainChance 1
+  Monster
+  +BOSS
+  +NOTARGET
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +NOTARGET
+  +FLOORCLIP
+  +QUICKTORETALIATE
+  +TELESTOMP
+  +DONTMORPH
+  SeeSound "Cerberus/Sight"
+  PainSound "Cerberus/PAIN"
+  DeathSound "Cerberus/DEATH"
+  ActiveSound "Cerberus/active"
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.6
+  Damagefactor "PFire", 0.6
+  Damagefactor "Electric", 1.0
+  Damagefactor "PElectric", 1.0
+  Damagefactor "Poison", 0.8
+  Damagefactor "PPoison", 0.8
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.9
+  Obituary "%o was blown away by Cerberus"
+  States
+  {
+  Spawn:
+    CERB AB 15 A_Look
+    Loop
+  See:
+    CERB AABBCCDDEEFF 3 A_Chase
+    Loop
+  Missile:
+    CERB FG 5 Bright A_FaceTarget
+    CERB H 0 Bright A_CustomMissile("CerberusShot",40,27,0,1,0)
+    CERB H 5 Bright A_CustomMissile("CerberusShot",40,-27,0,1,0)
+    CERB GF 5 Bright A_FaceTarget
+    Goto See
+  Pain:
+    CERB J 3
+    CERB J 3 A_Pain
+    Goto See
+  Death:
+    CERB J 0 
+	CERB JJJJJJJJJJJJJJJJ 8 A_SpawnItemEx("BossExplosion64",random(-40,40),random(-40,40),random(25,45),0,0,0,0,0,0)
+    CERB K 6 A_ScreamAndUnblock
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB L 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB L 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB M 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB M 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB N 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB N 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB O 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB O 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB P 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB P 3
+	CERB MMMMMMMMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB Q 3
+	CERB MMMMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB Q 3
+	CERB MMM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    CERB R 3
+	CERB MM 0 A_Spawnitemex("NashGore_Blood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	CERB R 3
+    CERB S 520 A_SetFloorClip
+    CERB S 2 A_FadeOut
+	Wait
+  }
+}
+
+actor CerberusShot 
+{
+  Decal Scorch
+    Mass 1
+    Radius 8
+    Height 6
+    Speed 40
+    Damage 20
+    Scale 0.7
+    RenderStyle Add
+    DamageType "Fire"
+    SeeSound "tchernobog/Napalm"
+    DeathSound "tchernobog/Napalm2"
+    PROJECTILE
+	+SPECTRAL
+    +EXTREMEDEATH
+    States
+    {
+    Spawn:
+    FBA2 A 3 Bright 
+    FBA2 A 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 B 3 Bright 
+	FBA2 B 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 C 3 Bright 
+	FBA2 C 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 D 3 Bright 
+	FBA2 D 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+    FBA2 E 3 Bright 
+	FBA2 E 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+    Loop
+Death:
+    NKXP B 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)  
+    NKXP BCD 3 bright    
+    NKXP D 0 Radius_Quake (1,10,0,16,0)
+    NKXP E 3 bright
+    NKXP FG 2 bright
+    NKXP HIJ 2 bright
+    NKXP KLMN 3 bright
+    NKXP P 3 bright
+    NKXP PQRSTU 3 bright 
+    NKXP V 3 A_FALL
+    NKXP V 0 bright
+	Stop
+   }
+}
+
+actor CerberusShottrail
+{
+        Speed 3
+        +NOCLIP
+		+clientsideonly
+        DamageType "fire"
+        Damage 0
+        Scale 0.4
+        Height 6     
+        Radius 5
+	    RenderStyle Add
+        SeeSound "NULL"
+        DeathSound "NULL"
+        PROJECTILE
+        States
+        {
+	Spawn:
+		FTRL MNOPIJKL 2 BRIGHT
+		Stop
+	}
+}
+
+//Friendly version for clericsummoner
+ACTOR FCerberus : Cerberus
+{
+    MONSTER
+   +NOBLOOD
+   +QUICKTORETALIATE
+   +NOBLOCKMONST
+   +NORADIUSDMG
+   +FRIENDLY
+   +Ghost
+   +BRIGHT
+   +THRUSPECIES
+    Species "Player"
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+    Renderstyle Add
+    Alpha 0.8
+    deathsound "null" 
+  Obituary "%o was blown away by a friendly Cerberus"
+  States
+  {
+  Spawn: 
+	CERB A 0
+	CERB A 0 A_GiveInventory("FriendlyMonsterTimer3",1)
+	Goto Super::Spawn
+   See:	    
+	CERB A 0 A_JumpIfInventory("FriendlyMonsterTimer3",1,1)
+	Goto ALTPAIN
+    CERB AABBCCDDEEFF 4 A_Chase
+    Loop
+  Missile:
+    CERB FG 5 Bright A_FaceTarget
+    CERB H 0 Bright A_CustomMissile("FCerberusShot",30,20,0,1,0)
+    CERB H 5 Bright A_CustomMissile("FCerberusShot",30,-20,0,1,0)
+    CERB GF 5 Bright A_FaceTarget
+    Goto See
+   Death:
+	   TNT1 A 1 A_CustomMissile("SummonFog2")
+	   stop
+  ALTPAIN:
+	CERB J 4
+	CERB J 4 A_PlaySound("items/unholytome")
+	Goto ALTDEATH
+   ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+  }
+}
+
+actor FCerberusShot 
+{
+    Decal Scorch
+    Mass 1
+    Radius 8
+    Height 6
+    Speed 45
+    Damage 20
+    Scale 0.7
+    RenderStyle Add
+    DamageType "PFire"
+	+MTHRUSPECIES
+    SeeSound "tchernobog/Napalm"
+    DeathSound "tchernobog/Napalm2"
+    PROJECTILE
+    States
+    {
+    Spawn:
+    FBA2 A 3 Bright 
+    FBA2 A 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 B 3 Bright 
+	FBA2 B 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 C 3 Bright 
+	FBA2 C 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 D 3 Bright 
+	FBA2 D 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+    FBA2 E 3 Bright 
+	FBA2 E 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)
+    Loop
+Death:
+    NKXP B 0 A_SpawnItemEx ("CerberusShottrail", 0, 0, 0, 0, 0, 0, 0, 0)  
+    NKXP BCD 3 bright    
+    NKXP D 0 Radius_Quake (1,10,0,16,0)
+    NKXP E 3 bright
+    NKXP FG 2 bright
+    NKXP HIJ 2 bright
+    NKXP KLMN 3 bright
+    NKXP P 3 bright
+    NKXP PQRSTU 3 bright 
+    NKXP V 3 A_FALL
+    NKXP V 0 bright
+	Stop
+   }
+}
+
+Actor Cerberus2 : Cerberus 24520	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//=========================================
+//
+//             InfernalSpider
+//           made by:.+:icytux:+.
+//
+//=========================================
+ACTOR BigInfernalSpider 29999
+{
+//$Category Blood
+  Radius 72
+  Height 120
+  Health 27000
+  Speed 30
+  MinMissileChance 35
+  dropitem "MediumHealthVile" 70
+  DropItem "Combatpack" 60
+  DropItem "Cmana" 60
+  DropItem "DmanaDrop" 60 
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  DropItem "SuperArmor" 3
+  DropItem "Greenarmor" 7
+  DropItem "Bluearmor" 5
+  DropItem "ArtiHealingRadius1" 5
+  DropItem "Medikit" 6
+  DropItem "Stimpack" 8
+  mass 999990
+  meleerange 76
+  meleedamage 12
+  painchance 1
+  translation "152:159=216:223,9:9=223:223,76:70=216:223,129:132=216:223"
+  BloodColor Orange
+  scale 2.0
+  SeeSound "spider2/sight"
+  DeathSound "spider2/death"
+  PainSound "spider2/pain"
+  ActiveSound "spider2/active"
+  MeleeSound "misc/gibbed"
+  Obituary "%o was burned to ashes by the infernalspider"
+  HitObituary "%o was eaten by the infernalspider"
+  MONSTER
+  +BOSS
+  +NOTARGET
+  +DONTMORPH
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +DONTHURTSPECIES
+  +NOTARGET
+  +FLOORCLIP
+  +QUICKTORETALIATE
+  +TELESTOMP
+  +THRUSPECIES
+  Species "Spider"
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.6
+  Damagefactor "PFire", 0.6
+  Damagefactor "Electric", 1.0
+  Damagefactor "PElectric", 1.0
+  Damagefactor "Poison", 0.8
+  Damagefactor "PPoison", 0.8
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.9
+  States
+  {
+  Spawn:
+   SPI2 AAAAAAAAAA 10 A_Look
+   SPI2 A 0 A_Playsound("spider/step")
+   SPI2 U 50 ThrustThingZ( 0, 100, 0, 1)
+   SPI2 A 0 Radius_Quake(9,64,0,16,0)
+   SPI2 A 0 A_Playsound("spider/land")
+   loop
+  See:
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 A_playsound ("spider/step")
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 A_playsound ("spider/step")
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   SPI2 A 0 Radius_Quake(4,8,0,16,0)
+   SPI2 A 0 A_playsound ("spider/step")
+   loop
+  Melee:
+   SPI2 E 0 A_Facetarget
+   SPI2 E 5 A_Meleeattack
+   SPI2 A 13 A_Facetarget
+   goto see
+  Missile:
+   SPI2 V 0 A_Jump (82,20)
+   SPI2 V 0 A_Jump (32,9)
+   SPI2 U 5 A_Facetarget
+   TNT1 A 0 A_jumpifcloser(1024,6)
+   SPI2 E 0 A_Facetarget
+   SPI2 E 0 A_Playsound ("spider/step")
+   SPI2 U 50 A_Skullattack
+   SPI2 A 0 A_Playsound ("spider/land")
+   SPI2 A 1 A_stop
+   goto see
+   SPI2 U 5 A_Facetarget
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, -8, 0)
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, 0, 0)
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, 8, 0)
+   SPI2 X 3 A_Facetarget
+   SPI2 U 5
+   goto see
+   SPI2 E 5 A_Facetarget
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 5
+   goto see
+   SPI2 E 5 A_Facetarget
+   SPI2 U 5 A_Playsound("spider2/sight")
+   SPI2 W 0 A_Facetarget
+   SPI2 X 5 A_Custommissile("Hellripper", 128, 0, 0, 0)
+   SPI2 X 17 A_Facetarget
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, -8, 0)
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, 0, 0)
+   SPI2 X 2 A_custommissile("flameshot", 54, 0, 8, 0)
+   SPI2 U 5 A_Facetarget
+   goto see
+   Pain:
+    SPI2 E 2 A_Pain
+    SPI2 E 0 A_Facetarget
+    SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+    SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+    SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+    goto see
+  Death:
+    SPI2 E 0 
+	SPI2 EEEEEEEEEEEEE 8 A_SpawnItemEx("BossExplosion64",random(-50,50),random(-50,50),random(25,65),0,0,0,0,0,0)
+    SPI2 F 8 A_ScreamAndUnblock
+	SPI2 MMMMMMMMMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    SPI2 G 5
+	SPI2 MMMMMMMMMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	SPI2 G 5
+	SPI2 MMMMMMMMMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    SPI2 G 5
+	SPI2 MMMMMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	SPI2 H 3
+	SPI2 MMMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    SPI2 I 3
+	SPI2 MMMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	SPI2 J 3
+	SPI2 MMM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+    SPI2 K 3
+	SPI2 MM 0 A_Spawnitemex("OrangeNashGore_FlyingBlood",random(-60,60),random(-35,35),random(0,70),random(-10,10),random(-10,10),random(-20,20))
+	SPI2 L 3
+    SPI2 M 520 A_SetFloorClip
+    SPI2 M 2 A_FadeOut
+	Wait
+	}
+}
+
+
+
+ACTOR flameshot : fatshot
+{
+Speed 25
+Damage 20
+DamageType "fire"
+SeeSound "skeleton/attack"
+Decal Scorch
++SPECTRAL
+States
+{
+Spawn:
+SBAL ABC 5 BRIGHT
+loop
+Death:
+SBAL DEFGH 3 BRIGHT
+stop
+}
+}
+Actor Hellripper : fatshot
+{
+Speed 50
+Damage 18
+DamageType "fire"
+Explosionradius 64
+ExplosionDamage 50
+SeeSound "skeleton/attack"
+Decal Scorch
++SPECTRAL
+States
+{
+Spawn:
+TNT1 A 1 Bright A_Custommissile("archvilefire2",0,0,90,0)
+TNT1 A 0 Bright A_Custommissile("archvilefire2",0,0,-90,0)
+TNT1 A 0 A_JumpIf (z-floorz<24,1)
+loop
+TNT1 A 0 A_Explode
+TNT1 A 0 ThrustThingZ (0, random(2,3), 0, 0)
+loop
+Death:
+TNT1 B 5 A_Burst("archvilefire2")
+stop
+}
+}
+
+Actor Archvilefire2 : archvilefire
+{
+Damage 15
+Speed 4
++SPECTRAL
+}
+
+Actor Spider 3342
+{
+//$Category DemortrixMinions
+  obituary "%o was webbed by a Spider."
+  health 1000
+  radius 18
+  height 64
+  mass 100
+  speed 32
+  painchance 10
+  seesound "PlagueSpider/See"
+  attacksound ""
+  painsound "PlagueSpider/Pain"
+  deathsound "PlagueSpider/Death"
+  activesound "PlagueSpider/Active"
+  MONSTER
+  +FLOORCLIP
+  +THRUSPECIES
+  Species "Spider"
+  states
+  {
+  Spawn:
+    SPDR C 10 A_Look
+    loop
+  See:
+    //SPDR E 0 A_JumpIfInventory("ReceiveActivate", 1, "See2")
+    //SPDR E 0 A_GiveToTarget ("TransmitActivate", 1) // opponents like ShapeShifter2 may start transforming
+  See2:
+    SPDR EE 3 A_Chase
+    SPDR FF 3 A_Chase
+    SPDR GG 3 A_Chase
+    SPDR HH 3 A_Chase
+    loop
+  Missile:
+    SPDR C 10 A_FaceTarget
+    SPDR C 0 A_JumpIfCloser(512,5)
+    SPDR D 4 A_SkullAttack
+    SPDR D 0 ThrustThingZ(0,32,0,1)
+    SPDR D 8
+    SPDR C 4 A_PlaySound("Enforcer/Landing")
+    SPDR C 4 A_FaceTarget
+    SPDR L 4 A_CustomMissile("WebShot", 32, 0, 0)
+    Goto See
+  Pain:
+    SPDR B 3 A_Pain
+    goto See
+  Death:
+    SPDR M 5
+	TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,12),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+    SPDR N 5 A_Scream
+    SPDR O 5 A_NoBlocking
+    SPDR PQR 5
+    SPDR S 520 A_SetFloorClip
+    SPDR S 2 A_FadeOut
+	Wait
+  }
+}
+
+Actor Spider2 : Spider 11134
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+actor WebShot
+{
+  spawnid 243
+  obituary "%o was poisoned by %k's Web."
+  radius 42
+  height 42
+  speed 20
+  damage 9
+  renderstyle Add
+  alpha 0.75
+  +SPECTRAL
+  seesound ""
+  deathsound ""
+  PROJECTILE  
+  states
+  {
+     Spawn:
+       SPFR A 4
+       Loop
+     Death:
+       SPFR BC 4
+	  TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("NashGore_Blood",random(-4,4),random(-6,6),random(-6,12),momx*random(1,7)*0.1,momy*random(1,7)*0.1,momz*random(1,7)*0.1,0,0,90)
+       SPFR D 4
+       TNT1 A -1
+       stop
+  }
+}
+
+Actor GreenSpider : Spider 19473
+{
+//$Category DemortrixMinions
+Translation "106:106=121:121", "108:108=123:123", "108:108=124:124"
+Scale 0.5
+States
+  {
+  Missile:
+    SPDR C 10 A_FaceTarget
+    SPDR C 0 A_JumpIfCloser(512,4)
+    SPDR D 4 A_SkullAttack
+    SPDR D 0 ThrustThingZ(0,32,0,1)
+    SPDR D 8
+    SPDR C 4 A_FaceTarget
+    SPDR L 4 A_CustomMissile("GreenWebShot", 32, 0, 0)
+    Goto See
+  }
+}
+
+Actor GreenSpider2 : Spider 11135
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+Actor GreenWebShot : WebShot
+{
+Translation "97:97=124:124", "100:100=121:121", "100:100=121:121", "96:96=123:123", "96:96=118:118", "96:96=124:124", "96:96=116:116", "100:100=123:123", "100:100=123:123"
+Scale 0.5
+}
+
+Actor RedSpider : Spider 19472
+{
+//$Category DemortrixMinions
+Translation "103:103=180:180", "107:107=190:190", "109:109=188:189"
+Scale 0.5
+States
+  {
+  Missile:
+    SPDR C 10 A_FaceTarget
+    SPDR C 0 A_JumpIfCloser(512,4)
+    SPDR D 4 A_SkullAttack
+    SPDR D 0 ThrustThingZ(0,32,0,1)
+    SPDR D 8
+    SPDR C 4 A_FaceTarget
+    SPDR L 4 A_CustomMissile("RedWebShot", 32, 0, 0)
+    Goto See
+  }
+}
+
+Actor redSpider2 : redSpider 11136
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+Actor RedWebShot : WebShot
+{
+Translation "96:96=182:182", "97:97=185:185", "100:100=183:183", "100:100=186:186", "98:98=183:183"
+Scale 0.5
+}
+
+ACTOR minispider 19999
+{
+//$Category DemortrixMinions
+health 1000
+radius 42
+height 56
+speed 12
+Painchance 200
+Obituary "%o was eaten by a spider"
+HitObituary "%o was eaten by a spider"
+SeeSound "spider2/sight"
+DeathSound "spider2/pain"
+PainSound "spider2/pain"
+ActiveSound "spider2/sight"
+MeleeSound "misc/gibbed"
+translation 1
+translation "96:111=64:79"
+scale 1.0
+meleedamage 20
+DamageType "Poison"
+MONSTER
++NOTARGET
++THRUSPECIES
+Species "Spider"
+States
+{
+spawn:
+GAYS A 1 A_Look
+loop
+See:
+GAYS ABCD 1 A_chase
+loop
+Melee:
+GAYS E 0 A_Facetarget
+GAYS E 8 A_Meleeattack
+GAYS E 13 A_Facetarget
+goto see
+Pain:
+GAYS A 2 A_Pain
+GAYS A 2
+goto see
+Death:
+GAYR FEDC 5 A_Setfloorclip
+GAYR B 5 A_Scream
+GAYR A 5 A_Die
+GAYR A 0 A_Fall
+GAYR A 520 A_SetFloorClip
+GAYR A 2 A_FadeOut
+Wait
+}
+}
+
+Actor MiniSpider2 : MiniSpider 11123	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+Actor SmallInfernalspider : BigInfernalSpider 29998
+{
+//$Category DemortrixMinions
+Health 2000
+Height 42
+Radius 56
+Speed 32
+MeleeRange 42
+MeleeDamage 15
+Dropitem Veryminispider
+Scale 1.0
+Painchance 10
+-MISSILEEVENMORE
+-NOTARGET
+-BOSS
++THRUSPECIES
+Species "Spider"
+States
+{
+  Spawn:
+   SPI2 AAAAAAAAAA 10 A_Look
+   loop
+  See:
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   SPI2 ABCD 2 A_Chase
+   MNTR A 0 A_playsound ("spider/step")
+   loop
+  Missile:
+   TNT1 A 0 A_jumpifcloser(1024,5)
+   SPI2 E 0 A_Facetarget
+   MNTR E 0 A_Playsound ("spider/step")
+   SPI2 U 50 A_Skullattack
+   MNTR A 0 A_Playsound ("spider/land")
+   SPI2 A 1 A_stop
+   MNTR V 0 A_Jump (82,11)
+   MNTR V 0 A_Jump (32,5)
+   SPI2 U 5 A_Facetarget
+   SPI2 X 2 A_custommissile("flameshot", 16, 0, 0, 0)
+   SPI2 X 3 A_Facetarget
+   SPI2 U 5
+   goto see
+   SPI2 E 5 A_Facetarget
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 6 A_SpawnItemEx ("Minispider",0,0,0,0,0,0,0,48)
+   SPI2 E 5
+   goto see
+   SPI2 E 5 A_Facetarget
+   SPI2 U 5 A_Playsound("spider2/sight")
+   MNTR W 0 A_Facetarget
+   SPI2 X 5 A_Custommissile("Hellripper2", 56, 0, 0, 0)
+   SPI2 X 17 A_Facetarget
+   SPI2 X 2 A_custommissile("flameshot", 16, 0, -8, 0)
+   SPI2 X 2 A_custommissile("flameshot", 16, 0, 0, 0)
+   SPI2 X 2 A_custommissile("flameshot", 16, 0, 8, 0)
+   SPI2 U 5 A_Facetarget
+   goto see
+  Pain:
+    SPI2 E 2 A_Pain
+    MNTR E 0 A_Facetarget
+    SPI2 E 6 A_SpawnItemEx ("veryMinispider",0,0,0,0,0,0,0,48)
+    SPI2 E 6 A_SpawnItemEx ("veryMinispider",0,0,0,0,0,0,0,48)
+    SPI2 E 6 A_SpawnItemEx ("veryMinispider",0,0,0,0,0,0,0,48)
+    goto see
+  }
+}
+
+Actor SmallInfernalspider2 : SmallInfernalspider 11124	
+{
+//$Category Friendlies
+	+FRIENDLY
+    +THRUSPECIES
+    Species "Spider"
+	States
+{
+  Pain:
+    SPI2 E 2 A_Pain
+    MNTR E 0 A_Facetarget
+    SPI2 E 6 A_throwgrenade("veryminispider2", 85, 10, 20)
+    SPI2 E 6 A_throwgrenade("veryminispider2", 85, 10, 20)
+    SPI2 E 6 A_throwgrenade("veryminispider2", 85, 10, 20)
+    goto see
+  }
+}
+
+
+Actor Veryminispider : minispider 19998
+{
+//$Category DemortrixMinions
+Health 800
+Radius 32
+Height 24
+Scale 0.5
+Translation 2
+Meleedamage 15
+-NOTARGET 
++THRUSPECIES
+Species "Spider"
+DamageType "Poison"
+}
+
+Actor Veryminispider2 : Veryminispider 11125	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+
+Actor Hellripper2 : Hellripper
+{
+damage 20
++SPECTRAL
+}
+
+Actor BigInfernalSpider2 : BigInfernalSpider 12420	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//       Tchernobog
+//       
+//       
+//
+//==========================================================
+
+ACTOR Tchernobog 6264
+{
+//$Category Blood
+    Health 34000
+    Radius 40
+    Height 100
+    Speed 10 
+    Mass 800000
+    PainChance 1
+	MinMissileChance 30
+    dropitem "MediumHealthVile" 70
+    DropItem "Combatpack" 60
+	DropItem "Cmana" 60
+	DropItem "DmanaDrop" 60
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	DropItem "SuperArmor" 3
+	DropItem "Greenarmor" 7
+	DropItem "Bluearmor" 5
+	DropItem "ArtiHealingRadius1" 5
+	DropItem "Medikit" 6
+	DropItem "Stimpack" 8
+    Scale 1.0
+    Damagefactor "HEAVENPOWER", 1.0
+    Damagefactor "PEXPLOSIVE", 1.0
+    Damagefactor "EXPLOSIVE", 1.0
+    Damagefactor "Fire", 0.4
+    Damagefactor "PFire", 0.4
+    Damagefactor "Electric", 0.7
+    Damagefactor "PElectric", 0.7
+    Damagefactor "Poison", 0.8
+    Damagefactor "PPoison", 0.8
+    Damagefactor "PBullet", 1.0
+    Damagefactor "Bullet", 1.0
+    Damagefactor "ice", 0.7
+    MONSTER 
+    +FLOORCLIP
+    +BOSS
+	+NOTARGET
+    +NOBLOOD
+	+NOICEDEATH
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	+DONTMORPH
+    +QUICKTORETALIATE
+    SeeSound "tchernobog/SIGHT"
+    PainSound "tchernobog/PAIN"
+    DeathSound "tchernobog/DEATH"
+    ActiveSound "tchernobog/idlE"
+    Obituary "%o kneeled after all TO TCHERNOBOG THE SLEEPING GOD."
+    States
+    {
+    Spawn:
+        E23W D 10 A_Look
+        Loop
+    See:
+        E23W AABBCCDDEEFF 3 A_Chase
+        Loop
+    Missile:
+	    NULL A 0 A_Jump(128,9,23,38)
+        E23A ABC 6 Bright A_FaceTarget
+        E23A A 0 Bright A_PlaySound("DSNAPALM")
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 15) 
+		E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, -15) 
+        E23A D 5 Bright A_CustomMissile("TCblueBALL", 120, 0, 0) 
+        E23A E 6 A_FaceTarget
+     Goto See
+        E23A ABC 6 Bright A_FaceTarget
+		E23A C 1 Bright A_PlaySound("DSNAPALM")
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 0) 
+	    NULL A 0 A_FaceTarget
+		E23A C 1 Bright A_PlaySound("DSNAPALM")
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 0) 
+	    NULL A 0 A_FaceTarget
+	    E23A C 1 Bright A_PlaySound("DSNAPALM")
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 0) 
+	    NULL C 0 A_FaceTarget
+	    E23A DE 4 Bright
+	 Goto See
+	    E23A ABC 6 Bright A_FaceTarget
+		E23A A 0 Bright A_PlaySound("DSNAPALM")
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 5) 
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, -5) 
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, -10) 
+	    E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 10) 
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, -15)
+	    E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 15) 
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, -20)
+	    E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 20) 
+        E23A D 0 Bright A_CustomMissile("TCblueBALL", 120, 0, 0) 
+	    E23A DE 4 Bright A_FaceTarget
+	 Goto See
+	   E23A A 2 BRIGHT A_FaceTarget
+	   E23A B 3 BRIGHT A_FaceTarget
+	   E23A C 2 BRIGHT A_FaceTarget
+	   E23A D 3 BRIGHT A_FaceTarget
+       E23A C 2 A_CustomMissile ("BFire",32,0,0)
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A A 3 BRIGHT A_FaceTarget
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A C 3 BRIGHT A_FaceTarget
+	   E23A D 2 BRIGHT A_FaceTarget
+	   E23A C 3 BRIGHT A_FaceTarget
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A A 3 BRIGHT A_FaceTarget
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A C 3 BRIGHT A_FaceTarget
+	   E23A D 2 BRIGHT A_FaceTarget
+	   E23A C 3 BRIGHT A_FaceTarget
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A A 3 BRIGHT A_FaceTarget
+	   E23A B 2 BRIGHT A_FaceTarget
+	   E23A C 3 BRIGHT A_FaceTarget       
+       Goto See
+    Pain:
+        E23P A 3
+        E23P A 3 A_Pain
+        Goto See
+    Death:   
+		E23P A 0
+		E23P AAAAAAAAAAAAAA 8 A_SpawnItemEx("BossExplosion64",random(-30,30),random(-30,30),random(25,130),0,0,0,0,0,0)
+		E23D AAAAA 1 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D AAAAAAAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D B 5 A_ScreamAndUnblock
+		E23D BBBBBBBBBBBBBBBBBBB 0 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D C 5 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D AAAAAAAAAAAAAAAAAAA 0 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D D 5 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D AAA 0 A_Spawnitemex("NashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+		E23D E 30
+		TNT1 A 0 A_PlaySound("tchernobog/dissapear")
+		E23D FGHIJFGHIJFGHIJ 6 Bright 
+		E23D KL 6 Bright 
+		E23D M 4 Bright A_SetTranslucent(0.9)
+		E23D M 4 Bright A_SetTranslucent(0.8)
+		E23D M 4 Bright A_SetTranslucent(0.7)
+		E23D M 4 Bright A_SetTranslucent(0.6)
+		E23D M 4 Bright A_SetTranslucent(0.5)
+		E23D M 4 Bright A_SetTranslucent(0.4)
+		E23D M 4 Bright A_SetTranslucent(0.3)
+		E23D M 4 Bright A_SetTranslucent(0.2)
+		E23D M 4 Bright A_SetTranslucent(0.1)
+		Stop 
+    }
+}
+
+Actor Bfire : CFlameMissile
+{
+   Obituary "%o was set ablaze by a TChernobog"
+   Radius 0
+   Height 1
+   Speed 0
+   RENDERSTYLE ADD
+   Translation "160:160=231:231", "161:162=215:215", "163:163=217:217", "164:167=176:188"
+   DamageType "fire"
+   ALPHA 1.00
+   +NOGRAVITY
+   +SEEKERMISSILE
+   +NOTARGET
+   +NODAMAGETHRUST
+   +SPECTRAL
+   States
+   {
+   Spawn:
+      FIRE A 2 Bright A_StartFire
+      NULL A 0 Bright A_Explode(35,32,0)
+	  NULL A 0 Bright A_CFlameMissile
+      FIRE B 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(36,32,0)
+      FIRE A 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(27,32,0)
+      FIRE B 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(28,32,0)
+      FIRE C 2 Bright A_FireCrackle
+      NULL A 0 Bright A_Explode(39,32,0)
+      FIRE B 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(20,32,0)
+      FIRE C 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(11,32,0)
+      FIRE B 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(32,32,0)
+	  NULL A 0 Bright A_CFlameMissile
+      FIRE C 2 Bright A_Fire 
+      NULL A 0 Bright A_Explode(23,32,0)
+      FIRE D 2 Bright A_Fire 
+      NULL A 0 Bright A_Explode(34,32,0)
+      FIRE C 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(25,32,0)
+      FIRE D 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(36,32,0)
+      FIRE C 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(27,32,0)
+      FIRE D 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(38,32,0)
+      FIRE E 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(29,32,0)
+	  NULL A 0 Bright A_CFlameMissile
+      FIRE D 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(40,32,0)
+      FIRE E 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(39,32,0)
+      FIRE D 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(48,32,0)
+      FIRE E 2 Bright A_FireCrackle
+      NULL A 0 Bright A_Explode(47,32,0)
+      FIRE F 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(36,32,0)
+      FIRE E 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(45,32,0)
+      FIRE F 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(44,32,0)
+      FIRE E 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(43,32,0)
+      FIRE F 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(42,32,0)
+      FIRE G 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(31,32,0)
+      FIRE H 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(40,32,0)
+      FIRE G 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(49,32,0)
+	  NULL A 0 Bright A_CFlameMissile
+      FIRE H 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(48,32,0)
+      FIRE G 2 Bright A_Fire
+      NULL A 0 Bright A_Explode(17,32,0)
+	  NULL A 0 Bright A_CFlameMissile
+      FIRE H 2 Bright A_Fire
+      stop
+   }
+}
+
+actor TCblueBALL
+{
+    Mass 1
+    Radius 8
+    Height 6
+    TRANSLATION "ICE"
+    Speed 22
+    Damage 20
+    Scale 0.7
+    RenderStyle Add
+    DamageType "Electric"
+    SeeSound "tchernobog/Napalm"
+    DeathSound "tchernobog/Napalm2"
+    PROJECTILE
+	+SPECTRAL
+    +EXTREMEDEATH
+    States
+    {
+    Spawn:
+    FBA2 A 3 Bright 
+    FBA2 A 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 B 3 Bright 
+	FBA2 B 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 C 3 Bright 
+	FBA2 C 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)
+	FBA2 D 3 Bright 
+	FBA2 D 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)
+    FBA2 E 3 Bright 
+	FBA2 E 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)
+    Loop
+Death:
+    NKXP B 0 A_SpawnItemEx ("TCHERNOBOGTAIL2", 0, 0, 0, 0, 0, 0, 0, 0)  
+    NKXP BCD 3 bright A_Explode(10,32,0)
+    NKXP D 0 Radius_Quake (1,10,0,16,0)
+    NKXP E 3 bright
+    NKXP FG 2 bright
+    NKXP HIJ 2 bright
+    NKXP KLMN 3 bright
+    NKXP P 3 bright
+    NKXP PQRSTU 3 bright 
+    NKXP V 3 A_FALL
+    NKXP V 0 bright
+	Stop
+   }
+}
+
+
+
+actor TCHERNOBOGTAIL2
+{
+        Speed 3
+        +NOCLIP
+		+clientsideonly
+        DamageType "fire"
+        Damage 0
+        Scale 0.4
+        Height 6     
+        TRANSLATION "ICE"
+        Radius 5
+	    RenderStyle Add
+        SeeSound "NULL"
+        DeathSound "NULL"
+        PROJECTILE
+        States
+        {
+	Spawn:
+		FTRL MNOPIJKL 2
+		Stop
+	}
+}
+
+Actor Tchernobog2 : Tchernobog 6265	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//       Cheogh
+//       
+//       
+//
+//==========================================================
+
+
+actor cheogh  7372
+{
+//$Category Blood
+  speed 10
+  floatspeed 14 
+  painchance 1
+  MinMissileChance 30
+  translation "112:127=96:111"
+  meleedamage 120 
+  meleerange 64
+  meleesound "GORG8"
+  dropitem "MediumHealthVile" 70
+  DropItem "Combatpack" 60
+  DropItem "Cmana" 60
+  DropItem "DmanaDrop" 60
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  DropItem "SuperArmor" 3
+  DropItem "Greenarmor" 7
+  DropItem "Bluearmor" 5
+  DropItem "ArtiHealingRadius1" 5
+  DropItem "Medikit" 6
+  DropItem "Stimpack" 8
+  +FLOORCLIP
+  +FLOAT
+  +NOGRAVITY
+  +NOSPLASHALERT
+  +SHORTMISSILERANGE
+  +DONTHURTSPECIES
+  +MissileMore
+  +Missileevenmore
+  +LONGMELEERANGE
+  +QUICKTORETALIATE
+  +NOBLOOD
+  +BOSS
+  +NOTARGET
+  +DONTMORPH
+  +TELESTOMP
+  obituary "%o fears the stone gargoyle"
+  hitobituary "%o duled a stone gargoyle"
+  health 32000
+  Radius 22
+  Height 65
+  mass 10000000
+  seesound "SUPA6"
+  painsound "SUPA5"
+  deathsound "CHEOGHDIE"
+  activesound "SUPA6"
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 0.7
+  Damagefactor "EXPLOSIVE", 0.7
+  Damagefactor "Fire", 0.8
+  Damagefactor "PFire", 0.8
+  Damagefactor "Electric", 1.0
+  Damagefactor "PElectric", 1.0
+  Damagefactor "Poison", 0.9
+  Damagefactor "PPoison", 0.9
+  Damagefactor "PBullet", 0.6
+  Damagefactor "Bullet", 0.6
+  Damagefactor "ice", 1.0
+  Scale 1.1
+  MONSTER
+  states
+  {
+  Spawn:
+	LUCY AB 10 A_Look
+	LUCY C 0 A_PlaySound ("DSWINGFL")
+	LUCY CD 10 A_LOOK
+    loop
+  See:
+    LUCY A 0 A_SentinelBob     
+    //LUCY BBCCDD 3 A_ExtChase(0,0,1,0)      
+    //LUCY AAABBB 2 A_ExtChase(0,0,1,0)
+    //LUCY CCCDDD 1 A_ExtChase(0,0,1,0)   
+    LUCY A 1 A_Chase
+    LUCY AA 1 A_ExtChase(0,0,1,0)
+    LUCY A 1 A_Chase
+    LUCY AA 1 A_ExtChase(0,0,1,0)
+    LUCY A 1 A_Chase
+    LUCY AA 1 A_ExtChase(0,0,1,0)
+    LUCY B 1 A_Chase
+    LUCY BB 1 A_ExtChase(0,0,1,0)
+    LUCY B 1 A_Chase
+    LUCY BB 1 A_ExtChase(0,0,1,0)
+    LUCY B 1 A_Chase
+    LUCY BB 1 A_ExtChase(0,0,1,0)
+    LUCY C 1 A_Chase
+    LUCY CC 1 A_ExtChase(0,0,1,0)
+	LUCY C 0 A_PlaySound ("DSWINGFL")
+    LUCY C 1 A_Chase
+    LUCY CC 1 A_ExtChase(0,0,1,0)
+    LUCY C 1 A_Chase
+    LUCY CC 1 A_ExtChase(0,0,1,0)
+    LUCY D 1 A_Chase
+    LUCY DD 1 A_ExtChase(0,0,1,0)
+    LUCY D 1 A_Chase
+    LUCY DD 1 A_ExtChase(0,0,1,0)
+    LUCY D 1 A_Chase
+    LUCY DD 1 A_ExtChase(0,0,1,0)
+    Loop
+    //GoTo See+18
+  Melee:
+    LUCY E 7 A_FaceTarget
+    LUCY E 6
+    LUCY F 6 A_Skullattack
+    LUCY GF 5
+	LUCY F 2 A_STOP
+    goto See
+  Missile:
+    LUCY A 5 A_FaceTarget
+    LUCY P 0 bright A_CustomMissile ("StoneGargBall",50,10,0,1,0) 
+    LUCY P 0 bright A_CustomMissile ("StoneGargBall",50,-10,0,1,0)
+    LUCY P 10 bright A_SentinelRefire
+	goto Missile
+  Pain:
+    LUCY H 2
+    LUCY H 2 A_Pain
+    goto See
+  Death:
+    LUCY I 8 A_ScreamAndUnblock
+    LUCY J -1
+    Stop
+  Crash:
+    LUCY K 6 
+    LUCY L 6 
+    LUCY M 6
+	LUCY N 520 A_SetFloorClip
+	LUCY N 2 A_FadeOut
+	Wait
+  }
+}
+actor StoneGargBall
+{ 
+  radius 6
+  height 8
+  speed 17
+SCALE 0.4
+  damage 19
+  renderstyle Add
+  seesound "SUPA1"
+  deathsound "BOWL"
+  DamageType "Electric"
+  PROJECTILE
+  +SPECTRAL
+  +RANDOMIZE
+  RENDERSTYLE ADD
+  alpha 1.0
+  states
+  {
+  Spawn:
+    JJJJ ABCD 1 bright
+    //BAL2 A 0 SetActorProperty(0, APROP_Speed, 2);
+    //BAL2 A 0 ThrustThing( (angle*256)/360, 4, 0, 0)
+    Loop
+  Death:
+    BAL2 EEEEEEEEEE 0 A_CustomMissile("CALLUMSANDERSONWASHERE2010", 0, 0, random(0,360), 2, random(-90,90))
+    BAL2 EFG 0 bright A_SCREAM
+    BAL2 HI 0 bright
+    stop
+  }
+}
+
+actor CALLUMSANDERSONWASHERE2010
+{
+  health 5
+  radius 1
+  height 1
+  Speed 10
+  Scale 0.2
+  PROJECTILE
+  +NOBLOCKMAP
+  +DONTSPLASH
+  +RANDOMIZE
+  -NOGRAVITY
+  -SOLID
+  +WINDTHRUST
+  RENDERSTYLE ADD
+  states
+  {
+  Spawn:
+    KKKK A 0 bright
+    KKKK A 10 bright
+    KKKK A 200 bright A_LowGravity
+    stop
+    KKKK B 10 bright
+    KKKK B 200 bright A_LowGravity
+    stop
+    KKKK C 10 bright
+    KKKK C 200 bright A_LowGravity
+    stop
+    KKKK D 10 bright
+    KKKK D 200 bright A_LowGravity
+    stop
+    KKKK E 10 bright
+    KKKK E 200 bright A_LowGravity
+    stop
+    KKKK F 10 bright
+    KKKK F 200 bright A_LowGravity
+    stop
+  Death:
+    KKKK F 1
+    stop
+  }
+}
+
+Actor cheogh2 : cheogh 6697
+{
+//$Category Friendlies
+	+FRIENDLY
+}
