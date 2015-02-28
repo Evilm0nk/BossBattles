@@ -592,6 +592,17 @@ object CentaurFX2
     frame CTFXF { light TAURBALL_X4 }
 }
 
+object FCentaurFX2
+{
+    frame CTFXA { light TAURBALL }
+
+    frame CTFXB { light TAURBALL_X1 }
+    frame CTFXC { light TAURBALL_X2 }
+    frame CTFXD { light TAURBALL_X3 }
+    frame CTFXE { light TAURBALL_X4 }
+    frame CTFXF { light TAURBALL_X4 }
+}
+
 // Reaver fireball
 pointlight REAVERBALL
 {
@@ -759,6 +770,19 @@ flickerlight SERPENTBALL_X4
     chance 0.5
 }
 
+object fDemon1FX11
+{
+    frame DMFXA { light SERPENTBALL }
+    frame DMFXB { light SERPENTBALL }
+    frame DMFXC { light SERPENTBALL }
+
+    frame DMFXD { light SERPENTBALL_X1 }
+    frame DMFXE { light SERPENTBALL_X2 }
+    frame DMFXF { light SERPENTBALL_X3 }
+    frame DMFXG { light SERPENTBALL_X4 }
+    frame DMFXH { light SERPENTBALL_X4 }
+}
+
 object Demon1FX11
 {
     frame DMFXA { light SERPENTBALL }
@@ -812,6 +836,23 @@ flickerlight CSGASBALL_X4
 }
 
 object Demon2FX12
+{
+    frame D2FXA { light CSGASBALL }
+    frame D2FXB { light CSGASBALL }
+    frame D2FXC { light CSGASBALL }
+    frame D2FXD { light CSGASBALL }
+    frame D2FXE { light CSGASBALL }
+    frame D2FXF { light CSGASBALL }
+
+    frame D2FXG { light CSGASBALL_X1 }
+    frame D2FXH { light CSGASBALL_X2 }
+    frame D2FXI { light CSGASBALL_X2 }
+    frame D2FXJ { light CSGASBALL_X3 }
+    frame D2FXK { light CSGASBALL_X4 }
+    frame D2FXL { light CSGASBALL_X4 }
+}
+
+object FDemon2FX12
 {
     frame D2FXA { light CSGASBALL }
     frame D2FXB { light CSGASBALL }

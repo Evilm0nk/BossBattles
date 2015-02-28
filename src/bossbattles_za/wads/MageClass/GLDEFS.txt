@@ -1,0 +1,617 @@
+//MAGE burning death
+
+flickerlight MAGEBURNING1
+{
+    color 1.0 0.8 0.0
+    size 68
+    secondarySize 86
+    chance 0.4
+}
+
+object Mage1
+{
+    frame FDTHC { light MAGEBURNING1 }
+    frame FDTHD { light MAGEBURNING1 }
+
+    frame FDTHG { light MAGEBURNING1 }
+    frame FDTHH { light MAGEBURNING1 }
+    frame FDTHI { light MAGEBURNING1 }
+    frame FDTHJ { light MAGEBURNING1 }
+    frame FDTHK { light MAGEBURNING1 }
+    frame FDTHL { light MAGEBURNING1 }
+	frame FDTHM { light MAGEBURNING1 }
+    frame FDTHN { light MAGEBURNING1 }
+    frame FDTHO { light MAGEBURNING1 }
+    frame FDTHP { light MAGEBURNING1 }
+    frame FDTHQ { light MAGEBURNING1 }
+    frame FDTHR { light MAGEBURNING1 }
+	frame FDTHS { light MAGEBURNING1 }
+    frame FDTHT { light MAGEBURNING1 }
+    frame FDTHU { light MAGEBURNING1 }
+    frame FDTHV { light MAGEBURNING1 }
+}
+
+//Lightning hands
+flickerlight MAGELIGHT
+{
+    color 0.4 0.4 1.0
+    size 48
+    secondarySize 52
+    chance 0.7
+}
+
+object RedLiteTop
+{
+    frame MLFX { light MAGELIGHT }
+    frame MLF2 { light MAGELIGHT }
+}
+
+
+object LightningZap
+{
+    frame MLFX { light MAGELIGHT }
+    frame MLF2 { light MAGELIGHT }
+}
+
+
+//Fire Wand
+flickerlight FIREWANDLIGHT
+{
+    color 0.8 0.6 0.0
+    size 10
+    secondarySize 14
+    chance 0.4
+    offset 0 0 0
+}
+
+object FireWave
+{
+    frame B1TT { light FIREWANDLIGHT }
+}
+object FireWavePowered
+{
+    frame B1TT { light FIREWANDLIGHT }
+}
+
+//cultshot
+
+pointlight CultLight1
+{
+    color 255 0 0
+    size 24
+}
+
+pointlight CultLight2
+{
+    color 255 0 0
+    size 16
+}
+
+pointlight CultLight3
+{
+    color 255 0 0
+    size 8
+}
+
+object CultShot1
+{
+    frame SCBLA { light CultLight2 }
+    frame SCBLB { light CultLight2 }
+
+    frame SCBLC { light CultLight1 }
+    frame SCBLD { light CultLight2 }
+    frame SCBLE { light CultLight3 }
+}
+
+object CultTrail1A
+{
+    frame SCBL { light CultLight2 }
+}
+object CultTrail1B
+{
+    frame SCBL { light CultLight2 }
+}
+
+object CultShot2
+{
+    frame SCB2A { light CultLight2 }
+    frame SCB2B { light CultLight2 }
+    frame SCB2C { light CultLight2 }
+
+    frame SSBLG { light CultLight1 }
+    frame SSBLH { light CultLight1 }
+    frame SSBLI { light CultLight2 }
+    frame SSBLJ { light CultLight2 }
+    frame SSBLK { light CultLight3 }
+}
+
+object CultTrail3
+{
+    frame SCB2 { light CultLight2 }
+}
+
+// Mage wand
+pointlight MWAND_X1
+{
+    color 0.3 0.3 1.0
+    size 32
+}
+
+pointlight MWAND_X2
+{
+    color 0.2 0.2 0.8
+    size 40
+}
+
+pointlight MWAND_X3
+{
+    color 0.1 0.1 0.6
+    size 48
+}
+
+pointlight MWAND_X4
+{
+    color 0.0 0.0 0.4
+    size 56
+}
+
+object MageWandMissileB
+{
+    frame MWNDE { light MWAND_X1 }
+    frame MWNDF { light MWAND_X2 }
+    frame MWNDG { light MWAND_X3 }
+    frame MWNDH { light MWAND_X4 }
+}
+
+pointlight MWAND_X5
+{
+    color 0.3 1.0 3.0
+    size 32
+}
+
+pointlight MWAND_X6
+{
+    color 0.2 0.8 0.2
+    size 40
+}
+
+pointlight MWAND_X7
+{
+    color 0.1 0.6 0.1
+    size 48
+}
+
+pointlight MWAND_X8
+{
+    color 0.0 0.4 0.0
+    size 56
+}
+
+object MageWandMissileG
+{
+    frame MWN1E { light MWAND_X5 }
+    frame MWN1F { light MWAND_X6 }
+    frame MWN1G { light MWAND_X7 }
+    frame MWN1H { light MWAND_X8 }
+}
+
+pointlight MWAND_X9
+{
+    color 1.0 0.3 0.3
+    size 32
+}
+
+pointlight MWAND_X10
+{
+    color 0.8 0.2 0.2
+    size 40
+}
+
+pointlight MWAND_X11
+{
+    color 0.6 0.1 0.1
+    size 48
+}
+
+pointlight MWAND_X12
+{
+    color 0.4 0.0 0.0
+    size 56
+}
+
+object MageWandMissileR
+{
+    frame MWN2E { light MWAND_X9 }
+    frame MWN2F { light MWAND_X10 }
+    frame MWN2G { light MWAND_X11 }
+    frame MWN2H { light MWAND_X12 }
+}
+
+pointlight REDMAGEBALL
+{
+    color 1.0 0.0 0.0
+    size 48
+}
+
+flickerlight REDMAGEBALL_X1
+{
+    color 1.0 0.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+flickerlight REDMAGEBALL_X2
+{
+    color 0.8 0.0 0.0
+    size 72
+    secondarySize 80
+    chance 0.5
+}
+
+flickerlight REDMAGEBALL_X3
+{
+    color 0.5 0.0 0.0
+    size 68
+    secondarySize 96
+    chance 0.5
+}
+
+object RedMageBall
+{
+    frame WRBLA { light REDMAGEBALL }
+    frame WRBLB { light REDMAGEBALL }
+    frame WRBLC { light REDMAGEBALL }
+    frame WRBLD { light REDMAGEBALL }
+    frame WRBLE { light REDMAGEBALL }
+    frame WRBLF { light REDMAGEBALL }
+
+    frame WRBLG { light REDMAGEBALL_X1 }
+    frame WRBLH { light REDMAGEBALL_X2 }
+    frame WRBLI { light REDMAGEBALL_X3 }
+}
+
+pointlight BLUEMAGEBALL
+{
+    color 0.0 0.0 1.0
+    size 48
+}
+
+flickerlight BLUEMAGEBALL_X1
+{
+    color 0.0 0.0 1.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+flickerlight BLUEMAGEBALL_X2
+{
+    color 0.0 0.0 0.8
+    size 72
+    secondarySize 80
+    chance 0.5
+}
+
+flickerlight BLUEMAGEBALL_X3
+{
+    color 0.0 0.0 0.5
+    size 68
+    secondarySize 96
+    chance 0.5
+}
+
+object BlueMageBall
+{
+    frame WRBLA { light BLUEMAGEBALL }
+    frame WRBLB { light BLUEMAGEBALL }
+    frame WRBLC { light BLUEMAGEBALL }
+    frame WRBLD { light BLUEMAGEBALL }
+    frame WRBLE { light BLUEMAGEBALL }
+    frame WRBLF { light BLUEMAGEBALL }
+
+    frame WRBLG { light BLUEMAGEBALL_X1 }
+    frame WRBLH { light BLUEMAGEBALL_X2 }
+    frame WRBLI { light BLUEMAGEBALL_X3 }
+}
+
+pointlight GREENMAGEBALL
+{
+    color 0.0 1.0 0.0
+    size 48
+}
+
+flickerlight GREENMAGEBALL_X1
+{
+    color 0.0 1.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+flickerlight GREENMAGEBALL_X2
+{
+    color 0.0 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.5
+}
+
+flickerlight GREENMAGEBALL_X3
+{
+    color 0.0 0.5 0.0
+    size 68
+    secondarySize 96
+    chance 0.5
+}
+
+object GreenMageBall
+{
+    frame WRBLA { light GREENMAGEBALL }
+    frame WRBLB { light GREENMAGEBALL }
+    frame WRBLC { light GREENMAGEBALL }
+    frame WRBLD { light GREENMAGEBALL }
+    frame WRBLE { light GREENMAGEBALL }
+    frame WRBLF { light GREENMAGEBALL }
+
+    frame WRBLG { light GREENMAGEBALL_X1 }
+    frame WRBLH { light GREENMAGEBALL_X2 }
+    frame WRBLI { light GREENMAGEBALL_X3 }
+}
+
+// BloodScourge
+flickerlight BSBALL
+{
+    color 1.0 0.2 0.0
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight BSBALL_X1
+{
+    color 1.0 0.4 0.0
+    size 24
+    secondarySize 28
+    chance 0.3
+}
+
+flickerlight BSBALL_X2
+{
+    color 0.7 0.3 0.0
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight BSBALL_X3
+{
+    color 0.5 0.2 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight BSBALL_X4
+{
+    color 0.3 0.1 0.0
+    size 40
+    secondarySize 48
+    chance 0.3
+}
+
+object MageStaffFX3
+{
+    frame MSP2A { light BSBALL }
+    frame MSP2B { light BSBALL }
+    frame MSP2C { light BSBALL }
+    frame MSP2D { light BSBALL }
+
+    frame MSP2E { light BSBALL_X1 }
+    frame MSP2F { light BSBALL_X2 }
+    frame MSP2G { light BSBALL_X3 }
+    frame MSP2H { light BSBALL_X4 }
+}
+
+object Powershot
+{
+    frame MSP2A { light BSBALL }
+    frame MSP2B { light BSBALL }
+    frame MSP2C { light BSBALL }
+    frame MSP2D { light BSBALL }
+
+    frame MSP2E { light BSBALL_X1 }
+    frame MSP2F { light BSBALL_X2 }
+    frame MSP2G { light BSBALL_X3 }
+    frame MSP2H { light BSBALL_X4 }
+}
+
+Object HellFX2
+{
+Frame HELXA { Light HellShot2Explode1 }
+Frame HELXB { Light HellShot2Explode2 }
+Frame HELXC { Light HellShot2Explode3 }
+Frame HELXD { Light HellShot2Explode4 }
+Frame HELXE { Light HellShot2Explode5 }
+Frame HELXF { Light HellShot2Explode6 }
+Frame HELXG { Light HellShot2Explode7 }
+Frame HELXH { Light HellShot2Explode8 }
+Frame HELXI { Light HellShot2Explode9 }
+Frame HELXJ { Light HellShot2Explode10 }
+}
+
+//RageStaff
+
+Object FireBeam1
+{
+Frame HK04A { Light FireBeam1 }
+Frame HK04B { Light FireBeam2 }
+Frame HK04C { Light FireBeam3 }
+}
+
+object Magepower3
+{
+    frame MSP2A { light BSBALL }
+    frame MSP2B { light BSBALL }
+    frame MSP2C { light BSBALL }
+    frame MSP2D { light BSBALL }
+
+    frame MSP2E { light BSBALL_X1 }
+    frame MSP2F { light BSBALL_X2 }
+    frame MSP2G { light BSBALL_X3 }
+    frame MSP2H { light BSBALL_X4 }
+}
+
+
+object HellStaffBeforeShot
+{
+	frame HSFX { light BSBALL_X1 }
+}
+
+object HellStaffShot
+{
+	frame HSSP { light BSBALL }
+
+	frame HSBXG { light BSBALL3 }
+	frame HSBXH { light BSBALL3 }
+	frame HSBXI { light BSBALL }
+	frame HSBXJ { light BSBALL3 }
+	frame HSBXK { light BSBALL3 }
+	frame HSBXL { light BSBALL }
+	frame HSBXM { light BSBALL4 }
+	frame HSBXN { light BSBALL2 }
+	frame HSBXO { light BSBALL5 }
+	frame HSBXP { light BSBALL5 }
+}
+
+object HellStaffSmallShot
+{
+	frame HSFX { light BSBALL_X1 }
+}
+
+object HellStaffSmallShot1
+{
+	frame ARCB { light BSBALL }
+}
+
+// Frost shards
+flickerlight MFROSTSHARD
+{
+    color 0.3 0.3 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X1
+{
+    color 0.3 0.3 1.0
+    size 40
+    secondarySize 48
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X2
+{
+    color 0.2 0.2 0.8
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X3
+{
+    color 0.1 0.1 0.5
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight MFROSTSHARD_X4
+{
+    color 0.0 0.0 0.2
+    size 64
+    secondarySize 68
+    chance 0.3
+}
+
+object FrostMissile1
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+object FrostMissile2
+{
+    frame FX05A { light MFROSTSHARD_X1 }
+    frame FX05B { light MFROSTSHARD_X2 }
+    frame FX05C { light MFROSTSHARD_X3 }
+    frame FX05E { light MFROSTSHARD_X4 }
+	frame FX05F { light MFROSTSHARD_X3 }
+    frame FX05G { light MFROSTSHARD_X4 }
+}
+
+object FrostMissile3
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+Object Blizzardwind
+{
+  frame IBRTA { light IceBreath1 }
+  frame IBRTB { light IceBreath2 }
+
+}
+
+//Gods spell
+
+object GodsMeteor
+{
+    frame AF02A { light LAVABALL3 }
+	frame AF02B { light LAVABALL3 }
+	frame AF02C { light LAVABALL3 }
+	frame AF02D { light LAVABALL3 }
+	frame AF02E { light LAVABALL3 }
+	frame AF02F { light LAVABALL3 }
+	frame AF02G { light LAVABALL3 }
+	frame AF02H { light LAVABALL3 }
+	frame AF02I { light LAVABALL3 }
+}
+
+
+// haste Sphere
+
+PulseLight HasteSphere
+{
+Color 1.0 1.0 0.0
+Size 40
+SecondarySize 56
+Interval 5.0
+}
+
+Object HasteSphere
+{
+Frame HAST { Light HasteSphere }
+}
+
+//sickness powerup for mage
+
+Object Sickness1
+{
+Frame SEF2 { Light SentGMissile1 }
+Frame PSBGD { Light GreenFire1 }
+Frame PSBGE { Light GreenFire2 }
+Frame PSBGF { Light GreenFire3 }
+Frame PSBGG { Light GreenFire4 }
+Frame PSBGH { Light GreenFire5 }
+Frame PSBGI { Light GreenFire6 }
+}

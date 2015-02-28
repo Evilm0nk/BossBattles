@@ -1,0 +1,62 @@
+
+//Mage Sounds
+
+$playersound Magep male *death MGDTH
+$playersound Magep male *Xdeath MGXDTH1
+$playersound Magep male *gibbed MGXDTH1
+$playersound Magep male *pain100 MGPAIN
+$playersound Magep male *pain75 MGPAIN
+$playersound Magep male *pain50 MGPAIN
+$playersound Magep male *pain25 MGPAIN
+$playersound Magep male *grunt MGGRUNT
+$playersound Magep male *land MGGRUNT
+$playersound Magep male *jump DSNONE
+$playersound Magep male *fist DSPUNCH
+$playersound Magep male *usefail MGGRUNT
+$playersound Magep male *taunt LAUGH1
+
+	
+//===========================================================================
+//
+// Weapons
+//
+//===========================================================================
+
+//*****Fire Crystal*****//
+
+FireCrystal2          FWAND2
+
+//*****Lightning hands and mage staff*****//
+
+//mageStaff
+MageStaffFire           mage4
+MageStaffExplode        mageball
+
+//Lightninghands (weapon not here but sounds are used in other places)
+MageLightningFire       lite2
+MageLightningContinuous gntpow
+MageLightningReady      wepele2
+MageLightningZap        gntact1
+
+//FrostShards
+MageShardFire           SNOW5
+MageShardExplode    	SNOW6
+
+//*****TriStaff*****//
+
+weapons/staffready		STFFRDY
+weapons/staffshot		DSSTAFF
+weapons/staffReload		DSSTAFR
+
+//*****Cult Staff*****//
+
+cult/fire		cotsfire
+cult/hit		cotshit
+
+//*****Ragestaff*****/
+
+HellStaff/BShot				SFX1_01
+HellStaff/SmallShot			SFX1_02
+HellStaff/SmallShotDeath	SFX1_05
+HellStaff/BigShot			SFX1_03
+HellStaff/BigshotDeath		SFX1_04
