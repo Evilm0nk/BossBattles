@@ -1,0 +1,438 @@
+// Cyberdemon
+
+pointlight CYBERROCKET
+{
+    color 1.0 0.7 0.0
+    size 56
+}
+
+flickerlight CYBERROCKET_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight CYBERROCKET_X2
+{
+    color 0.5 0.1 0.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight CYBERROCKET_X3
+{
+    color 0.3 0.0 0.0
+    size 96
+    secondarySize 104
+    chance 0.3
+}
+
+object RocketC
+{
+    frame MISLA { light CYBERROCKET }
+    frame MISLB { light CYBERROCKET_X1 }
+    frame MISLC { light CYBERROCKET_X2 }
+    frame MISLD { light CYBERROCKET_X3 }
+}
+
+//baby cyberdemon rocket
+Object babyRocket
+{
+Frame MISL { Light REAVERBALL }
+}
+
+//SpiderMastermind
+
+flickerlight2 SPIDERMASTERMINDLIGHT
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+object SpiderMastermindF
+{
+    frame SPIDG { light SPIDERMASTERMINDLIGHT }
+}
+
+object SpiderMastermind2
+{
+    frame SPIDG { light SPIDERMASTERMINDLIGHT }
+}
+
+//Arachnotron
+
+pointlight ARACHPLAS
+{
+    color 0.6 1.0 0.0
+    size 56
+}
+
+flickerlight ARACHPLAS_X1
+{
+    color 0.4 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X2
+{
+    color 0.6 0.6 0.0
+    size 88
+    secondarySize 96
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X3
+{
+    color 0.4 0.4 0.0
+    size 48
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X4
+{
+    color 0.2 0.2 0.0
+    size 24
+    secondarySize 16
+    chance 0.3
+}
+
+object ArachnotronPlasmaA
+{
+    frame APLSA { light ARACHPLAS }
+    frame APLSB { light ARACHPLAS }
+
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X2 }
+    frame APBXD { light ARACHPLAS_X3 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object ArachnotronPlasma2 //friendly arachnotron
+{
+    frame APLSA { light ARACHPLAS }
+    frame APLSB { light ARACHPLAS }
+
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X2 }
+    frame APBXD { light ARACHPLAS_X3 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+//Mancubus
+
+flickerlight FATBALL
+{
+    color 0.7 0.2 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+
+object FatshotF
+{
+    frame MANFA { light FATBALL   }
+    frame MANFB { light FATBALL   }
+
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object Fatshot2	//Friendly mancubus
+{
+    frame MANFA { light FATBALL   }
+    frame MANFB { light FATBALL   }
+
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+//Hellknight and BaronofHell
+
+pointlight BARONBALL
+{
+    color 0.0 1.0 0.0
+    size 64
+}
+
+flickerlight BARONBALL_X1
+{
+    color 0.0 0.7 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+flickerlight BARONBALL_X2
+{
+    color 0.0 0.4 0.0
+    size 96
+    secondarySize 104
+    chance 0.25
+}
+
+flickerlight BARONBALL_X3
+{
+    color 0.0 0.2 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+object BaronBallB
+{
+    frame BAL7A { light BARONBALL    }
+    frame BAL7B { light BARONBALL    }
+
+    frame BAL7C { light BARONBALL_X1 }
+    frame BAL7D { light BARONBALL_X2 }
+    frame BAL7E { light BARONBALL_X3 }
+}
+
+object BaronBall2
+{
+    frame BAL7A { light BARONBALL    }
+    frame BAL7B { light BARONBALL    }
+
+    frame BAL7C { light BARONBALL_X1 }
+    frame BAL7D { light BARONBALL_X2 }
+    frame BAL7E { light BARONBALL_X3 }
+}
+
+//Cacodemon
+
+// Cacodemon fireball
+flickerlight CACOBALL
+{
+    color 1.0 0.2 0.6
+    size 56
+    secondarySize 64
+    chance 0.5
+}
+
+flickerlight CACOBALL_X1
+{
+    color 0.9 0.1 0.4
+    size 72
+    secondarySize 80
+    chance 0.25
+}
+
+flickerlight CACOBALL_X2
+{
+    color 0.6 0.0 0.1
+    size 88
+    secondarySize 96
+    chance 0.25
+}
+
+flickerlight CACOBALL_X3
+{
+    color 0.3 0.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.25
+}
+
+object CacodemonBall
+{
+    frame BAL2A { light CACOBALL }
+    frame BAL2B { light CACOBALL }
+
+    frame BAL2C { light CACOBALL_X1 }
+    frame BAL2D { light CACOBALL_X2 }
+    frame BAL2E { light CACOBALL_X3 }
+}
+
+object CacodemonBallC
+{
+    frame BAL2A { light CACOBALL }
+    frame BAL2B { light CACOBALL }
+
+    frame BAL2C { light CACOBALL_X1 }
+    frame BAL2D { light CACOBALL_X2 }
+    frame BAL2E { light CACOBALL_X3 }
+}
+
+object CacodemonBall2		//Friendly cacodemon cleric summons
+{
+    frame BAL2A { light CACOBALL }
+    frame BAL2B { light CACOBALL }
+
+    frame BAL2C { light CACOBALL_X1 }
+    frame BAL2D { light CACOBALL_X2 }
+    frame BAL2E { light CACOBALL_X3 }
+}
+
+//EvilDoomguy
+
+// BFG
+pointlight EBFGBALL2
+{
+    color 0.0 1.0 0.0
+    size 80
+}
+
+flickerlight BFGBALL2_X1
+{
+    color 0.2 1.0 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight BFGBALL2_X2
+{
+    color 0.3 1.0 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight BFGBALL2_X3
+{
+    color 0.5 1.0 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight BFGBALL2_X4
+{
+    color 0.2 0.7 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight BFGBALL2_X5
+{
+    color 0.1 0.3 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object BFGBall2
+{
+    frame BFS1A { light EBFGBALL2 }
+    frame BFS1B { light EBFGBALL2 }
+
+    frame BFE1A { light BFGBALL2_X1 }
+    frame BFE1B { light BFGBALL2_X2 }
+    frame BFE1C { light BFGBALL2_X3 }
+    frame BFE1D { light BFGBALL2_X1 }
+    frame BFE1E { light BFGBALL2_X4 }
+    frame BFE1F { light BFGBALL2_X5 }
+}
+
+flickerlight EVILBULLET1
+{
+    color 0.5 0.5 0.0
+    size 6
+    secondarySize 8
+    chance 0.8
+}
+
+flickerlight EVILBULLET2
+{
+    color 0.5 0.5 0.0
+    size 3
+    secondarySize 4
+    chance 0.8
+}
+
+object EvilDoomguybullet
+{
+    frame BPUFA { light EVILBULLET1 }
+    frame BPUFB { light EVILBULLET1 }
+    frame BPUFC { light EVILBULLET2 }
+    frame BPUFD { light EVILBULLET2 }
+}
+
+//Phobos
+
+Object UraniumBall3
+{
+	Frame PLSSA { light PURPLEPLASMA }
+	Frame PLSSB { light PURPLEPLASMA }
+	
+	Frame PLSEA { light PURPLE_X1 }
+	Frame PLSEB { light PURPLE_X2 }
+	Frame PLSEC { light PURPLE_X2 }
+	Frame PLSED { light PURPLE_X3 }
+	Frame PLSEE { light PURPLE_X4 }
+}
+
+Object UraniumBallRed2
+{
+	Frame PLSSA { light REDPLASMA }
+	Frame PLSSB { light REDPLASMA }
+	
+	Frame PLSEA { light RED_X1 }
+	Frame PLSEB { light RED_X2 }
+	Frame PLSEC { light RED_X2 }
+	Frame PLSED { light RED_X3 }
+	Frame PLSEE { light RED_X4 }
+}
+
+Object UraniumAltBall3
+{
+	Frame APBXA { light ALTBALL }
+	
+	Frame APBXB { light PURPLE_X2 }
+	Frame APBXC { light PURPLE_X2 }
+	Frame APBXD { light PURPLE_X3 }
+	Frame APBXE { light PURPLE_X4 }
+}
+
+Object UraniumAltBall4
+{
+	Frame PLSSA { light REDPLASMA }
+	Frame PLSSB { light REDPLASMA }
+	
+	Frame PLSEA { light RED_X1 }
+	Frame PLSEB { light RED_X2 }
+	Frame PLSEC { light RED_X2 }
+	Frame PLSED { light RED_X3 }
+	Frame PLSEE { light RED_X4 }
+}
+
+object GyroBurst2
+{
+    frame BFS1A { light EBFGBALL2 }
+    frame BFS1B { light EBFGBALL2 }
+
+    frame BFE1A { light BFGBALL2_X1 }
+    frame BFE1B { light BFGBALL2_X2 }
+    frame BFE1C { light BFGBALL2_X3 }
+    frame BFE1D { light BFGBALL2_X1 }
+    frame BFE1E { light BFGBALL2_X4 }
+    frame BFE1F { light BFGBALL2_X5 }
+}
+
+object GyroBall2
+{
+	frame APLS { light ARACHPLAS }
+
+	frame APBXA { light ARACHPLAS_X1 }
+	frame APBXB { light ARACHPLAS_X2 }
+	frame APBXC { light ARACHPLAS_X2 }
+	frame APBXD { light ARACHPLAS_X3 }
+	frame APBXE { light ARACHPLAS_X4 }
+}
+
+

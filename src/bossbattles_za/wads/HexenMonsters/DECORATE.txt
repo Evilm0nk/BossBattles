@@ -250,7 +250,111 @@ ACTOR BishopBlur2 : Bishopblur replaces BishopBlur
   +clientsideonly
 }
 
-Actor BluetrapBall : BishopFX
+//Friendly Bishop for ClericSummoner
+Actor FBishop : Bishop 
+{
+	Health 1600
+	+FLOORCLIP
+	+QUICKTORETALIATE
+	+TELESTOMP
+	+NOBLOOD
+	+NOBLOCKMONST
+	+friendly
+	+NORADIUSDMG
+	+Ghost
+	+THRUSPECIES
+    Species "Player"
+	Height 56
+    Renderstyle Add
+    Alpha 0.8
+	Mass 100000
+	Mass 100000
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+	Obituary "%o wasn't quick enough to avoid the Friendly bishop's spells."
+	States
+	{
+  Spawn:
+	BISH A 0
+	BISH A 0 A_GiveInventory("FriendlyMonsterTimer",1)
+	Goto Super::Spawn
+  See:
+  	BISH A 0 A_JumpIfInventory("FriendlyMonsterTimer",1,1)
+	Goto ALTPAIN
+    BISH A 2 A_Chase
+    BISH A 2 A_BishopChase
+    BISH A 2
+    BISH B 2 A_BishopChase
+    BISH B 2 A_Chase
+    BISH B 2 A_BishopChase
+    BISH A 1 A_BishopDecide
+    Loop
+  Missile:
+    BISH A 3 A_FaceTarget
+    BISH DE 3 A_FaceTarget
+    BISH F 0 A_PlaySound ("bishopattack")
+	BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+	BISH A 0 A_FaceTarget
+	BISH F 0 A_PlaySound ("bishopattack")
+	BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+    BISH A 0 A_FaceTarget
+	BISH F 0 A_PlaySound ("bishopattack")
+	BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+	BISH A 0 A_FaceTarget
+	BISH F 0 A_PlaySound ("bishopattack")
+    BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+	BISH A 0 A_FaceTarget
+    BISH F 0 A_PlaySound ("bishopattack")
+	BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+	BISH A 0 A_FaceTarget
+	BISH F 0 A_PlaySound ("bishopattack")
+    BISH F 2 A_Custommissile ("FBishopFX2", 35, 0, 0) 
+	Goto See
+	Blur:
+	BISH A 2 A_BishopDoBlur
+	BISH AAA 4 A_SpawnItemEx("BishopBlur",0,0,0,0,0,0,0,161) 
+	TNT1 A 0 A_Jump(256,1,2,3)
+	BISH AA 4 A_SpawnItemEx("BishopBlur",0,0,0,0,0,0,0,161) 
+	TNT1 A 0 Thing_Stop(0)
+	TNT1 A 0 A_SpawnItemEx("BishopBlur",0,0,0,0,0,0,0,161) 
+	TNT1 A 0 A_Jump(97,"Missile")
+	Goto See
+  Pain:
+	BISH C 6 A_Pain
+	TNT1 A 0 A_Jump(64,"Blur")
+	BISH C 6 A_SpawnItemEx("BishopPainBlur",Random(-10,10),Random(-10,10),Random(-10,10),0,0,0,0,161)
+	TNT1 A 0 A_Jump(64,"Blur")
+	BISH C 6 A_SpawnItemEx("BishopPainBlur",Random(-10,10),Random(-10,10),Random(-10,10),0,0,0,0,161)
+	TNT1 A 0 A_Jump(64,"Blur")
+	BISH C 6 A_SpawnItemEx("BishopPainBlur",Random(-10,10),Random(-10,10),Random(-10,10),0,0,0,0,161)
+	Goto See
+  Death:
+	TNT1 A 1 A_CustomMissile("SummonFog2")
+	stop
+  ALTPAIN:
+    BISH C 4
+    BISH C 4 A_PlaySound("items/unholytome")
+    Goto ALTDEATH
+  ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+	}
+}
+
+Actor FBishopFX2 : BishopFX
+{
+	Damage 30
+	DamageType "PELECTRIC"
+	+MTHRUSPECIES
+}
+
+
+Actor BluetrapBall : BishopFX //For magic Map
 {
 	Translation "112:127=192:207", "80:95=192:196", "209:223=198:206", "232:235=203:203", "227:231=201:201"
     +SPECTRAL
@@ -3737,6 +3841,16 @@ ACTOR CentaurFX2 : CentaurFX replaces CentaurFX
   DamageType "Ice"
 }
 
+ACTOR FCentaurFX2 : CentaurFX 
+{
+  Speed 25
+  Damage 15
+  DamageType "Ice"
+  +MTHRUSPECIES
+  Decal PlasmaScorchLower
+}
+
+
 Actor korax3 : korax2 1479	
 {
 //$Category Friendlies
@@ -3814,12 +3928,81 @@ Actor Demon3 : Demon1 7085
 	}
 }
 
-ACTOR Demon1FX11 : Demon1FX1 replaces Demon1FX1 //also used on mage staff wep
+ACTOR Demon1FX11 : Demon1FX1 replaces Demon1FX1 
 {
 +SPECTRAL
   Damage 18
   Speed 28
   DamageType "Poison"
+}
+
+//Friendly Demon1 for ClericSummoner
+Actor FDemon1 : Demon1 
+{
+	Health 1800
+	Height 64
+	Mass 100000
+	+TELESTOMP
+	+QUICKTORETALIATE
+	+FLOORCLIP
+	+FRIENDLY
+	+NOBLOOD
+	+NOBLOCKMONST
+    +NORADIUSDMG
+	+Ghost
+	+THRUSPECIES
+    Species "Player"
+    Renderstyle Add
+    Alpha 0.8
+    MeleeDamage 25
+    Damage 25
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+	Obituary "%o felt the gasball of a friendly dragon whelp."
+	HitObituary "%o was bitten by a friendly dragon whelp."
+  States
+  {
+  Spawn:
+	DEMN A 0
+	DEMN A 0 A_GiveInventory("FriendlyMonsterTimer",1)
+	Goto Super::Spawn
+  See:
+  	DEMN A 0 A_JumpIfInventory("FriendlyMonsterTimer",1,1)
+	Goto ALTPAIN
+    DEMN ABC 3 A_Chase
+	DEMN D 3 A_FastChase
+    Loop
+  Missile:
+    DEMN E 5 A_FaceTarget
+    DEMN F 6 A_FaceTarget
+    DEMN G 3 A_CustomMissile("FDemon1FX11", 62, 0)
+	DEMN F 1 A_FaceTarget
+    Goto See
+	Death:
+	TNT1 A 1 A_CustomMissile("SummonFog2")
+	stop
+  ALTPAIN:
+    DEMN E 4
+    DEMN E 4 A_PlaySound("items/unholytome")
+    Goto ALTDEATH
+  ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+	}
+}
+
+ACTOR FDemon1FX11 : Demon1FX1 	
+{
+  Speed 25
+  Damage 15
+  DamageType "PPoison"
+  +MTHRUSPECIES
+  Decal PlasmaScorchLower
 }
 
 Actor demon5 : demon3 1234	
@@ -3900,12 +4083,21 @@ Actor Demon4 : Demon2 7086
 	}
 }
 
-ACTOR Demon2FX12 : Demon2FX1 replaces Demon2FX1 //also used on magestaff wep
+ACTOR Demon2FX12 : Demon2FX1 replaces Demon2FX1 
 {
 +SPECTRAL
   Speed 29
   DamageType "Fire"
   Damage 19
+}
+
+ACTOR FDemon2FX12 : Demon2FX1  
+{
+  Speed 25
+  DamageType "PFire"
+  Damage 15
+  +MTHRUSPECIES
+  Decal PlasmaScorchLower
 }
 
 Actor demon6 : demon4 1275	
@@ -4057,6 +4249,76 @@ ACTOR IceGuyFX25 : IceguyFx replaces Iceguyfx
   Speed 29
   Damage 13
   DamageType "Ice"
+}
+
+//Friendly Iceguy for ClericSummoner
+ACTOR FIceGuy : IceGuy 
+{
+
+  Health 1400
+  PainChance 1
+  Mass 150000
+  +FLOORCLIP
+  +QUICKTORETALIATE
+  +TELESTOMP
+  +NOBLOOD
+  +friendly
+  +NOBLOCKMONST
+  +NORADIUSDMG
+  +Ghost
+  +THRUSPECIES
+  Species "Player"
+  Renderstyle Add
+  Alpha 0.8
+  Damagefactor "HEAVENPOWER", 0
+  Damagefactor "PEXPLOSIVE", 0
+  Damagefactor "PFire", 0
+  Damagefactor "PElectric", 0
+  Damagefactor "PPoison", 0
+  Damagefactor "PBullet", 0
+  DamageFactor "ice", 0.1
+  Damagefactor "ice", 0
+  SeeSound "IceGuySight"
+  AttackSound "IceGuyAttack"
+  ActiveSound "IceGuyActive"
+  Obituary "$OB_ICEGUY" // "%o was frozen solid by a Wendigo." 
+  States
+  {
+  Spawn:
+	ICEY A 0
+	ICEY A 0 A_GiveInventory("FriendlyMonsterTimer",1)
+	Goto Super::Spawn
+  See:
+  	ICEY A 0 A_JumpIfInventory("FriendlyMonsterTimer",1,1)
+	Goto ALTPAIN
+    ICEY A 4 A_Chase
+    ICEY B 4 A_IceGuyChase
+    ICEY CD 4 A_Chase
+    Loop
+  Missile:
+    ICEY EF 3 A_FaceTarget
+    ICEY G 0 Bright A_Custommissile ("IceGuyFX26", 35, 16, 0) 
+	ICEY G 8 Bright A_Custommissile ("IceGuyFX26", 35, -16, 0) 
+    ICEY F 4 A_FaceTarget
+    Goto See
+  Death:
+	TNT1 A 1 A_CustomMissile("SummonFog2")
+	stop
+  ALTPAIN:
+    ICEY A 4
+    ICEY A 4 A_PlaySound("items/unholytome")
+    Goto ALTDEATH
+  ALTDEATH:
+	TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+	stop
+  }
+}
+
+ACTOR IceGuyFX26 : IceguyFx 
+{
+  Damage 25
+  DamageType "ice"
+  +MTHRUSPECIES
 }
 
 Actor IceGuy3 : Iceguy2 14521	

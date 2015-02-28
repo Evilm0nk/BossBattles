@@ -1,0 +1,7 @@
+//======================================
+//Phobos
+//======================================
+
+Phobos/Sight	DSPHOBS
+Phobos/Pain		DSPHOBP
+Phobos/Death	DSPHOBD
