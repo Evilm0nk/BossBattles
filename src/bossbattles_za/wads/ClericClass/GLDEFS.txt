@@ -1,0 +1,500 @@
+//CLERIC burning death
+
+flickerlight CLERICBURNING1
+{
+    color 1.0 0.8 0.0
+    size 68
+    secondarySize 86
+    chance 0.4
+}
+
+object Cleric1
+{
+    frame FDTHC { light CLERICBURNING1 }
+    frame FDTHD { light CLERICBURNING1 }
+
+    frame FDTHG { light CLERICBURNING1 }
+    frame FDTHH { light CLERICBURNING1 }
+    frame FDTHI { light CLERICBURNING1 }
+    frame FDTHJ { light CLERICBURNING1 }
+    frame FDTHK { light CLERICBURNING1 }
+    frame FDTHL { light CLERICBURNING1 }
+	frame FDTHM { light CLERICBURNING1 }
+    frame FDTHN { light CLERICBURNING1 }
+    frame FDTHO { light CLERICBURNING1 }
+    frame FDTHP { light CLERICBURNING1 }
+    frame FDTHQ { light CLERICBURNING1 }
+    frame FDTHR { light CLERICBURNING1 }
+	frame FDTHS { light CLERICBURNING1 }
+    frame FDTHT { light CLERICBURNING1 }
+    frame FDTHU { light CLERICBURNING1 }
+    frame FDTHV { light CLERICBURNING1 }
+}
+
+//baby cyberdemon rocket
+Object babyRocket
+{
+Frame MISL { Light REAVERBALL }
+}
+
+/////ICEBow
+flickerlight ICEBOWSHOT
+{
+    color 0.3 0.3 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight ICEBOWSHOT_X1
+{
+    color 0.3 0.3 1.0
+    size 40
+    secondarySize 48
+    chance 0.3
+}
+
+flickerlight ICEBOWSHOT_X2
+{
+    color 0.2 0.2 0.8
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight ICEBOWSHOT_X3
+{
+    color 0.1 0.1 0.5
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight ICEBOWSHOT_X4
+{
+    color 0.0 0.0 0.2
+    size 64
+    secondarySize 68
+    chance 0.3
+}
+
+object IceArrow
+{
+	frame ARR2 { light ICEBOWSHOT }
+	frame SHEXA { light ICEBOWSHOT_X1 }
+    frame SHEXB { light ICEBOWSHOT_X2 }
+    frame SHEXC { light ICEBOWSHOT_X3 }
+    frame SHEXD { light ICEBOWSHOT_X4 }
+}
+
+object IceArrowSpawner2
+{
+	frame ARR2 { light ICEBOWSHOT }
+	frame SHEXA { light ICEBOWSHOT_X1 }
+    frame SHEXB { light ICEBOWSHOT_X2 }
+    frame SHEXC { light ICEBOWSHOT_X3 }
+    frame SHEXD { light ICEBOWSHOT_X4 }
+}
+
+object Rainpillar2
+{
+	frame FX23A { light ICEBOWSHOT }
+	frame FX23B { light ICEBOWSHOT_X1 }
+    frame FX23C { light ICEBOWSHOT_X2 }
+    frame FX23D { light ICEBOWSHOT_X3 }
+    frame FX23E { light ICEBOWSHOT_X4 }
+	frame FX23F { light ICEBOWSHOT }
+	frame FX23G { light ICEBOWSHOT_X1 }
+    frame FX23H { light ICEBOWSHOT_X2 }
+    frame FX23I { light ICEBOWSHOT_X3 }
+}
+
+
+// Cleric fire hands
+flickerlight CFLAMETRAIL
+{
+    color 1.0 0.8 0.0
+    size 40
+    secondarySize 44
+    chance 0.5
+}
+
+flickerlight CFLAME1
+{
+    color 1.0 0.8 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight CFLAME2
+{
+    color 1.0 0.8 0.0
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight CFLAME3
+{
+    color 0.7 0.4 0.0
+    size 48
+    secondarySize 56
+    chance 0.4
+}
+
+flickerlight CFLAME4
+{
+    color 0.5 0.2 0.0
+    size 32
+    secondarySize 40
+    chance 0.4
+}
+
+flickerlight CFLAME5
+{
+    color 0.2 0.2 0.0
+    size 24
+    secondarySize 32
+    chance 0.4
+}
+
+object FlamePuff2
+{
+    frame CFFXB { light CFLAME1 }
+    frame CFFXC { light CFLAME2 }
+    frame CFFXD { light CFLAME2 }
+    frame CFFXE { light CFLAME2 }
+    frame CFFXF { light CFLAME2 }
+    frame CFFXG { light CFLAME2 }
+    frame CFFXH { light CFLAME2 }
+    frame CFFXI { light CFLAME2 }
+    frame CFFXJ { light CFLAME3 }
+    frame CFFXK { light CFLAME4 }
+    frame CFFXL { light CFLAME5 }
+}
+
+object CFlameFloor
+{
+    frame CFFX { light CFLAMETRAIL }
+}
+
+object RfireA
+{
+    frame FIRE { light CFLAME1 }
+}
+
+object RfireB
+{
+    frame FIRE { light CFLAME2 }
+}
+
+object RfireC
+{
+    frame FIRE { light CFLAME3 }
+}
+
+object RfireD
+{
+    frame FIRE { light CFLAME4 }
+}
+
+object RfireE
+{
+    frame FIRE { light CFLAME2 }
+}
+
+object RfireF
+{
+    frame FIRE { light CFLAME3 }
+}
+
+object RfireG
+{
+    frame FIRE { light CFLAME4 }
+}
+
+object RfireH
+{
+    frame FIRE { light CFLAME4 }
+}
+
+
+//LightBringer
+PointLight SUNPROJECTILE1
+{
+Color 0.7 0.6 0.2
+Size 56
+}
+
+Object SunProjectile
+{
+Frame SUNP { Light SUNPROJECTILE1 }
+}
+
+Pointlight MELTDOWN1
+{
+Color 1.0 1.0 0.5
+Size 96
+}
+
+Pointlight MELTDOWN2
+{
+Color 0.9 0.6 0.1
+Size 72
+}
+
+Pointlight MELTDOWN3
+{
+Color 0.6 0.3 0.0
+Size 56
+}
+
+Pointlight MELTDOWN4
+{
+Color 0.5 0.1 0.0
+Size 48
+}
+
+Pointlight MELTDOWN5
+{
+Color 0.3 0.0 0.0
+Size 32
+}
+
+Object SunBurst
+{
+Frame SNXPA { Light MELTDOWN1 }
+Frame SNXPB { Light MELTDOWN2 }
+Frame SNXPC { Light MELTDOWN2 }
+Frame SNXPD { Light MELTDOWN3 }
+Frame SNXPE { Light MELTDOWN3 }
+Frame SNXPF { Light MELTDOWN4 }
+Frame SNXPG { Light MELTDOWN4 }
+Frame SNXPH { Light MELTDOWN5 }
+}
+
+PointLight SUNRAY1
+{
+Color 0.7 0.6 0.2
+Size 20
+}
+
+Object SunRay
+{
+Frame FX01 { Light SUNRAY1 }
+}
+
+// Cleric Serpent Staff ball
+pointlight CSTAFFBALL
+{
+    color 0.0 1.0 0.0
+    size 40
+}
+
+flickerlight CSTAFFBALL_X1
+{
+    color 0.0 1.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X2
+{
+    color 0.0 0.7 0.0
+    size 60
+    secondarySize 68
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X3
+{
+    color 0.0 0.5 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight CSTAFFBALL_X4
+{
+    color 0.0 0.3 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+object CStaffMissile
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+object CStaffMissile1
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+object CStaffMissile3
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+object SerpentStaffPower
+{
+    frame CSSFD { light CSTAFFBALL }
+    frame CSSFE { light CSTAFFBALL }
+
+    frame CSSFF { light CSTAFFBALL_X1 }
+    frame CSSFG { light CSTAFFBALL_X2 }
+    frame CSSFH { light CSTAFFBALL_X3 }
+    frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+//Wraithverge1
+
+Object Holyspirit4
+{
+Frame SPIRA { Light HadesBolt1 }
+Frame SPIRB { Light HadesBolt1 }
+Frame SPIRD { Light HadesBolt1 }
+Frame SPIRE { Light HadesBolt2 }
+Frame SPIRF { Light HadesBolt3 }
+Frame SPIRG { Light HadesBolt1 }
+Frame SPIRH { Light HadesBolt2 }
+Frame SPIRI { Light HadesBolt3 }
+}
+
+flickerlight GHOST
+{
+    color 1.0 1.0 1.0
+    size 56
+    secondarySize 52
+    chance 0.7
+    subtractive 1
+}
+
+object HolyMissile
+{
+    frame SPIRP { light GHOST }
+}
+
+object HolySpirit
+{
+    frame SPIRA { light GHOST }
+    frame SPIRB { light GHOST }
+}
+
+object HolyMissile3
+{
+    frame SPIRP { light GHOST }
+}
+
+object HolySpirit2
+{
+    frame SPIRA { light GHOST }
+    frame SPIRB { light GHOST }
+}
+
+// summon Sphere
+
+pulselight SUMMONSPHERE
+{
+    color 0.8 0.2 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object SummonSphere
+{
+    frame CARN { light SUMMONSPHERE }
+}
+
+object SummonSphereThrown
+{
+    frame CARN { light SUMMONSPHERE }
+}
+
+object SummonFog1
+{
+    frame TFOGA { light DTFOG1 }
+    frame TFOGB { light DTFOG2 }
+    frame TFOGC { light DTFOG2 }
+    frame TFOGD { light DTFOG2 }
+    frame TFOGE { light DTFOG3 }
+    frame TFOGF { light DTFOG4 }
+    frame TFOGI { light DTFOG4 }
+    frame TFOGJ { light DTFOG3 }
+}
+
+object SummonFog2
+{
+    frame TFOGA { light DTFOG1 }
+    frame TFOGB { light DTFOG2 }
+    frame TFOGC { light DTFOG2 }
+    frame TFOGD { light DTFOG2 }
+    frame TFOGE { light DTFOG3 }
+    frame TFOGF { light DTFOG4 }
+    frame TFOGI { light DTFOG4 }
+    frame TFOGJ { light DTFOG3 }
+}
+
+// PowerSpawner
+object PowerGathering
+{
+    frame LFX1 { light SUMMONSPHERE }
+}
+
+object PowerGathering2
+{
+    frame LFX1 { light SUMMONSPHERE }
+}
+
+pointlight MONSTERSDISAPPEARANCE
+{
+    color 1.0 1.0 1.0
+    size 40
+	offset 0 36 0
+}
+
+//Disappearance for friendly monsters
+
+Object Disappearance
+{
+Frame DISAA { light MONSTERDISAPPEARANCE }
+Frame DISAB { light MONSTERDISAPPEARANCE }
+Frame DISAC { light MONSTERDISAPPEARANCE }
+Frame DISAD { light MONSTERDISAPPEARANCE }
+Frame DISAE { light MONSTERDISAPPEARANCE }
+Frame DISAF { light MONSTERDISAPPEARANCE }
+Frame DISAG { light MONSTERDISAPPEARANCE }
+Frame DISAH { light MONSTERDISAPPEARANCE }
+Frame DISAI { light MONSTERDISAPPEARANCE }
+Frame DISAJ { light MONSTERDISAPPEARANCE }
+Frame DISAK { light MONSTERDISAPPEARANCE }
+Frame DISAL { light MONSTERDISAPPEARANCE }
+Frame DISAM { light MONSTERDISAPPEARANCE }
+Frame DISAN { light MONSTERDISAPPEARANCE }
+Frame DISAO { light MONSTERDISAPPEARANCE }
+Frame DISAP { light MONSTERDISAPPEARANCE }
+Frame DISAQ { light MONSTERDISAPPEARANCE }
+}

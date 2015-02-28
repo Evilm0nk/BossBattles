@@ -1,0 +1,57 @@
+//CLERIC PLAYER Sounds
+
+$playersound Clericp male *death PLRDTH
+$playersound Clericp male *Xdeath PLRCDTH
+$playersound Clericp male *gibbed PLRDTH
+$playersound Clericp male *pain100 CLEPAIN3
+$playersound Clericp male *pain75 CLEPAIN3
+$playersound Clericp male *pain50 CLEPAIN3
+$playersound Clericp male *pain25 CLEPAIN3
+$playersound Clericp male *grunt GRUNT1
+$playersound Clericp male *land GRUNT1
+$playersound Clericp male *jump DSNONE
+$playersound Clericp male *fist DSPUNCH
+$playersound Clericp male *usefail GRUNT1
+$playersound Clericp male *taunt LAUGH3
+
+//*****LightBringer*****//
+
+Weapons/Lightbringer/Bounce	LTBRBNCE
+Weapons/Lightbringer/Charge	LTBRCHRG
+Weapons/Lightbringer/Fire	LTBRFIRE
+Weapons/Lightbringer/Fire2	LTBRFIR2
+Weapons/Lightbringer/Loop	LTBRLOOP
+Weapons/Lightbringer/Meltdown	LTBRMELT
+Weapons/Lightbringer/Recharge	LTBRRCHG
+
+//*****Fighter and Cleric Melee weps*****//
+
+Fist/Swing        DSCFSWIN
+Fist/Punch        DSCFPUN
+
+//Serpent Staff
+ClericCStaffFire        spell1
+ClericCStaffExplode     glbhit4
+ClericCStaffHitThing    vamp5
+
+//wraithverge
+HolySymbolFire          holy3
+SpiritActive            spirt7
+SpiritAttack            spirt5
+SpiritDie               spirts1
+
+//Fire Hands
+ClericFlameFire            strike3
+ClericFlameExplode         firehit
+ClericFlameCircle          strike1
+
+//*****Ice Bow*****//
+
+ARROW1	ARROW1
+ARROW2	ARROW2
+ARROW3	ARROW3
+ARROW4	ARROW4
+
+// Friendly baby cyberdemon
+
+Babycyberdemon/Sight	DSBBCYB1
