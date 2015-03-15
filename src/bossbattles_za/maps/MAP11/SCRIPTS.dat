@@ -465,7 +465,6 @@ Floor_RaiseByValue(56, 50, 125);
 Floor_RaiseByValue(57, 50, 135);
 Floor_RaiseByValue(58, 50, 155);
 Floor_RaiseByValue(59, 50, 165);
-Floor_RaiseByValue(60, 50, 165);
 Floor_LowerToLowest(50,100);
 setfont("BIGFONT");
 hudmessage(s:"Passage unlocked"; HUDMSG_TYPEON, 1, CR_Green, 0.5, 0.5, 2.5, 0.05, 1.0);
@@ -2117,5 +2116,42 @@ Script 164 OPEN
 SectorDamage (60, 20, "fire", "", DAMAGE_PLAYERS);
 SectorDamage (17, 20, "fire", "", DAMAGE_PLAYERS);
 delay(5);
+Restart;
+}
+
+Script 298 (void) // Monsters counter 
+{
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (298, 0);
+  }
+Delay(const:35);
+Restart;
+}
+
+Script 299 (void) // Monsters counter 
+{
+SetFont("BIGFONT");
+HudMessageBold(s: "Monsters left: ", d:ThingCount(0, 999);
+                HUDMSG_PLAIN, 0, CR_Red, -0.0, -0.75, 1.0, 0.03, 0);
+If ( (ThingCount(0, 999)) == 0 )
+  {
+  SetFont("BIGFONT");
+  HudMessage(s:"Well Done...!"; HUDMSG_PLAIN, 1, CR_RED, 0.5, 0.5, 2.5, 0.05, 1.0);
+  AmbientSound("dswelld", 127); // "Welldone"
+  Delay(10);
+  Wave = Wave + 1;
+  WellDone = 0;
+  Delay(10);
+  Acs_Terminate (299, 0);
+  }
+Delay(const:35);
 Restart;
 }  

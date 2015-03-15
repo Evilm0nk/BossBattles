@@ -401,13 +401,13 @@ ACTOR BlueMageBall
   Radius 10
   Height 6
   Mass 5
-  Damage 16
+  Damage 17
+  Scale 0.7
   DamageType "Ice"
   Projectile
   +FLOORCLIP
-  DeathSound "snow2/Death"
+  DeathSound "HellStaff/SmallShot"
   Decal PlasmaScorchLower
-
   States
   {
   Spawn:
@@ -432,11 +432,12 @@ ACTOR RedMageBall
   Radius 10
   Height 6
   Mass 5
-  Damage 16
+  Damage 17
+  Scale 0.7
   DamageType "Pfire"
   Projectile
   +FLOORCLIP
-  DeathSound "WraithMissileExplode"
+  DeathSound "HellStaff/SmallShot"
   Decal PlasmaScorchLower
 
   States
@@ -464,10 +465,11 @@ ACTOR GreenMageBall
   Height 6
   Mass 5
   Damage 17
+  Scale 0.7
   DamageType "Ppoison"
   Projectile
   +FLOORCLIP
-  DeathSound "ClericCStaffExplode"
+  DeathSound "HellStaff/SmallShot"
   Decal PlasmaScorchLower
 
   States
