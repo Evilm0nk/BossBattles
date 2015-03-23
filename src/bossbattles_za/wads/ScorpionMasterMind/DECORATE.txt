@@ -46,10 +46,10 @@ actor ScorpionMastermind 21324
     Missile:
         SCRP EE 10 A_FaceTarget
         SCRP E 0 A_Jump(120,8)
-	SCRP E 0 A_PlayWeaponSound ("spider/attack")
+	    SCRP E 0 A_PlayWeaponSound ("spider/attack")
         SCRP F 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
         SCRP F 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
-	SCRP G 0 A_PlayWeaponSound ("spider/attack")
+	    SCRP G 0 A_PlayWeaponSound ("spider/attack")
         SCRP G 0 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
         SCRP G 2 BRIGHT A_CustomMissile ("DemolisherBullet",15,Random(50, -50),0)
         SCRP G 1 A_SpidRefire
@@ -153,6 +153,165 @@ MISL C 6 Bright A_Explode(5,30,0)
 MISL D 4 Bright A_Explode(5,30,0)
 Stop
 }
+}
+
+//Friendly scorpion Mastermind for clericsummoner
+ACTOR FScorpionMastermind : ScorpionMastermind
+{
+    Obituary "The friendly ScorpionMastermind blew %o away."
+    Health 12000 
+    MONSTER
+   +NOBLOOD
+   +QUICKTORETALIATE
+   +NOBLOCKMONST
+   +NORADIUSDMG
+   +FRIENDLY
+   +Ghost
+   +BRIGHT
+   +THRUSPECIES
+    Species "Player"
+    Damagefactor "HEAVENPOWER", 0
+    Damagefactor "PEXPLOSIVE", 0
+    Damagefactor "PFire", 0
+    Damagefactor "PElectric", 0
+    Damagefactor "PPoison", 0
+    Damagefactor "PBullet", 0
+    DamageFactor "ice", 0.1
+    Renderstyle Add
+    Alpha 0.8
+    deathsound "null" 
+States 
+   {    
+   Spawn: 
+	   SCRP A 0
+	   SCRP A 0 A_GiveInventory("FriendlyMonsterTimer3",1)
+	   Goto Super::Spawn
+   See:	    
+	   SCRP A 0 A_JumpIfInventory("FriendlyMonsterTimer3",1,1)
+	   Goto ALTPAIN
+       SCRP AABB 3 A_Chase
+       SCRP B 0 A_PlaySound("spider/walk")
+       SCRP CCDD 3 A_Chase
+       SCRP D 0 A_PlaySound("spider/walk")
+       Loop
+    Missile:
+        SCRP EE 10 A_FaceTarget
+        SCRP E 0 A_Jump(120,8)
+	    SCRP E 0 A_PlayWeaponSound ("spider/attack")
+        SCRP F 0 BRIGHT A_CustomMissile ("FScorpionMastermindBullet",15,Random(50, -50),0)
+        SCRP F 2 BRIGHT A_CustomMissile ("FScorpionMastermindBullet",15,Random(50, -50),0)
+	    SCRP G 0 A_PlayWeaponSound ("spider/attack")
+        SCRP G 0 BRIGHT A_CustomMissile ("FScorpionMastermindBullet",15,Random(50, -50),0)
+        SCRP G 2 BRIGHT A_CustomMissile ("FScorpionMastermindBullet",15,Random(50, -50),0)
+        SCRP G 1 A_SpidRefire
+        Goto Missile+3
+        SCRP H 6 A_CustomMissile("FBlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("FBlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("FBlackRocket", 24, 40, 0)
+        SCRP IG 6 A_FaceTarget
+        SCRP H 6 A_CustomMissile("FBlackRocket", 24, 40, 0)
+        SCRP I 6 A_FaceTarget
+        SCRP A 24
+        Goto See
+   Death:
+	   TNT1 A 1 A_CustomMissile("SummonFog2")
+	   stop
+   ALTPAIN:
+		SCRP J 4
+		SCRP J 4 A_PlaySound("items/unholytome")
+		Goto ALTDEATH
+   ALTDEATH:
+		TNT1 A 1 A_SPAWNITEMEX("Disappearance")
+		stop
+   } 
+}
+
+actor FScorpionMastermindBullet : FastProjectile
+{ 
+    Radius 3
+	Height 3  
+	Mass 1
+	Damage 2
+	Speed 200
+	RenderStyle ADD
+    Alpha		1
+	Scale		.15
+	DamageType "Bullet"
+	PROJECTILE
+	Decal BulletChip
+	+NOTELEPORT
+	+BLOODSPLATTER
+	+Spectral
+	
+	States{
+		Spawn:
+			TNT1 A 1
+			Loop
+		Death:
+			TNT1 A 1
+			BPUF A 0
+			BPUF A 1 A_PlaySound("Weapons/NailHit")
+			BPUF A 1 Bright A_SpawnDebris("BulletSpark")
+			BPUF B 1 Bright A_SetTranslucent(.75,1)
+			BPUF C 1 Bright A_SetTranslucent(.5,1)
+			BPUF D 1 Bright A_SetTranslucent(.25,1)
+			Stop	
+		XDeath:
+            BPUF A 0 A_PlaySound("Weapons/NailHitBleed")
+            Stop	
+   	}
+}
+
+actor FBlackRocket : BlackRocket
+{
+    -SPECTRAL
+	+MTHRUSPECIES
+    States
+    {
+    Spawn:
+        NRK1 A 1 Bright A_SpawnItem("CyberRocketSmoke64")
+        Loop
+    Death:
+        NRK1 A 0 A_SpawnItem("FBlackRocketExplosion",0,0,0)
+        MISL BCD 5 
+        Stop
+    }
+}
+
+
+Actor FBlackRocketExplosion : BlackRocketExplosion
+{
++MTHRUSPECIES
+-SPECTRAL
+States
+{
+Spawn:
+TNT1 A 1
+Goto Death
+Death:
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,12,0,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,-12,-5,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,19,13,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,-17,15,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,26,7,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,-20,26,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,23,30,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,30,22,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,20,-10,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,12,-15,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,35,0,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,-40,-10,0,0,0,0,0,0)
+TNT1 A 2 A_SpawnItemEx("FBlackRocketExplosion2",0,55,25,0,0,0,0,0,0)
+Stop
+}
+}
+
+Actor FBlackRocketExplosion2 : BlackRocketExplosion2
+{
++MTHRUSPECIES
+-SPECTRAL
 }
 
 Actor ScorpionMastermind2 : ScorpionMastermind 19148	

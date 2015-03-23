@@ -2514,7 +2514,7 @@ actor SummonSphereThrown : SummoningDoll Replaces SummoningDoll
 	 Death:
 	   CARN AB 4
 	   CARN C 4 A_SpawnItemEx("SummonFog1",0,0,0,0,0,0,0)
-	   CARN C 0 A_Jump (256,"Annihilator","Arachnophyte","Cyberdemon64","Cerberus","IceLich","BCyberdemon")
+	   CARN C 0 A_Jump (256,"Annihilator","Arachnophyte","Cyberdemon64","Cerberus","IceLich","BCyberdemon","ScorpionMastermind")
 	 Annihilator:
 	   CARN C 4 A_SpawnItemEx("FAnnihilator",0,0,0,0,0,0,0)
 	   stop
@@ -2532,6 +2532,8 @@ actor SummonSphereThrown : SummoningDoll Replaces SummoningDoll
 	   stop 
 	 BCyberdemon:
 	   CARN C 4 A_SpawnItemEx("BabyCyberdemon",0,0,0,0,0,0,0)
+	 ScorpionMastermind:
+	   CARN C 4 A_SpawnItemEx("FScorpionMastermind",0,0,0,0,0,0,0)
 	   stop
  	}
 }

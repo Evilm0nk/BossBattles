@@ -1,0 +1,64 @@
+object BlackRocket
+{
+    frame NRK1A { light CYBERROCKET }
+    frame MISCB { light CYBERROCKET_X1 }
+    frame MISCC { light CYBERROCKET_X2 }
+    frame MISCD { light CYBERROCKET_X3 }
+}
+
+object FBlackRocket
+{
+    frame NRK1A { light CYBERROCKET }
+    frame MISCB { light CYBERROCKET_X1 }
+    frame MISCC { light CYBERROCKET_X2 }
+    frame MISCD { light CYBERROCKET_X3 }
+}
+
+object BlackRocketExplosion2
+{
+    frame NRK1A { light CYBERROCKET }
+    frame MISCB { light CYBERROCKET_X1 }
+    frame MISCC { light CYBERROCKET_X2 }
+    frame MISCD { light CYBERROCKET_X3 }
+}
+
+object FBlackRocketExplosion2
+{
+    frame NRK1A { light CYBERROCKET }
+    frame MISCB { light CYBERROCKET_X1 }
+    frame MISCC { light CYBERROCKET_X2 }
+    frame MISCD { light CYBERROCKET_X3 }
+}
+
+pointlight SCORPIONPUFF1
+{
+    color 1.0 1.0 0.0 
+    size 32
+}
+
+pointlight SCORPIONPUFF2
+{
+    color 0.7 0.7 0.0
+    size 24
+}
+
+pointlight SCORPIONPUFF3
+{
+    color 0.4 0.4 0.0
+    size 16
+}
+
+pointlight SCORPIONPUFF4
+{
+    color 0.2 0.2 0.0
+    size 8
+}
+
+
+object FScorpionMastermindBullet
+{
+    frame BPUFA { light SCORPIONPUFF1 }
+    frame BPUFB { light SCORPIONPUFF2 }
+    frame BPUFC { light SCORPIONPUFF3 }
+    frame BPUFD { light SCORPIONPUFF4 }
+}
