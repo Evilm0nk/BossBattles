@@ -39,14 +39,6 @@ Frame CFCF { Light PentaFire }
 }
 
 //fighter vapor sword
-Object fStormBolt2
-{
-Frame LFX2F { Light HadesBolt1 }
-Frame LFX2G { Light HadesBolt1 }
-Frame LFX2H { Light HadesBolt1 }
-Frame LFX2I { Light HadesBolt2 }
-Frame LFX2J { Light HadesBolt3 }
-}
 
 Object fStormlite2
 {

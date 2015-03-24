@@ -1,0 +1,1099 @@
+//================================================================
+//================================================================
+//
+//				Thamuz
+//
+//================================================================
+//================================================================
+//	Decorate by DBT, sprites by Jimmy91
+//================================================================
+
+ACTOR Thamuz : Cyberdemon 7228
+{
+//$Category Cybers
+  Health 28800
+  Speed 16
+  PainChance 2
+  Mass 200000000
+  MinMissileChance 30
+  Scale 1.1
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.1
+   Damagefactor "PFire", 1.1
+   Damagefactor "Electric", 0.8
+   Damagefactor "PElectric", 0.8
+   Damagefactor "Poison", 0.1
+   Damagefactor "PPoison", 0.1
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+  Bloodcolor "00 aa 00"
+    dropitem "MediumHealthVile" 70
+    DropItem "Combatpack" 60
+	DropItem "Cmana" 60
+	DropItem "DmanaDrop" 60
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	DropItem "SuperArmor" 3
+	DropItem "Greenarmor" 7
+	DropItem "Bluearmor" 5
+	DropItem "ArtiHealingRadius1" 5
+	DropItem "Medikit" 6
+	DropItem "Stimpack" 8
+  MONSTER
+  +Boss
+  +NOTARGET
+  +FloorClip
+  +AMBUSH
+  +DONTMORPH
+  +QUICKTORETALIATE
+  +TELESTOMP
+  SEESOUND "Thamuz/Idlesight"
+  PAINSOUND "Thamuz/Pain"
+  DEATHSOUND "Thamuz/death"
+  ACTIVESOUND "Thamuz/Idlesight"
+  OBITUARY "%o fell before Thamuz."
+  states
+  {
+  Spawn:
+    DCYB A 10 A_Look
+    Loop
+  See:
+    DCYB A 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostA",0,0,0,0,0,0,0,128)
+    DCYB A 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostA",0,0,0,0,0,0,0,128)
+    DCYB A 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostB",0,0,0,0,0,0,0,128)
+    DCYB B 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostB",0,0,0,0,0,0,0,128)
+    DCYB C 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostC",0,0,0,0,0,0,0,128)
+    DCYB C 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostC",0,0,0,0,0,0,0,128)
+    DCYB D 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostD",0,0,0,0,0,0,0,128)
+    DCYB D 3 A_Chase
+      TNT1 A 0 A_SpawnItemEx("DarkCyberGhostD",0,0,0,0,0,0,0,128)
+    Loop
+  Missile:
+	TNT1 A 0 A_Jump(160,6)
+    DCYB AE 5 A_FaceTarget
+    DCYB E 5 A_FaceTarget
+    DCYB F 10 A_CustomMissile("DCBMiss1",56,-25,0)
+    DCYB E 15 A_FaceTarget
+    Goto See
+	TNT1 A 0 A_Jump(160,31)
+	TNT1 A 0 A_SetInvulnerable
+    DCYB G 20 A_PlaySound("Apocalypse/cast")
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,20)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,40)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,60)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,80)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,100)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,120)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,140)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,160)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-20)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-40)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-60)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-80)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-100)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-120)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-140)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,-160)
+    TNT1 A 0 A_CustomMissile("DCBMiss3",50,0,180)
+    DCYB G 10 A_CustomMissile("DCBMiss3",50,0,0)
+	DCYB GGGGGGGG 10
+	TNT1 A 0 A_UnsetInvulnerable
+	DCYB G 10
+    Goto See
+    DCYB AE 3 A_FaceTarget
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    DCYB E 4 A_FaceTarget
+    DCYB F 4 A_CustomMissile("DCBMiss2",56,-25,0)
+    Goto See
+  Pain:
+    DCYB G 2
+    DCYB G 2 A_Pain
+    Goto See
+  Death:   
+    DCYB G 0
+	DCYB GGGGGGGGGGGGGGGG 8 A_SpawnItemEx("BossExplosion64",random(-30,30),random(-30,30),random(25,90),0,0,0,0,0,0)
+    DCYB H 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB H 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB H 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+    DCYB IIIIIIIIIIIIIIIIIIIIIIII 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB I 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB IIIIIIIIIIIIIIIIIIIIIIII 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB I 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB IIIIIIIIIIIIIIIIIIIIIIII 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB I 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+    DCYB J 1 A_ScreamAndUnblock
+	TNT1 A 0 A_SpawnItemEx("BDS",0,0,0,0,0,0,0,128)
+	DCYB J 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB JJJJJJJJJJJJJJJJJJJJJJJJ 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB J 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB JJJJJJJJJJJJJJJJJJJJJJJJ 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB J 1 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB JJJJJJJJJJJJJJJJJJJJJJJJ 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB K 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB KKKKKKKKKKKKKKKKKKKKKKKK 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB K 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB KKKKKKKKKKKKKKKKKKKKKKKK 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB K 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB KKKKKKKKKKKKKKKKKKKKKKKK 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB L 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB LLLLLLLLLLLLLLLLLLLLLLLL 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB L 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB LLLLLLLLLLLLLLLLLLLLLLLL 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	DCYB L 2 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10))
+	DCYB LLLLLLLLLLLLLLLLLLLLLLLL 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+    DCYB MMM 3 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-40,40),random(-10,10),random(-20,20))
+    DCYB NNN 3 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-40,40),random(-10,10),random(-20,20))
+	DCYB OOO 3 
+    DCYB P 520 A_SetFloorClip
+    DCYB P 2 A_FadeOut
+	Wait
+
+	}
+}
+
+Actor BDS
+{   
+   Radius 1
+   Height 1
+   Speed 1
+   SeeSound "Thamuz/death2"
+   PROJECTILE
+   States
+   {
+   Spawn:
+      TNT1 A 1
+	Stop
+   }
+}
+
+ACTOR DarkCyberGhostA
+{   
+   Radius 2
+   Height 2
+   Speed 0
+   Scale 1.1
+   PROJECTILE
+   +ClientSideOnly
+   RENDERSTYLE Translucent
+   ALPHA 0.6
+   States
+   {
+   Spawn:
+      TNT1 A 3
+      DCYB A 3 A_FadeOut(0.10)
+      goto spawn+1
+   }
+}
+
+ACTOR DarkCyberGhostB : DarkCyberGhostA
+{   
+   States
+   {
+   Spawn:
+      TNT1 A 3
+      DCYB B 3 A_FadeOut(0.10)
+      goto spawn+1
+   }
+}
+
+ACTOR DarkCyberGhostC : DarkCyberGhostA
+{   
+   States
+   {
+   Spawn:
+      TNT1 A 3
+      DCYB C 3 A_FadeOut(0.10)
+      goto spawn+1
+   }
+}
+
+ACTOR DarkCyberGhostD : DarkCyberGhostA
+{   
+   States
+   {
+   Spawn:
+      TNT1 A 3
+      DCYB D 3 A_FadeOut(0.10)
+      goto spawn+1
+   }
+}
+
+
+ACTOR DCBMiss1
+{
+	Radius 12
+	Height 12
+	Speed 16
+	Damage 18
+    DamageType "Poison"
+	PROJECTILE
+      +SeekerMissile
+      +ExtremeDeath
+	  +SPECTRAL
+	Renderstyle Add
+	SEESOUND "q2weapon/bfgball"
+    DEATHSOUND "q2weapon/bfgballexplo"
+    	Decal BFGLightning
+	states
+	{
+	Spawn:
+		CBTS A 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS B 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS C 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS D 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS E 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS F 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS G 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS H 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS I 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		CBTS J 2 BRIGHT A_SeekerMissile(1,90)
+		TNT1 A 0 BRIGHT A_SpawnItemEx("DCBM1Trail",0,0,0,0,0,0,0,128)
+		Loop
+	Death:
+		CBTS K 2 BRIGHT A_Explode(140,140)
+		CBTS LMNOPQRSTUVW 2 BRIGHT
+		Stop
+	}
+}
+
+ACTOR DCBM1Trail
+{   
+   Radius 1
+   Height 1
+   Speed 0
+   Scale 0.8
+   +Noclip
+   +ClientSideOnly
+   PROJECTILE
+   RENDERSTYLE Add
+   Alpha 0.6
+   states
+   {
+   Spawn:
+      TNT1 A 4
+      CBTS LMNOPQRSTUVW 2 A_FadeOut
+      Stop
+   }
+}
+
+ACTOR DCBMiss2
+{
+	Radius 12
+	Height 8
+	Health 5
+	Speed 24
+	Damage 15 
+	+SPECTRAL
+    DamageType "Poison"
+	RENDERSTYLE Add
+	PROJECTILE
+	Translation "160:167=120:127", "208:223=120:127"
+	SEESOUND "q2weapon/rocketlauncherfire"
+    DEATHSOUND "q2weapon/rocketexplo"
+    	Decal RevenantScorch
+	states
+	{
+	Spawn:
+		THZ4 A 2 BRIGHT 
+		Loop
+	Death:
+		FSFX DEFGHIJKLM 2 BRIGHT
+		Stop
+	}
+}
+
+ACTOR DCBMiss3
+{
+	Radius 1
+	Height 1
+	Health 5
+	Speed 8
+	Damage 0
+	Scale 2
+	RENDERSTYLE Add
+	+BloodLessImpact
+	+Ripper
+	+DontSplash
+	+SPECTRAL
+	PROJECTILE
+	SEESOUND "h2necromancer/magiccast"
+	states
+	{
+	Spawn:
+		TNT1 A 2 A_Gravity
+		Loop
+	Death:
+		FSFX NOPQRSTNOPQRST 3
+		FSFX Z 0 A_CustomMissile("DCBMiss3M",0,0,180)
+		Stop
+	}
+}
+
+
+ACTOR DCBMiss3M
+{
+	Radius 10
+	Height 10
+	Speed 28
+	Damage 18
+	Scale 1.3
+	+FloorHugger
+	+SPECTRAL
+	RENDERSTYLE Add
+	PROJECTILE
+	DEATHSOUND "comet/explosion"
+	Decal RevenantScorch
+	states
+	{
+	Spawn:
+		FSFX NOPQRSTNOPQRST 3 A_SpawnItemEx("DCBMiss3MG",0,0,0,0,0,0,0,128)
+		Loop
+	Death:
+		TNT1 A 0 A_Explode(64,64)
+		FSFX UVW 3
+		Stop
+	}
+}
+
+
+ACTOR DCBMiss3MG
+{   
+   Radius 1
+   Height 1
+   Speed 0
+   Scale 0.8
+   +Noclip
+   +SPECTRAL
+   PROJECTILE
+   RENDERSTYLE Add
+   Alpha 0.6
+   states
+   {
+   Spawn:
+      TNT1 A 4
+      FSFX NOPQRST 3
+      Stop
+   }
+}
+
+Actor thamuz2 : thamuz 1179	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//      Cardinal
+//       
+//       
+//
+//==========================================================
+
+ACTOR Cardinal 12863
+{ 
+//$Category Cybers
+   Health 26500
+   Speed 6
+   Radius 24
+   Height 112
+   PainChance 1
+   MinMissileChance 30
+   Mass 70000000
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.1
+   Damagefactor "PFire", 1.1
+   Damagefactor "Electric", 0.8
+   Damagefactor "PElectric", 0.8
+   Damagefactor "Poison", 0.0
+   Damagefactor "PPoison", 0.0
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+    dropitem "MediumHealthVile" 70
+    DropItem "Combatpack" 60
+	DropItem "Cmana" 60
+	DropItem "DmanaDrop" 60
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	DropItem "SuperArmor" 3
+	DropItem "Greenarmor" 7
+	DropItem "Bluearmor" 5
+	DropItem "ArtiHealingRadius1" 5
+	DropItem "Medikit" 6
+	DropItem "Stimpack" 8
+   Meleedamage 10 
+   SeeSound "cyber/sight"
+   PainSound "brain/pain"
+   DeathSound "cyber/death"
+   Missiletype "Cardinal_Rocket"
+   MissileHeight 72
+   MONSTER
+   +NOGRAVITY
+   +FLOATBOB
+   +FLOAT
+	+DONTMORPH
+   	+TELESTOMP
+   +QUICKTORETALIATE
+   bloodcolor green
+   Obituary "%o was blessed by the dark cardinal."  
+   States 
+   { 
+   Spawn:
+      CARD AB 4 Bright A_Look
+      Loop
+   See:
+      CARD AABBAABBAABB 2 Bright A_Chase 
+      loop
+   Missile:
+      CARD A 0 A_jump(10,6)
+      CARD A 0 A_jump(100,7)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("Cardinal_Rocket", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("Cardinal_Rocket", 72, -30, 0)
+      Goto See
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("pain_gernade", 72, -30, 0)
+      Goto See
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("CardinalPlasma", 72, -30, 0)
+      Goto See
+   Pain: 
+      CARD A 4 Bright
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,0,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,20,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,40,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,60,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,80,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,100,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,120,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,140,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,160,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,180,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,200,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,220,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,240,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,260,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,280,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,300,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,320,2,0)
+      CARD A 0 Bright A_custommissile("DeathBall",72,0,340,2,0)
+      Goto See
+   Death: 
+      CARD E 8 Bright A_killChildren
+      CARD F 8 Bright A_ScreamAndUnblock
+      CARD G 4 Bright 
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD G 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD H 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD H 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD I 4 Bright 
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD I 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD J 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD J 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD K 4 Bright 
+	  CARD HHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD K 4 Bright
+	  CARD HHHHHHHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD L 4 Bright
+	  CARD HHH 0 A_Spawnitemex("GreenNashGore_Blood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD L 4 Bright
+      Stop 
+   } 
+}
+//====================
+ACTOR Cardinal_Rocket
+{
+	Game Doom
+	SpawnID 127
+	Radius 11
+	Height 8
+	Speed 20
+	Damage 20
+	Projectile
+	Damagetype "Explosive"
+	+RANDOMIZE
+	+DEHEXPLOSION
+	+ROCKETTRAIL
+	+SPECTRAL
+	SeeSound "weapons/rocklf"
+	DeathSound "weapons/rocklx"
+	States
+	{
+	Spawn:
+		CROC AB 4 Bright
+		Loop
+	Death:
+		CROC C 8 Bright A_Explode
+		CROC D 6 Bright
+		CROC E 4 Bright
+		Stop
+	}
+}
+//====================
+ACTOR pain_gernade
+{
+	Game Doom
+	SpawnID 127
+	Radius 11
+	Height 8
+	Speed 30
+	Damage 15
+	Damagetype "Explosive"
+	Projectile
+	+DoomBounce
+	+SPECTRAL
+	-NoGravity
+	scale .25
+	translation "168 : 191 = 112 : 127"
+	SeeSound "weapons/rocklf"
+	DeathSound "caco/death"
+	States
+	{
+	Spawn:
+		HEAD A 2 Bright A_CustomMissile("faintGhost1", 0, 0, 0)
+		Loop
+	Death:
+		HEAD GHIJ 8
+		HEAD k 8 A_SpawnItem("CacodemonSpawnerFire", 0, 0)
+	    HEAD L 8 A_SpawnItem("paingasm", 0, 0)
+		HEAD L 10
+		Stop
+	}
+}
+//====================
+ACTOR CacodemonSpawnerFire
+{
+	+NOBLOCKMAP
+	+NOTELEPORT
+	+SPECTRAL
+	+NOGRAVITY
+	RenderStyle Add
+    Alpha 0.9
+	States
+	{
+	Spawn:
+		FIRE ABCD 6 Bright
+		FIRE E 6 Bright 
+		FIRE FGH 6 Bright
+		Stop
+	}
+}
+//====================
+actor Paingasm 10004
+{
+//$Category CacoInvasion
+	Health 5000
+	Radius 31
+	Height 56
+	Mass 400000000
+	Speed 25
+	PainChance 1
+	Monster
+	bloodcolor blue
+	+FLOAT +NOGRAVITY
+	+TELESTOMP
+	dropitem "MediumHealthVile" 70
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	AttackSound "imp/melee"
+	SeeSound "caco/sight"
+	PainSound "caco/pain"
+	DeathSound "caco/death"
+	ActiveSound "caco/active"
+	Obituary "you were removed from life by a paingasm"
+	HitObituary "%o  face got tore off by a paingasm"
+	translation "168:191=112:127"
+	RenderStyle Translucent
+	Alpha 0.5
+	States
+	{
+	Spawn:
+		HEAD A 10 A_Look
+		Loop
+	See:
+		HEAD A 3 A_Chase
+		HEAD A 0 A_SpawnItemEx("faintghost2",0,0,0,0,0,0,0,128)
+		Loop
+	Missile:
+		HEAD B 5 A_FaceTarget
+		HEAD C 5 A_FaceTarget
+		HEAD D 5 BRIGHT A_CustomMissile("painball", 24, 0, 0)
+		Goto See
+	Melee:
+		HEAD B 4 A_FaceTarget
+		HEAD C 4 A_FaceTarget
+		HEAD D 4 A_FaceTarget
+		HEAD C 4 A_SargAttack
+		HEAD B 4 A_FaceTarget
+		HEAD a 4 A_FaceTarget
+		Goto See
+	Pain:
+		HEAD E 3
+		HEAD E 3 A_Pain
+		HEAD F 6
+		Goto See
+	Death:
+		HEAD G 8 
+		HEAD H 8 A_ScreamAndUnblock
+		HEAD I 8 
+		HEAD J 8
+		HEAD K 8 
+		HEAD L 520 A_SetFloorClip
+		HEAD L 2 A_FadeOut
+		Wait
+	}
+}
+
+Actor PainGasm2 : PainGasm 6739
+{
+//$Category Friendlies
+   +FRIENDLY
+}
+
+//====================
+ACTOR faintGhost1
+{
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Mass 100
+	translation "168 : 191 = 112 : 127"
+	RenderStyle Translucent
+	Alpha 0.9
+	+CLIENTSIDEONLY
+	PROJECTILE
+	scale .25
+	States
+	{
+	Spawn:
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 Thing_ChangeTid(0,390)
+	HEAD A 2 A_fadeout(0.05)
+	loop
+	}
+}
+//====================
+ACTOR faintGhost2 : faintGhost1
+{
+	scale 1
+	States
+	{
+	Spawn:
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 Thing_ChangeTid(0,390)
+	HEAD A 2 A_fadeout(0.05)
+	loop
+	}
+}
+//====================
+ACTOR faintGhost3 : faintGhost1
+{
+	scale 1
+	States
+	{
+	Spawn:
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 Thing_ChangeTid(0,390)
+	CARD AB 2 A_fadeout(0.05)
+	loop
+	}
+}
+//====================
+ACTOR painball : BaronBall
+{
+translation "112 : 127 = 192 : 207"
+	States
+	{
+	Spawn:
+		BAL7 AB 4 BRIGHT
+		Loop
+	Death:
+		BAL7 CDE 6 BRIGHT
+		Stop
+	}
+}
+//====================
+actor DeathBall : BaronBall
+{
+  Damage 15
+  +SPECTRAL
+  +SEEKERMISSILE 
+  Damagetype "poison"
+  scale .8
+  States
+  {
+  Spawn:
+    BAL7 A 4 BRIGHT A_Tracer
+    BAL7 A 0 BRIGHT A_SpawnItem("BallTail", 0, 0)
+    BAL7 B 4 BRIGHT A_Tracer
+    BAL7 A 0 BRIGHT A_SpawnItem("BallTail", 0, 0)
+    Loop
+  Death:
+    BAL7 CDE 6 BRIGHT
+    Stop
+  }
+}
+//====================
+ACTOR BallTail : faintGhost1
+{
+	scale .6
+	States
+	{
+	Spawn:
+	 TNT1 A 0 A_FaceTarget
+	 TNT1 A 0 Thing_ChangeTid(0,390)
+	 BAL7 AB 2 A_fadeout(0.05)
+	loop
+	}
+}
+//====================
+ACTOR CardinalPlasma  
+{
+	Radius 11
+	Height 8
+	Speed 20
+	Damage 10
+	Projectile
+	+FLOATBOB
+	+SPECTRAL
+	Damagetype "electric"
+	SeeSound "imp/attack"
+	DeathSound ""
+	scale 1.0
+	States
+	{
+	Spawn:
+	 CRTA J 1 Bright A_SpawnItemex("plasmaTail", 0, 0)
+	 Loop
+	Death:
+	 TNT1 A 0 A_FaceTarget
+	 TNT1 A 0 Thing_ChangeTid(0,390)
+	 CRTA J 2 A_fadeout(0.05)
+		Stop
+	}
+}
+//====================
+ACTOR plasmaTail
+{
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Mass 100
+	+FLOATBOB
+    +ClientSideOnly
+	PROJECTILE
+	scale .25
+	scale 1.0
+	States
+	{
+	Spawn:
+	 TNT1 A 0 A_FaceTarget
+	 TNT1 A 0 Thing_ChangeTid(0,390)
+	 CRTA IHGFEDCBABCDEFGHIJ 2 BRIGHT A_fadeout(0.05)
+	loop
+	}
+}
+
+
+Actor cardinal1 : cardinal 12864	
+{
+//$Category Friendlies
+	+FRIENDLY
+}
+
+//==========================================================
+//
+//      Blizzard Demon
+//       
+//       
+//
+//==========================================================
+
+ACTOR Blizzarddemon 15363
+{ 
+//$Category Cybers
+   Translation "112:127=192:207"
+   Health 33500
+   Speed 14
+   Radius 24
+   Height 112
+   PainChance 1
+   MinMissileChance 30
+   Mass 70000000
+   Damagefactor "HEAVENPOWER", 1.0
+   Damagefactor "PEXPLOSIVE", 1.0
+   Damagefactor "EXPLOSIVE", 1.0
+   Damagefactor "Fire", 1.1
+   Damagefactor "PFire", 1.1
+   Damagefactor "Electric", 0.8
+   Damagefactor "PElectric", 0.8
+   Damagefactor "Poison", 0.0
+   Damagefactor "PPoison", 0.0
+   Damagefactor "PBullet", 1.0
+   Damagefactor "Bullet", 1.0
+   Damagefactor "ice", 0.8
+    dropitem "MediumHealthVile" 70
+    DropItem "Combatpack" 60
+	DropItem "Cmana" 60
+	DropItem "DmanaDrop" 60
+	DropItem "SmallhealthVile" 150
+	DropItem "LargeHealthvile" 50
+	DropItem "SuperArmor" 3
+	DropItem "Greenarmor" 7
+	DropItem "Bluearmor" 5
+	DropItem "ArtiHealingRadius1" 5
+	DropItem "Medikit" 6
+	DropItem "Stimpack" 8
+   Meleedamage 10 
+   SeeSound "cyber/sight"
+   PainSound "brain/pain"
+   DeathSound "cyber/death"
+   Missiletype "Cardinal_Rocket"
+   MissileHeight 72
+   MONSTER
+   +NOGRAVITY
+   +FLOATBOB
+   +FLOAT
+   +DONTMORPH
+   +TELESTOMP
+   +QUICKTORETALIATE
+   bloodcolor Blue
+   Obituary "%o was frozen by the BlizzardDemon."  
+   States 
+   { 
+   Spawn:
+      CARD AB 3 Bright A_Look
+      Loop
+   See:
+      CARD AABBAABBAABB 2 Bright A_Chase 
+      loop
+   Missile:
+      CARD A 0 A_jump(10,6)
+      CARD A 0 A_jump(100,7)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("Blizzard_Rocket", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("Blizzard_Rocket", 72, -30, 0)
+      Goto See
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("pain_gernade2", 72, -30, 0)
+      Goto See
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      CARD C 4 Bright A_FaceTarget
+      CARD D 5 Bright A_CustomMissile("BlizzardDemonPlasma", 72, -30, 0)
+      Goto See
+   Pain: 
+      CARD A 4 Bright
+      CARD A 0 Bright A_custommissile("IceBall",72,0,0,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,20,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,40,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,60,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,80,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,100,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,120,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,140,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,160,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,180,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,200,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,220,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,240,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,260,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,280,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,300,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,320,2,0)
+      CARD A 0 Bright A_custommissile("iceball",72,0,340,2,0)
+      Goto See
+   Death: 
+      CARD E 8 Bright A_killChildren
+      CARD F 8 Bright A_ScreamAndUnblock
+      CARD G 4 Bright 
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD G 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD H 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD H 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD I 4 Bright 
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-20,20))
+	  CARD I 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD J 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD J 4 Bright
+	  CARD HHHHHHHHHHHHHHHHHHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD K 4 Bright 
+	  CARD HHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD K 4 Bright
+	  CARD HHHHHHHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD L 4 Bright
+	  CARD HHH 0 A_Spawnitemex("BlueNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,100),random(-10,10),random(-10,10),random(-40,40))
+	  CARD L 4 Bright
+      Stop 
+   } 
+}
+
+ACTOR Blizzard_Rocket : Cardinal_Rocket
+{
+	Translation "112:127=192:207"
+	Speed 25
+	Damage 12
+	Damagetype "Ice"
+	States
+	{
+	Spawn:
+		CROC AB 4 Bright
+		Loop
+	Death:
+		CROC C 1 Bright A_Explode
+		CROC C 1 Bright A_IceGuyDie
+		Stop
+	}
+}
+
+ACTOR pain_gernade2 : pain_gernade
+{
+	translation "171:191=193:207"
+	States
+	{
+	Spawn:
+		HEAD A 2 Bright
+		Loop
+	Death:
+		HEAD GHIJ 8
+		HEAD k 8 A_SpawnItem("CacodemonSpawnerFire", 0, 0)
+	    HEAD L 8 A_SpawnItem("FrozenCacodemon", 0, 0)
+		HEAD L 10
+		Stop
+	}
+}
+
+actor IceBall : BaronBall
+{
+  Translation "112:127=192:200"
+  Damage 15
+  +SPECTRAL
+  +SEEKERMISSILE 
+  Damagetype "Ice"
+  scale .8
+  States
+  {
+  Spawn:
+    BAL7 A 4 BRIGHT A_Tracer
+    Loop
+  Death:
+    BAL7 A 6 BRIGHT A_IceGuyDie
+    Stop
+  }
+}
+
+ACTOR BlizzardDemonPlasma  
+{
+    Translation "112:127=192:207"
+	Radius 11
+	Height 8
+	Speed 20
+	Damage 3
+	Projectile
+	+FLOATBOB
+	+SPECTRAL
+	+Ripper
+	Damagetype "Ice"
+	SeeSound "imp/attack"
+	DeathSound ""
+	scale 1.0
+	States
+	{
+	Spawn:
+	 CRTA J 1 Bright A_SpawnItemex("IceplasmaTail", 0, 0)
+	 Loop
+	Death:
+	 TNT1 A 0 A_FaceTarget
+	 TNT1 A 0 Thing_ChangeTid(0,390)
+	 CRTA J 2 A_fadeout(0.05)
+     Stop
+	}
+}
+
+//====================
+ACTOR IceplasmaTail : plasmaTail
+{
+    Translation "112:127=192:207"
+}
+
+
+Actor Blizzarddemon2 : BlizzardDemon	
+{
+//$Category Friendlies
+	+FRIENDLY
+}

@@ -1529,4 +1529,11 @@ if(PlayerCount() > 1) SetActorProperty(22, APROP_Health, (GetActorProperty (22, 
 {
 delay (50);
 if(PlayerCount() > 1) SetActorProperty(24, APROP_Health, (GetActorProperty (24, APROP_SpawnHealth)) / PlayerCount());
+}
+
+Script 309 OPEN
+{
+SectorDamage (40, 20, "fire", "", DAMAGE_PLAYERS);
+delay(5);
+Restart;
 }  

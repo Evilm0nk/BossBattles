@@ -479,7 +479,7 @@ Color 1.0 0.0 0.0
 Size 56
 }
 
-Object Terminator
+Object UltimateTerminator
 {
 Frame TERMF { Light TerminatorAttack2 }
 Frame TERMH { Light TerminatorAttack1 }

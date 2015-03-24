@@ -1,0 +1,13 @@
+//SupremeFiend
+fiend/hover		  DSHOVER
+fiend/see		  DSFIEND
+fiend/bfg		  DSFBFG1
+fiend/bfg2		  DSFBFG2
+fiend/bomb		  DSFBOMB
+
+//Prox Sounds (from Infernux Grand)
+prox/fire		  DSIGPRXF
+prox/beep		  DSIGPRXB
+
+//Bomb
+bomb/beep DSBEEEP

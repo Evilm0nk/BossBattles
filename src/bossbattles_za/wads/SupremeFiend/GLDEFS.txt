@@ -1,0 +1,161 @@
+pointlight SUPREMEPLAS
+{
+    color 0.6 1.0 0.0
+    size 56
+}
+
+flickerlight SUPREMEPLAS_X1
+{
+    color 0.4 0.8 0.0
+    size 72
+    secondarySize 80
+    chance 0.3
+}
+
+flickerlight SUPREMEPLAS_X2
+{
+    color 0.6 0.6 0.0
+    size 88
+    secondarySize 96
+    chance 0.3
+}
+
+flickerlight SUPREMEPLAS_X3
+{
+    color 0.4 0.4 0.0
+    size 48
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight SUPREMEPLAS_X4
+{
+    color 0.2 0.2 0.0
+    size 24
+    secondarySize 16
+    chance 0.3
+}
+
+Object FiendPlasmaBall
+{
+  Frame APLSA { Light SUPREMEPLAS }
+  Frame APLSB { Light SUPREMEPLAS }
+  Frame APBXA { Light SUPREMEPLAS_X1 }
+  Frame APBXB { Light SUPREMEPLAS_X2 }
+  Frame APBXC { Light SUPREMEPLAS_X2 }
+  Frame APBXD { Light SUPREMEPLAS_X3 }
+  Frame APBXE { Light SUPREMEPLAS_X4 }
+}
+
+flickerlight REMOTEBOMBDETONATION_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight REMOTEBOMBDETONATION_X2
+{
+    color 0.5 0.1 0.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight REMOTEBOMBDETONATION_X3
+{
+    color 0.3 0.0 0.0
+    size 96
+    secondarySize 104
+    chance 0.3
+}
+
+Object RemoteBomb
+{
+    frame MISLB { light REMOTEBOMBDETONATION_X1 }
+    frame MISLC { light REMOTEBOMBDETONATION_X2 }
+    frame MISLD { light REMOTEBOMBDETONATION_X3 }
+}
+
+PointLight SupremeFiendFire1
+{
+Color 0.2 0.8 0.2
+Size 72
+Offset 0 30 0
+} 
+
+PointLight SupremeFiendFire2
+{
+Color 0.4 1.0 0.4
+Size 96
+Offset 0 30 0
+} 
+
+Pointlight SupremeFiendDie1
+{
+Color 0.7 0.2 0.0
+Size 80
+}
+
+Pointlight SupremeFiendDie2
+{
+Color 1.0 0.4 0.0
+Size 88
+}
+
+Pointlight SupremeFiendDie3
+{
+Color 1.0 0.6 0.0
+Size 96
+}
+
+Pointlight SupremeFiendDie4
+{
+Color 0.8 0.3 0.0
+Size 88
+}
+
+Pointlight SupremeFiendDie5
+{
+Color 0.6 0.2 0.0
+Size 80
+}
+
+Pointlight SupremeFiendDie6
+{
+Color 0.4 0.0 0.0
+Size 88
+}
+
+Pointlight SupremeFiendDie7
+{
+Color 0.2 0.0 0.0
+Size 72
+}
+
+Object SupremeFiend
+{
+Frame SUPRE { Light SupremeFiendFire1 }
+Frame SUPRF { Light SupremeFiendFire1 }
+Frame SUPRG { Light SupremeFiendDie1 }
+Frame SUPRH { Light SupremeFiendDie2 }
+Frame SUPRI { Light SupremeFiendDie3 }
+Frame SUPRJ { Light SupremeFiendDie4 }
+Frame SUPRK { Light SupremeFiendDie5 }
+Frame SUPRL { Light SupremeFiendDie6 }
+Frame SUPRM { Light SupremeFiendDie7 }
+}
+
+Object SupremeFiend1
+{
+Frame SUPRE { Light SupremeFiendFire1 }
+Frame SUPRF { Light SupremeFiendFire1 }
+Frame SUPRG { Light SupremeFiendDie1 }
+Frame SUPRH { Light SupremeFiendDie2 }
+Frame SUPRI { Light SupremeFiendDie3 }
+Frame SUPRJ { Light SupremeFiendDie4 }
+Frame SUPRK { Light SupremeFiendDie5 }
+Frame SUPRL { Light SupremeFiendDie6 }
+Frame SUPRM { Light SupremeFiendDie7 }
+}

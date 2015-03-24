@@ -1,0 +1,110 @@
+//Evo Baron
+
+pointlight EVOBARONBALL
+{
+    color 0.0 1.0 0.0
+    size 64
+}
+
+flickerlight EVOBARONBALL_X1
+{
+    color 0.0 0.7 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+flickerlight EVOBARONBALL_X2
+{
+    color 0.0 0.4 0.0
+    size 96
+    secondarySize 104
+    chance 0.25
+}
+
+flickerlight EVOBARONBALL_X3
+{
+    color 0.0 0.2 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+object BaronBallRapid
+{
+    frame BAL7A { light EVOBARONBALL    }
+    frame BAL7B { light EVOBARONBALL    }
+
+    frame BAL7C { light EVOBARONBALL_X1 }
+    frame BAL7D { light EVOBARONBALL_X2 }
+    frame BAL7E { light EVOBARONBALL_X3 }
+}
+
+object BaronBallRapid2
+{
+    frame BAL7A { light EVOBARONBALL    }
+    frame BAL7B { light EVOBARONBALL    }
+
+    frame BAL7C { light EVOBARONBALL_X1 }
+    frame BAL7D { light EVOBARONBALL_X2 }
+    frame BAL7E { light EVOBARONBALL_X3 }
+}
+
+pointlight EVOBARONBALL2
+{
+    color 0.0 1.0 0.0
+    size 80
+}
+
+flickerlight EVOBARONBALL2_X1
+{
+    color 0.2 1.0 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight EVOBARONBALL2_X2
+{
+    color 0.3 1.0 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight EVOBARONBALL2_X3
+{
+    color 0.5 1.0 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight EVOBARONBALL2_X4
+{
+    color 0.2 0.7 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight EVOBARONBALL2_X5
+{
+    color 0.1 0.3 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object EvoBaronBallBig1
+{
+    frame BFS1A { light EVOBARONBALL2 }
+    frame BFS1B { light EVOBARONBALL2 }
+
+    frame BFE1A { light EVOBARONBALL2_X1 }
+    frame BFE1B { light EVOBARONBALL2_X2 }
+    frame BFE1C { light EVOBARONBALL2_X3 }
+    frame BFE1D { light EVOBARONBALL2_X1 }
+    frame BFE1E { light EVOBARONBALL2_X4 }
+    frame BFE1F { light EVOBARONBALL2_X5 }
+}

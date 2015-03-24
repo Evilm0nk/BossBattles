@@ -1,0 +1,12 @@
+//===========================================================================
+//
+// Evo Baron
+//
+//===========================================================================
+
+EvoBaron/See    EVBRSIT
+EvoBaron/Death  EVBRDTH
+EvoBaron/Pain1  EVBRPAIN
+EvoBaron/Pain2  EVBRPN2
+EvoBaron/Laugh  EVBRSIT2
+$RANDOM EvoBaron/Pain { EvoBaron/Pain1 EvoBaron/Pain2 }

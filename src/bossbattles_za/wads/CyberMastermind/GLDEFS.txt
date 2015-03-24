@@ -1,0 +1,362 @@
+//CyberMastermind
+
+Flickerlight2 CyberMastermindAttack1
+{
+Color 1.0 1.0 0.0
+Size 64
+SecondarySize 72
+Interval 1.5
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindAttack2
+{
+Color 0.6 0.4 0.0
+Size 96
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode1
+{
+Color 0.7 0.0 0.0
+Size 64
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode2
+{
+Color 1.0 0.6 0.0
+Size 96
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode3
+{
+Color 1.0 0.5 0.0
+Size 160
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode4
+{
+Color 0.9 0.4 0.0
+Size 128
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode5
+{
+Color 0.8 0.3 0.0
+Size 96
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode6
+{
+Color 0.7 0.3 0.0
+Size 80
+Offset 0 42 0
+}
+
+Pointlight CyberMastermindExplode7
+{
+Color 0.5 0.2 0.0
+Size 64
+Offset 0 42 0
+}
+
+Object CyberMastermind
+{
+Frame CYMMG { Light CyberMastermindAttack1 }
+Frame CYMMH { Light CyberMastermindAttack1 }
+Frame CYMMI { Light CyberMastermindAttack2 }
+Frame CYMMJ { Light CyberMastermindAttack2 }
+Frame CYMMN { Light CyberMastermindExplode1 }
+Frame CYMMO { Light CyberMastermindExplode2 }
+Frame CYMMP { Light CyberMastermindExplode3 }
+Frame CYMMQ { Light CyberMastermindExplode4 }
+Frame CYMMR { Light CyberMastermindExplode5 }
+Frame CYMMS { Light CyberMastermindExplode6 }
+Frame CYMMT { Light CyberMastermindExplode7 }
+}
+
+pointlight CYBERMASTERMINDPUFF1
+{
+    color 1.0 1.0 0.0
+    size 32
+}
+
+pointlight CYBERMASTERMINDPUFF2
+{
+    color 0.7 0.7 0.0
+    size 24
+}
+
+pointlight CYBERMASTERMINDPUFF3
+{
+    color 0.4 0.4 0.0
+    size 16
+}
+
+pointlight CYBERMASTERMINDPUFF4
+{
+    color 0.2 0.2 0.0
+    size 8
+}
+
+
+object Cybermastermindbullet
+{
+    frame BPUFA { light CYBERMASTERMINDPUFF1 }
+    frame BPUFB { light CYBERMASTERMINDPUFF2 }
+    frame BPUFC { light CYBERMASTERMINDPUFF3 }
+    frame BPUFD { light CYBERMASTERMINDPUFF4 }
+}
+
+//CyberDestroyer
+
+Pointlight CYBERDESTROYEREXPLOSION11
+{
+Color 0.6 0.4 0.0
+Size 18
+}
+
+Pointlight CYBERDESTROYEREXPLOSION12
+{
+Color 0.6 0.4 0.0
+Size 20
+}
+
+Pointlight CYBERDESTROYEREXPLOSION13
+{
+Color 0.6 0.4 0.0
+Size 22
+}
+
+Pointlight CYBERDESTROYEREXPLOSION14
+{
+Color 0.6 0.4 0.0
+Size 24
+}
+
+Pointlight CYBERDESTROYEREXPLOSION15
+{
+Color 0.6 0.4 0.0
+Size 26
+}
+
+Pointlight CYBERDESTROYEREXPLOSION16
+{
+Color 0.6 0.4 0.0
+Size 28
+}
+
+Pointlight CYBERDESTROYEREXPLOSION17
+{
+Color 0.6 0.4 0.0
+Size 30
+}
+
+Pointlight CYBERDESTROYEREXPLOSION18
+{
+Color 0.6 0.4 0.0
+Size 28
+}
+
+Pointlight CYBERDESTROYEREXPLOSION19
+{
+Color 0.6 0.4 0.0
+Size 26
+}
+
+Pointlight CYBERDESTROYEREXPLOSION10
+{
+Color 0.6 0.4 0.0
+Size 24
+}
+
+Pointlight CYBERDESTROYEREXPLOSION111
+{
+Color 0.6 0.4 0.0
+Size 23
+}
+
+Pointlight CYBERDESTROYEREXPLOSION121
+{
+Color 0.6 0.4 0.0
+Size 25
+}
+
+Pointlight CYBERDESTROYEREXPLOSION131
+{
+Color 0.6 0.4 0.0
+Size 27
+}
+
+Pointlight CYBERDESTROYEREXPLOSION141
+{
+Color 0.6 0.4 0.0
+Size 29
+}
+
+Pointlight CYBERDESTROYEREXPLOSION151
+{
+Color 0.6 0.4 0.0
+Size 31
+}
+
+Pointlight CYBERDESTROYEREXPLOSION161
+{
+Color 0.6 0.4 0.0
+Size 33
+}
+
+Pointlight CYBERDESTROYEREXPLOSION171
+{
+Color 0.6 0.4 0.0
+Size 35
+}
+
+Pointlight CYBERDESTROYEREXPLOSION181
+{
+Color 0.6 0.4 0.0
+Size 33
+}
+
+Pointlight CYBERDESTROYEREXPLOSION191
+{
+Color 0.6 0.4 0.0
+Size 31
+}
+
+Pointlight CYBERDESTROYEREXPLOSION101
+{
+Color 0.6 0.4 0.0
+Size 29
+}
+
+Object UltimaExplosion2
+{
+Frame NKXPA { Light CYBERDESTROYEREXPLOSION11 }
+Frame NKXPB { Light CYBERDESTROYEREXPLOSION11 }
+Frame NKXPC { Light CYBERDESTROYEREXPLOSION12 }
+Frame NKXPD { Light CYBERDESTROYEREXPLOSION12 }
+Frame NKXPE { Light CYBERDESTROYEREXPLOSION13 }
+Frame NKXPF { Light CYBERDESTROYEREXPLOSION13 }
+Frame NKXPG { Light CYBERDESTROYEREXPLOSION14 }
+Frame NKXPH { Light CYBERDESTROYEREXPLOSION14 }
+Frame NKXPI { Light CYBERDESTROYEREXPLOSION15 }
+Frame NKXPJ { Light CYBERDESTROYEREXPLOSION15 }
+Frame NKXPK { Light CYBERDESTROYEREXPLOSION16 }
+Frame NKXPL { Light CYBERDESTROYEREXPLOSION16 }
+Frame NKXPM { Light CYBERDESTROYEREXPLOSION17 }
+Frame NKXPN { Light CYBERDESTROYEREXPLOSION17 }
+Frame NKXPO { Light CYBERDESTROYEREXPLOSION18 }
+Frame NKXPP { Light CYBERDESTROYEREXPLOSION18 }
+Frame NKXPQ { Light CYBERDESTROYEREXPLOSION19 }
+Frame NKXPR { Light CYBERDESTROYEREXPLOSION19 }
+Frame NKXPS { Light CYBERDESTROYEREXPLOSION10 }
+Frame NKXPT { Light CYBERDESTROYEREXPLOSION10 }
+Frame NKXPU { Light CYBERDESTROYEREXPLOSION10 }
+Frame NKXPV { Light CYBERDESTROYEREXPLOSION10 }
+}
+
+//Cyberdemolisher
+
+Pointlight CYBERDEMLISHERROCKET1
+{
+Color 1.0 0.7 0.0
+Size 56
+}
+
+Flickerlight CYBERDEMLISHERROCKET2
+{
+Color 1.0 0.7 0.0
+Size 64
+SecondarySize 72
+Chance 0.3
+}
+
+Flickerlight CYBERDEMLISHERROCKET3
+{
+Color 0.5 0.1 0.0
+Size 80
+SecondarySize 88
+Chance 0.3
+}
+
+Flickerlight CYBERDEMLISHERROCKET4
+{
+Color 0.3 0.0 0.0
+Size 96
+SecondarySize 104
+Chance 0.3
+}
+
+
+Object CyberdemolisherRocket
+{
+Frame HMISA { Light CYBERDEMLISHERROCKET1 }
+Frame BAL3C { Light CYBERDEMLISHERROCKET2 }
+Frame BAL3D { Light CYBERDEMLISHERROCKET3 }
+Frame BAL3E { Light CYBERDEMLISHERROCKET4 }
+}
+
+pointlight CYBERDEMLISHERBFGBALL
+{
+    color 0.0 1.0 0.0
+    size 80
+}
+
+flickerlight CYBERDEMLISHERBFGBALL_X1
+{
+    color 0.2 1.0 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight CYBERDEMLISHERBFGBALL_X2
+{
+    color 0.3 1.0 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight CYBERDEMLISHERBFGBALL_X3
+{
+    color 0.5 1.0 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight CYBERDEMLISHERBFGBALL_X4
+{
+    color 0.2 0.7 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight CYBERDEMLISHERBFGBALL_X5
+{
+    color 0.1 0.3 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object CyberDemolisherBFGBall
+{
+    frame BFS1A { light CYBERDEMLISHERBFGBALL }
+    frame BFS1B { light CYBERDEMLISHERBFGBALL }
+
+    frame BFE1A { light CYBERDEMLISHERBFGBALL_X1 }
+    frame BFE1B { light CYBERDEMLISHERBFGBALL_X2 }
+    frame BFE1C { light CYBERDEMLISHERBFGBALL_X3 }
+    frame BFE1D { light CYBERDEMLISHERBFGBALL_X1 }
+    frame BFE1E { light CYBERDEMLISHERBFGBALL_X4 }
+    frame BFE1F { light CYBERDEMLISHERBFGBALL_X5 }
+}
