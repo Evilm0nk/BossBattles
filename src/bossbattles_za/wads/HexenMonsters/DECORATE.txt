@@ -8,6 +8,7 @@ ACTOR PorkFX1 : PorkFX replaces PorkFX
   Speed 15
   +SEEKERMISSILE
   +SPECTRAL
+  MorphProjectile.Duration -10
   MorphProjectile.PlayerClass "PigPlayer2"
   MorphProjectile.MonsterClass "Pig1"
   MorphProjectile.MorphStyle MRF_UNDOBYTOMEOFPOWER|MRF_UNDOBYCHAOSDEVICE
