@@ -1,0 +1,296 @@
+// Heresiarch warlock
+flickerlight TELEPORTBALLRED1
+{
+    color 1.0 0.2 0.0
+    size 40
+    secondarySize 45
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLRED_X1
+{
+    color 1.0 0.4 0.0
+    size 24
+    secondarySize 28
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLRED_X2
+{
+    color 0.7 0.3 0.0
+    size 30
+    secondarySize 34
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLRED_X3
+{
+    color 0.5 0.2 0.0
+    size 30
+    secondarySize 35
+    chance 0.3
+}
+
+object TeleportBallRed
+{
+    frame MSP1A { light TELEPORTBALLRED1 }
+    frame MSP1B { light TELEPORTBALLRED1 }
+    frame MSP1C { light TELEPORTBALLRED1 }
+    frame MSP1D { light TELEPORTBALLRED1 }
+    frame MSP1E { light TELEPORTBALLRED1 }
+    frame MSP1F { light TELEPORTBALLRED1 }
+
+    frame MISLB { light TELEPORTBALLRED_X1 }
+	frame MISLC { light TELEPORTBALLRED_X2 }
+	frame MISLD { light TELEPORTBALLRED_X3 }
+}
+
+flickerlight FIRERING_X1
+{
+    color 1.0 0.7 0.0
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight FIRERING_X2
+{
+    color 1.0 0.7 0.0
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight FIRERING_X3
+{
+    color 0.7 0.4 0.0
+    size 64
+    secondarySize 68
+    chance 0.3
+}
+
+flickerlight FIRERING_X4
+{
+    color 0.5 0.1 0.0
+    size 68
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight FIRERING_X5
+{
+    color 0.2 0.0 0.0
+    size 72
+    secondarySize 76
+    chance 0.3
+}
+
+object HeresiarchFireRingSpawner
+{
+    frame MSP1A { light TELEPORTBALLRED1 }
+    frame MSP1B { light TELEPORTBALLRED1 }
+    frame MSP1C { light TELEPORTBALLRED1 }
+    frame MSP1D { light TELEPORTBALLRED1 }
+    frame MSP1E { light TELEPORTBALLRED1 }
+    frame MSP1F { light TELEPORTBALLRED1 }
+
+    frame ADVYC { light FIRERING_X1 }
+    frame ADVYD { light FIRERING_X2 }
+    frame ADVYE { light FIRERING_X3 }
+    frame ADVYF { light FIRERING_X4 }
+    frame ADVYG { light FIRERING_X5 }
+    frame ADVYH { light FIRERING_X5 }
+}
+
+flickerlight TELEPORTBALLBLACK1
+{
+    color 1.0 1.0 1.0
+    size 40
+    secondarySize 45
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLBLACK_X1
+{
+    color 1.0 1.0 1.0
+    size 24
+    secondarySize 28
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLBLACK_X2
+{
+    color 1.0 1.0 1.0
+    size 30
+    secondarySize 34
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLBLACK_X3
+{
+    color 1.0 1.0 1.0
+    size 30
+    secondarySize 35
+    chance 0.3
+}
+
+object TeleportBallBlack
+{
+    frame MSP1A { light TELEPORTBALLBLACK1 }
+    frame MSP1B { light TELEPORTBALLBLACK1 }
+    frame MSP1C { light TELEPORTBALLBLACK1 }
+    frame MSP1D { light TELEPORTBALLBLACK1 }
+    frame MSP1E { light TELEPORTBALLBLACK1 }
+    frame MSP1F { light TELEPORTBALLBLACK1 }
+
+    frame MISLB { light TELEPORTBALLBLACK_X1 }
+	frame MISLC { light TELEPORTBALLBLACK_X2 }
+	frame MISLD { light TELEPORTBALLBLACK_X3 }
+}
+
+flickerlight TELEPORTBALLPURPLE1
+{
+    color 1.0 0.0 1.0
+    size 32
+    secondarySize 40
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLPURPLE_X1
+{
+    color 0.7 0.0 0.7
+    size 35
+    secondarySize 37
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLPURPLE_X2
+{
+    color 0.3 0.0 0.3
+    size 20
+    secondarySize 35
+    chance 0.3
+}
+
+flickerlight TELEPORTBALLPURPLE_X3
+{
+    color 0.3 0.0 0.3
+    size 26
+    secondarySize 30
+    chance 0.3
+}
+
+object TeleportBallPurple
+{
+    frame MSP1A { light TELEPORTBALLPURPLE1 }
+    frame MSP1B { light TELEPORTBALLPURPLE1 }
+    frame MSP1C { light TELEPORTBALLPURPLE1 }
+    frame MSP1D { light TELEPORTBALLPURPLE1 }
+    frame MSP1E { light TELEPORTBALLPURPLE1 }
+    frame MSP1F { light TELEPORTBALLPURPLE1 }
+
+    frame MISLB { light TELEPORTBALLPURPLE_X1 }
+	frame MISLC { light TELEPORTBALLPURPLE_X2 }
+	frame MISLD { light TELEPORTBALLPURPLE_X3 }
+}
+
+pulselight FIRERING1
+{
+    color 1.0 0.7 0.0
+    size 1
+    secondarySize 64
+    interval 6.0
+}
+
+object HeresiarchFireRingPuff
+{
+    frame FX13B { light FIRERING1 }
+    frame FX13C { light FIRERING1 }
+    frame FX13D { light FIRERING1 }
+    frame FX13E { light FIRERING1 }
+    frame FX13F { light FIRERING1 }
+    frame FX13G { light FIRERING1 }
+    frame FX13H { light FIRERING1 }
+}
+
+object HeresiarchTracer
+{
+    frame FX13B { light FIRERING1 }
+    frame FX13C { light FIRERING1 }
+    frame FX13D { light FIRERING1 }
+    frame FX13E { light FIRERING1 }
+    frame FX13F { light FIRERING1 }
+}
+
+object ATracerPuff
+{
+    frame FX13B { light FIRERING1 }
+    frame FX13C { light FIRERING1 }
+    frame FX13D { light FIRERING1 }
+    frame FX13E { light FIRERING1 }
+    frame FX13F { light FIRERING1 }
+    frame FX13G { light FIRERING1 }
+    frame FX13H { light FIRERING1 }
+}
+
+flickerlight2 WARLOCKFOG1
+{
+    color 1.0 0.0 0.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 44 0
+}
+
+object WarlockFog
+{
+    frame HEFT { light WARLOCKFOG1 }
+}
+
+object WarlockWhirlFog
+{
+    frame HEFT { light WARLOCKFOG1 }
+}
+
+flickerlight2 WARLOCKFOG2
+{
+    color 1.0 0.0 1.0
+    size 64
+    secondarySize 72
+    interval 0.1
+    offset 0 44 0
+}
+
+object WarlockFogpurple
+{
+    frame HEFT { light WARLOCKFOG2 }
+}
+
+object WarlockSpark
+{
+    frame HEFT { light WARLOCKFOG2 }
+}
+
+
+flickerlight HERESIARCHLIGHTNING
+{
+    color 1.0 1.0 1.0
+    size 48
+    secondarySize 52
+    chance 0.7
+}
+
+object HeresiarchWarlockLightningCeiling
+{
+    frame MLF2 { light HERESIARCHLIGHTNING }
+}
+
+object HeresiarchWarlockLightningFloor
+{
+    frame MLF2 { light HERESIARCHLIGHTNING }
+}
+
+object HeresiarchWarlockLightningParticle
+{
+    frame MLF2 { light HERESIARCHLIGHTNING }
+}

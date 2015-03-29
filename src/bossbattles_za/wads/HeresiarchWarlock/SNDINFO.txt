@@ -1,0 +1,8 @@
+Advocate/see	ADVOCATA
+Advocate/death	ADVOCATB
+Advocate/fireballsee	ADVOCATC
+Advocate/fireballwait	ADVOCATD
+Advocate/teleport	ADVOCATE
+Advocate/pain	ADVOCATF
+Advocate/active	ADVOCATG
+Advocate/tornado	ADVOCATH

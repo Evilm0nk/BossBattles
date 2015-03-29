@@ -1,0 +1,712 @@
+ACTOR HeresiarchWarlock 14391
+{
+//$Category RandomBosses
+  Health 33000
+  PainChance 3
+  Speed 16
+  Radius 40
+  Height 110
+  Mass 5000000
+  Damage 9
+  MinMissileChance 40
+  BloodColor purple
+  Monster
+  +FLOORCLIP
+  +BOSS
+  +DONTMORPH
+  +NOTARGET
+  +NOICEDEATH
+  +NOTARGET
+  +QUICKTORETALIATE
+  +DEFLECT
+  +MISSILEMORE
+  +NORADIUSDMG
+  +DONTRIP
+  dropitem "MediumHealthVile" 70
+  DropItem "Combatpack" 60
+  DropItem "Cmana" 60
+  DropItem "DmanaDrop" 60
+  DropItem "SmallhealthVile" 150
+  DropItem "LargeHealthvile" 50
+  DropItem "SuperArmor" 3
+  DropItem "Greenarmor" 7
+  DropItem "Bluearmor" 5
+  DropItem "ArtiHealingRadius1" 5
+  DropItem "Medikit" 6
+  DropItem "Stimpack" 8
+  Damagefactor "HEAVENPOWER", 1.0
+  Damagefactor "PEXPLOSIVE", 1.0
+  Damagefactor "EXPLOSIVE", 1.0
+  Damagefactor "Fire", 0.7
+  Damagefactor "PFire", 0.7
+  Damagefactor "Electric", 0.7
+  Damagefactor "PElectric", 0.7
+  Damagefactor "Poison", 0.7
+  Damagefactor "PPoison", 0.7
+  Damagefactor "PBullet", 1.0
+  Damagefactor "Bullet", 1.0
+  Damagefactor "ice", 0.7
+  SeeSound "Advocate/see"
+  PainSound "Advocate/Pain"
+  DeathSound "Advocate/death"
+  ActiveSound "Advocate/active"
+  obituary "%o got slain by a HeresiarchWarlock."
+  hitobituary "%o couldn't withstand the magical force of a HeresiarchWarlock"
+  States
+  {
+  Spawn: 
+    HEWA A 10 A_Look
+    loop
+  See:  
+    HEWA ABCD 5 A_Chase
+    Loop
+  Pain:  
+    HEWA B 2 a_jump(224,"teleport")
+    HEWA BBBBBB 2 A_Pain   
+    Goto See
+  Missile:
+    HEWA A 0 a_jump(256,"missile1","missile2")
+    missile1:
+    HEWA F 1 Bright a_facetarget
+    HEWA F 1 Bright A_custommissile("WarlockBook",100,0,0)
+    HEWA F 1 Bright A_custommissile("WarlockVerticalStaff",80,0,0)
+    HEWA F 16 Bright         
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,0,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,0,2,-45)     
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,45,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,45,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,90,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,90,2,-45) 
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,135,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,135,2,-45)  
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,180,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,180,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,225,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,225,2,-45)    
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,270,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,270,2,-45)  
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,315,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,315,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchFireRingSpawner",40,0,-5) 
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchFireRingSpawner",40,0,5)
+    HEWA F 5 Bright A_CustomMissile ("HeresiarchFireRingSpawner",40,0,0)
+    goto see  
+    missile2:
+    HEWA F 1 Bright a_facetarget
+    HEWA F 1 Bright A_custommissile("WarlockBook",100,0,0)
+    HEWA F 1 Bright A_custommissile("WarlockHorizontalStaff",50,0,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",80,0,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",64,-16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",40,-40,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",24,-16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",16,0,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",24,16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",40,40,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",64,16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",80,0,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",64,-16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",40,-40,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",24,-16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",16,0,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",24,16,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",40,40,0)
+    HEWA F 1 BRIGHT a_custommissile("warlockwhirlfog",64,16,0)
+    HEWA F 1 Bright         
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,0,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,0,2,-45)     
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,45,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,45,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,90,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,90,2,-45) 
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,135,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,135,2,-45)  
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,180,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,180,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,225,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,225,2,-45)    
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,270,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,270,2,-45)  
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningCeiling",0,0,315,2,45)
+    HEWA F 0 Bright A_CustomMissile ("HeresiarchWarlockLightningFloor",0,0,315,2,-45)   
+    HEWA F 0 Bright A_CustomMissile ("Heresiarchtracer",40,-24,0)
+    HEWA F 0 Bright A_CustomMissile ("Heresiarchtracer",40,24,0)
+    HEWA F 5 Bright A_CustomMissile ("WarlockSparkBall",40,0,0)
+    goto see 
+  Teleport:
+    HEWA A 0
+    HEWA A 0 a_custommissile("TeleportBallRed",8,-16,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallRed",8,16,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",24,-16,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",24,16,random(1,359))  
+    HEWA A 0 a_custommissile("TeleportBallBlack",40,-16,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",40,0,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",40,16,random(1,359)) 
+    HEWA A 0 a_custommissile("TeleportBallBlack",50,-18,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",50,0,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",50,18,random(1,359)) 
+    HEWA A 0 a_custommissile("TeleportBallBlack",64,-19,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",64,0,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",64,19,random(1,359))
+     
+    HEWA A 0 a_custommissile("TeleportBallred",64,-39,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallred",64,39,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",80,39,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",80,-39,random(1,359))
+    
+    HEWA A 0 a_custommissile("TeleportBallBlack",80,-10,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallBlack",80,10,random(1,359))
+    HEWA A 0 a_custommissile("TeleportBallred",90,0,random(1,359))
+    
+    NULL AAAAAAAAAAAAAAAAAAAAAAAA 0 A_ExtChase(0,0,1,1)
+    NULL A 0 A_Jump(128,25)
+    NULL AAAAAAAAAAAAAAAAAAAAAAAA 0 A_ExtChase(0,0,1,1)
+    HEWA A 1 a_custommissile("warlockfog",40,0,0)
+    goto See
+  
+  
+  Death:
+    HEWA G 0
+    HEWA DDDDDDDDDDDDDDDD 8 A_SpawnItemEx("KoraxDeathExplosion",random(-30,30),random(-30,30),random(25,90),0,0,0,0,0,0)
+	TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Spawnitemex("PurpleNashGore_FlyingBlood",random(-36,36),random(-35,35),random(0,40),random(-10,10),random(-10,10))
+    HEWA DDDDDDDDD 0 a_custommissile("WarlockFogpurple",random(8,100),random(-32,32),random(1,359))
+    HEWA GGGGG 1 Bright a_custommissile("WarlockFogpurple",random(8,100),random(-32,32),random(1,359))
+    HEWA H 5 Bright A_FaceTarget
+    HEWA I 5 Bright A_ScreamAndUnblock
+    HEWA JJJJJ 1 Bright a_custommissile("WarlockFogpurple",random(8,100),random(-32,32),random(1,359))
+    HEWA K 5 Bright 
+    HEWA LMN 5 Bright
+	HEWA O 520 BRIGHT A_SetFloorClip
+	HEWA O 2 A_FadeOut
+	Wait
+  }
+}
+ACTOR WarlockVerticalStaff
+{
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "sorcererballwoosh"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    HEWS IJKLMNOPIJKLMNOP 2 Bright a_playsound("sorcererballwoosh")
+    Stop
+  }
+}
+ACTOR WarlockHorizontalStaff
+{
+  Radius 6
+  Height 8
+  Speed 20
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "sorcererballwoosh"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    HEWS I 2
+    HEWS I 0 a_stop
+    HEWS ABCDEFGHABCDEFGH 2 Bright a_playsound("sorcererballwoosh")
+    Stop
+  }
+}
+ACTOR WarlockBook
+{
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    HEWB ABCDEFGHABCDEFGH 2 Bright
+    Stop
+  }
+}
+ACTOR WarlockFog
+{
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "MageLightningContinuous"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    HEFT ABCDEFGHGFEDC 6 Bright
+    Stop
+  }
+}
+ACTOR WarlockFogpurple : WarlockFog
+{
+translation "168:191=250:254"
+}
+ACTOR WarlockWhirlFog
+{
+  TRANSLATION "172:191=32:47", "80:95=32:38", "16:31=34:34"
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "none"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    HEFT ABCDEFGH 1 Bright
+    Stop
+  }
+}
+ACTOR WarlockSparkBall
+{
+  Radius 6
+  Height 8
+  Speed 30
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +ripper
+  damagetype "heresiarchwarlock"
+  +BLOODLESSIMPACT
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "none"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    NULL A 10 Bright
+    NULL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 2 BRIGHT a_spawnitemex("WarlockSpark",random(-72,72),random(-72,72),0,0,0,0)
+    Stop
+  }
+}
+ACTOR WarlockSpark
+{
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 0
+  Projectile
+  +RANDOMIZE
+  +noclip
+  +SPECTRAL
+  DamageType "Electric"
+  RenderStyle translucent
+  Alpha 1
+  SeeSound "MageLightningContinuous"
+  DeathSound "imp/shotx"
+  translation "168:191=250:254"
+  States
+  {
+  Spawn:
+    HEFT ABCDEFGHGFEDC 6 Bright a_Explode(8,128)
+    Stop
+  }
+}
+
+
+ACTOR HeresiarchWarlockLightningCeiling
+{
+  Translation "192:207=80:111"
+  Speed 20
+  Radius 13
+  Height 8
+  Damage (random(10,20))
+  Projectile
+  scale 0.75
+  RenderStyle translucent
+  alpha 1
+  donthurtshooter
+  +CEILINGHUGGER
+  +THRUGHOST
+  +SPECTRAL
+  DamageType "Electric"
+  reactiontime 15
+  SeeSound "MageLightningContinuous"
+  DeathSound "MageLightningContinuous"
+  States
+  {
+  Spawn:
+    MLF2 A 1 a_seekermissile(65,65)
+    MLF2 A 1 A_CountDown
+    MLF2 A 1 a_seekermissile(65,65)
+    MLF2 A 1 Bright a_Explode(4,80,false)
+    MLF2 B 1 a_seekermissile(5,5)
+    MLF2 B 1 a_seekermissile(65,65)
+    MLF2 B 2 Bright a_Explode(4,80,false)
+    MLF2 C 1 a_seekermissile(5,5)
+    MLF2 C 1 a_seekermissile(65,65)
+    MLF2 C 2 Bright a_Explode(4,80,false)
+    MLF2 D 1 a_seekermissile(5,5)
+    MLF2 D 1 a_seekermissile(65,65)
+    MLF2 D 2 Bright a_Explode(4,80,false)
+    MLF2 D 0 a_spawnitemex("HeresiarchWarlockLightningParticle",0,0,-16,0,0,-35)
+    Loop
+  Death:
+    MLF2 A 3 BRIGHT a_settranslucent(0.5)
+    MLF2 B 3 BRIGHT a_settranslucent(0.4)
+    MLF2 C 3 BRIGHT a_settranslucent(0.3)
+    MLF2 D 3 BRIGHT a_settranslucent(0.2)
+    MLF2 A 3 BRIGHT a_settranslucent(0.1)
+    Stop
+  }
+}
+ACTOR HeresiarchWarlockLightningFloor
+{
+  Translation "192:207=80:111"
+  Speed 20
+  Radius 13
+  Height 8
+  Damage (random(4,9))
+  Projectile
+  scale 1
+  DamageType "Electric"
+  RenderStyle translucent
+  donthurtshooter
+  alpha 0.75
+  +FLOORHUGGER
+  +ripper
+  +THRUGHOST
+  +SPECTRAL
+  reactiontime 15
+  SeeSound "MageLightningContinuous"
+  DeathSound "MageLightningContinuous"
+  States
+  {
+  Spawn:
+    MLF2 E 1 a_seekermissile(65,65)
+    MLF2 E 1 A_CountDown
+    MLF2 E 1 a_seekermissile(65,65)
+    MLF2 E 1 Bright a_Explode(4,80,false)
+    MLF2 F 1 a_seekermissile(5,5)
+    MLF2 F 1 a_seekermissile(65,65)
+    MLF2 F 2 Bright a_Explode(4,80,false)
+    MLF2 G 1 a_seekermissile(5,5)
+    MLF2 G 1 a_seekermissile(65,65)
+    MLF2 G 2 Bright a_Explode(4,80,false)
+    MLF2 H 1 a_seekermissile(5,5)
+    MLF2 H 1 a_seekermissile(65,65)
+    MLF2 H 2 Bright a_Explode(4,80,false)
+    Loop
+  Death:
+    MLF2 E 3 BRIGHT a_settranslucent(0.5)
+    MLF2 F 3 BRIGHT a_settranslucent(0.4)
+    MLF2 G 3 BRIGHT a_settranslucent(0.3)
+    MLF2 H 3 BRIGHT a_settranslucent(0.2)
+    MLF2 E 3 BRIGHT a_settranslucent(0.1)
+    Stop
+  }
+}
+ACTOR HeresiarchWarlockLightningParticle
+{
+  Translation "192:207=80:111"
+  Radius 6
+  Height 8
+  Speed 0
+  Damage 3
+  Projectile
+  donthurtshooter
+  +RANDOMIZE
+  +THRUGHOST
+  +SPECTRAL
+  DamageType "Electric"
+  RenderStyle translucent
+  Alpha 0.75
+  SeeSound "MageLightningContinuous"
+  DeathSound "MageLightningContinuous"
+  States
+  {
+  Spawn:
+    MLF2 IJKLM 4 Bright a_explode(4,128)
+    Loop
+  Death:
+    MLF2 E 3 BRIGHT a_settranslucent(0.5)
+    MLF2 F 3 BRIGHT a_settranslucent(0.4)
+    MLF2 G 3 BRIGHT a_settranslucent(0.3)
+    MLF2 H 3 BRIGHT a_settranslucent(0.2)
+    MLF2 E 3 BRIGHT a_settranslucent(0.1)
+    Stop
+  }
+}
+
+ACTOR HeresiarchFireRingSpawner
+{
+  Radius 6
+  Height 8
+  Speed 30
+  Damage 15
+  Projectile 
+  +RANDOMIZE
+  +THRUGHOST
+  +SPECTRAL
+  DamageType "Fire"
+  RenderStyle translucent
+  Alpha 0.85
+  SeeSound "advocate/fireballsee"
+  DeathSound "weapons/rocklx"
+  donthurtshooter
+  States
+  {
+  Spawn:
+    MSP1 ABCDEF 4 Bright //Sprites located in mageclass
+    Loop
+  Death:
+    ADVY C 1 BRIGHT a_playsound("advocate/fireballwait")
+    ADVY C 8 BRIGHT
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,0)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,20)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,40)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,60)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,80)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,100)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,120)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,140)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,160)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,180)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,200)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,220)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,240)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,260)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,280)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,300)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,320)
+    ADVY C 0 a_custommissile("HeresiarchFireRingBall",0,0,340)     
+    ADVY DEFGH 7 BRIGHT
+    Stop
+  }
+}
+ACTOR HeresiarchFireRingBall
+{
+   Radius 5
+   Height 5
+   Speed 15
+   Damage 9
+   RenderStyle translucent   
+   Alpha 0.05
+   PROJECTILE
+   +SEEKERMISSILE
+   +FLOORHUGGER
+   +THRUGHOST
+   -NOGRAVITY
+   +SPECTRAL
+   DamageType "Fire"
+   Obituary "%o got was set ablaze by Heresiarch Warlock."
+   Seesound "weapons/diasht"
+   donthurtshooter
+   DeathSound "weapons/firex3"   
+   States
+   {
+   Spawn:
+      NULL A 1 Bright
+      NULL A 0 Bright
+      NULL AAAAAAAAAAAAAAAAAAAAA 1 Bright A_CustomMissile("HeresiarchFireRingPuff",0,0,0,0)
+      NULL A 1 A_ChangeVelocity (-20, 0, 0, CVF_RELATIVE|CVF_REPLACE) 
+      NULL AAAAAAAAAAAAAAAAAAAAA 1 Bright A_CustomMissile("HeresiarchFireRingPuff",0,0,0,0)     
+      stop
+   }
+}
+ACTOR HeresiarchFireRingPuff //Heretic minotaur uses same sprites
+{
+   Radius 1
+   Height 1
+   Speed 0
+   RENDERSTYLE translucent
+   ALPHA 0.8
+   donthurtshooter
+   PROJECTILE
+   +FLOORHUGGER
+   +THRUGHOST
+   -NOGRAVITY
+   +SPECTRAL
+   DamageType "Fire"
+   States
+   {
+   Spawn:
+      FX13 BCDEFGH 3 Bright A_Explode(2,4)
+      stop
+   }
+}
+
+ACTOR TeleportBallRed
+{
+  Speed 7
+  Radius 5
+  Height 5
+  Projectile
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  -NOGRAVITY
+  +FULLVOLDEATH
+  +CANBOUNCEWATER
+  +NOWALLBOUNCESND
+  +THRUGHOST
+  +SPECTRAL
+  donthurtshooter
+  BounceFactor 1.0
+  +HEXENBOUNCE
+  SeeSound "Advocate/teleport"
+  reactiontime 5
+  DeathSound "Advocate/fireballwait"
+  DamageType "Fire"
+  States
+  {
+  Spawn:
+    MSP1 A 0
+    MSP1 A 0 a_jumpifinventory("cell",1,4)
+    MSP1 A 2 a_stop
+    MSP1 A 2 a_stop
+    MSP1 A 2 A_ChangeVelocity (7, 0, 0, CVF_RELATIVE|CVF_REPLACE) 
+    MSP1 A 2 Bright a_countdown
+    MSP1 A 0 a_giveinventory("cell",1)
+    MSP1 BCDEF 3 Bright
+    Loop
+  Death:
+    MISL B 2 Bright A_Explode(30, 128)
+    MISL CD 2 Bright
+    Stop
+  }
+}
+ACTOR TeleportBallBlack : TeleportBallRed
+{
+translation "175:191=100:111" , "45:47=5:7",  "208:223=80:111"
+DamageType "Electric"
+}
+ACTOR TeleportBallPurple
+{
+  Speed 7
+  Radius 5
+  Height 5
+  Projectile
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  -NOGRAVITY
+  +FULLVOLDEATH
+  +CANBOUNCEWATER
+  reactiontime 5
+  +NOWALLBOUNCESND
+  donthurtshooter
+  scale 0.5
+  BounceFactor 1.0
+  +HEXENBOUNCE
+  +THRUGHOST
+  +SPECTRAL
+  DamageType "Electric"
+  SeeSound "Advocate/teleport"
+  translation "174:191=250:254", "32:47=252:254", "2:2=254:254", "208:223=253:253"
+  DeathSound "Advocate/fireballwait"
+  States
+  {
+  Spawn:
+    MSP1 A 0
+    MSP1 A 0 a_jumpifinventory("cell",1,4)
+    MSP1 A 2 a_stop
+    MSP1 A 2 a_stop
+    MSP1 A 2 A_ChangeVelocity (7, 0, 0, CVF_RELATIVE|CVF_REPLACE)  
+    MSP1 A 2 Bright a_countdown
+    MSP1 A 0 a_giveinventory("cell",1)
+    MSP1 BCDEF 3 Bright
+    Loop
+  Death:
+    MISL B 2 Bright A_Explode(30, 128)
+    MISL CD 2 Bright
+    Stop
+  }
+}
+ACTOR HeresiarchTracer
+{
+   Radius 5
+   Height 5
+   Speed 30
+   Damage 10
+   ExplosionDamage 20
+   ExplosionRadius 128
+   RenderStyle translucent
+   DamageType "heresiarchwarlock"
+   Alpha 0.7
+   PROJECTILE
+   +FLOORHUGGER
+   +THRUGHOST
+   +seekermissile
+   -NOGRAVITY
+   +DONTSPLASH
+   +SPECTRAL
+   DamageType "Fire"
+   Seesound "Advocate/fireballwait"
+   DeathSound "Advocate/fireballwait"  
+   States
+   {
+   Spawn:
+      NULL A 1 Bright A_seekermissile(15,15)
+      NULL A 1 Bright A_CStaffMissileSlither
+      NULL A 0 Bright A_SpawnItem("ATracerPuff",0,0)
+      loop
+   Death:
+      FX13 B 4 Bright
+      FX13 C 4 Bright A_Explode
+      FX13 DDEF 3 Bright
+      stop
+   }
+}
+
+ACTOR ATracerPuff
+{
+   Radius 1
+   Height 1
+   Speed 0
+   RENDERSTYLE translucent
+   DamageType "heresiarchwarlock"
+   ALPHA 0.7
+   scale 1.2
+   PROJECTILE
+   ExplosionRadius 8
+   ExplosionDamage 4
+   +FLOORHUGGER
+   -NOGRAVITY
+   +DONTSPLASH
+   +SPECTRAL
+   DamageType "Fire"
+   States
+   {
+   Spawn:
+      FX13 BCDEFGH 3 Bright A_Explode
+      stop
+   }
+}
+
+Actor HeresiarchWarlock2 : HeresiarchWarlock 14392	
+{
+//$Category Friendlies
+  Species "Player"
+  +FRIENDLY
+  +SPECTRAL
+}
