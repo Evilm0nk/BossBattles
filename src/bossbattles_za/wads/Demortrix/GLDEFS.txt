@@ -1,0 +1,108 @@
+//Demortrix
+
+Object Poisonspell
+{
+Frame SEF2 { Light SentGMissile1 }
+Frame PSBGD { Light GreenFire1 }
+Frame PSBGE { Light GreenFire2 }
+Frame PSBGF { Light GreenFire3 }
+Frame PSBGG { Light GreenFire4 }
+Frame PSBGH { Light GreenFire5 }
+Frame PSBGI { Light GreenFire6 }
+}
+
+Object ShadowLightning
+{
+Frame ZAP6A { Light LightningRod1 }
+Frame ZAP6B { Light LightningRod1 }
+Frame ZAP6C { Light LightningRod1 }
+Frame ZOTSA { Light LightningRod1Death1 }
+Frame ZOTSB { Light LightningRod1Death2 }
+Frame ZOTSC { Light LightningRod1Death3 }
+Frame ZOTSD { Light LightningRod1Death4 }
+Frame ZOTSE { Light LightningRod1Death5 }
+Frame ZOTSF { Light LightningRod1Death6 }
+}
+
+object Hellball1
+{
+    frame VFBLA { light EXPFLASH1 }
+    frame VFBLB { light EXPFLASH1 }
+
+    frame XPL1A { light EXPFLASH1 }
+    frame XPL1B { light EXPFLASH1 }
+    frame XPL1C { light EXPFLASH1 }
+	frame XPL1D { light EXPFLASH1 }
+    frame XPL1E { light EXPFLASH1 }
+    frame XPL1F { light EXPFLASH1 }
+}
+
+object Hellball2
+{
+    frame VFBLA { light REAVERBALL }
+    frame VFBLB { light REAVERBALL }
+
+    frame XPL1A { light REAVERBALL_X1 }
+    frame XPL1B { light REAVERBALL_X1 }
+    frame XPL1C { light REAVERBALL_X2 }
+	frame XPL1D { light REAVERBALL_X2 }
+    frame XPL1E { light REAVERBALL_X3 }
+    frame XPL1F { light REAVERBALL_X3 }
+}
+
+Object Hellfirespread
+{
+Frame FTRA { Light STracer1 }
+}
+
+Object Hellfire1
+{
+Frame FTRAK { Light STracer2 }
+Frame FTRAL { Light STracer3 }
+Frame FTRAM { Light STracer4 }
+Frame FTRAN { Light STracer5 }
+Frame FTRAO { Light STracer6 }
+}
+
+object Snowstorm
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+object Frostbite
+{
+    frame SHRD { light MFROSTSHARD }
+
+    frame SHEXA { light MFROSTSHARD_X1 }
+    frame SHEXB { light MFROSTSHARD_X2 }
+    frame SHEXC { light MFROSTSHARD_X3 }
+    frame SHEXD { light MFROSTSHARD_X4 }
+}
+
+object Barbeque
+{
+frame FIREA { light ARCHFIRE1 }
+frame FIREB { light ARCHFIRE2 }
+frame FIREC { light ARCHFIRE3 }
+frame FIRED { light ARCHFIRE4 }
+frame FIREE { light ARCHFIRE5 }
+frame FIREF { light ARCHFIRE6 }
+frame FIREG { light ARCHFIRE7 }
+frame FIREH { light ARCHFIRE8 }
+}
+
+Object FIREBURST
+{
+Frame FRFXJ { Light SmithExplode1 }
+Frame FRFXK { Light SmithExplode2 }
+Frame FRFXL { Light SmithExplode3 }
+Frame FRFXM { Light SmithExplode4 }
+Frame FRFXN { Light SmithExplode5 }
+Frame FRFXO { Light SmithExplode6 }
+Frame FRFXP { Light SmithExplode7 }
+}
