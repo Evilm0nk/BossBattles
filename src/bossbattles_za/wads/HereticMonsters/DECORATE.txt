@@ -8,6 +8,7 @@ ACTOR EggFX1 : EggFX replaces EggFX
   Speed 15
   +SEEKERMISSILE
   +SPECTRAL
+  MorphProjectile.Duration -10
   MorphProjectile.PlayerClass "ChickenPlayer2"
   MorphProjectile.MonsterClass "Chicken1"
   MorphProjectile.MorphStyle MRF_UNDOBYTOMEOFPOWER
