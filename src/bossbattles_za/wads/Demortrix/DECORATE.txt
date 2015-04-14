@@ -1972,7 +1972,7 @@ actor HealthPower2
 
 //fIREBALLS
 
-actor DWyvernBall3 : DWyvernBall2
+actor DWyvernBall3 : DragonFireball
 {
    +SPECTRAL
    +SEEKERMISSILE
